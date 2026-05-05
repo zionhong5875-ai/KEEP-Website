@@ -1,0 +1,9 @@
+.DS_Store
+
+# Local video/prototype workspace artifacts
+keep-brand-video/.DS_Store
+keep-brand-video/.venv*/
+keep-brand-video/assets/video-source/
+keep-brand-video/node_modules/
+keep-brand-video/dist/
+keep-brand-video/.hyperframes/
