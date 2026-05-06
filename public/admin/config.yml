@@ -2,8 +2,8 @@ backend:
   name: github
   repo: zionhong5875-ai/KEEP-Website
   branch: main
-  site_domain: keep-website.vercel.app
-  base_url: https://keep-website.vercel.app
+  site_domain: keep-website-ochre.vercel.app
+  base_url: https://keep-website-ochre.vercel.app
   auth_endpoint: oauth
 
 local_backend: true

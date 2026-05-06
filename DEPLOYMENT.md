@@ -66,8 +66,8 @@ backend:
   name: github
   repo: zionhong5875-ai/KEEP-Website
   branch: main
-  site_domain: keep-website.vercel.app
-  base_url: https://keep-website.vercel.app
+  site_domain: keep-website-ochre.vercel.app
+  base_url: https://keep-website-ochre.vercel.app
   auth_endpoint: oauth
 ```
 
@@ -76,8 +76,8 @@ Then invite editors to the GitHub repository with limited write access. Editors 
 Create a GitHub OAuth App:
 
 ```text
-Homepage URL: https://keep-website.vercel.app
-Authorization callback URL: https://keep-website.vercel.app/oauth/callback
+Homepage URL: https://keep-website-ochre.vercel.app
+Authorization callback URL: https://keep-website-ochre.vercel.app/oauth/callback
 ```
 
 Add these Vercel environment variables:

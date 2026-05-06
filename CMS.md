@@ -54,8 +54,8 @@ They can update JSON-backed content under `src/data/` and upload media without t
 The CMS uses GitHub OAuth on Vercel:
 
 ```yaml
-site_domain: keep-website.vercel.app
-base_url: https://keep-website.vercel.app
+site_domain: keep-website-ochre.vercel.app
+base_url: https://keep-website-ochre.vercel.app
 auth_endpoint: oauth
 ```
 
@@ -73,8 +73,8 @@ https://github.com/settings/applications/new
 Use:
 
 ```text
-Homepage URL: https://keep-website.vercel.app
-Authorization callback URL: https://keep-website.vercel.app/oauth/callback
+Homepage URL: https://keep-website-ochre.vercel.app
+Authorization callback URL: https://keep-website-ochre.vercel.app/oauth/callback
 ```
 
 Then put the Client ID and Client Secret into Vercel environment variables:
