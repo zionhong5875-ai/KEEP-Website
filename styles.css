@@ -44,20 +44,21 @@ body {
 
 .skip-link {
   position: fixed;
-  left: 20px;
-  top: 20px;
+  left: -999px;
+  top: 18px;
   z-index: 60;
   padding: 12px 16px;
   border-radius: 999px;
   background: var(--color-tiffany-blue);
   color: var(--color-obsidian);
   font-weight: 700;
-  transform: translateY(-180%);
-  transition: transform 160ms ease;
+  opacity: 0;
+  transition: opacity 160ms ease;
 }
 
-.skip-link:focus-visible {
-  transform: translateY(0);
+body.using-keyboard .skip-link:focus {
+  left: 20px;
+  opacity: 1;
 }
 
 body.menu-open {
@@ -140,6 +141,7 @@ textarea {
 
 body.menu-open .site-header {
   mix-blend-mode: normal;
+  color: var(--color-canvas-white);
 }
 
 .brand,
@@ -249,6 +251,23 @@ body.menu-open .site-header {
   height: 1px;
   margin: 5px auto;
   background: currentColor;
+}
+
+body.menu-open .menu-toggle {
+  border-color: var(--color-canvas-white);
+  color: var(--color-canvas-white);
+}
+
+body.menu-open .lang-switch-floating {
+  border-color: var(--color-canvas-white);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--color-canvas-white);
+  backdrop-filter: blur(10px);
+}
+
+body.menu-open .lang-switch__button[aria-pressed="true"] {
+  background: var(--color-tiffany-blue);
+  color: var(--color-obsidian);
 }
 
 .hero {
@@ -1416,6 +1435,10 @@ body.menu-open .site-header {
     z-index: 22;
   }
 
+  .lang-switch-floating {
+    top: 18px;
+  }
+
   .site-nav {
     position: fixed;
     inset: 0;
@@ -1427,16 +1450,25 @@ body.menu-open .site-header {
     padding: 98px clamp(22px, 7vw, 68px) 40px;
     padding-right: clamp(140px, 28vw, 220px);
     margin: 0;
-    background: var(--color-obsidian);
+    background: linear-gradient(
+      180deg,
+      rgba(0, 17, 17, 0.94) 0%,
+      rgba(0, 17, 17, 0.78) 42%,
+      rgba(0, 17, 17, 0.34) 100%
+    );
     color: var(--color-canvas-white);
     opacity: 0;
     pointer-events: none;
     transform: translateY(-10px);
+    backdrop-filter: blur(7px);
     transition: opacity 180ms ease, transform 180ms ease;
   }
 
   .header-tools {
     gap: 8px;
+    top: 18px;
+    right: calc(clamp(22px, 4vw, 68px) + 116px);
+    transform: none;
   }
 
   .lang-switch__button {

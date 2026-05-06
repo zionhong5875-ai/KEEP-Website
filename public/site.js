@@ -67,6 +67,16 @@ const setupLanguageSwitch = () => {
   });
 };
 
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Tab") {
+    document.body.classList.add("using-keyboard");
+  }
+});
+
+document.addEventListener("pointerdown", () => {
+  document.body.classList.remove("using-keyboard");
+});
+
 const toggle = document.querySelector("[data-menu-toggle]");
 const nav = document.querySelector("[data-nav]");
 
@@ -86,7 +96,29 @@ if (toggle && nav) {
   nav.addEventListener("click", (event) => {
     if (event.target instanceof HTMLAnchorElement) {
       closeMenu();
+      return;
     }
+
+    if (event.target === nav) {
+      closeMenu();
+    }
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!document.body.classList.contains("menu-open")) {
+      return;
+    }
+
+    const target = event.target;
+    if (!(target instanceof Node)) {
+      return;
+    }
+
+    if (nav.contains(target) || toggle.contains(target) || target.closest?.(".lang-switch-floating")) {
+      return;
+    }
+
+    closeMenu();
   });
 
   window.addEventListener("keydown", (event) => {
