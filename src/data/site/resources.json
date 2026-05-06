@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "title": {
+      "zh": "博客与资源 | KEEP",
+      "en": "Blog & Resources | KEEP"
+    },
+    "description": {
+      "zh": "KEEP 博客与资源中心，包含公司新闻、专业博客、产品说明书、SDS 与数字资料。",
+      "en": "KEEP's blog and resource hub for news, articles, product manuals, SDS files, and digital documentation."
+    }
+  },
+  "hero": {
+    "title": {
+      "zh": "新闻、观点与<br />数字资料。",
+      "en": "News,<br />thinking &<br />documents."
+    },
+    "body": {
+      "zh": "这里汇集 KEEP 的最新动态、擦拭系统知识、产品说明书、SDS 和应用资料，帮助客户更快完成选型、培训和内部审批。",
+      "en": "A hub for company updates, wiping-system knowledge, manuals, SDS files, and support documents to speed selection, training, and internal review."
+    }
+  },
+  "news": [
+    {
+      "date": "2026.04 / Product Line",
+      "title": {
+        "zh": "MEDIKEEP 感染控制系列完成新一轮材料兼容测试",
+        "en": "MEDIKEEP completes a new material compatibility testing round"
+      },
+      "body": {
+        "zh": "围绕常见医疗设备外壳、诊疗台面与公共接触面，更新低残留擦拭建议。",
+        "en": "New low-residue wiping guidance across common device shells, treatment benches, and public contact surfaces."
+      },
+      "image": "/assets/resource-news-lab.jpg",
+      "alt": "实验室研发与洁净测试场景"
+    },
+    {
+      "date": "2026.03 / Supply",
+      "title": {
+        "zh": "KEEP 启动跨区域 OEM 快速打样流程",
+        "en": "KEEP launches cross-region OEM rapid sampling workflow"
+      },
+      "body": {
+        "zh": "标准化基材、配方、包装和标签信息，让客户从概念到样品更顺畅。",
+        "en": "Standardized substrate, formula, packaging, and labeling data streamline the path from concept to sample."
+      },
+      "image": "/assets/resource-news-meeting.jpg",
+      "alt": "产品团队讨论供应和质量计划"
+    },
+    {
+      "date": "2026.02 / Quality",
+      "title": {
+        "zh": "批次追溯系统新增数字资料包",
+        "en": "Batch traceability system adds a new digital document pack"
+      },
+      "body": {
+        "zh": "为产品说明书、COA、SDS 和包装版本建立统一资源索引。",
+        "en": "A unified index for manuals, COA files, SDS documents, and packaging revisions."
+      },
+      "image": "/assets/resource-library.jpg",
+      "alt": "整洁办公室中的资源资料库"
+    }
+  ],
+  "blogs": [
+    {
+      "category": "Personal Care",
+      "title": {
+        "zh": "免冲洗护理产品如何平衡肤感、清洁力和包装密封",
+        "en": "How no-rinse care products balance skin feel, cleaning power, and pack sealing"
+      },
+      "body": {
+        "zh": "从液体负载、基材柔软度和开合结构三个维度拆解 CAREKEEP 选型。",
+        "en": "A CAREKEEP selection framework across fluid load, substrate softness, and opening structure."
+      },
+      "image": "/assets/resource-blog-care.jpg",
+      "alt": "个人护理与日常清洁护理场景"
+    },
+    {
+      "category": "Industrial Wiping",
+      "title": {
+        "zh": "重油污现场为什么需要高强度低尘擦拭布",
+        "en": "Why heavy oil environments need durable low-lint wipes"
+      },
+      "body": {
+        "zh": "INDUKEEP 的核心不是更厚，而是在吸油、耐溶剂和抗撕裂之间找到平衡。",
+        "en": "INDUKEEP is not just thicker. It is about balancing oil pickup, solvent resistance, and tear strength."
+      },
+      "image": "/assets/resource-blog-industrial.jpg",
+      "alt": "工业现场维护和擦拭应用场景"
+    }
+  ],
+  "downloads": [
+    {
+      "type": "PDF",
+      "label": "Product Manual",
+      "title": "MEDIKEEP Infection Control Wipes Product Guide",
+      "body": {
+        "zh": "包含三款 MEDIKEEP SKU 的尺寸、包装、应用场景和储存建议。",
+        "en": "Includes size, pack format, use case, and storage guidance across the three MEDIKEEP SKUs."
+      }
+    },
+    {
+      "type": "SDS",
+      "label": "Safety Data Sheet",
+      "title": "Alcohol Disinfectant Wipes SDS",
+      "body": {
+        "zh": "酒精型消毒湿巾的安全信息、储存条件、运输和应急处理摘要。",
+        "en": "Safety, storage, transport, and emergency handling summary for alcohol disinfectant wipes."
+      }
+    },
+    {
+      "type": "PDF",
+      "label": "Selection Matrix",
+      "title": "CAREKEEP Personal Care Selection Sheet",
+      "body": {
+        "zh": "按使用对象、护理频次和包装场景选择 Bath Wipes、Bath Gloves 和 Continence Care Wipes。",
+        "en": "Choose Bath Wipes, Bath Gloves, and Continence Care Wipes by user type, care frequency, and packaging context."
+      }
+    }
+  ]
+}

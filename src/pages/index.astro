@@ -1,0 +1,139 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ContactForm from "../components/ContactForm.astro";
+import home from "../data/site/home.json";
+import { text, attrs, htmlAttrs } from "../utils/i18n";
+---
+
+<BaseLayout title={home.meta.title} description={home.meta.description}>
+  <section class="hero" id="top" aria-labelledby="hero-title">
+    <img class="hero-image" src={home.hero.image} alt={home.hero.alt} />
+    <div class="hero-scrim"></div>
+    <div class="hero-content">
+      <p class="eyebrow" {...attrs(home.hero.eyebrow)}>{text(home.hero.eyebrow)}</p>
+      <h1 id="hero-title" set:html={text(home.hero.title)} {...htmlAttrs(home.hero.title)} />
+      <div class="hero-bottom">
+        <p set:html={text(home.hero.body)} {...htmlAttrs(home.hero.body)} />
+        <div class="button-row">
+          <a class="button button-accent" href="#lines" data-zh="查看产品线" data-en="View product lines">查看产品线</a>
+          <a class="button button-dark" href="#contact" data-zh="获取方案" data-en="Request a brief">获取方案</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="intro section-pad" aria-label="公司简介">
+    <div class="intro-mark">3</div>
+    <div>
+      <p class="section-kicker" {...attrs(home.intro.kicker)}>{text(home.intro.kicker)}</p>
+      <h2 {...attrs(home.intro.title)}>{text(home.intro.title)}</h2>
+    </div>
+  </section>
+
+  <section class="product-lines" id="lines" aria-labelledby="lines-title">
+    <div class="section-heading section-pad">
+      <p class="section-kicker" data-zh="产品线" data-en="Product Lines">产品线</p>
+      <h2 id="lines-title" data-zh="专注场景，而不是堆叠 SKU。" data-en="Built around use cases, not SKU clutter.">专注场景，而不是堆叠 SKU。</h2>
+    </div>
+
+    {home.lines.map((line) => (
+      <article class:list={["line-panel", line.dark && "line-panel-dark"]}>
+        <div class="line-copy">
+          <p class="line-index">{line.index}</p>
+          <h3 {...attrs(line.name)}>{text(line.name)}</h3>
+          <p {...attrs(line.body)}>{text(line.body)}</p>
+          <a class="text-link" href="#contact" data-zh="咨询方案" data-en="Discuss a solution">咨询方案</a>
+        </div>
+        <figure class="line-media">
+          <img src={line.image} alt={line.alt} />
+        </figure>
+      </article>
+    ))}
+  </section>
+
+  <section class="feature-experience" id="features" aria-labelledby="features-title">
+    <div class="feature-copy">
+      <div class="feature-title">
+        <h2
+          id="features-title"
+          data-i18n-html="true"
+          data-zh="KEEP<sup>®</sup><br />产品特性"
+          data-en="KEEP<sup>®</sup><br />Product<br />Traits"
+        >
+          KEEP<sup>®</sup><br />产品特性
+        </h2>
+      </div>
+      <div class="feature-intro">
+        <p
+          data-zh="KEEP 的产品不是单一湿巾，而是一套围绕接触场景建立的擦拭系统。我们关注基材强度、液体释放、肤感与包装密封，让每一次使用都稳定、直接、可预期。"
+          data-en="KEEP products are not isolated wipes but a wiping system built around real contact scenarios. We focus on substrate strength, fluid release, skin feel, and package seal integrity so each use feels stable, direct, and predictable."
+        >
+          KEEP 的产品不是单一湿巾，而是一套围绕接触场景建立的擦拭系统。我们关注基材强度、液体释放、肤感与包装密封，让每一次使用都稳定、直接、可预期。
+        </p>
+        <p
+          data-i18n-html="true"
+          data-zh="三条产品线共享同一套质量语言：<strong>洁净、温和、耐用、可追溯</strong>。"
+          data-en="The three lines share one quality language: <strong>clean, gentle, durable, traceable</strong>."
+        >
+          三条产品线共享同一套质量语言：<strong>洁净、温和、耐用、可追溯</strong>。
+        </p>
+      </div>
+    </div>
+    <div class="feature-grid" aria-label="产品特点">
+      {[
+        ["Controlled Wetting", "液体含量与释放速度可控，减少过湿、残留和无效擦拭。", "Controlled fluid load and release reduce over-wetting, residue, and ineffective wiping."],
+        ["Skin & Surface Fit", "按皮肤、设备、玻璃、金属、塑料等接触面匹配材料与配方。", "Materials and formulations are matched to skin, equipment, glass, metal, plastic, and other contact surfaces."],
+        ["Format Ready", "单片、袋装、桶装、便携与大包装方案，适配不同使用节奏。", "Single sachets, pouches, canisters, travel formats, and bulk packs suit different usage rhythms."],
+        ["Batch Traceability", "从原料到成品批次管理，为医疗、护理和工业客户降低供应风险。", "Traceability from raw material through finished batches helps reduce supply risk."]
+      ].map(([title, zh, en]) => (
+        <article class="trait-card">
+          <div class="trait-icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" focusable="false"><path d="M14 25h20M24 15v20M16 14l16 20M32 14 16 34" /></svg>
+          </div>
+          <h3>{title}</h3>
+          <p data-zh={zh} data-en={en}>{zh}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="gallery-section" id="gallery" aria-labelledby="gallery-title">
+    <div class="gallery-heading">
+      <p class="section-kicker" data-zh="场景" data-en="Use Cases">场景</p>
+      <h2 id="gallery-title" data-zh="同一套洁净逻辑，进入不同的现场。" data-en="One clean logic, adapted to different environments.">同一套洁净逻辑，进入不同的现场。</h2>
+    </div>
+    <div class="gallery" data-carousel tabindex="0">
+      <div class="gallery-track">
+        {home.gallery.map((slide, index) => (
+          <figure class:list={["gallery-slide", index === 0 && "is-active"]}>
+            <img src={slide.image} alt={slide.alt} />
+            <figcaption {...attrs(slide.caption)}>{text(slide.caption)}</figcaption>
+          </figure>
+        ))}
+      </div>
+      <div class="gallery-controls" data-aria-label-zh="轮播控制" data-aria-label-en="Carousel controls" aria-label="轮播控制">
+        <button type="button" class="gallery-arrow" data-carousel-prev data-aria-label-zh="上一张" data-aria-label-en="Previous slide" aria-label="上一张">
+          <svg viewBox="0 0 72 48" aria-hidden="true" focusable="false"><path d="M64 24H10M25 8 9 24l16 16" /></svg>
+        </button>
+        <button type="button" class="gallery-arrow gallery-arrow-next" data-carousel-next data-aria-label-zh="下一张" data-aria-label-en="Next slide" aria-label="下一张">
+          <svg viewBox="0 0 72 48" aria-hidden="true" focusable="false"><path d="M8 24h54M47 8l16 16-16 16" /></svg>
+        </button>
+        <span class="gallery-count" aria-live="polite"><b data-carousel-current>1</b>/{home.gallery.length}</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="quality" id="quality" aria-labelledby="quality-title">
+    <div class="quality-inner">
+      <p class="section-kicker" data-zh="质量体系" data-en="Quality System">质量体系</p>
+      <h2 id="quality-title" data-zh="清洁产品不需要喧哗，它需要稳定抵达标准。" data-en="Clean products do not need noise. They need to reach a stable standard.">清洁产品不需要喧哗，它需要稳定抵达标准。</h2>
+      <div class="metric-row" aria-label="质量指标">
+        <div><strong>ISO</strong><span data-zh="流程管理" data-en="Process control">流程管理</span></div>
+        <div><strong>GMP</strong><span data-zh="洁净生产" data-en="Clean production">洁净生产</span></div>
+        <div><strong>OEM</strong><span data-zh="品牌合作" data-en="Brand partnership">品牌合作</span></div>
+      </div>
+    </div>
+  </section>
+
+  <ContactForm />
+</BaseLayout>

@@ -1,0 +1,101 @@
+{
+  "meta": {
+    "title": {
+      "zh": "KEEP | 感染控制、个人护理与工业擦拭",
+      "en": "KEEP | Infection Control, Personal Care & Industrial Wiping"
+    },
+    "description": {
+      "zh": "KEEP 旗下 MEDIKEEP、CAREKEEP、INDUKEEP 为感染控制、个人护理和工业擦拭场景提供专业湿巾与擦拭解决方案。",
+      "en": "KEEP brings MEDIKEEP, CAREKEEP, and INDUKEEP to infection control, personal care, and industrial wiping environments."
+    }
+  },
+  "hero": {
+    "image": "/assets/medikeep-lab.jpg",
+    "alt": "洁净实验环境中的专业防护场景",
+    "eyebrow": {
+      "zh": "专业擦拭系统",
+      "en": "Professional Wiping Systems"
+    },
+    "title": {
+      "zh": "让洁净<br />持续运行。",
+      "en": "Clean<br />kept in<br />motion."
+    },
+    "body": {
+      "zh": "从医疗感染控制到日常护理，<br />再到高强度工业擦拭，<br />KEEP 以克制、可靠、可追溯<br />的产品体系服务关键环境。",
+      "en": "From infection control to personal care and high-duty industrial wiping, KEEP supports critical environments with disciplined, dependable, traceable product systems."
+    }
+  },
+  "intro": {
+    "kicker": {
+      "zh": "一个平台，三类现场。",
+      "en": "One platform, three fields."
+    },
+    "title": {
+      "zh": "围绕不同污染风险与接触场景，建立清晰的擦拭产品架构。",
+      "en": "A clear wiping architecture built around contamination risk and contact conditions."
+    }
+  },
+  "lines": [
+    {
+      "index": "01 / MEDIKEEP",
+      "name": "INFECTION CONTROL",
+      "dark": true,
+      "image": "/assets/wipes-pack.jpg",
+      "alt": "简洁白色护理包装与洁净产品细节",
+      "body": {
+        "zh": "面向医院、诊所、实验室和公共卫生设施的感染控制擦拭产品。强调接触面清洁、材料兼容和稳定供应。",
+        "en": "Wiping systems for hospitals, clinics, labs, and public health facilities, focused on clean contact surfaces, material compatibility, and dependable supply."
+      }
+    },
+    {
+      "index": "02 / CAREKEEP",
+      "name": "PERSONAL CARE",
+      "dark": false,
+      "image": "/assets/carekeep-hands.jpg",
+      "alt": "浅色自然光下的个人护理与手部清洁场景",
+      "body": {
+        "zh": "覆盖家庭、母婴、成人护理与外出便携场景。触感温和、使用直觉清晰，让日常护理更从容。",
+        "en": "For home, maternal, adult-care, and on-the-go routines, with gentle touch, clear usage logic, and calmer daily care."
+      }
+    },
+    {
+      "index": "03 / INDUKEEP",
+      "name": {
+        "zh": "工业擦拭",
+        "en": "INDUSTRIAL WIPING"
+      },
+      "dark": true,
+      "image": "/assets/indukeep-industrial.jpg",
+      "alt": "工业生产环境中的洁净维护与设备作业",
+      "body": {
+        "zh": "服务制造、设备维护、喷涂、电子与精密加工环境。为油污、粉尘、溶剂和高频作业提供耐用擦拭方案。",
+        "en": "For manufacturing, maintenance, coating, electronics, and precision processing, with durable wiping performance for oil, dust, solvents, and repetitive tasks."
+      }
+    }
+  ],
+  "gallery": [
+    {
+      "image": "/assets/gallery-infection.jpg",
+      "alt": "医疗与实验室感染控制应用场景",
+      "caption": "MEDIKEEP / Infection Control"
+    },
+    {
+      "image": "/assets/gallery-care.jpg",
+      "alt": "个人护理产品在浅色自然光中的使用场景",
+      "caption": "CAREKEEP / Personal Care"
+    },
+    {
+      "image": "/assets/gallery-industrial.jpg",
+      "alt": "工业制造环境中的设备维护擦拭场景",
+      "caption": {
+        "zh": "INDUKEEP / 工业擦拭",
+        "en": "INDUKEEP / Industrial Wiping"
+      }
+    },
+    {
+      "image": "/assets/gallery-product.jpg",
+      "alt": "专业擦拭产品包装与洁净产品细节",
+      "caption": "KEEP / Product Formats"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "../components/PageHero.astro";
+import about from "../data/site/about.json";
+---
+
+<BaseLayout title={about.meta.title} description={about.meta.description}>
+  <PageHero eyebrow={about.hero.eyebrow} title={about.hero.title} body={about.hero.body} image={about.hero.image} alt={about.hero.alt} light={false} />
+
+  <section class="split-section">
+    <div>
+      <p class="section-kicker" data-zh="我们的逻辑" data-en="Our logic">我们的逻辑</p>
+      <h2 data-zh="不从单品开始，而从使用现场开始。" data-en="We start with the environment, not with a standalone SKU.">不从单品开始，而从使用现场开始。</h2>
+    </div>
+    <div>
+      <p data-zh="医疗环境关注感染风险和接触面兼容，个人护理关注肤感和安全边界，工业场景关注强度、吸附和耐溶剂能力。KEEP 以这三类需求为产品架构的起点。" data-en="Medical environments care about infection risk and surface compatibility, personal care focuses on skin feel and safety margins, and industrial settings care about strength, absorbency, and solvent resistance.">
+        医疗环境关注感染风险和接触面兼容，个人护理关注肤感和安全边界，工业场景关注强度、吸附和耐溶剂能力。KEEP 以这三类需求为产品架构的起点。
+      </p>
+      <p data-zh="我们的工作方式很直接：确认污染物、接触面、使用频次、包装节奏和合规要求，再反推基材、配方、尺寸和交付方式。" data-en="Our workflow is direct: define contaminant, contact surface, usage frequency, pack rhythm, and compliance needs first, then back into substrate, formula, size, and delivery model.">
+        我们的工作方式很直接：确认污染物、接触面、使用频次、包装节奏和合规要求，再反推基材、配方、尺寸和交付方式。
+      </p>
+    </div>
+  </section>
+
+  <section class="split-section">
+    <figure class="about-image">
+      <img src="/assets/gallery-infection.jpg" alt="专业医疗清洁与感染控制作业现场" />
+    </figure>
+    <div>
+      <p class="section-kicker" data-zh="我们坚持什么" data-en="What we keep">我们坚持什么</p>
+      <h2 data-zh="克制、清晰、可持续复制。" data-en="Disciplined, clear, repeatable.">克制、清晰、可持续复制。</h2>
+      <p data-zh="KEEP 的视觉语言和产品语言保持一致：少做装饰，多做控制。我们更关心一片擦拭材料是否在真实现场里稳定工作，而不是只在货架上显眼。" data-en="KEEP keeps its visual language close to its product logic: less decoration, more control. We care more about stable performance in the field than shelf drama.">
+        KEEP 的视觉语言和产品语言保持一致：少做装饰，多做控制。我们更关心一片擦拭材料是否在真实现场里稳定工作，而不是只在货架上显眼。
+      </p>
+    </div>
+  </section>
+
+  <section class="value-band">
+    <p class="section-kicker" data-zh="公司价值" data-en="Company values">公司价值</p>
+    <h2 data-zh="把洁净交付给每一个需要确定性的环境。" data-en="Deliver clean performance to environments that depend on certainty.">把洁净交付给每一个需要确定性的环境。</h2>
+    <div class="value-grid">
+      <div class="value-item"><strong>01</strong><p data-zh="以接触场景定义产品，不让客户在复杂 SKU 中反复试错。" data-en="Define products through contact scenarios so teams do not keep guessing through crowded SKU lists.">以接触场景定义产品，不让客户在复杂 SKU 中反复试错。</p></div>
+      <div class="value-item"><strong>02</strong><p data-zh="围绕配方、材料、包装和批次建立可复用的质量体系。" data-en="Build reusable quality systems around formula, material, packaging, and batch traceability.">围绕配方、材料、包装和批次建立可复用的质量体系。</p></div>
+      <div class="value-item"><strong>03</strong><p data-zh="支持 OEM、定制规格和跨区域交付，让合作更直接。" data-en="Support OEM, custom formats, and cross-region delivery to make partnership more direct.">支持 OEM、定制规格和跨区域交付，让合作更直接。</p></div>
+    </div>
+  </section>
+</BaseLayout>

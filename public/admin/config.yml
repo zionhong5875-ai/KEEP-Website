@@ -1,0 +1,191 @@
+backend:
+  name: github
+  repo: OWNER/KEEP-site
+  branch: main
+
+local_backend: true
+media_folder: public/assets/uploads
+public_folder: /assets/uploads
+
+i18n_text: &i18n_text
+  widget: object
+  fields:
+    - { label: 中文, name: zh, widget: string }
+    - { label: English, name: en, widget: string }
+
+i18n_markdown: &i18n_markdown
+  widget: object
+  fields:
+    - { label: 中文, name: zh, widget: markdown, minimal: true }
+    - { label: English, name: en, widget: markdown, minimal: true }
+
+collections:
+  - name: site
+    label: 官网内容
+    files:
+      - label: 首页
+        name: home
+        file: src/data/site/home.json
+        format: json
+        fields:
+          - label: SEO
+            name: meta
+            widget: object
+            fields:
+              - { label: 页面标题, name: title, <<: *i18n_text }
+              - { label: 页面描述, name: description, <<: *i18n_text }
+          - label: 首屏 Banner
+            name: hero
+            widget: object
+            fields:
+              - { label: 背景图, name: image, widget: image }
+              - { label: 图片描述 Alt, name: alt, widget: string }
+              - { label: 小标题, name: eyebrow, <<: *i18n_text }
+              - { label: 大标题, name: title, <<: *i18n_markdown }
+              - { label: 说明文字, name: body, <<: *i18n_markdown }
+          - label: 首页简介
+            name: intro
+            widget: object
+            fields:
+              - { label: 小标题, name: kicker, <<: *i18n_text }
+              - { label: 标题, name: title, <<: *i18n_text }
+          - label: 产品线模块
+            name: lines
+            widget: list
+            summary: "{{fields.index}} {{fields.name}}"
+            fields:
+              - { label: 序号, name: index, widget: string }
+              - { label: 产品线名称, name: name, widget: string }
+              - { label: 深色模块, name: dark, widget: boolean, required: false }
+              - { label: 图片, name: image, widget: image }
+              - { label: 图片描述 Alt, name: alt, widget: string }
+              - { label: 说明文字, name: body, <<: *i18n_text }
+          - label: 轮播场景
+            name: gallery
+            widget: list
+            summary: "{{fields.caption}}"
+            fields:
+              - { label: 图片, name: image, widget: image }
+              - { label: 图片描述 Alt, name: alt, widget: string }
+              - { label: 标题, name: caption, widget: string }
+
+      - label: 产品页
+        name: products
+        file: src/data/site/products.json
+        format: json
+        fields:
+          - label: SEO
+            name: meta
+            widget: object
+            fields:
+              - { label: 页面标题, name: title, <<: *i18n_text }
+              - { label: 页面描述, name: description, <<: *i18n_text }
+          - label: 首屏
+            name: hero
+            widget: object
+            fields:
+              - { label: 小标题, name: eyebrow, widget: string }
+              - { label: 大标题, name: title, <<: *i18n_markdown }
+              - { label: 说明文字, name: body, <<: *i18n_text }
+          - label: 产品线与 SKU
+            name: lines
+            widget: list
+            summary: "{{fields.index}} {{fields.name}}"
+            fields:
+              - { label: 序号, name: index, widget: string }
+              - { label: 产品线名称, name: name, widget: string }
+              - { label: 单 SKU 版式, name: single, widget: boolean, required: false }
+              - label: SKU
+                name: skus
+                widget: list
+                summary: "{{fields.code}} {{fields.title}}"
+                fields:
+                  - { label: SKU 编号, name: code, widget: string }
+                  - { label: SKU 名称, name: title, widget: string }
+                  - { label: 图片, name: image, widget: image }
+                  - { label: 图片描述 Alt, name: alt, widget: string }
+                  - { label: 说明文字, name: body, <<: *i18n_text }
+                  - label: 规格参数
+                    name: specs
+                    widget: list
+                    fields:
+                      - { label: 参数名, name: label, widget: string }
+                      - { label: 参数值, name: value, widget: string }
+
+      - label: 关于我们
+        name: about
+        file: src/data/site/about.json
+        format: json
+        fields:
+          - label: SEO
+            name: meta
+            widget: object
+            fields:
+              - { label: 页面标题, name: title, <<: *i18n_text }
+              - { label: 页面描述, name: description, <<: *i18n_text }
+          - label: 首屏
+            name: hero
+            widget: object
+            fields:
+              - { label: 背景图, name: image, widget: image }
+              - { label: 图片描述 Alt, name: alt, widget: string }
+              - { label: 小标题, name: eyebrow, widget: string }
+              - { label: 大标题, name: title, <<: *i18n_markdown }
+              - { label: 说明文字, name: body, <<: *i18n_text }
+
+      - label: 博客与资源
+        name: resources
+        file: src/data/site/resources.json
+        format: json
+        fields:
+          - label: SEO
+            name: meta
+            widget: object
+            fields:
+              - { label: 页面标题, name: title, <<: *i18n_text }
+              - { label: 页面描述, name: description, <<: *i18n_text }
+          - label: 首屏
+            name: hero
+            widget: object
+            fields:
+              - { label: 大标题, name: title, <<: *i18n_markdown }
+              - { label: 说明文字, name: body, <<: *i18n_text }
+          - label: 新闻
+            name: news
+            widget: list
+            summary: "{{fields.date}} {{fields.title.zh}}"
+            fields:
+              - { label: 日期/分类, name: date, widget: string }
+              - { label: 标题, name: title, <<: *i18n_text }
+              - { label: 摘要, name: body, <<: *i18n_text }
+              - { label: 图片, name: image, widget: image }
+              - { label: 图片描述 Alt, name: alt, widget: string }
+          - label: 博客
+            name: blogs
+            widget: list
+            summary: "{{fields.category}} {{fields.title.zh}}"
+            fields:
+              - { label: 分类, name: category, widget: string }
+              - { label: 标题, name: title, <<: *i18n_text }
+              - { label: 摘要, name: body, <<: *i18n_text }
+              - { label: 图片, name: image, widget: image }
+              - { label: 图片描述 Alt, name: alt, widget: string }
+          - label: 数字资源
+            name: downloads
+            widget: list
+            summary: "{{fields.type}} {{fields.title}}"
+            fields:
+              - { label: 类型, name: type, widget: string }
+              - { label: 标签, name: label, widget: string }
+              - { label: 标题, name: title, widget: string }
+              - { label: 说明, name: body, <<: *i18n_text }
+
+      - label: 合规页面
+        name: legal
+        file: src/data/legal/policies.json
+        format: json
+        fields:
+          - { label: 隐私政策, name: privacy, widget: object }
+          - { label: Cookie 政策, name: cookies, widget: object }
+          - { label: 免责声明, name: disclaimer, widget: object }
+          - { label: 版权信息, name: copyright, widget: object }

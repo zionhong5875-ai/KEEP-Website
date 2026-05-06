@@ -1,0 +1,88 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "../components/PageHero.astro";
+import resources from "../data/site/resources.json";
+import { text, attrs } from "../utils/i18n";
+---
+
+<BaseLayout title={resources.meta.title} description={resources.meta.description}>
+  <PageHero eyebrow="Resources" title={resources.hero.title} body={resources.hero.body} />
+
+  <section class="resource-section" aria-labelledby="news-title">
+    <div class="resource-heading">
+      <p class="section-kicker">News</p>
+      <div>
+        <h2 id="news-title" data-zh="新闻" data-en="News">新闻</h2>
+        <p data-zh="关于产品线、产能、质量体系和行业合作的最新更新。" data-en="Updates on product lines, capacity, quality systems, and industry collaboration.">关于产品线、产能、质量体系和行业合作的最新更新。</p>
+      </div>
+    </div>
+    <div class="resource-scroll" data-scroll-region="x" tabindex="0" aria-label="新闻横向滚动列表">
+      <div class="article-grid">
+        {resources.news.map((item) => (
+          <article class="article-card">
+            <figure><img src={item.image} alt={item.alt} /></figure>
+            <div class="article-card-copy">
+              <span>{item.date}</span>
+              <h3 {...attrs(item.title)}>{text(item.title)}</h3>
+              <p {...attrs(item.body)}>{text(item.body)}</p>
+              <a href="#" data-zh="阅读更新" data-en="Read update">阅读更新</a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="resource-section resource-section-dark" aria-labelledby="blog-title">
+    <div class="resource-heading">
+      <p class="section-kicker">Blog</p>
+      <div>
+        <h2 id="blog-title" data-zh="博客" data-en="Blog">博客</h2>
+        <p data-zh="面向采购、产品经理、护理机构和工业现场的擦拭产品知识。" data-en="Wiping product knowledge for procurement teams, product managers, care operators, and industrial sites.">面向采购、产品经理、护理机构和工业现场的擦拭产品知识。</p>
+      </div>
+    </div>
+    <div class="resource-scroll resource-scroll-dark" data-scroll-region="x" tabindex="0" aria-label="博客横向滚动列表">
+      <div class="article-grid">
+        {resources.blogs.map((item) => (
+          <article class="article-card">
+            <figure><img src={item.image} alt={item.alt} /></figure>
+            <div class="article-card-copy">
+              <span>{item.category}</span>
+              <h3 {...attrs(item.title)}>{text(item.title)}</h3>
+              <p {...attrs(item.body)}>{text(item.body)}</p>
+              <a href="#" data-zh="阅读文章" data-en="Read article">阅读文章</a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="resource-section" aria-labelledby="digital-title">
+    <div class="resource-heading">
+      <p class="section-kicker">Digital Resources</p>
+      <div>
+        <h2 id="digital-title" data-zh="数字资源" data-en="Digital Resources">数字资源</h2>
+        <p data-zh="产品说明书、SDS、安全使用指南和选型表。当前可后续接入真实下载链接。" data-en="Product manuals, SDS files, safe-use guides, and selection sheets. These can later connect to real download links.">产品说明书、SDS、安全使用指南和选型表。当前可后续接入真实下载链接。</p>
+      </div>
+    </div>
+    <div class="download-grid">
+      <figure class="download-feature"><img src="/assets/resource-manuals.jpg" alt="产品说明书和数字资料文件" /></figure>
+      <div class="download-scroll" data-scroll-region="y" tabindex="0" aria-label="数字资源纵向滚动列表">
+        <div class="download-list">
+          {resources.downloads.map((item) => (
+            <article class="resource-download">
+              <div class="resource-file">{item.type}</div>
+              <div>
+                <span>{item.label}</span>
+                <h3>{item.title}</h3>
+                <p {...attrs(item.body)}>{text(item.body)}</p>
+                <a href="#" data-zh="查看资料" data-en="Open resource">查看资料</a>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

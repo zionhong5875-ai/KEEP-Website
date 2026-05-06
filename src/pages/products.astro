@@ -1,0 +1,53 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "../components/PageHero.astro";
+import products from "../data/site/products.json";
+import { text, attrs } from "../utils/i18n";
+
+const specLabel = (spec) => Array.isArray(spec) ? spec[0] : spec.label;
+const specValue = (spec) => Array.isArray(spec) ? spec[1] : spec.value;
+---
+
+<BaseLayout title={products.meta.title} description={products.meta.description}>
+  <PageHero eyebrow={products.hero.eyebrow} title={products.hero.title} body={products.hero.body} />
+
+  <section class="specs sku-section" id="sku" aria-labelledby="specs-title">
+    <div class="specs-heading">
+      <p class="section-kicker" data-zh="规格指南" data-en="Specification guide">规格指南</p>
+      <div>
+        <h2 id="specs-title" data-zh="按 SKU 进入真实使用场景。" data-en="Enter the real environment through each SKU.">按 SKU 进入真实使用场景。</h2>
+        <p data-zh="每个 SKU 都有明确场景、包装节奏和规格边界，可根据目标市场、法规要求和终端作业方式继续定制。" data-en="Each SKU has a clear environment, pack rhythm, and specification boundary, and can be extended for market, regulatory, and end-use requirements.">
+          每个 SKU 都有明确场景、包装节奏和规格边界，可根据目标市场、法规要求和终端作业方式继续定制。
+        </p>
+      </div>
+    </div>
+
+    {products.lines.map((line) => (
+      <div class="sku-line">
+        <div class="sku-line-head">
+          <p class="line-index">{line.index}</p>
+          <h3 {...attrs(line.name)}>{text(line.name)}</h3>
+        </div>
+        <div class="sku-scroll" data-scroll-region="x" tabindex="0" aria-label={`${line.index} SKU 横向滚动列表`}>
+          <div class:list={["sku-grid", line.single && "sku-grid-single"]}>
+            {line.skus.map((sku) => (
+              <article class:list={["sku-card", line.single && "sku-card-wide"]}>
+                <figure><img src={sku.image} alt={sku.alt} /></figure>
+                <div class="sku-card-copy">
+                  <span>{sku.code}</span>
+                  <h4>{sku.title}</h4>
+                  <p {...attrs(sku.body)}>{text(sku.body)}</p>
+                  <dl>
+                    {sku.specs.map((spec) => (
+                      <div><dt>{specLabel(spec)}</dt><dd>{specValue(spec)}</dd></div>
+                    ))}
+                  </dl>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </div>
+    ))}
+  </section>
+</BaseLayout>

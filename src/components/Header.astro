@@ -1,0 +1,29 @@
+---
+const nav = [
+  { href: "/", zh: "首页", en: "Home" },
+  { href: "/products/", zh: "产品", en: "Products" },
+  { href: "/about/", zh: "关于我们", en: "About" },
+  { href: "/#contact", zh: "联系", en: "Contact" },
+  { href: "/resources/", zh: "博客与资源", en: "Blog & Resources" }
+];
+---
+
+<header class="site-header" data-header>
+  <a class="brand" href="/" data-aria-label-zh="KEEP 首页" data-aria-label-en="KEEP home" aria-label="KEEP 首页">KEEP</a>
+
+  <div class="header-tools">
+    <button class="menu-toggle" type="button" data-menu-toggle data-aria-label-zh="打开导航" data-aria-label-en="Open navigation" aria-label="打开导航" aria-expanded="false">
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <nav class="site-nav" data-nav>
+    {nav.map((item) => <a href={item.href} data-zh={item.zh} data-en={item.en}>{item.zh}</a>)}
+  </nav>
+</header>
+
+<div class="lang-switch lang-switch-floating" role="group" data-aria-label-zh="语言切换" data-aria-label-en="Language switcher" aria-label="语言切换">
+  <button class="lang-switch__button is-active" type="button" data-lang-button="zh" aria-pressed="true">中</button>
+  <button class="lang-switch__button" type="button" data-lang-button="en" aria-pressed="false">EN</button>
+</div>

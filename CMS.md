@@ -1,0 +1,67 @@
+# KEEP CMS Setup
+
+This Astro site is CMS-ready through Decap CMS. The editing entry is `/admin/`.
+
+## What editors can change
+
+- Homepage hero, intro, product lines, and gallery
+- About page hero copy and image
+- Product lines, SKU cards, product images, and specifications
+- News, blog cards, and digital resource cards
+- Legal policy text
+
+## Local editing
+
+Decap CMS supports local editing during development:
+
+```bash
+npm run dev
+```
+
+Then open:
+
+```text
+http://localhost:4321/admin/
+```
+
+For full local CMS editing, run Decap's local backend in another terminal:
+
+```bash
+npx decap-server
+```
+
+## GitHub editing
+
+Production CMS editing needs a GitHub repository and a Decap/GitHub OAuth setup. Update `public/admin/config.yml`:
+
+```yaml
+backend:
+  name: github
+  repo: YOUR_ORG/YOUR_REPO
+  branch: main
+```
+
+For non-technical staff, deploy the site and give them access to:
+
+```text
+https://YOUR_DOMAIN/admin/
+```
+
+They can update JSON-backed content under `src/data/` and upload media without touching code.
+
+## Editor workflow
+
+1. Open `/admin/`.
+2. Log in with the invited GitHub account.
+3. Choose `官网内容`.
+4. Edit `首页`, `产品页`, `关于我们`, `博客与资源`, or `合规页面`.
+5. To replace an image, click the image field and upload/select a file.
+6. Click `Publish`. The CMS commits the change to GitHub.
+7. Vercel rebuilds the website automatically after the commit.
+
+## Image rules for editors
+
+- Use horizontal images for hero and large modules.
+- Prefer 2000px wide JPG/WebP images.
+- Always fill in the Alt text field.
+- Avoid screenshots, watermarked images, and low-resolution product photos.

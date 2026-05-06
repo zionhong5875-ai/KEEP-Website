@@ -1,0 +1,37 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import policies from "../data/legal/policies.json";
+import { text, attrs } from "../utils/i18n";
+
+export const prerender = true;
+
+export function getStaticPaths() {
+  return Object.keys(policies).map((policy) => ({ params: { policy } }));
+}
+
+const policy = policies[Astro.params.policy];
+---
+
+<BaseLayout title={policy.title} description={policy.title}>
+  <section class="policy-hero">
+    <p class="section-kicker">Legal</p>
+    <h1 {...attrs(policy.title)}>{text(policy.title)}</h1>
+    <p data-zh="以下文本为官网 prototype 版本，用于建立上线前的合规框架。" data-en="The following text is drafted for the prototype website to establish a practical compliance framework before launch.">
+      以下文本为官网 prototype 版本，用于建立上线前的合规框架。
+    </p>
+  </section>
+  <section class="policy-layout">
+    <aside class="policy-side">
+      <p data-zh="最近更新" data-en="Last updated">最近更新</p>
+      <strong>2026-05-06</strong>
+    </aside>
+    <div class="policy-content">
+      {policy.body.map((block) => (
+        <article class="policy-block">
+          <h2 {...attrs(block.heading)}>{text(block.heading)}</h2>
+          <p {...attrs(block.text)}>{text(block.text)}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,152 @@
+{
+  "meta": {
+    "title": {
+      "zh": "产品 | KEEP",
+      "en": "Products | KEEP"
+    },
+    "description": {
+      "zh": "浏览 KEEP 旗下 MEDIKEEP、CAREKEEP、INDUKEEP 擦拭产品规格与应用场景。",
+      "en": "Browse specifications and use cases across the MEDIKEEP, CAREKEEP, and INDUKEEP wiping lines."
+    }
+  },
+  "hero": {
+    "eyebrow": "Products",
+    "title": {
+      "zh": "三条产品线。<br />一套洁净系统。",
+      "en": "Three lines.<br />One clean<br />system."
+    },
+    "body": {
+      "zh": "规格可以变化，但产品逻辑保持一致：明确场景、稳定擦拭、可靠包装、批次可追溯。",
+      "en": "Formats can change, but the logic stays constant: clear use case, stable wiping, reliable packaging, and batch traceability."
+    }
+  },
+  "lines": [
+    {
+      "index": "01 / MEDIKEEP",
+      "name": "INFECTION CONTROL",
+      "skus": [
+        {
+          "code": "MEDIKEEP 01",
+          "title": "Alcohol Disinfectant Wipes",
+          "image": "/assets/sku-alcohol-wipes.jpg",
+          "alt": "Alcohol Disinfectant Wipes 产品场景",
+          "body": {
+            "zh": "适用于高频接触表面、设备外壳和快速挥发清洁需求。",
+            "en": "Built for high-touch surfaces, equipment shells, and fast-evaporation cleaning."
+          },
+          "specs": [
+            ["规格", "150 x 200 mm / 80 wipes canister"],
+            ["基材", "低掉屑水刺无纺布"],
+            ["配方", "70% alcohol fast-dry"]
+          ]
+        },
+        {
+          "code": "MEDIKEEP 02",
+          "title": "Clinical Disinfectant Wipes",
+          "image": "/assets/sku-clinical-wipes.jpg",
+          "alt": "Clinical Disinfectant Wipes 产品场景",
+          "body": {
+            "zh": "为诊疗空间、公共区域和非侵入式设备表面提供稳定消毒擦拭。",
+            "en": "Designed for treatment zones, public areas, and non-invasive equipment surfaces with stable disinfecting performance."
+          },
+          "specs": [
+            ["规格", "180 x 200 mm / 100 wipes soft pack"],
+            ["基材", "复合高吸附无纺布"],
+            ["配方", "QAC low-residue system"]
+          ]
+        },
+        {
+          "code": "MEDIKEEP 03",
+          "title": "Chlorhexidine Wash Cloths",
+          "image": "/assets/sku-chlorhexidine-cloths.jpg",
+          "alt": "Chlorhexidine Wash Cloths 产品场景",
+          "body": {
+            "zh": "面向临床辅助清洁和术前准备流程的柔软大尺寸擦拭布。",
+            "en": "Soft large-format cloths for clinical support cleaning and pre-op preparation routines."
+          },
+          "specs": [
+            ["规格", "200 x 300 mm / single pouch"],
+            ["基材", "柔感加厚水刺布"],
+            ["配方", "CHG wash cloth solution"]
+          ]
+        }
+      ]
+    },
+    {
+      "index": "02 / CAREKEEP",
+      "name": "PERSONAL CARE",
+      "skus": [
+        {
+          "code": "CAREKEEP 01",
+          "title": "Rinse-free Bath Wipes",
+          "image": "/assets/sku-bath-wipes.jpg",
+          "alt": "Rinse-free Bath Wipes 产品场景",
+          "body": {
+            "zh": "为卧床护理、旅行和日常身体清洁提供免冲洗护理体验。",
+            "en": "A no-rinse body-care format for bedside care, travel, and everyday cleansing."
+          },
+          "specs": [
+            ["规格", "200 x 220 mm / 40 wipes flip-top pack"],
+            ["基材", "柔感可降解混纺布"],
+            ["配方", "pH-balanced no-rinse lotion"]
+          ]
+        },
+        {
+          "code": "CAREKEEP 02",
+          "title": "Rinse-free Bath Gloves",
+          "image": "/assets/sku-bath-gloves.jpg",
+          "alt": "Rinse-free Bath Gloves 产品场景",
+          "body": {
+            "zh": "手套型结构提升抓握和覆盖面积，适合护理人员高效操作。",
+            "en": "A glove format improves grip and coverage for faster caregiver handling."
+          },
+          "specs": [
+            ["规格", "250 x 160 mm / 8 gloves pack"],
+            ["基材", "双层柔感无纺布"],
+            ["配方", "rinse-free cleansing lotion"]
+          ]
+        },
+        {
+          "code": "CAREKEEP 03",
+          "title": "Continence Care Wipes",
+          "image": "/assets/sku-continence-wipes.jpg",
+          "alt": "Continence Care Wipes 产品场景",
+          "body": {
+            "zh": "针对成人失禁护理，兼顾清洁、舒缓和皮肤屏障保护。",
+            "en": "For continence care routines that need cleansing, soothing, and skin barrier support together."
+          },
+          "specs": [
+            ["规格", "200 x 300 mm / 80 wipes soft pack"],
+            ["基材", "加厚亲肤水刺布"],
+            ["配方", "aloe + barrier-care formula"]
+          ]
+        }
+      ]
+    },
+    {
+      "index": "03 / INDUKEEP",
+      "name": {
+        "zh": "工业擦拭",
+        "en": "INDUSTRIAL WIPING"
+      },
+      "single": true,
+      "skus": [
+        {
+          "code": "INDUKEEP 01",
+          "title": "Heavy Duty Oil Removal Wipes",
+          "image": "/assets/sku-oil-removal.jpg",
+          "alt": "Heavy Duty Oil Removal Wipes 产品场景",
+          "body": {
+            "zh": "面向机械维修、设备保养、喷涂前处理和油污重清洁的高强度工业擦拭产品。",
+            "en": "A heavy-duty wipe for machinery repair, maintenance, pre-coating prep, and severe oil removal."
+          },
+          "specs": [
+            ["规格", "320 x 380 mm / 500 wipes bulk pack"],
+            ["基材", "木浆复合增强低尘工业布"],
+            ["性能", "high oil absorbency / solvent resistant / tear resistant"]
+          ]
+        }
+      ]
+    }
+  ]
+}

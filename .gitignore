@@ -1,6 +1,13 @@
 .DS_Store
+node_modules/
+dist/
+.astro/
+.vercel/
+*.zip
+assets/preview-astro*.png
 
 # Local video/prototype workspace artifacts
+keep-brand-video/
 keep-brand-video/.DS_Store
 keep-brand-video/.venv*/
 keep-brand-video/assets/video-source/

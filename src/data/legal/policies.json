@@ -1,0 +1,84 @@
+{
+  "privacy": {
+    "title": {
+      "zh": "隐私政策",
+      "en": "Privacy Policy"
+    },
+    "body": [
+      {
+        "heading": {
+          "zh": "1. 我们收集哪些信息",
+          "en": "1. What information we collect"
+        },
+        "text": {
+          "zh": "当您通过联系表单、邮件或下载资料与 KEEP 互动时，我们可能收集姓名、邮箱、公司名称、需求描述、下载记录以及基础访问日志信息。",
+          "en": "When you contact KEEP through forms, email, or document downloads, we may collect your name, email address, company name, request details, download records, and basic access-log information."
+        }
+      },
+      {
+        "heading": {
+          "zh": "2. 我们如何使用这些信息",
+          "en": "2. How we use the information"
+        },
+        "text": {
+          "zh": "这些信息主要用于回复询盘、提供产品资料、安排样品或商务沟通、改进官网内容结构，以及评估哪些资源最有帮助。",
+          "en": "We use this information to respond to inquiries, provide product information, arrange sampling or commercial communication, improve the site structure, and understand which resources are most useful."
+        }
+      }
+    ]
+  },
+  "cookies": {
+    "title": {
+      "zh": "Cookie 政策",
+      "en": "Cookie Policy"
+    },
+    "body": [
+      {
+        "heading": {
+          "zh": "1. 什么是 Cookie",
+          "en": "1. What cookies are"
+        },
+        "text": {
+          "zh": "Cookie 是网站在您的设备上存储的小型文本文件，用于记录基础偏好、会话状态和分析信息。",
+          "en": "Cookies are small text files stored on your device to remember basic preferences, session state, and analytics-related information."
+        }
+      }
+    ]
+  },
+  "disclaimer": {
+    "title": {
+      "zh": "免责声明",
+      "en": "Disclaimer"
+    },
+    "body": [
+      {
+        "heading": {
+          "zh": "1. 信息用途",
+          "en": "1. Informational use"
+        },
+        "text": {
+          "zh": "本网站中的产品介绍、规格、应用说明和资源文件目前主要用于品牌展示、概念说明和初步商务沟通，不构成最终技术承诺或法律承诺。",
+          "en": "The product descriptions, specifications, application notes, and resources on this website are primarily for brand presentation, concept framing, and initial commercial communication."
+        }
+      }
+    ]
+  },
+  "copyright": {
+    "title": {
+      "zh": "版权信息",
+      "en": "Copyright"
+    },
+    "body": [
+      {
+        "heading": {
+          "zh": "1. 网站内容归属",
+          "en": "1. Ownership of website content"
+        },
+        "text": {
+          "zh": "除另有说明外，本网站中的品牌名称、页面文案、结构设计、界面排版、图形元素和原创资料均归 KEEP 或其授权方所有。",
+          "en": "Unless otherwise stated, the brand names, page copy, structural layout, interface design, graphic elements, and original materials on this website belong to KEEP or its licensors."
+        }
+      }
+    ]
+  }
+}

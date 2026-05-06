@@ -1,0 +1,36 @@
+---
+const nav = [
+  { href: "/", zh: "首页", en: "Home" },
+  { href: "/products/", zh: "产品", en: "Products" },
+  { href: "/about/", zh: "关于我们", en: "About" },
+  { href: "/#contact", zh: "联系", en: "Contact" },
+  { href: "/resources/", zh: "博客与资源", en: "Blog & Resources" }
+];
+
+const legal = [
+  { href: "/privacy/", zh: "隐私政策", en: "Privacy Policy" },
+  { href: "/cookies/", zh: "Cookie 政策", en: "Cookie Policy" },
+  { href: "/disclaimer/", zh: "免责声明", en: "Disclaimer" },
+  { href: "/copyright/", zh: "版权信息", en: "Copyright" }
+];
+---
+
+<footer class="site-footer">
+  <div class="footer-main">
+    <div>
+      <a class="footer-brand" href="/">KEEP</a>
+      <p>MEDIKEEP · CAREKEEP · INDUKEEP</p>
+    </div>
+    <nav>
+      {nav.map((item) => <a href={item.href} data-zh={item.zh} data-en={item.en}>{item.zh}</a>)}
+    </nav>
+  </div>
+
+  <div class="footer-legal">
+    {legal.map((item) => <a href={item.href} data-zh={item.zh} data-en={item.en}>{item.zh}</a>)}
+  </div>
+
+  <p class="source-note" data-zh="Prototype 站点使用公开图片素材；联系表单当前已迁移为 Astro API 接口。" data-en="This prototype uses publicly sourced photography; the contact form has been migrated to an Astro API endpoint.">
+    Prototype 站点使用公开图片素材；联系表单当前已迁移为 Astro API 接口。
+  </p>
+</footer>
