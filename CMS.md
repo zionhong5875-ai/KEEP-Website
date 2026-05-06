@@ -49,6 +49,41 @@ https://YOUR_DOMAIN/admin/
 
 They can update JSON-backed content under `src/data/` and upload media without touching code.
 
+## Production login
+
+The CMS uses GitHub OAuth on Vercel:
+
+```yaml
+site_domain: keep-website.vercel.app
+base_url: https://keep-website.vercel.app
+auth_endpoint: oauth
+```
+
+If the final Vercel URL is different, update these two values in `public/admin/config.yml` and redeploy:
+
+- `site_domain`
+- `base_url`
+
+Create a GitHub OAuth App at:
+
+```text
+https://github.com/settings/applications/new
+```
+
+Use:
+
+```text
+Homepage URL: https://keep-website.vercel.app
+Authorization callback URL: https://keep-website.vercel.app/oauth/callback
+```
+
+Then put the Client ID and Client Secret into Vercel environment variables:
+
+```text
+OAUTH_GITHUB_CLIENT_ID
+OAUTH_GITHUB_CLIENT_SECRET
+```
+
 ## Editor workflow
 
 1. Open `/admin/`.

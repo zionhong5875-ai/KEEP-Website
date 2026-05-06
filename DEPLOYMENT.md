@@ -59,13 +59,30 @@ Create these fields in the target table:
 
 ## CMS Production Requirements
 
-Decap CMS needs a GitHub repository and OAuth login. After the repo exists, update:
+Decap CMS needs a GitHub repository and OAuth login. The repo is configured as:
 
 ```yaml
 backend:
   name: github
-  repo: YOUR_ORG/YOUR_REPO
+  repo: zionhong5875-ai/KEEP-Website
   branch: main
+  site_domain: keep-website.vercel.app
+  base_url: https://keep-website.vercel.app
+  auth_endpoint: oauth
 ```
 
 Then invite editors to the GitHub repository with limited write access. Editors use `/admin/` to change copy, images, SKUs, news, blogs, and resources.
+
+Create a GitHub OAuth App:
+
+```text
+Homepage URL: https://keep-website.vercel.app
+Authorization callback URL: https://keep-website.vercel.app/oauth/callback
+```
+
+Add these Vercel environment variables:
+
+```text
+OAUTH_GITHUB_CLIENT_ID=
+OAUTH_GITHUB_CLIENT_SECRET=
+```
