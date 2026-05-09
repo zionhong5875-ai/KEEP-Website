@@ -22,6 +22,18 @@ i18n_markdown: &i18n_markdown
     - { label: 中文, name: zh, widget: markdown, minimal: true }
     - { label: English, name: en, widget: markdown, minimal: true }
 
+policy_fields: &policy_fields
+  widget: object
+  fields:
+    - { label: 标题, name: title, <<: *i18n_text }
+    - label: 正文段落
+      name: body
+      widget: list
+      summary: "{{fields.heading.zh}}"
+      fields:
+        - { label: 小标题, name: heading, <<: *i18n_text }
+        - { label: 内容, name: text, <<: *i18n_markdown }
+
 collections:
   - name: site
     label: 官网内容
@@ -55,10 +67,10 @@ collections:
           - label: 产品线模块
             name: lines
             widget: list
-            summary: "{{fields.index}} {{fields.name}}"
+            summary: "{{fields.index}} {{fields.name.zh}}"
             fields:
               - { label: 序号, name: index, widget: string }
-              - { label: 产品线名称, name: name, widget: string }
+              - { label: 产品线名称, name: name, <<: *i18n_text }
               - { label: 深色模块, name: dark, widget: boolean, required: false }
               - { label: 图片, name: image, widget: image }
               - { label: 图片描述 Alt, name: alt, widget: string }
@@ -70,7 +82,7 @@ collections:
             fields:
               - { label: 图片, name: image, widget: image }
               - { label: 图片描述 Alt, name: alt, widget: string }
-              - { label: 标题, name: caption, widget: string }
+              - { label: 标题, name: caption, <<: *i18n_text }
 
       - label: 产品页
         name: products
@@ -87,16 +99,16 @@ collections:
             name: hero
             widget: object
             fields:
-              - { label: 小标题, name: eyebrow, widget: string }
+              - { label: 小标题, name: eyebrow, <<: *i18n_text }
               - { label: 大标题, name: title, <<: *i18n_markdown }
               - { label: 说明文字, name: body, <<: *i18n_text }
           - label: 产品线与 SKU
             name: lines
             widget: list
-            summary: "{{fields.index}} {{fields.name}}"
+            summary: "{{fields.index}} {{fields.name.zh}}"
             fields:
               - { label: 序号, name: index, widget: string }
-              - { label: 产品线名称, name: name, widget: string }
+              - { label: 产品线名称, name: name, <<: *i18n_text }
               - { label: 单 SKU 版式, name: single, widget: boolean, required: false }
               - label: SKU
                 name: skus
@@ -132,7 +144,7 @@ collections:
             fields:
               - { label: 背景图, name: image, widget: image }
               - { label: 图片描述 Alt, name: alt, widget: string }
-              - { label: 小标题, name: eyebrow, widget: string }
+              - { label: 小标题, name: eyebrow, <<: *i18n_text }
               - { label: 大标题, name: title, <<: *i18n_markdown }
               - { label: 说明文字, name: body, <<: *i18n_text }
 
@@ -188,7 +200,7 @@ collections:
         file: src/data/legal/policies.json
         format: json
         fields:
-          - { label: 隐私政策, name: privacy, widget: object }
-          - { label: Cookie 政策, name: cookies, widget: object }
-          - { label: 免责声明, name: disclaimer, widget: object }
-          - { label: 版权信息, name: copyright, widget: object }
+          - { label: 隐私政策, name: privacy, <<: *policy_fields }
+          - { label: Cookie 政策, name: cookies, <<: *policy_fields }
+          - { label: 免责声明, name: disclaimer, <<: *policy_fields }
+          - { label: 版权信息, name: copyright, <<: *policy_fields }

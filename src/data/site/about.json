@@ -12,7 +12,10 @@
   "hero": {
     "image": "/assets/about-hero.jpg",
     "alt": "专业洁净制造与质量控制环境",
-    "eyebrow": "About KEEP",
+    "eyebrow": {
+      "zh": "About KEEP",
+      "en": "About KEEP"
+    },
     "title": {
       "zh": "为关键洁净工作而建。",
       "en": "Built for<br />clean-critical<br />work."

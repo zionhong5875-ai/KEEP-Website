@@ -38,7 +38,10 @@
   "lines": [
     {
       "index": "01 / MEDIKEEP",
-      "name": "INFECTION CONTROL",
+      "name": {
+        "zh": "INFECTION CONTROL",
+        "en": "INFECTION CONTROL"
+      },
       "dark": true,
       "image": "/assets/wipes-pack.jpg",
       "alt": "简洁白色护理包装与洁净产品细节",
@@ -49,7 +52,10 @@
     },
     {
       "index": "02 / CAREKEEP",
-      "name": "PERSONAL CARE",
+      "name": {
+        "zh": "PERSONAL CARE",
+        "en": "PERSONAL CARE"
+      },
       "dark": false,
       "image": "/assets/carekeep-hands.jpg",
       "alt": "浅色自然光下的个人护理与手部清洁场景",
@@ -77,12 +83,18 @@
     {
       "image": "/assets/gallery-infection.jpg",
       "alt": "医疗与实验室感染控制应用场景",
-      "caption": "MEDIKEEP / Infection Control"
+      "caption": {
+        "zh": "MEDIKEEP / Infection Control",
+        "en": "MEDIKEEP / Infection Control"
+      }
     },
     {
       "image": "/assets/gallery-care.jpg",
       "alt": "个人护理产品在浅色自然光中的使用场景",
-      "caption": "CAREKEEP / Personal Care"
+      "caption": {
+        "zh": "CAREKEEP / Personal Care",
+        "en": "CAREKEEP / Personal Care"
+      }
     },
     {
       "image": "/assets/gallery-industrial.jpg",
@@ -95,7 +107,10 @@
     {
       "image": "/assets/gallery-product.jpg",
       "alt": "专业擦拭产品包装与洁净产品细节",
-      "caption": "KEEP / Product Formats"
+      "caption": {
+        "zh": "KEEP / Product Formats",
+        "en": "KEEP / Product Formats"
+      }
     }
   ]
 }

@@ -94,6 +94,8 @@ OAUTH_GITHUB_CLIENT_SECRET
 6. Click `Publish`. The CMS commits the change to GitHub.
 7. Vercel rebuilds the website automatically after the commit.
 
+For the non-technical editor handoff, use `BUSINESS_EDITOR_GUIDE.md`.
+
 ## Image rules for editors
 
 - Use horizontal images for hero and large modules.

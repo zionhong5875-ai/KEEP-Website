@@ -10,7 +10,10 @@
     }
   },
   "hero": {
-    "eyebrow": "Products",
+    "eyebrow": {
+      "zh": "Products",
+      "en": "Products"
+    },
     "title": {
       "zh": "三条产品线。<br />一套洁净系统。",
       "en": "Three lines.<br />One clean<br />system."
@@ -23,7 +26,10 @@
   "lines": [
     {
       "index": "01 / MEDIKEEP",
-      "name": "INFECTION CONTROL",
+      "name": {
+        "zh": "INFECTION CONTROL",
+        "en": "INFECTION CONTROL"
+      },
       "skus": [
         {
           "code": "MEDIKEEP 01",
@@ -35,9 +41,18 @@
             "en": "Built for high-touch surfaces, equipment shells, and fast-evaporation cleaning."
           },
           "specs": [
-            ["规格", "150 x 200 mm / 80 wipes canister"],
-            ["基材", "低掉屑水刺无纺布"],
-            ["配方", "70% alcohol fast-dry"]
+            {
+              "label": "规格",
+              "value": "150 x 200 mm / 80 wipes canister"
+            },
+            {
+              "label": "基材",
+              "value": "低掉屑水刺无纺布"
+            },
+            {
+              "label": "配方",
+              "value": "70% alcohol fast-dry"
+            }
           ]
         },
         {
@@ -50,9 +65,18 @@
             "en": "Designed for treatment zones, public areas, and non-invasive equipment surfaces with stable disinfecting performance."
           },
           "specs": [
-            ["规格", "180 x 200 mm / 100 wipes soft pack"],
-            ["基材", "复合高吸附无纺布"],
-            ["配方", "QAC low-residue system"]
+            {
+              "label": "规格",
+              "value": "180 x 200 mm / 100 wipes soft pack"
+            },
+            {
+              "label": "基材",
+              "value": "复合高吸附无纺布"
+            },
+            {
+              "label": "配方",
+              "value": "QAC low-residue system"
+            }
           ]
         },
         {
@@ -65,16 +89,28 @@
             "en": "Soft large-format cloths for clinical support cleaning and pre-op preparation routines."
           },
           "specs": [
-            ["规格", "200 x 300 mm / single pouch"],
-            ["基材", "柔感加厚水刺布"],
-            ["配方", "CHG wash cloth solution"]
+            {
+              "label": "规格",
+              "value": "200 x 300 mm / single pouch"
+            },
+            {
+              "label": "基材",
+              "value": "柔感加厚水刺布"
+            },
+            {
+              "label": "配方",
+              "value": "CHG wash cloth solution"
+            }
           ]
         }
       ]
     },
     {
       "index": "02 / CAREKEEP",
-      "name": "PERSONAL CARE",
+      "name": {
+        "zh": "PERSONAL CARE",
+        "en": "PERSONAL CARE"
+      },
       "skus": [
         {
           "code": "CAREKEEP 01",
@@ -86,9 +122,18 @@
             "en": "A no-rinse body-care format for bedside care, travel, and everyday cleansing."
           },
           "specs": [
-            ["规格", "200 x 220 mm / 40 wipes flip-top pack"],
-            ["基材", "柔感可降解混纺布"],
-            ["配方", "pH-balanced no-rinse lotion"]
+            {
+              "label": "规格",
+              "value": "200 x 220 mm / 40 wipes flip-top pack"
+            },
+            {
+              "label": "基材",
+              "value": "柔感可降解混纺布"
+            },
+            {
+              "label": "配方",
+              "value": "pH-balanced no-rinse lotion"
+            }
           ]
         },
         {
@@ -101,9 +146,18 @@
             "en": "A glove format improves grip and coverage for faster caregiver handling."
           },
           "specs": [
-            ["规格", "250 x 160 mm / 8 gloves pack"],
-            ["基材", "双层柔感无纺布"],
-            ["配方", "rinse-free cleansing lotion"]
+            {
+              "label": "规格",
+              "value": "250 x 160 mm / 8 gloves pack"
+            },
+            {
+              "label": "基材",
+              "value": "双层柔感无纺布"
+            },
+            {
+              "label": "配方",
+              "value": "rinse-free cleansing lotion"
+            }
           ]
         },
         {
@@ -116,9 +170,18 @@
             "en": "For continence care routines that need cleansing, soothing, and skin barrier support together."
           },
           "specs": [
-            ["规格", "200 x 300 mm / 80 wipes soft pack"],
-            ["基材", "加厚亲肤水刺布"],
-            ["配方", "aloe + barrier-care formula"]
+            {
+              "label": "规格",
+              "value": "200 x 300 mm / 80 wipes soft pack"
+            },
+            {
+              "label": "基材",
+              "value": "加厚亲肤水刺布"
+            },
+            {
+              "label": "配方",
+              "value": "aloe + barrier-care formula"
+            }
           ]
         }
       ]
@@ -141,9 +204,18 @@
             "en": "A heavy-duty wipe for machinery repair, maintenance, pre-coating prep, and severe oil removal."
           },
           "specs": [
-            ["规格", "320 x 380 mm / 500 wipes bulk pack"],
-            ["基材", "木浆复合增强低尘工业布"],
-            ["性能", "high oil absorbency / solvent resistant / tear resistant"]
+            {
+              "label": "规格",
+              "value": "320 x 380 mm / 500 wipes bulk pack"
+            },
+            {
+              "label": "基材",
+              "value": "木浆复合增强低尘工业布"
+            },
+            {
+              "label": "性能",
+              "value": "high oil absorbency / solvent resistant / tear resistant"
+            }
           ]
         }
       ]
