@@ -273,7 +273,7 @@ body.menu-open .lang-switch__button[aria-pressed="true"] {
 
 .hero {
   position: relative;
-  min-height: 88svh;
+  min-height: 100svh;
   overflow: hidden;
   background: var(--color-obsidian);
   color: var(--color-canvas-white);
@@ -298,7 +298,7 @@ body.menu-open .lang-switch__button[aria-pressed="true"] {
   position: relative;
   z-index: 1;
   display: flex;
-  min-height: 88svh;
+  min-height: 100svh;
   flex-direction: column;
   justify-content: space-between;
   padding: 112px clamp(22px, 5vw, 68px) 48px;
@@ -320,6 +320,23 @@ body.menu-open .lang-switch__button[aria-pressed="true"] {
   line-height: 0.8;
   font-weight: 700;
   letter-spacing: 0;
+}
+
+html:lang(zh-CN) .hero h1,
+html:lang(zh-CN) .policy-hero h1 {
+  line-height: 0.94;
+}
+
+html:lang(zh-CN) .page-hero h1 {
+  font-size: clamp(74px, 10.6vw, 150px);
+  line-height: 0.98;
+}
+
+html:lang(zh-CN) .section-heading h2,
+html:lang(zh-CN) .specs-heading h2,
+html:lang(zh-CN) .gallery-heading h2,
+html:lang(zh-CN) .resource-heading h2 {
+  line-height: 1.04;
 }
 
 .hero-bottom {
@@ -698,7 +715,7 @@ body.menu-open .lang-switch__button[aria-pressed="true"] {
 .page-hero {
   position: relative;
   overflow: hidden;
-  min-height: 64svh;
+  min-height: 100svh;
   display: flex;
   align-items: end;
   padding: 112px clamp(22px, 5vw, 68px) 68px;
@@ -733,7 +750,7 @@ body.menu-open .lang-switch__button[aria-pressed="true"] {
 }
 
 .page-hero-image {
-  min-height: 76svh;
+  min-height: 100svh;
   background: var(--color-obsidian);
 }
 
@@ -1013,7 +1030,7 @@ body.menu-open .lang-switch__button[aria-pressed="true"] {
 }
 
 .resources-hero {
-  min-height: 72svh;
+  min-height: 100svh;
 }
 
 .resources-hero p {
@@ -1497,11 +1514,11 @@ body.menu-open .lang-switch__button[aria-pressed="true"] {
   }
 
   .hero {
-    min-height: 86svh;
+    min-height: 100svh;
   }
 
   .hero-content {
-    min-height: 86svh;
+    min-height: 100svh;
     padding-top: 92px;
   }
 
@@ -1595,11 +1612,11 @@ body.menu-open .lang-switch__button[aria-pressed="true"] {
   }
 
   .page-hero {
-    min-height: 64svh;
+    min-height: 100svh;
   }
 
   .page-hero-image {
-    min-height: 72svh;
+    min-height: 100svh;
   }
 
   .value-grid {
