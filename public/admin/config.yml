@@ -115,17 +115,53 @@ collections:
                 widget: list
                 summary: "{{fields.code}} {{fields.title}}"
                 fields:
+                  - { label: URL Slug, name: slug, widget: string }
                   - { label: SKU 编号, name: code, widget: string }
+                  - { label: 货号, name: itemNo, widget: string }
                   - { label: SKU 名称, name: title, widget: string }
                   - { label: 图片, name: image, widget: image }
                   - { label: 图片描述 Alt, name: alt, widget: string }
                   - { label: 说明文字, name: body, <<: *i18n_text }
+                  - { label: 详情页简介, name: intro, <<: *i18n_text }
+                  - label: 详情页多图
+                    name: gallery
+                    widget: list
+                    summary: "{{fields.alt}}"
+                    fields:
+                      - { label: 图片, name: image, widget: image }
+                      - { label: 图片描述 Alt, name: alt, widget: string }
+                  - label: 卖点
+                    name: highlights
+                    widget: list
+                    fields:
+                      - { label: 中文, name: zh, widget: string }
+                      - { label: English, name: en, widget: string }
+                  - label: 杀菌/抗菌性能（MEDIKEEP 使用）
+                    name: killPerformance
+                    widget: list
+                    required: false
+                    fields:
+                      - { label: 指标名, name: label, <<: *i18n_text }
+                      - { label: 指标内容, name: value, <<: *i18n_text }
+                  - label: 使用说明
+                    name: usage
+                    widget: list
+                    fields:
+                      - { label: 中文, name: zh, widget: string }
+                      - { label: English, name: en, widget: string }
                   - label: 规格参数
                     name: specs
                     widget: list
                     fields:
-                      - { label: 参数名, name: label, widget: string }
-                      - { label: 参数值, name: value, widget: string }
+                      - { label: 参数名, name: label, <<: *i18n_text }
+                      - { label: 参数值, name: value, <<: *i18n_text }
+                  - label: 下载资源
+                    name: downloads
+                    widget: list
+                    fields:
+                      - { label: 类型, name: type, widget: string }
+                      - { label: 标题, name: title, <<: *i18n_text }
+                      - { label: 链接, name: href, widget: string }
 
       - label: 关于我们
         name: about

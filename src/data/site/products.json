@@ -32,7 +32,9 @@
       },
       "skus": [
         {
+          "slug": "alcohol-disinfectant-wipes",
           "code": "MEDIKEEP 01",
+          "itemNo": "MK-ADW-8020",
           "title": "Alcohol Disinfectant Wipes",
           "image": "/assets/sku-alcohol-wipes.jpg",
           "alt": "Alcohol Disinfectant Wipes 产品场景",
@@ -40,23 +42,147 @@
             "zh": "适用于高频接触表面、设备外壳和快速挥发清洁需求。",
             "en": "Built for high-touch surfaces, equipment shells, and fast-evaporation cleaning."
           },
+          "intro": {
+            "zh": "70% 酒精快速挥发体系，适合医疗空间中高频接触点的日常清洁与消毒前处理。",
+            "en": "A 70% alcohol fast-dry format for daily cleaning and disinfection preparation on high-touch points in clinical spaces."
+          },
+          "gallery": [
+            {
+              "image": "/assets/sku-alcohol-wipes.jpg",
+              "alt": "Alcohol Disinfectant Wipes 桶装包装"
+            },
+            {
+              "image": "/assets/gallery-infection.jpg",
+              "alt": "医疗空间接触面擦拭场景"
+            },
+            {
+              "image": "/assets/wipes-pack.jpg",
+              "alt": "洁净擦拭产品包装细节"
+            }
+          ],
+          "highlights": [
+            {
+              "zh": "快速挥发，减少表面残留与等待时间。",
+              "en": "Fast evaporation reduces surface residue and waiting time."
+            },
+            {
+              "zh": "低掉屑基材，适合设备外壳、推车、床旁高频表面。",
+              "en": "Low-lint substrate suits equipment shells, carts, and bedside high-touch surfaces."
+            },
+            {
+              "zh": "桶装抽取结构，支持连续作业与现场补给。",
+              "en": "Canister dispensing supports continuous work and point-of-use replenishment."
+            }
+          ],
+          "killPerformance": [
+            {
+              "label": {
+                "zh": "杀菌体系",
+                "en": "Active system"
+              },
+              "value": {
+                "zh": "70% 酒精快干配方",
+                "en": "70% alcohol fast-dry formula"
+              }
+            },
+            {
+              "label": {
+                "zh": "适用对象",
+                "en": "Target use"
+              },
+              "value": {
+                "zh": "硬质、非多孔高频接触表面",
+                "en": "Hard, non-porous high-touch surfaces"
+              }
+            },
+            {
+              "label": {
+                "zh": "接触逻辑",
+                "en": "Contact logic"
+              },
+              "value": {
+                "zh": "充分润湿表面，并按当地法规与验证要求执行接触时间。",
+                "en": "Fully wet the surface and follow contact time required by local regulation and validation."
+              }
+            }
+          ],
+          "usage": [
+            {
+              "zh": "打开桶盖并从中心抽取单片湿巾。",
+              "en": "Open the canister and pull one wipe from the center feed."
+            },
+            {
+              "zh": "按一个方向擦拭目标表面，确保表面被均匀润湿。",
+              "en": "Wipe the target surface in one direction and ensure even wetting."
+            },
+            {
+              "zh": "使用后及时合盖，避免液体挥发；废弃物按现场规范处理。",
+              "en": "Close the lid after use to reduce evaporation; dispose of waste according to site procedures."
+            }
+          ],
           "specs": [
             {
-              "label": "规格",
-              "value": "150 x 200 mm / 80 wipes canister"
+              "label": {
+                "zh": "规格",
+                "en": "Format"
+              },
+              "value": {
+                "zh": "150 x 200 mm / 80 wipes canister",
+                "en": "150 x 200 mm / 80 wipes canister"
+              }
             },
             {
-              "label": "基材",
-              "value": "低掉屑水刺无纺布"
+              "label": {
+                "zh": "基材",
+                "en": "Substrate"
+              },
+              "value": {
+                "zh": "低掉屑水刺无纺布",
+                "en": "Low-lint spunlace nonwoven"
+              }
             },
             {
-              "label": "配方",
-              "value": "70% alcohol fast-dry"
+              "label": {
+                "zh": "配方",
+                "en": "Formula"
+              },
+              "value": {
+                "zh": "70% alcohol fast-dry",
+                "en": "70% alcohol fast-dry"
+              }
+            }
+          ],
+          "downloads": [
+            {
+              "type": "SDS",
+              "title": {
+                "zh": "安全数据表",
+                "en": "Safety Data Sheet"
+              },
+              "href": "/resources/#downloads"
+            },
+            {
+              "type": "Brochure",
+              "title": {
+                "zh": "产品说明书",
+                "en": "Product brochure"
+              },
+              "href": "/resources/#downloads"
+            },
+            {
+              "type": "Poster",
+              "title": {
+                "zh": "场景海报",
+                "en": "Use-case poster"
+              },
+              "href": "/resources/#downloads"
             }
           ]
         },
         {
+          "slug": "clinical-disinfectant-wipes",
           "code": "MEDIKEEP 02",
+          "itemNo": "MK-CDW-100S",
           "title": "Clinical Disinfectant Wipes",
           "image": "/assets/sku-clinical-wipes.jpg",
           "alt": "Clinical Disinfectant Wipes 产品场景",
@@ -64,23 +190,147 @@
             "zh": "为诊疗空间、公共区域和非侵入式设备表面提供稳定消毒擦拭。",
             "en": "Designed for treatment zones, public areas, and non-invasive equipment surfaces with stable disinfecting performance."
           },
+          "intro": {
+            "zh": "低残留临床消毒擦拭方案，适用于医院、诊所与公共卫生空间的日常表面管理。",
+            "en": "A low-residue clinical disinfecting wipe for daily surface management in hospitals, clinics, and public health spaces."
+          },
+          "gallery": [
+            {
+              "image": "/assets/sku-clinical-wipes.jpg",
+              "alt": "Clinical Disinfectant Wipes 软包产品"
+            },
+            {
+              "image": "/assets/medikeep-lab.jpg",
+              "alt": "洁净医疗环境与感染控制现场"
+            },
+            {
+              "image": "/assets/gallery-infection.jpg",
+              "alt": "临床表面擦拭作业"
+            }
+          ],
+          "highlights": [
+            {
+              "zh": "湿润保持稳定，适合连续擦拭诊疗区域。",
+              "en": "Stable wetting supports continuous wiping across treatment zones."
+            },
+            {
+              "zh": "翻盖软包便于床旁、护士站和公共区域快速取用。",
+              "en": "Flip-top soft pack enables fast access beside beds, nursing stations, and public areas."
+            },
+            {
+              "zh": "配方与基材兼顾清洁效率和表面兼容性。",
+              "en": "Formula and substrate balance cleaning efficiency with surface compatibility."
+            }
+          ],
+          "killPerformance": [
+            {
+              "label": {
+                "zh": "杀菌体系",
+                "en": "Active system"
+              },
+              "value": {
+                "zh": "低残留季铵盐体系",
+                "en": "Low-residue QAC system"
+              }
+            },
+            {
+              "label": {
+                "zh": "使用场景",
+                "en": "Application"
+              },
+              "value": {
+                "zh": "诊疗空间、公共区域、非侵入式设备外表面",
+                "en": "Treatment zones, public areas, and non-invasive equipment exteriors"
+              }
+            },
+            {
+              "label": {
+                "zh": "验证建议",
+                "en": "Validation note"
+              },
+              "value": {
+                "zh": "根据目标市场法规、微生物谱和接触时间进行第三方验证。",
+                "en": "Validate against target-market regulation, organism spectrum, and contact time."
+              }
+            }
+          ],
+          "usage": [
+            {
+              "zh": "打开翻盖后取出湿巾，避免手部接触未使用湿巾。",
+              "en": "Open the flip lid and remove one wipe without touching unused wipes."
+            },
+            {
+              "zh": "由洁净区域向污染区域擦拭，单片湿巾不跨区域复用。",
+              "en": "Wipe from clean to contaminated areas and do not reuse one wipe across zones."
+            },
+            {
+              "zh": "使用后压紧翻盖，保持包装密封。",
+              "en": "Press the flip lid closed after use to preserve pack seal integrity."
+            }
+          ],
           "specs": [
             {
-              "label": "规格",
-              "value": "180 x 200 mm / 100 wipes soft pack"
+              "label": {
+                "zh": "规格",
+                "en": "Format"
+              },
+              "value": {
+                "zh": "180 x 200 mm / 100 wipes soft pack",
+                "en": "180 x 200 mm / 100 wipes soft pack"
+              }
             },
             {
-              "label": "基材",
-              "value": "复合高吸附无纺布"
+              "label": {
+                "zh": "基材",
+                "en": "Substrate"
+              },
+              "value": {
+                "zh": "复合高吸附无纺布",
+                "en": "Composite high-absorbency nonwoven"
+              }
             },
             {
-              "label": "配方",
-              "value": "QAC low-residue system"
+              "label": {
+                "zh": "配方",
+                "en": "Formula"
+              },
+              "value": {
+                "zh": "QAC low-residue system",
+                "en": "QAC low-residue system"
+              }
+            }
+          ],
+          "downloads": [
+            {
+              "type": "SDS",
+              "title": {
+                "zh": "安全数据表",
+                "en": "Safety Data Sheet"
+              },
+              "href": "/resources/#downloads"
+            },
+            {
+              "type": "Brochure",
+              "title": {
+                "zh": "产品说明书",
+                "en": "Product brochure"
+              },
+              "href": "/resources/#downloads"
+            },
+            {
+              "type": "Poster",
+              "title": {
+                "zh": "临床区域海报",
+                "en": "Clinical-zone poster"
+              },
+              "href": "/resources/#downloads"
             }
           ]
         },
         {
+          "slug": "chlorhexidine-wash-cloths",
           "code": "MEDIKEEP 03",
+          "itemNo": "MK-CHG-1P",
           "title": "Chlorhexidine Wash Cloths",
           "image": "/assets/sku-chlorhexidine-cloths.jpg",
           "alt": "Chlorhexidine Wash Cloths 产品场景",
@@ -88,18 +338,140 @@
             "zh": "面向临床辅助清洁和术前准备流程的柔软大尺寸擦拭布。",
             "en": "Soft large-format cloths for clinical support cleaning and pre-op preparation routines."
           },
+          "intro": {
+            "zh": "柔软大尺寸 CHG 洗护布，支持临床辅助清洁、术前准备与护理流程中的稳定覆盖。",
+            "en": "A soft large-format CHG wash cloth for clinical support cleansing, pre-op preparation, and controlled coverage during care routines."
+          },
+          "gallery": [
+            {
+              "image": "/assets/sku-chlorhexidine-cloths.jpg",
+              "alt": "Chlorhexidine Wash Cloths 单片包装"
+            },
+            {
+              "image": "/assets/gallery-infection.jpg",
+              "alt": "感染控制护理现场"
+            },
+            {
+              "image": "/assets/resource-sds.jpg",
+              "alt": "临床产品文件和安全资料"
+            }
+          ],
+          "highlights": [
+            {
+              "zh": "加厚柔感布面，减少护理过程中的拉扯感。",
+              "en": "Thicker soft-touch cloth helps reduce pulling during care."
+            },
+            {
+              "zh": "单片包装便于流程分配与批次管理。",
+              "en": "Single pouches support procedure allocation and batch control."
+            },
+            {
+              "zh": "大尺寸设计提升覆盖面积，减少反复取片。",
+              "en": "Large size improves coverage and reduces repeated wipe retrieval."
+            }
+          ],
+          "killPerformance": [
+            {
+              "label": {
+                "zh": "抗菌体系",
+                "en": "Antimicrobial system"
+              },
+              "value": {
+                "zh": "CHG 洗护液体系",
+                "en": "CHG wash cloth solution"
+              }
+            },
+            {
+              "label": {
+                "zh": "适用流程",
+                "en": "Procedure fit"
+              },
+              "value": {
+                "zh": "临床辅助清洁、术前准备、护理流程",
+                "en": "Clinical support cleansing, pre-op preparation, and care routines"
+              }
+            },
+            {
+              "label": {
+                "zh": "注意事项",
+                "en": "Use note"
+              },
+              "value": {
+                "zh": "按医疗机构流程与当地法规使用，不用于开放性伤口。",
+                "en": "Use according to facility protocol and local regulation; not intended for open wounds."
+              }
+            }
+          ],
+          "usage": [
+            {
+              "zh": "使用前确认包装完整和批次信息。",
+              "en": "Check pack integrity and batch information before use."
+            },
+            {
+              "zh": "打开单片包装后立即使用，按护理流程擦拭目标区域。",
+              "en": "Open the single pouch and use immediately according to the care protocol."
+            },
+            {
+              "zh": "避免重复污染；使用后按医疗废弃物规范处理。",
+              "en": "Avoid recontamination; dispose of used cloth according to medical waste rules."
+            }
+          ],
           "specs": [
             {
-              "label": "规格",
-              "value": "200 x 300 mm / single pouch"
+              "label": {
+                "zh": "规格",
+                "en": "Format"
+              },
+              "value": {
+                "zh": "200 x 300 mm / single pouch",
+                "en": "200 x 300 mm / single pouch"
+              }
             },
             {
-              "label": "基材",
-              "value": "柔感加厚水刺布"
+              "label": {
+                "zh": "基材",
+                "en": "Substrate"
+              },
+              "value": {
+                "zh": "柔感加厚水刺布",
+                "en": "Soft thick spunlace cloth"
+              }
             },
             {
-              "label": "配方",
-              "value": "CHG wash cloth solution"
+              "label": {
+                "zh": "配方",
+                "en": "Formula"
+              },
+              "value": {
+                "zh": "CHG wash cloth solution",
+                "en": "CHG wash cloth solution"
+              }
+            }
+          ],
+          "downloads": [
+            {
+              "type": "SDS",
+              "title": {
+                "zh": "安全数据表",
+                "en": "Safety Data Sheet"
+              },
+              "href": "/resources/#downloads"
+            },
+            {
+              "type": "Brochure",
+              "title": {
+                "zh": "产品说明书",
+                "en": "Product brochure"
+              },
+              "href": "/resources/#downloads"
+            },
+            {
+              "type": "Poster",
+              "title": {
+                "zh": "护理流程海报",
+                "en": "Care-protocol poster"
+              },
+              "href": "/resources/#downloads"
             }
           ]
         }
@@ -113,7 +485,9 @@
       },
       "skus": [
         {
+          "slug": "rinse-free-bath-wipes",
           "code": "CAREKEEP 01",
+          "itemNo": "CK-RBW-40F",
           "title": "Rinse-free Bath Wipes",
           "image": "/assets/sku-bath-wipes.jpg",
           "alt": "Rinse-free Bath Wipes 产品场景",
@@ -121,23 +495,107 @@
             "zh": "为卧床护理、旅行和日常身体清洁提供免冲洗护理体验。",
             "en": "A no-rinse body-care format for bedside care, travel, and everyday cleansing."
           },
+          "intro": {
+            "zh": "免冲洗身体清洁湿巾，适合卧床护理、差旅和不便沐浴场景。",
+            "en": "No-rinse body cleansing wipes for bedside care, travel, and moments when bathing is inconvenient."
+          },
+          "gallery": [
+            {
+              "image": "/assets/sku-bath-wipes.jpg",
+              "alt": "Rinse-free Bath Wipes 翻盖包装"
+            },
+            {
+              "image": "/assets/carekeep-hands.jpg",
+              "alt": "温和个人护理场景"
+            },
+            {
+              "image": "/assets/gallery-care.jpg",
+              "alt": "家庭护理和清洁用品"
+            }
+          ],
+          "highlights": [
+            {
+              "zh": "免冲洗配方，减少护理流程对水源的依赖。",
+              "en": "No-rinse lotion reduces reliance on water during care routines."
+            },
+            {
+              "zh": "亲肤柔感基材，适合大面积身体清洁。",
+              "en": "Soft skin-friendly substrate suits larger-area body cleansing."
+            },
+            {
+              "zh": "翻盖软包控制开封后的湿润度。",
+              "en": "Flip-top pack helps retain moisture after opening."
+            }
+          ],
+          "usage": [
+            {
+              "zh": "打开翻盖，取出一片湿巾。",
+              "en": "Open the flip lid and remove one wipe."
+            },
+            {
+              "zh": "按身体区域分区擦拭，必要时更换新片。",
+              "en": "Clean by body zone and switch to a new wipe when needed."
+            },
+            {
+              "zh": "使用后无需冲洗；如皮肤不适请停止使用。",
+              "en": "No rinsing is required; stop use if skin irritation occurs."
+            }
+          ],
           "specs": [
             {
-              "label": "规格",
-              "value": "200 x 220 mm / 40 wipes flip-top pack"
+              "label": {
+                "zh": "规格",
+                "en": "Format"
+              },
+              "value": {
+                "zh": "200 x 220 mm / 40 wipes flip-top pack",
+                "en": "200 x 220 mm / 40 wipes flip-top pack"
+              }
             },
             {
-              "label": "基材",
-              "value": "柔感可降解混纺布"
+              "label": {
+                "zh": "基材",
+                "en": "Substrate"
+              },
+              "value": {
+                "zh": "柔感可降解混纺布",
+                "en": "Soft biodegradable blend"
+              }
             },
             {
-              "label": "配方",
-              "value": "pH-balanced no-rinse lotion"
+              "label": {
+                "zh": "配方",
+                "en": "Formula"
+              },
+              "value": {
+                "zh": "pH-balanced no-rinse lotion",
+                "en": "pH-balanced no-rinse lotion"
+              }
+            }
+          ],
+          "downloads": [
+            {
+              "type": "Brochure",
+              "title": {
+                "zh": "产品说明书",
+                "en": "Product brochure"
+              },
+              "href": "/resources/#downloads"
+            },
+            {
+              "type": "Poster",
+              "title": {
+                "zh": "护理场景海报",
+                "en": "Care-use poster"
+              },
+              "href": "/resources/#downloads"
             }
           ]
         },
         {
+          "slug": "rinse-free-bath-gloves",
           "code": "CAREKEEP 02",
+          "itemNo": "CK-RBG-8G",
           "title": "Rinse-free Bath Gloves",
           "image": "/assets/sku-bath-gloves.jpg",
           "alt": "Rinse-free Bath Gloves 产品场景",
@@ -145,23 +603,107 @@
             "zh": "手套型结构提升抓握和覆盖面积，适合护理人员高效操作。",
             "en": "A glove format improves grip and coverage for faster caregiver handling."
           },
+          "intro": {
+            "zh": "免冲洗手套型清洁产品，让护理人员在移动、翻身和身体清洁时更容易控制接触面。",
+            "en": "A no-rinse glove format that gives caregivers better contact control during repositioning and body cleansing."
+          },
+          "gallery": [
+            {
+              "image": "/assets/sku-bath-gloves.jpg",
+              "alt": "Rinse-free Bath Gloves 包装与手套结构"
+            },
+            {
+              "image": "/assets/gallery-care.jpg",
+              "alt": "个人护理产品应用场景"
+            },
+            {
+              "image": "/assets/resource-blog-care.jpg",
+              "alt": "护理用品和文档资料"
+            }
+          ],
+          "highlights": [
+            {
+              "zh": "手套结构提升抓握稳定性，减少滑脱。",
+              "en": "Glove shape improves grip stability and reduces slipping."
+            },
+            {
+              "zh": "双层柔感基材，兼顾覆盖和舒适触感。",
+              "en": "Dual-layer soft substrate balances coverage and comfort."
+            },
+            {
+              "zh": "适合护理机构、家庭护理和旅行护理包。",
+              "en": "Fits care facilities, home care, and travel care kits."
+            }
+          ],
+          "usage": [
+            {
+              "zh": "取出手套并套入手部，确认湿润面覆盖掌心。",
+              "en": "Remove the glove and wear it with the wet surface covering the palm."
+            },
+            {
+              "zh": "按护理流程擦拭身体区域，避免重复污染。",
+              "en": "Clean body areas according to care procedure and avoid recontamination."
+            },
+            {
+              "zh": "使用后丢弃，不可重复使用。",
+              "en": "Dispose after use; do not reuse."
+            }
+          ],
           "specs": [
             {
-              "label": "规格",
-              "value": "250 x 160 mm / 8 gloves pack"
+              "label": {
+                "zh": "规格",
+                "en": "Format"
+              },
+              "value": {
+                "zh": "250 x 160 mm / 8 gloves pack",
+                "en": "250 x 160 mm / 8 gloves pack"
+              }
             },
             {
-              "label": "基材",
-              "value": "双层柔感无纺布"
+              "label": {
+                "zh": "基材",
+                "en": "Substrate"
+              },
+              "value": {
+                "zh": "双层柔感无纺布",
+                "en": "Dual-layer soft nonwoven"
+              }
             },
             {
-              "label": "配方",
-              "value": "rinse-free cleansing lotion"
+              "label": {
+                "zh": "配方",
+                "en": "Formula"
+              },
+              "value": {
+                "zh": "rinse-free cleansing lotion",
+                "en": "rinse-free cleansing lotion"
+              }
+            }
+          ],
+          "downloads": [
+            {
+              "type": "Brochure",
+              "title": {
+                "zh": "产品说明书",
+                "en": "Product brochure"
+              },
+              "href": "/resources/#downloads"
+            },
+            {
+              "type": "Poster",
+              "title": {
+                "zh": "护理流程海报",
+                "en": "Care-protocol poster"
+              },
+              "href": "/resources/#downloads"
             }
           ]
         },
         {
+          "slug": "continence-care-wipes",
           "code": "CAREKEEP 03",
+          "itemNo": "CK-CCW-80S",
           "title": "Continence Care Wipes",
           "image": "/assets/sku-continence-wipes.jpg",
           "alt": "Continence Care Wipes 产品场景",
@@ -169,18 +711,100 @@
             "zh": "针对成人失禁护理，兼顾清洁、舒缓和皮肤屏障保护。",
             "en": "For continence care routines that need cleansing, soothing, and skin barrier support together."
           },
+          "intro": {
+            "zh": "失禁护理湿巾将清洁、舒缓与屏障护理整合到同一流程，适合长期护理与家庭护理。",
+            "en": "A continence-care wipe that combines cleansing, soothing, and barrier support for long-term care and home care."
+          },
+          "gallery": [
+            {
+              "image": "/assets/sku-continence-wipes.jpg",
+              "alt": "Continence Care Wipes 软包包装"
+            },
+            {
+              "image": "/assets/carekeep-hands.jpg",
+              "alt": "亲肤护理应用场景"
+            },
+            {
+              "image": "/assets/resource-manuals.jpg",
+              "alt": "护理资源与操作说明"
+            }
+          ],
+          "highlights": [
+            {
+              "zh": "大尺寸加厚布面，适合成人护理高频更换场景。",
+              "en": "Large thick cloth suits frequent adult-care changes."
+            },
+            {
+              "zh": "舒缓护理配方，兼顾清洁和皮肤屏障支持。",
+              "en": "Soothing care formula supports cleansing and skin-barrier comfort."
+            },
+            {
+              "zh": "软包翻盖易取用，便于床旁和护理车配置。",
+              "en": "Flip-top soft pack is easy to place bedside or on care carts."
+            }
+          ],
+          "usage": [
+            {
+              "zh": "从翻盖取出湿巾，按护理区域单向擦拭。",
+              "en": "Remove a wipe from the flip lid and wipe one-way across the care area."
+            },
+            {
+              "zh": "根据污染程度更换新片，避免重复污染。",
+              "en": "Use a new wipe according to soil level to avoid recontamination."
+            },
+            {
+              "zh": "外用产品，请勿冲入马桶。",
+              "en": "For external use only; do not flush."
+            }
+          ],
           "specs": [
             {
-              "label": "规格",
-              "value": "200 x 300 mm / 80 wipes soft pack"
+              "label": {
+                "zh": "规格",
+                "en": "Format"
+              },
+              "value": {
+                "zh": "200 x 300 mm / 80 wipes soft pack",
+                "en": "200 x 300 mm / 80 wipes soft pack"
+              }
             },
             {
-              "label": "基材",
-              "value": "加厚亲肤水刺布"
+              "label": {
+                "zh": "基材",
+                "en": "Substrate"
+              },
+              "value": {
+                "zh": "加厚亲肤水刺布",
+                "en": "Thick skin-friendly spunlace"
+              }
             },
             {
-              "label": "配方",
-              "value": "aloe + barrier-care formula"
+              "label": {
+                "zh": "配方",
+                "en": "Formula"
+              },
+              "value": {
+                "zh": "aloe + barrier-care formula",
+                "en": "aloe + barrier-care formula"
+              }
+            }
+          ],
+          "downloads": [
+            {
+              "type": "Brochure",
+              "title": {
+                "zh": "产品说明书",
+                "en": "Product brochure"
+              },
+              "href": "/resources/#downloads"
+            },
+            {
+              "type": "Poster",
+              "title": {
+                "zh": "长期护理海报",
+                "en": "Long-term care poster"
+              },
+              "href": "/resources/#downloads"
             }
           ]
         }
@@ -195,7 +819,9 @@
       "single": true,
       "skus": [
         {
+          "slug": "heavy-duty-oil-removal-wipes",
           "code": "INDUKEEP 01",
+          "itemNo": "IK-HDO-500B",
           "title": "Heavy Duty Oil Removal Wipes",
           "image": "/assets/sku-oil-removal.jpg",
           "alt": "Heavy Duty Oil Removal Wipes 产品场景",
@@ -203,18 +829,108 @@
             "zh": "面向机械维修、设备保养、喷涂前处理和油污重清洁的高强度工业擦拭产品。",
             "en": "A heavy-duty wipe for machinery repair, maintenance, pre-coating prep, and severe oil removal."
           },
+          "intro": {
+            "zh": "高吸油、耐撕裂、耐溶剂的工业擦拭布，面向高强度维护、喷涂前处理和油污重清洁。",
+            "en": "A high-absorbency, tear-resistant, solvent-resistant industrial wipe for heavy maintenance, pre-coating prep, and severe oil removal."
+          },
+          "gallery": [
+            {
+              "image": "/assets/sku-oil-removal.jpg",
+              "alt": "Heavy Duty Oil Removal Wipes 工业维修场景"
+            },
+            {
+              "image": "/assets/indukeep-industrial.jpg",
+              "alt": "工业设备维护与洁净作业"
+            },
+            {
+              "image": "/assets/gallery-industrial.jpg",
+              "alt": "制造现场擦拭和维护"
+            }
+          ],
+          "highlights": [
+            {
+              "zh": "高吸油能力，适合油污、润滑脂和设备维护残留。",
+              "en": "High oil absorbency for oil, grease, and maintenance residue."
+            },
+            {
+              "zh": "增强复合结构，湿态擦拭不易破裂。",
+              "en": "Reinforced composite structure resists tearing during wet wiping."
+            },
+            {
+              "zh": "大包装适合车间、产线和维修站点集中补给。",
+              "en": "Bulk pack supports centralized supply for workshops, lines, and service bays."
+            }
+          ],
+          "usage": [
+            {
+              "zh": "按作业区域取用擦拭布，避免将重油污带入洁净工序。",
+              "en": "Take wipes by work zone to avoid carrying heavy soil into cleaner processes."
+            },
+            {
+              "zh": "先去除大面积油污，再对关键接触面进行二次精擦。",
+              "en": "Remove bulk oil first, then perform a second fine wipe on critical contact surfaces."
+            },
+            {
+              "zh": "含油废弃物按工厂 EHS 规范分类处理。",
+              "en": "Dispose of oil-contaminated waste according to plant EHS procedures."
+            }
+          ],
           "specs": [
             {
-              "label": "规格",
-              "value": "320 x 380 mm / 500 wipes bulk pack"
+              "label": {
+                "zh": "规格",
+                "en": "Format"
+              },
+              "value": {
+                "zh": "320 x 380 mm / 500 wipes bulk pack",
+                "en": "320 x 380 mm / 500 wipes bulk pack"
+              }
             },
             {
-              "label": "基材",
-              "value": "木浆复合增强低尘工业布"
+              "label": {
+                "zh": "基材",
+                "en": "Substrate"
+              },
+              "value": {
+                "zh": "木浆复合增强低尘工业布",
+                "en": "Wood-pulp composite low-dust industrial cloth"
+              }
             },
             {
-              "label": "性能",
-              "value": "high oil absorbency / solvent resistant / tear resistant"
+              "label": {
+                "zh": "性能",
+                "en": "Performance"
+              },
+              "value": {
+                "zh": "high oil absorbency / solvent resistant / tear resistant",
+                "en": "high oil absorbency / solvent resistant / tear resistant"
+              }
+            }
+          ],
+          "downloads": [
+            {
+              "type": "SDS",
+              "title": {
+                "zh": "安全数据表",
+                "en": "Safety Data Sheet"
+              },
+              "href": "/resources/#downloads"
+            },
+            {
+              "type": "Brochure",
+              "title": {
+                "zh": "产品说明书",
+                "en": "Product brochure"
+              },
+              "href": "/resources/#downloads"
+            },
+            {
+              "type": "Poster",
+              "title": {
+                "zh": "车间应用海报",
+                "en": "Workshop poster"
+              },
+              "href": "/resources/#downloads"
             }
           ]
         }

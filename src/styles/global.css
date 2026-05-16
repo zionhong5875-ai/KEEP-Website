@@ -1029,6 +1029,330 @@ html:lang(zh-CN) .resource-heading h2 {
   overflow-wrap: anywhere;
 }
 
+.sku-card-link {
+  width: fit-content;
+  margin-top: var(--spacing-23);
+  padding-bottom: 7px;
+  border-bottom: 1px solid currentColor;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.product-detail-hero {
+  display: grid;
+  grid-template-columns: minmax(420px, 0.9fr) minmax(520px, 1.1fr);
+  gap: clamp(34px, 5vw, 84px);
+  min-height: 100svh;
+  padding: 120px clamp(22px, 5vw, 68px) var(--spacing-68);
+  align-items: end;
+  border-bottom: 1px solid rgba(142, 142, 149, 0.48);
+  background: var(--color-canvas-white);
+}
+
+.product-detail-copy {
+  display: flex;
+  min-height: calc(100svh - 188px);
+  flex-direction: column;
+  justify-content: end;
+  min-width: 0;
+}
+
+.back-link {
+  width: fit-content;
+  margin-bottom: auto;
+  padding-bottom: 7px;
+  border-bottom: 1px solid currentColor;
+  font-weight: 700;
+}
+
+.product-detail-copy h1 {
+  margin: var(--spacing-23) 0;
+  font-size: clamp(56px, 7.6vw, 118px);
+  line-height: 0.9;
+  letter-spacing: 0;
+  overflow-wrap: normal;
+}
+
+.product-code {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  margin: 0 0 var(--spacing-34);
+  color: var(--color-slate-mist);
+  font-weight: 700;
+}
+
+.product-code span + span::before {
+  content: "/";
+  margin-right: 18px;
+  color: rgba(95, 101, 112, 0.6);
+}
+
+.product-intro {
+  max-width: 720px;
+  margin: 0 0 var(--spacing-34);
+  color: var(--color-slate-mist);
+  font-size: clamp(20px, 2vw, 28px);
+  line-height: 1.18;
+}
+
+.product-gallery {
+  display: grid;
+  grid-template-rows: minmax(460px, 68svh) minmax(150px, 16svh);
+  gap: var(--spacing-23);
+  min-width: 0;
+}
+
+.product-gallery figure {
+  margin: 0;
+  overflow: hidden;
+  background: var(--color-obsidian);
+}
+
+.product-gallery-main {
+  border-radius: 0;
+}
+
+.product-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--spacing-23);
+}
+
+.product-gallery-grid figure {
+  min-height: 150px;
+}
+
+.product-detail-section {
+  padding: var(--spacing-119) clamp(22px, 5vw, 68px);
+  border-bottom: 1px solid rgba(142, 142, 149, 0.48);
+}
+
+.product-detail-section h2 {
+  margin: 16px 0 0;
+  font-size: clamp(48px, 6.6vw, 108px);
+  line-height: 0.92;
+  letter-spacing: 0;
+}
+
+.product-detail-overview {
+  display: grid;
+  grid-template-columns: minmax(320px, 0.62fr) minmax(560px, 1fr);
+  gap: var(--spacing-68);
+  align-items: end;
+}
+
+.detail-highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--spacing-23);
+}
+
+.detail-highlight-grid article {
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-top: 1px solid var(--color-obsidian);
+  padding-top: var(--spacing-23);
+}
+
+.detail-highlight-grid span {
+  width: 54px;
+  height: 54px;
+  display: grid;
+  place-items: center;
+  border: 1px solid currentColor;
+  border-radius: var(--radius-full);
+  color: var(--color-tiffany-blue);
+  font-size: 30px;
+  line-height: 1;
+}
+
+.detail-highlight-grid p {
+  margin: var(--spacing-34) 0 0;
+  font-size: clamp(22px, 2vw, 30px);
+  line-height: 1.08;
+}
+
+.product-spec-block,
+.product-performance,
+.usage-section {
+  display: grid;
+  grid-template-columns: minmax(360px, 0.76fr) minmax(520px, 1fr);
+  gap: var(--spacing-68);
+  align-items: start;
+}
+
+.detail-split-heading h2 {
+  max-width: 820px;
+}
+
+.detail-spec-list,
+.performance-grid {
+  margin: 0;
+  border-top: 1px solid rgba(142, 142, 149, 0.48);
+}
+
+.detail-spec-list div,
+.performance-grid div {
+  display: grid;
+  grid-template-columns: minmax(140px, 0.32fr) minmax(0, 1fr);
+  gap: var(--spacing-23);
+  padding: var(--spacing-23) 0;
+  border-bottom: 1px solid rgba(142, 142, 149, 0.48);
+}
+
+.detail-spec-list dt,
+.detail-spec-list dd,
+.performance-grid dt,
+.performance-grid dd {
+  margin: 0;
+}
+
+.detail-spec-list dt,
+.performance-grid dt {
+  font-weight: 700;
+}
+
+.detail-spec-list dd,
+.performance-grid dd {
+  color: var(--color-slate-mist);
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.product-performance {
+  background: var(--color-obsidian);
+  color: var(--color-canvas-white);
+}
+
+.product-performance .performance-grid {
+  border-top-color: rgba(255, 255, 255, 0.28);
+}
+
+.product-performance .performance-grid div {
+  border-bottom-color: rgba(255, 255, 255, 0.28);
+}
+
+.product-performance .performance-grid dd {
+  color: rgba(255, 255, 255, 0.74);
+}
+
+.usage-steps {
+  display: grid;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid rgba(142, 142, 149, 0.48);
+}
+
+.usage-steps li {
+  display: grid;
+  grid-template-columns: 88px minmax(0, 1fr);
+  gap: var(--spacing-23);
+  padding: var(--spacing-23) 0;
+  border-bottom: 1px solid rgba(142, 142, 149, 0.48);
+}
+
+.usage-steps span {
+  color: var(--color-tiffany-blue);
+  font-weight: 700;
+}
+
+.usage-steps p {
+  margin: 0;
+  color: var(--color-slate-mist);
+  font-size: clamp(20px, 1.8vw, 26px);
+  line-height: 1.2;
+}
+
+.download-panel {
+  display: grid;
+  grid-template-columns: minmax(360px, 0.76fr) minmax(520px, 1fr);
+  gap: var(--spacing-68);
+  background: var(--color-canvas-white);
+}
+
+.download-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--spacing-23);
+  align-content: start;
+}
+
+.download-card {
+  display: flex;
+  min-height: 220px;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: var(--spacing-23);
+  border: 1px solid var(--color-obsidian);
+  border-radius: 0 0 34px 0;
+  transition: background 0.18s ease, color 0.18s ease, transform 0.18s ease;
+}
+
+.download-card:hover {
+  transform: translateY(-2px);
+  background: var(--color-obsidian);
+  color: var(--color-canvas-white);
+}
+
+.download-card span {
+  color: var(--color-tiffany-blue);
+  font-weight: 700;
+}
+
+.download-card strong {
+  font-size: clamp(24px, 2.4vw, 38px);
+  line-height: 1;
+}
+
+.related-products {
+  background: var(--color-obsidian);
+  color: var(--color-canvas-white);
+}
+
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--spacing-23);
+  margin-top: var(--spacing-68);
+}
+
+.related-card {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.42fr) minmax(0, 1fr);
+  gap: var(--spacing-23);
+  align-items: end;
+  padding-top: var(--spacing-23);
+  border-top: 1px solid rgba(255, 255, 255, 0.32);
+}
+
+.related-card figure {
+  min-height: 240px;
+  margin: 0;
+  background: var(--color-canvas-white);
+}
+
+.related-card span {
+  color: rgba(255, 255, 255, 0.62);
+  font-weight: 700;
+}
+
+.related-card strong {
+  display: block;
+  margin: 12px 0;
+  font-size: clamp(26px, 2.8vw, 42px);
+  line-height: 1;
+}
+
+.related-card p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.72);
+}
+
 .resources-hero {
   min-height: 100svh;
 }
@@ -1533,6 +1857,12 @@ html:lang(zh-CN) .resource-heading h2 {
   .sku-line-head,
   .sku-grid,
   .sku-card-wide,
+  .product-detail-hero,
+  .product-detail-overview,
+  .product-spec-block,
+  .product-performance,
+  .usage-section,
+  .download-panel,
   .resource-heading,
   .article-grid,
   .download-grid,
@@ -1771,6 +2101,57 @@ html:lang(zh-CN) .resource-heading h2 {
   .sku-card-copy dl div {
     grid-template-columns: 1fr;
     gap: 4px;
+  }
+
+  .product-detail-hero {
+    padding-top: 104px;
+    gap: var(--spacing-34);
+  }
+
+  .product-detail-copy {
+    min-height: auto;
+  }
+
+  .product-gallery {
+    order: 2;
+  }
+
+  .back-link {
+    margin-bottom: var(--spacing-34);
+  }
+
+  .product-detail-copy h1 {
+    font-size: clamp(54px, 15vw, 96px);
+    line-height: 0.94;
+  }
+
+  .product-gallery {
+    grid-template-rows: minmax(340px, 58svh) auto;
+  }
+
+  .product-gallery-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .detail-highlight-grid,
+  .download-card-grid,
+  .related-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-highlight-grid article {
+    min-height: 220px;
+  }
+
+  .detail-spec-list div,
+  .performance-grid div,
+  .usage-steps li,
+  .related-card {
+    grid-template-columns: 1fr;
+  }
+
+  .download-card {
+    min-height: 180px;
   }
 
   .resource-section {

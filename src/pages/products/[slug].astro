@@ -1,0 +1,157 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import products from "../../data/site/products.json";
+import { text, attrs } from "../../utils/i18n";
+
+export const prerender = true;
+
+export function getStaticPaths() {
+  const entries = products.lines.flatMap((line) =>
+    line.skus.map((sku) => ({
+      line,
+      sku,
+      related: line.skus.filter((item) => item.slug !== sku.slug)
+    }))
+  );
+
+  return entries.map((entry) => ({
+    params: { slug: entry.sku.slug },
+    props: entry
+  }));
+}
+
+const { line, sku, related } = Astro.props;
+const pageTitle = {
+  zh: `${sku.title} | KEEP`,
+  en: `${sku.title} | KEEP`
+};
+const pageDescription = sku.intro || sku.body;
+const specLabel = (spec) => text(Array.isArray(spec) ? spec[0] : spec.label);
+const specValue = (spec) => text(Array.isArray(spec) ? spec[1] : spec.value);
+const gallery = sku.gallery?.length ? sku.gallery : [{ image: sku.image, alt: sku.alt }];
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <section class="product-detail-hero" aria-labelledby="product-title">
+    <div class="product-detail-copy">
+      <a class="back-link" href="/products/" data-zh="返回产品页" data-en="Back to products">返回产品页</a>
+      <p class="section-kicker">{line.index}</p>
+      <h1 id="product-title">{sku.title}</h1>
+      <p class="product-code">
+        <span>{sku.code}</span>
+        <span>{sku.itemNo}</span>
+      </p>
+      <p class="product-intro" {...attrs(sku.intro)}>{text(sku.intro)}</p>
+      <div class="button-row">
+        <a class="button button-accent" href="#downloads" data-zh="下载资料" data-en="Download resources">下载资料</a>
+        <a class="button button-dark" href="/#contact" data-zh="咨询方案" data-en="Request a brief">咨询方案</a>
+      </div>
+    </div>
+    <div class="product-gallery" aria-label="Product images">
+      <figure class="product-gallery-main">
+        <img src={gallery[0].image} alt={gallery[0].alt} />
+      </figure>
+      <div class="product-gallery-grid">
+        {gallery.slice(1).map((image) => (
+          <figure><img src={image.image} alt={image.alt} /></figure>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="product-detail-section product-detail-overview" aria-labelledby="overview-title">
+    <div>
+      <p class="section-kicker" data-zh="产品定位" data-en="Product position">产品定位</p>
+      <h2 id="overview-title" data-zh="稳定、直接、可验证。" data-en="Stable, direct, verifiable.">稳定、直接、可验证。</h2>
+    </div>
+    <div class="detail-highlight-grid">
+      {sku.highlights.map((highlight) => (
+        <article>
+          <span aria-hidden="true">+</span>
+          <p {...attrs(highlight)}>{text(highlight)}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="product-detail-section product-spec-block" aria-labelledby="spec-title">
+    <div class="detail-split-heading">
+      <p class="section-kicker" data-zh="规格与结构" data-en="Format & build">规格与结构</p>
+      <h2 id="spec-title" data-zh="把产品参数压进清晰的现场语言。" data-en="Product parameters translated into field language.">把产品参数压进清晰的现场语言。</h2>
+    </div>
+    <dl class="detail-spec-list">
+      {sku.specs.map((spec) => (
+        <div>
+          <dt {...attrs(Array.isArray(spec) ? spec[0] : spec.label)}>{specLabel(spec)}</dt>
+          <dd {...attrs(Array.isArray(spec) ? spec[1] : spec.value)}>{specValue(spec)}</dd>
+        </div>
+      ))}
+    </dl>
+  </section>
+
+  {sku.killPerformance?.length && (
+    <section class="product-detail-section product-performance" aria-labelledby="performance-title">
+      <div class="detail-split-heading">
+        <p class="section-kicker" data-zh="微生物控制" data-en="Microbial control">微生物控制</p>
+        <h2 id="performance-title" data-zh="为感染控制场景保留验证空间。" data-en="Designed with validation space for infection-control use.">为感染控制场景保留验证空间。</h2>
+      </div>
+      <dl class="performance-grid">
+        {sku.killPerformance.map((item) => (
+          <div>
+            <dt {...attrs(item.label)}>{text(item.label)}</dt>
+            <dd {...attrs(item.value)}>{text(item.value)}</dd>
+          </div>
+        ))}
+      </dl>
+    </section>
+  )}
+
+  <section class="product-detail-section usage-section" aria-labelledby="usage-title">
+    <div class="detail-split-heading">
+      <p class="section-kicker" data-zh="使用流程" data-en="Use protocol">使用流程</p>
+      <h2 id="usage-title" data-zh="少一点解释，多一点确定性。" data-en="Less explanation, more certainty.">少一点解释，多一点确定性。</h2>
+    </div>
+    <ol class="usage-steps">
+      {sku.usage.map((step, index) => (
+        <li>
+          <span>{String(index + 1).padStart(2, "0")}</span>
+          <p {...attrs(step)}>{text(step)}</p>
+        </li>
+      ))}
+    </ol>
+  </section>
+
+  <section class="product-detail-section download-panel" id="downloads" aria-labelledby="downloads-title">
+    <div>
+      <p class="section-kicker" data-zh="数字资源" data-en="Digital resources">数字资源</p>
+      <h2 id="downloads-title" data-zh="SDS、说明书和应用海报集中下载。" data-en="SDS, brochures, and posters in one place.">SDS、说明书和应用海报集中下载。</h2>
+    </div>
+    <div class="download-card-grid">
+      {sku.downloads.map((download) => (
+        <a class="download-card" href={download.href}>
+          <span>{download.type}</span>
+          <strong {...attrs(download.title)}>{text(download.title)}</strong>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  {related.length > 0 && (
+    <section class="product-detail-section related-products" aria-labelledby="related-title">
+      <div class="detail-split-heading">
+        <p class="section-kicker" {...attrs(line.name)}>{text(line.name)}</p>
+        <h2 id="related-title" data-zh="同一产品线的其他选择。" data-en="Other products in the same line.">同一产品线的其他选择。</h2>
+      </div>
+      <div class="related-grid">
+        {related.map((item) => (
+          <a class="related-card" href={`/products/${item.slug}/`}>
+            <figure><img src={item.image} alt={item.alt} /></figure>
+            <span>{item.code}</span>
+            <strong>{item.title}</strong>
+            <p {...attrs(item.body)}>{text(item.body)}</p>
+          </a>
+        ))}
+      </div>
+    </section>
+  )}
+</BaseLayout>

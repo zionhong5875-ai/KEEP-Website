@@ -4,8 +4,8 @@ import PageHero from "../components/PageHero.astro";
 import products from "../data/site/products.json";
 import { text, attrs } from "../utils/i18n";
 
-const specLabel = (spec) => Array.isArray(spec) ? spec[0] : spec.label;
-const specValue = (spec) => Array.isArray(spec) ? spec[1] : spec.value;
+const specLabel = (spec) => text(Array.isArray(spec) ? spec[0] : spec.label);
+const specValue = (spec) => text(Array.isArray(spec) ? spec[1] : spec.value);
 ---
 
 <BaseLayout title={products.meta.title} description={products.meta.description}>
@@ -39,9 +39,13 @@ const specValue = (spec) => Array.isArray(spec) ? spec[1] : spec.value;
                   <p {...attrs(sku.body)}>{text(sku.body)}</p>
                   <dl>
                     {sku.specs.map((spec) => (
-                      <div><dt>{specLabel(spec)}</dt><dd>{specValue(spec)}</dd></div>
+                      <div>
+                        <dt {...attrs(Array.isArray(spec) ? spec[0] : spec.label)}>{specLabel(spec)}</dt>
+                        <dd {...attrs(Array.isArray(spec) ? spec[1] : spec.value)}>{specValue(spec)}</dd>
+                      </div>
                     ))}
                   </dl>
+                  <a class="sku-card-link" href={`/products/${sku.slug}/`} data-zh="查看详情" data-en="View details">查看详情</a>
                 </div>
               </article>
             ))}
