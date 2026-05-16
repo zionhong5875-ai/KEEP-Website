@@ -31,7 +31,44 @@
         "en": "New low-residue wiping guidance across common device shells, treatment benches, and public contact surfaces."
       },
       "image": "/assets/resource-news-lab.jpg",
-      "alt": "实验室研发与洁净测试场景"
+      "alt": "实验室研发与洁净测试场景",
+      "slug": "medikeep-material-compatibility-testing",
+      "sections": [
+        {
+          "heading": {
+            "zh": "为什么材料兼容测试重要",
+            "en": "Why material compatibility matters"
+          },
+          "body": {
+            "zh": "医疗空间里的擦拭对象并不单一：床旁设备、监护仪外壳、诊疗台面、门把手和推车扶手都有不同的塑料、涂层和金属结构。MEDIKEEP 的新一轮测试围绕这些高频接触面展开，重点观察擦拭后的表面残留、视觉变化和触感变化。",
+            "en": "Clinical wiping does not happen on one surface type. Bedside equipment, monitor shells, treatment benches, handles, and cart rails involve different plastics, coatings, and metals. MEDIKEEP's new testing round focuses on these high-touch surfaces, observing residue, visual change, and tactile change after wiping."
+          }
+        },
+        {
+          "heading": {
+            "zh": "测试如何进入产品建议",
+            "en": "How testing becomes product guidance"
+          },
+          "body": {
+            "zh": "测试结果会被整理为选型建议、接触面提醒和包装使用说明。对于客户而言，这意味着采购不只是看配方名称，而是能看到产品在真实表面上的使用边界。",
+            "en": "The results are translated into selection guidance, surface notes, and pack-use instructions. For customers, procurement can move beyond formula names and understand how a wipe behaves on real surfaces."
+          }
+        },
+        {
+          "heading": {
+            "zh": "下一步",
+            "en": "Next step"
+          },
+          "body": {
+            "zh": "KEEP 将继续把材料兼容、批次追溯和数字资源整合到 MEDIKEEP 的资料包中，方便医院、经销商和 OEM 客户完成内部审核。",
+            "en": "KEEP will continue integrating material compatibility, batch traceability, and digital resources into MEDIKEEP documentation packs for hospitals, distributors, and OEM customers."
+          }
+        }
+      ],
+      "quote": {
+        "zh": "感染控制产品的价值，不只在杀菌性能，也在对接触面的长期尊重。",
+        "en": "The value of infection-control products is not only antimicrobial performance, but long-term respect for contact surfaces."
+      }
     },
     {
       "date": "2026.03 / Supply",
@@ -44,7 +81,44 @@
         "en": "Standardized substrate, formula, packaging, and labeling data streamline the path from concept to sample."
       },
       "image": "/assets/resource-news-meeting.jpg",
-      "alt": "产品团队讨论供应和质量计划"
+      "alt": "产品团队讨论供应和质量计划",
+      "slug": "oem-rapid-sampling-workflow",
+      "sections": [
+        {
+          "heading": {
+            "zh": "从需求到样品的路径",
+            "en": "From brief to sample"
+          },
+          "body": {
+            "zh": "新的 OEM 快速打样流程将基材、液体、包装、标签和合规资料拆分为标准模块。客户可以先确认使用场景和目标市场，再快速组合适合的湿巾结构。",
+            "en": "The new OEM rapid sampling workflow separates substrate, liquid, packaging, labeling, and compliance documents into standard modules. Customers can define use case and target market first, then assemble a suitable wipe structure faster."
+          }
+        },
+        {
+          "heading": {
+            "zh": "减少反复沟通",
+            "en": "Reducing repeated communication"
+          },
+          "body": {
+            "zh": "业务、研发和供应链共用同一份项目简报，避免版本混乱。包装尺寸、开合结构、装量和视觉方向可以在早期就进入确认流程。",
+            "en": "Sales, R&D, and supply chain teams work from the same project brief to avoid version confusion. Pack size, closure structure, fill count, and visual direction can be confirmed earlier."
+          }
+        },
+        {
+          "heading": {
+            "zh": "适合哪些客户",
+            "en": "Who it helps"
+          },
+          "body": {
+            "zh": "该流程适合跨境品牌、渠道客户、护理机构和工业客户，尤其适合需要在短时间内完成样品评估与内部立项的团队。",
+            "en": "The workflow supports cross-border brands, channel customers, care organizations, and industrial buyers, especially teams that need quick sample evaluation and internal approval."
+          }
+        }
+      ],
+      "quote": {
+        "zh": "打样速度来自流程清晰，而不是仓促省略。",
+        "en": "Sampling speed comes from process clarity, not rushed shortcuts."
+      }
     },
     {
       "date": "2026.02 / Quality",
@@ -57,7 +131,44 @@
         "en": "A unified index for manuals, COA files, SDS documents, and packaging revisions."
       },
       "image": "/assets/resource-library.jpg",
-      "alt": "整洁办公室中的资源资料库"
+      "alt": "整洁办公室中的资源资料库",
+      "slug": "batch-traceability-digital-pack",
+      "sections": [
+        {
+          "heading": {
+            "zh": "资料不应散落在邮件里",
+            "en": "Documents should not live only in email threads"
+          },
+          "body": {
+            "zh": "新的数字资料包把产品说明书、COA、SDS、包装版本和批次信息统一索引。业务员可以更快回应客户索取资料的需求，客户内部审核也能减少遗漏。",
+            "en": "The new digital document pack indexes manuals, COA files, SDS documents, packaging revisions, and batch information in one place. Sales teams can respond faster, and customer review teams can reduce missing information."
+          }
+        },
+        {
+          "heading": {
+            "zh": "与批次追溯的关系",
+            "en": "How it connects to traceability"
+          },
+          "body": {
+            "zh": "每个资料包都围绕产品线和 SKU 建立，不只展示文件，也帮助客户理解文件与产品批次、包装版本之间的关系。",
+            "en": "Each pack is structured around product line and SKU. It does not simply display files; it helps customers understand how documents connect to batches and packaging revisions."
+          }
+        },
+        {
+          "heading": {
+            "zh": "持续更新",
+            "en": "Continuous updates"
+          },
+          "body": {
+            "zh": "后续 KEEP 将把更多下载资源接入 CMS，方便业务团队维护最新版本。",
+            "en": "KEEP will connect more downloadable resources to the CMS so business teams can maintain the latest versions."
+          }
+        }
+      ],
+      "quote": {
+        "zh": "资料管理也是产品体验的一部分。",
+        "en": "Document management is part of the product experience."
+      }
     }
   ],
   "blogs": [
@@ -72,7 +183,44 @@
         "en": "A CAREKEEP selection framework across fluid load, substrate softness, and opening structure."
       },
       "image": "/assets/resource-blog-care.jpg",
-      "alt": "个人护理与日常清洁护理场景"
+      "alt": "个人护理与日常清洁护理场景",
+      "slug": "no-rinse-care-product-selection",
+      "sections": [
+        {
+          "heading": {
+            "zh": "免冲洗不是简单地少一步",
+            "en": "No-rinse is not just one less step"
+          },
+          "body": {
+            "zh": "免冲洗护理产品需要同时考虑清洁力、肤感、液体残留和使用后的舒适度。液体太少会影响覆盖，液体太多则可能带来黏腻和包装渗漏风险。",
+            "en": "No-rinse care products must balance cleansing power, skin feel, residue, and comfort after use. Too little liquid hurts coverage; too much can create stickiness and leakage risk."
+          }
+        },
+        {
+          "heading": {
+            "zh": "三个选型维度",
+            "en": "Three selection dimensions"
+          },
+          "body": {
+            "zh": "第一看使用对象，是成人护理、家庭清洁还是旅行便携；第二看基材触感和强度；第三看包装开合是否能保持湿润度。CAREKEEP 的 SKU 设计正是围绕这三个维度展开。",
+            "en": "First, identify the user and setting: adult care, home cleansing, or travel. Second, evaluate substrate softness and strength. Third, check whether the opening structure preserves moisture. CAREKEEP SKUs are built around these dimensions."
+          }
+        },
+        {
+          "heading": {
+            "zh": "给采购和产品经理的建议",
+            "en": "Advice for buyers and product managers"
+          },
+          "body": {
+            "zh": "不要只比较单片尺寸和克重。更应该结合目标人群、使用频次、包装打开后的保存周期以及渠道陈列方式来判断。",
+            "en": "Do not compare only sheet size and basis weight. Evaluate target users, usage frequency, open-pack life, and channel display format together."
+          }
+        }
+      ],
+      "quote": {
+        "zh": "好的护理湿巾让使用者少感知产品，多感知舒适。",
+        "en": "A good care wipe makes the user notice comfort more than the product itself."
+      }
     },
     {
       "category": "Industrial Wiping",
@@ -85,7 +233,44 @@
         "en": "INDUKEEP is not just thicker. It is about balancing oil pickup, solvent resistance, and tear strength."
       },
       "image": "/assets/resource-blog-industrial.jpg",
-      "alt": "工业现场维护和擦拭应用场景"
+      "alt": "工业现场维护和擦拭应用场景",
+      "slug": "heavy-oil-low-lint-industrial-wipes",
+      "sections": [
+        {
+          "heading": {
+            "zh": "厚不等于强",
+            "en": "Thicker is not always stronger"
+          },
+          "body": {
+            "zh": "工业擦拭要面对油污、溶剂、金属边缘和高频摩擦。单纯加厚可能提升吸附量，却不一定带来湿态强度和低尘表现。",
+            "en": "Industrial wiping faces oil, solvent, metal edges, and repeated friction. Simply making a wipe thicker may increase pickup, but it does not guarantee wet strength or low-lint performance."
+          }
+        },
+        {
+          "heading": {
+            "zh": "INDUKEEP 的平衡点",
+            "en": "The INDUKEEP balance"
+          },
+          "body": {
+            "zh": "Heavy Duty Oil Removal Wipes 通过木浆复合增强结构兼顾吸油、耐撕裂和耐溶剂。它更适合车间、设备维护、喷涂前处理和维修站点。",
+            "en": "Heavy Duty Oil Removal Wipes use a reinforced wood-pulp composite to balance oil pickup, tear resistance, and solvent resistance. They fit workshops, equipment maintenance, pre-coating prep, and service bays."
+          }
+        },
+        {
+          "heading": {
+            "zh": "现场使用提醒",
+            "en": "Field-use note"
+          },
+          "body": {
+            "zh": "重油污作业建议先进行粗擦，再对关键接触面进行二次精擦。含油废弃物应按工厂 EHS 规范分类处理。",
+            "en": "For heavy oil tasks, perform a first bulk wipe and then a second fine wipe on critical contact surfaces. Oil-contaminated waste should follow plant EHS disposal rules."
+          }
+        }
+      ],
+      "quote": {
+        "zh": "工业擦拭的核心，是在粗重现场里保持可控。",
+        "en": "The core of industrial wiping is keeping control in harsh environments."
+      }
     }
   ],
   "downloads": [

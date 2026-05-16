@@ -67,6 +67,66 @@ const setupLanguageSwitch = () => {
   });
 };
 
+const setupFloatingLanguageContrast = () => {
+  const switcher = document.querySelector(".lang-switch-floating");
+  if (!switcher) {
+    return;
+  }
+
+  const mediaSelectors = [
+    ".hero",
+    ".page-hero-image",
+    ".gallery",
+    ".product-gallery-main",
+    ".resource-detail-image",
+    ".about-image",
+    ".line-media",
+    ".download-feature"
+  ].join(",");
+
+  const darkSectionSelectors = [
+    ".line-panel-dark",
+    ".resource-section-dark",
+    ".product-performance",
+    ".related-products",
+    ".quality",
+    ".site-footer"
+  ].join(",");
+
+  const isDarkColor = (color) => {
+    const match = color.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)/);
+    if (!match) {
+      return false;
+    }
+
+    const [, red, green, blue] = match.map(Number);
+    return (red * 299 + green * 587 + blue * 114) / 1000 < 118;
+  };
+
+  const updateContrast = () => {
+    const rect = switcher.getBoundingClientRect();
+    const x = Math.min(window.innerWidth - 1, Math.max(0, rect.left + rect.width / 2));
+    const y = Math.min(window.innerHeight - 1, Math.max(0, rect.top + rect.height / 2));
+
+    const elements = document
+      .elementsFromPoint(x, y)
+      .filter((element) => !element.closest(".lang-switch-floating") && !element.closest(".site-header"));
+
+    const target = elements[0];
+    const shouldInvert = Boolean(
+      target?.closest(mediaSelectors) ||
+      target?.closest(darkSectionSelectors) ||
+      (target && isDarkColor(window.getComputedStyle(target).backgroundColor))
+    );
+
+    switcher.classList.toggle("is-on-media", shouldInvert);
+  };
+
+  updateContrast();
+  window.addEventListener("scroll", updateContrast, { passive: true });
+  window.addEventListener("resize", updateContrast);
+};
+
 document.addEventListener("keydown", (event) => {
   if (event.key === "Tab") {
     document.body.classList.add("using-keyboard");
@@ -164,6 +224,60 @@ if (carousel) {
   });
 }
 
+document.querySelectorAll("[data-product-carousel]").forEach((carousel) => {
+  const slides = Array.from(carousel.querySelectorAll(".product-gallery-slide"));
+  const thumbnails = Array.from(carousel.querySelectorAll("[data-product-thumb]"));
+  const prev = carousel.querySelector("[data-product-prev]");
+  const next = carousel.querySelector("[data-product-next]");
+  const current = carousel.querySelector("[data-product-current]");
+  const main = carousel.querySelector(".product-gallery-main");
+  let activeIndex = 0;
+
+  const showSlide = (index) => {
+    if (!slides.length) {
+      return;
+    }
+
+    activeIndex = (index + slides.length) % slides.length;
+    slides.forEach((slide, slideIndex) => {
+      slide.classList.toggle("is-active", slideIndex === activeIndex);
+    });
+
+    thumbnails.forEach((thumbnail, thumbnailIndex) => {
+      const isActive = thumbnailIndex === activeIndex;
+      thumbnail.classList.toggle("is-active", isActive);
+      thumbnail.setAttribute("aria-pressed", String(isActive));
+    });
+
+    if (current) {
+      current.textContent = String(activeIndex + 1);
+    }
+  };
+
+  thumbnails.forEach((thumbnail) => {
+    thumbnail.addEventListener("click", () => {
+      showSlide(Number(thumbnail.dataset.productThumb || 0));
+    });
+  });
+
+  prev?.addEventListener("click", () => showSlide(activeIndex - 1));
+  next?.addEventListener("click", () => showSlide(activeIndex + 1));
+
+  main?.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowLeft") {
+      event.preventDefault();
+      showSlide(activeIndex - 1);
+    }
+
+    if (event.key === "ArrowRight") {
+      event.preventDefault();
+      showSlide(activeIndex + 1);
+    }
+  });
+
+  showSlide(0);
+});
+
 document.querySelectorAll("[data-scroll-region]").forEach((region) => {
   const axis = region.getAttribute("data-scroll-region");
   if (!region.hasAttribute("role")) {
@@ -221,6 +335,7 @@ document.querySelectorAll("[data-scroll-region]").forEach((region) => {
 });
 
 setupLanguageSwitch();
+setupFloatingLanguageContrast();
 
 document.querySelectorAll("[data-contact-form]").forEach((form) => {
   const status = form.querySelector("[data-contact-status]");

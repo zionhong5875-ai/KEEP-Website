@@ -29,6 +29,7 @@ const pageDescription = sku.intro || sku.body;
 const specLabel = (spec) => text(Array.isArray(spec) ? spec[0] : spec.label);
 const specValue = (spec) => text(Array.isArray(spec) ? spec[1] : spec.value);
 const gallery = sku.gallery?.length ? sku.gallery : [{ image: sku.image, alt: sku.alt }];
+const galleryTotal = gallery.length;
 ---
 
 <BaseLayout title={pageTitle} description={pageDescription}>
@@ -47,13 +48,34 @@ const gallery = sku.gallery?.length ? sku.gallery : [{ image: sku.image, alt: sk
         <a class="button button-dark" href="/#contact" data-zh="咨询方案" data-en="Request a brief">咨询方案</a>
       </div>
     </div>
-    <div class="product-gallery" aria-label="Product images">
-      <figure class="product-gallery-main">
-        <img src={gallery[0].image} alt={gallery[0].alt} />
-      </figure>
-      <div class="product-gallery-grid">
-        {gallery.slice(1).map((image) => (
-          <figure><img src={image.image} alt={image.alt} /></figure>
+    <div class="product-gallery" data-product-carousel aria-label="Product images">
+      <div class="product-gallery-main" tabindex="0">
+        <div class="product-gallery-track">
+          {gallery.map((image, index) => (
+            <figure class:list={["product-gallery-slide", index === 0 && "is-active"]}>
+              <img src={image.image} alt={image.alt} />
+            </figure>
+          ))}
+        </div>
+        <div class="product-gallery-caption">
+          <p>{sku.title}</p>
+          <span>{sku.itemNo}</span>
+        </div>
+        <div class="gallery-controls product-gallery-controls" data-aria-label-zh="产品图片轮播控制" data-aria-label-en="Product image carousel controls" aria-label="产品图片轮播控制">
+          <button type="button" class="gallery-arrow" data-product-prev data-aria-label-zh="上一张产品图" data-aria-label-en="Previous product image" aria-label="上一张产品图">
+            <svg viewBox="0 0 72 48" aria-hidden="true" focusable="false"><path d="M64 24H10M25 8 9 24l16 16"></path></svg>
+          </button>
+          <button type="button" class="gallery-arrow gallery-arrow-next" data-product-next data-aria-label-zh="下一张产品图" data-aria-label-en="Next product image" aria-label="下一张产品图">
+            <svg viewBox="0 0 72 48" aria-hidden="true" focusable="false"><path d="M8 24h54M47 8l16 16-16 16"></path></svg>
+          </button>
+          <span class="gallery-count" aria-live="polite"><b data-product-current>1</b>/{galleryTotal}</span>
+        </div>
+      </div>
+      <div class="product-thumbnails" role="list" data-aria-label-zh="产品图片缩略图" data-aria-label-en="Product image thumbnails" aria-label="产品图片缩略图">
+        {gallery.map((image, index) => (
+          <button class:list={["product-thumbnail", index === 0 && "is-active"]} type="button" data-product-thumb={index} aria-label={`Show product image ${index + 1}`}>
+            <img src={image.image} alt="" />
+          </button>
         ))}
       </div>
     </div>

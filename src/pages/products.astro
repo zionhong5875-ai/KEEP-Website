@@ -32,10 +32,12 @@ const specValue = (spec) => text(Array.isArray(spec) ? spec[1] : spec.value);
           <div class:list={["sku-grid", line.single && "sku-grid-single"]}>
             {line.skus.map((sku) => (
               <article class:list={["sku-card", line.single && "sku-card-wide"]}>
-                <figure><img src={sku.image} alt={sku.alt} /></figure>
+                <a class="sku-card-media-link" href={`/products/${sku.slug}/`} aria-label={`View ${sku.title}`}>
+                  <figure><img src={sku.image} alt={sku.alt} /></figure>
+                </a>
                 <div class="sku-card-copy">
                   <span>{sku.code}</span>
-                  <h4>{sku.title}</h4>
+                  <h4><a href={`/products/${sku.slug}/`}>{sku.title}</a></h4>
                   <p {...attrs(sku.body)}>{text(sku.body)}</p>
                   <dl>
                     {sku.specs.map((spec) => (

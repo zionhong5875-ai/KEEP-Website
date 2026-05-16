@@ -206,21 +206,39 @@ collections:
             widget: list
             summary: "{{fields.date}} {{fields.title.zh}}"
             fields:
+              - { label: URL Slug, name: slug, widget: string }
               - { label: 日期/分类, name: date, widget: string }
               - { label: 标题, name: title, <<: *i18n_text }
               - { label: 摘要, name: body, <<: *i18n_text }
               - { label: 图片, name: image, widget: image }
               - { label: 图片描述 Alt, name: alt, widget: string }
+              - { label: 金句/重点, name: quote, <<: *i18n_text }
+              - label: 正文段落
+                name: sections
+                widget: list
+                summary: "{{fields.heading.zh}}"
+                fields:
+                  - { label: 小标题, name: heading, <<: *i18n_text }
+                  - { label: 正文, name: body, <<: *i18n_text }
           - label: 博客
             name: blogs
             widget: list
             summary: "{{fields.category}} {{fields.title.zh}}"
             fields:
+              - { label: URL Slug, name: slug, widget: string }
               - { label: 分类, name: category, widget: string }
               - { label: 标题, name: title, <<: *i18n_text }
               - { label: 摘要, name: body, <<: *i18n_text }
               - { label: 图片, name: image, widget: image }
               - { label: 图片描述 Alt, name: alt, widget: string }
+              - { label: 金句/重点, name: quote, <<: *i18n_text }
+              - label: 正文段落
+                name: sections
+                widget: list
+                summary: "{{fields.heading.zh}}"
+                fields:
+                  - { label: 小标题, name: heading, <<: *i18n_text }
+                  - { label: 正文, name: body, <<: *i18n_text }
           - label: 数字资源
             name: downloads
             widget: list

@@ -20,12 +20,14 @@ import { text, attrs } from "../utils/i18n";
       <div class="article-grid">
         {resources.news.map((item) => (
           <article class="article-card">
-            <figure><img src={item.image} alt={item.alt} /></figure>
+            <a class="article-card-media-link" href={`/resources/${item.slug}/`} aria-label={`Read ${text(item.title)}`}>
+              <figure><img src={item.image} alt={item.alt} /></figure>
+            </a>
             <div class="article-card-copy">
               <span>{item.date}</span>
-              <h3 {...attrs(item.title)}>{text(item.title)}</h3>
+              <h3><a href={`/resources/${item.slug}/`} {...attrs(item.title)}>{text(item.title)}</a></h3>
               <p {...attrs(item.body)}>{text(item.body)}</p>
-              <a href="#" data-zh="阅读更新" data-en="Read update">阅读更新</a>
+              <a href={`/resources/${item.slug}/`} data-zh="阅读更新" data-en="Read update">阅读更新</a>
             </div>
           </article>
         ))}
@@ -45,12 +47,14 @@ import { text, attrs } from "../utils/i18n";
       <div class="article-grid">
         {resources.blogs.map((item) => (
           <article class="article-card">
-            <figure><img src={item.image} alt={item.alt} /></figure>
+            <a class="article-card-media-link" href={`/resources/${item.slug}/`} aria-label={`Read ${text(item.title)}`}>
+              <figure><img src={item.image} alt={item.alt} /></figure>
+            </a>
             <div class="article-card-copy">
               <span>{item.category}</span>
-              <h3 {...attrs(item.title)}>{text(item.title)}</h3>
+              <h3><a href={`/resources/${item.slug}/`} {...attrs(item.title)}>{text(item.title)}</a></h3>
               <p {...attrs(item.body)}>{text(item.body)}</p>
-              <a href="#" data-zh="阅读文章" data-en="Read article">阅读文章</a>
+              <a href={`/resources/${item.slug}/`} data-zh="阅读文章" data-en="Read article">阅读文章</a>
             </div>
           </article>
         ))}
