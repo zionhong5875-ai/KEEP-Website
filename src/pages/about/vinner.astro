@@ -1,0 +1,76 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHero from "../../components/PageHero.astro";
+import about from "../../data/site/aboutVinner.json";
+import { text, attrs } from "../../utils/i18n";
+---
+
+<BaseLayout
+  title={about.meta.title}
+  description={about.meta.description}
+>
+  <PageHero
+    eyebrow={about.hero.eyebrow}
+    title={about.hero.title}
+    body={about.hero.body}
+    image={about.hero.image}
+    alt={about.hero.alt}
+    light={about.hero.light}
+  />
+
+  <section class="split-section about-company-intro">
+    <div>
+      <p class="section-kicker" {...attrs(about.intro.kicker)}>{text(about.intro.kicker)}</p>
+      <h2 {...attrs(about.intro.title)}>{text(about.intro.title)}</h2>
+    </div>
+    <div>
+      {about.intro.paragraphs.map((paragraph) => (
+        <p {...attrs(paragraph)}>{text(paragraph)}</p>
+      ))}
+    </div>
+  </section>
+
+  <section class="about-metrics" aria-labelledby="about-metrics-title">
+    <div class="about-section-heading">
+      <p class="section-kicker" {...attrs(about.metricsSection.kicker)}>{text(about.metricsSection.kicker)}</p>
+      <h2 id="about-metrics-title" {...attrs(about.metricsSection.title)}>{text(about.metricsSection.title)}</h2>
+    </div>
+    <div class="metric-grid">
+      {about.metricsSection.items.map((metric) => (
+        <article class="metric-card">
+          <strong class="metric-number">{metric.number}</strong>
+          <p {...attrs(metric.label)}>{text(metric.label)}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="about-timeline" aria-labelledby="about-history-title">
+    <div class="about-section-heading">
+      <p class="section-kicker" {...attrs(about.timelineSection.kicker)}>{text(about.timelineSection.kicker)}</p>
+      <h2 id="about-history-title" {...attrs(about.timelineSection.title)}>{text(about.timelineSection.title)}</h2>
+    </div>
+    <ol class="timeline-list">
+      {about.timelineSection.items.map((item) => (
+        <li>
+          <strong>{item.year}</strong>
+          <p {...attrs(item.body)}>{text(item.body)}</p>
+        </li>
+      ))}
+    </ol>
+  </section>
+
+  <section class="partner-section" aria-labelledby="partner-title">
+    <div class="about-section-heading">
+      <p class="section-kicker" {...attrs(about.partnersSection.kicker)}>{text(about.partnersSection.kicker)}</p>
+      <h2 id="partner-title" {...attrs(about.partnersSection.title)}>{text(about.partnersSection.title)}</h2>
+    </div>
+    <div class="partner-wall" aria-label="Partner brands">
+      {about.partnersSection.items.map((partner) => (
+        <span>
+          <img src={partner.logo} alt={partner.name} loading="lazy" />
+        </span>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

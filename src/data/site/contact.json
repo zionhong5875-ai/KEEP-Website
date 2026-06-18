@@ -1,0 +1,116 @@
+{
+  "meta": {
+    "title": {
+      "zh": "联系我们 | VINNER",
+      "en": "Contact | VINNER"
+    },
+    "description": {
+      "zh": "联系 VINNER 维尼健康团队，获取产品方案、OEM/ODM 项目支持、总部与工厂地址以及业务联系方式。",
+      "en": "Contact VINNER for product solutions, OEM/ODM project support, headquarters and factory addresses, and business contacts."
+    }
+  },
+  "hero": {
+    "eyebrow": {
+      "zh": "联系我们",
+      "en": "Contact"
+    },
+    "title": {
+      "zh": "把需求直接发给负责的人。",
+      "en": "Send the brief<br />to the right team."
+    },
+    "body": {
+      "zh": "无论是产品选型、样品开发、OEM/ODM 定制还是资料索取，都可以通过电话、邮箱或表单联系 VINNER。",
+      "en": "For product selection, sample development, OEM/ODM customization, or document requests, contact VINNER by phone, email, or the form below."
+    },
+    "image": "/assets/resource-news-meeting.jpg",
+    "alt": "业务沟通与项目会议"
+  },
+  "directory": {
+    "kicker": {
+      "zh": "联系方式",
+      "en": "Contacts"
+    },
+    "title": {
+      "zh": "产品、项目和商务合作可以直接联系。",
+      "en": "Direct contacts for products, projects, and commercial support."
+    },
+    "people": [
+      {
+        "name": "石万明 Jack Shi",
+        "role": {
+          "zh": "总经理",
+          "en": "General Manager"
+        },
+        "phone": "+86 18620314077",
+        "email": "shiwanming@vinnercare.cn"
+      },
+      {
+        "name": "洪梓豪 Zion Hong",
+        "role": {
+          "zh": "业务开发",
+          "en": "Business Development Manager"
+        },
+        "phone": "+86 15013995875",
+        "email": "hongzihao@vinnercare.cn"
+      }
+    ]
+  },
+  "locationsSection": {
+    "kicker": {
+      "zh": "公司地址",
+      "en": "Locations"
+    },
+    "title": {
+      "zh": "深圳总部与黄冈制造基地。",
+      "en": "Shenzhen headquarters and Huanggang manufacturing base."
+    },
+    "locations": [
+      {
+        "label": {
+          "zh": "总部",
+          "en": "Headquarters"
+        },
+        "company": {
+          "zh": "维尼健康（深圳）股份有限公司",
+          "en": "Vinner (Shenzhen) Health Products Limited"
+        },
+        "addressLabel": {
+          "zh": "总部地址",
+          "en": "Headquarters address"
+        },
+        "address": {
+          "zh": "深圳市龙华区民治街道民强社区宝山时代大厦608",
+          "en": "Room 608, Baoshan Times Building, Shenzhen Longhua District, China. 518129"
+        },
+        "phoneLabel": {
+          "zh": "总部电话",
+          "en": "Headquarters phone"
+        },
+        "phone": "+86 0755-61695825"
+      },
+      {
+        "label": {
+          "zh": "工厂",
+          "en": "Factory"
+        },
+        "company": {
+          "zh": "维尼健康（深圳）股份有限公司黄冈分公司",
+          "en": "Vinner (Shenzhen) Health Products Limited Huanggang Branch"
+        },
+        "addressLabel": {
+          "zh": "工厂地址",
+          "en": "Factory address"
+        },
+        "address": {
+          "zh": "湖北省黄冈市黄州区新桥街76号3号楼",
+          "en": "Building 3, No.76 Xinqiao Street, Huangzhou District, Huanggang City, Hubei Province, China. 438000"
+        },
+        "phoneLabel": {
+          "zh": "工厂电话",
+          "en": "Factory phone"
+        },
+        "phone": ""
+      }
+    ]
+  }
+}

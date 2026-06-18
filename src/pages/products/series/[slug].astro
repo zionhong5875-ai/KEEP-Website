@@ -1,0 +1,106 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import products from "../../../data/site/products.json";
+import { text, attrs } from "../../../utils/i18n";
+import { getProductLineMeta } from "../../../utils/productLines";
+
+export const prerender = true;
+
+export function getStaticPaths() {
+  const lineEntries = products.lines.map((line) => ({
+    line,
+    meta: getProductLineMeta(line)
+  }));
+
+  return lineEntries.map((entry) => ({
+    params: { slug: entry.meta.slug },
+    props: entry
+  }));
+}
+
+const { line, meta } = Astro.props;
+const pageTitle = {
+  zh: `${meta.brand} ${text(meta.title)} | VINNER`,
+  en: `${meta.brand} ${text(meta.title)} | VINNER`
+};
+const pageDescription = meta.summary;
+const specLabel = (spec) => text(Array.isArray(spec) ? spec[0] : spec.label);
+const specValue = (spec) => text(Array.isArray(spec) ? spec[1] : spec.value);
+const getSkuPrimaryImage = (sku) => sku.gallery?.[0]?.image || sku.image;
+const getSkuPrimaryAlt = (sku) => sku.gallery?.[0]?.alt || sku.alt;
+const hasProducts = line.skus.length > 0;
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <section class="page-hero page-hero-image series-page-hero" aria-labelledby="series-title">
+    <img src={meta.image} alt={meta.alt} />
+    <div class="page-hero-scrim"></div>
+    <div>
+      <a class="back-link back-link-on-media" href="/products/" data-zh="返回产品页" data-en="Back to products">返回产品页</a>
+      <p class="eyebrow">{line.index}</p>
+      <h1 id="series-title">{meta.brand}</h1>
+      <p {...attrs(meta.title)}>{text(meta.title)}</p>
+    </div>
+  </section>
+
+  <section class="series-intro" aria-labelledby="series-intro-title">
+    <div class="series-intro-copy">
+      <p class="section-kicker" data-zh="系列定位" data-en="Series Position">系列定位</p>
+      <h2 id="series-intro-title" {...attrs(meta.summary)}>{text(meta.summary)}</h2>
+      <p {...attrs(meta.detail)}>{text(meta.detail)}</p>
+    </div>
+    <div class="series-use-grid">
+      {meta.uses.map((item) => (
+        <article>
+          <span aria-hidden="true">+</span>
+          <p {...attrs(item)}>{text(item)}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="series-products" aria-labelledby="series-products-title">
+    <div class="series-products-heading">
+      <p class="section-kicker" data-zh="系列产品" data-en="Series Products">系列产品</p>
+      <h2 id="series-products-title" data-zh="看清楚这个系列目前有哪些产品。" data-en="See every product currently in this series.">看清楚这个系列目前有哪些产品。</h2>
+    </div>
+
+    {hasProducts ? (
+      <div class="series-product-grid">
+        {line.skus.map((sku) => (
+          <article class="series-product-card">
+            <a class="series-product-media" href={`/products/${sku.slug}/`} aria-label={`View ${sku.title}`}>
+              <img src={getSkuPrimaryImage(sku)} alt={getSkuPrimaryAlt(sku)} />
+            </a>
+            <div class="series-product-copy">
+              <span>{sku.code}</span>
+              <h3><a href={`/products/${sku.slug}/`}>{sku.title}</a></h3>
+              <p {...attrs(sku.body)}>{text(sku.body)}</p>
+              <dl>
+                {sku.specs.slice(0, 3).map((spec) => (
+                  <div>
+                    <dt {...attrs(Array.isArray(spec) ? spec[0] : spec.label)}>{specLabel(spec)}</dt>
+                    <dd {...attrs(Array.isArray(spec) ? spec[1] : spec.value)}>{specValue(spec)}</dd>
+                  </div>
+                ))}
+              </dl>
+              <a class="sku-card-link" href={`/products/${sku.slug}/`} data-zh="查看详情" data-en="View details">查看详情</a>
+            </div>
+          </article>
+        ))}
+      </div>
+    ) : (
+      <div class="series-capability-grid">
+        {meta.uses.map((item, index) => (
+          <article>
+            <span>{String(index + 1).padStart(2, "0")}</span>
+            <h3 {...attrs(item)}>{text(item)}</h3>
+            <p data-zh="根据目标市场、使用场景和包装需求继续拆解为可打样、可测试、可量产的项目简报。" data-en="Map target market, use case, and packaging needs into a sample-ready, test-ready, and production-ready project brief.">
+              根据目标市场、使用场景和包装需求继续拆解为可打样、可测试、可量产的项目简报。
+            </p>
+          </article>
+        ))}
+      </div>
+    )}
+  </section>
+</BaseLayout>

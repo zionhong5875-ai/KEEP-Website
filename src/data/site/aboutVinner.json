@@ -1,0 +1,117 @@
+{
+  "meta": {
+    "title": {
+      "zh": "关于维尼 | VINNER",
+      "en": "About Vinner | VINNER"
+    },
+    "description": {
+      "zh": "了解维尼健康（深圳）股份有限公司的湿巾研发、生产、资质认证、历史与合作伙伴。",
+      "en": "Learn about Vinner Health's wipes R&D, manufacturing, certifications, history, and partners."
+    }
+  },
+  "hero": {
+    "eyebrow": {
+      "zh": "关于维尼",
+      "en": "About Vinner"
+    },
+    "title": {
+      "zh": "二十年湿巾研发与制造。",
+      "en": "Twenty years<br />in wipes."
+    },
+    "body": {
+      "zh": "维尼健康（深圳）股份有限公司成立于 2004 年，2015 年成功挂牌新三板，是一家从事湿巾产品研发、生产、销售的专业制造商。",
+      "en": "Vinner Health (Shenzhen) Co., Ltd. was founded in 2004 and listed on the NEEQ in 2015. The company specializes in wet wipes R&D, manufacturing, and sales."
+    },
+    "image": "/assets/about-hero.jpg",
+    "alt": "洁净制造与质量控制环境",
+    "light": false
+  },
+  "intro": {
+    "kicker": {
+      "zh": "公司介绍",
+      "en": "Company"
+    },
+    "title": {
+      "zh": "专业化、精细化的研产销一体驱动。",
+      "en": "Integrated R&D, manufacturing, and sales with specialist execution."
+    },
+    "paragraphs": [
+      {
+        "zh": "公司以专业化、精细化的研-产-销一体驱动，采用 ODM/OEM 和联合研发的模式，为全棉时代、GAMA（Clinell）、比亚迪、MUNCHKIN、名创优品等国内外知名品牌客户提供差异化、高品质的湿巾产品与服务。",
+        "en": "The company combines professional R&D, manufacturing, and sales capabilities, using ODM/OEM and joint-development models to serve well-known domestic and international brands including Purcotton, GAMA (Clinell), BYD, MUNCHKIN, and MINISO with differentiated, high-quality wipe products and services."
+      },
+      {
+        "zh": "公司已取得中国及欧美市场的多项资质认证，包括 ISO13485 医疗器械质量管理体系认证、ISO9001 质量管理体系认证、ISO22716、消毒产品生产企业卫生许可、第一类医疗器械生产备案等资质认证。",
+        "en": "The company has obtained multiple qualifications for China, Europe, and the United States, including ISO13485 medical device quality management system certification, ISO9001 quality management system certification, ISO22716, hygiene license for disinfectant product manufacturers, and Class I medical device production filing."
+      }
+    ]
+  },
+  "metricsSection": {
+    "kicker": {
+      "zh": "关键数字",
+      "en": "Key Figures"
+    },
+    "title": {
+      "zh": "用经验、产能和研发体系支撑客户项目。",
+      "en": "Experience, capacity, and R&D systems for customer programs."
+    },
+    "items": [
+      { "number": "20+", "label": { "zh": "年湿巾研发与生产经验", "en": "years of wet wipes R&D and manufacturing experience" } },
+      { "number": "15+", "label": { "zh": "年医疗消毒湿巾生产经验", "en": "years of medical disinfectant wipes manufacturing experience" } },
+      { "number": "95%+", "label": { "zh": "自动化率", "en": "automation rate" } },
+      { "number": "3%+", "label": { "zh": "以上销售额投入研发", "en": "of sales invested in R&D" } },
+      { "number": "500+", "label": { "zh": "成熟湿巾配方", "en": "mature wipe formulas" } },
+      { "number": "3", "label": { "zh": "个独立实验室", "en": "independent laboratories" } },
+      { "number": "30+", "label": { "zh": "知识产权专利", "en": "intellectual property patents" } },
+      { "number": "80亿+", "label": { "zh": "片以上湿巾年产能", "en": "wipes annual capacity" } },
+      { "number": "20+", "label": { "zh": "家合作实验室与大学", "en": "partner laboratories and universities" } },
+      { "number": "2015", "label": { "zh": "年上市", "en": "listed in 2015" } }
+    ]
+  },
+  "timelineSection": {
+    "kicker": {
+      "zh": "发展历史",
+      "en": "History"
+    },
+    "title": {
+      "zh": "从深圳工厂到黄冈制造基地。",
+      "en": "From Shenzhen factory to Huanggang manufacturing base."
+    },
+    "items": [
+      { "year": "2004", "body": { "zh": "11月公司与深圳工厂成立", "en": "Vinner Health and the Shenzhen factory were founded in November." } },
+      { "year": "2009", "body": { "zh": "涉足医疗消毒领域", "en": "Entered the medical disinfection field." } },
+      { "year": "2015", "body": { "zh": "12月成功挂牌新三板", "en": "Listed on the NEEQ in December." } },
+      { "year": "2017", "body": { "zh": "维尼健康黄冈工厂成立并投产", "en": "The Huanggang factory was established and put into production." } },
+      { "year": "2020", "body": { "zh": "成为国家高新技术企业", "en": "Recognized as a National High-Tech Enterprise." } },
+      { "year": "2022", "body": { "zh": "深圳工厂生产转移至黄冈工厂，深圳作为总部办公室，保留行政部门", "en": "Production moved from Shenzhen to Huanggang; Shenzhen remained the headquarters office with administration functions." } },
+      { "year": "2025", "body": { "zh": "持续研发新技术和产品，并持续更新设备", "en": "Continues to develop new technologies and products while upgrading equipment." } }
+    ]
+  },
+  "partnersSection": {
+    "kicker": {
+      "zh": "合作伙伴",
+      "en": "Partners"
+    },
+    "title": {
+      "zh": "服务国内外品牌客户与渠道伙伴。",
+      "en": "Serving brand customers and channel partners worldwide."
+    },
+    "items": [
+      { "name": "全棉时代", "logo": "/assets/partners/purcotton.svg" },
+      { "name": "Walmart", "logo": "/assets/partners/walmart.svg" },
+      { "name": "洁柔", "logo": "/assets/partners/cns.svg" },
+      { "name": "Bela Andersen", "logo": "/assets/partners/bela-andersen.svg" },
+      { "name": "GAMA Healthcare", "logo": "/assets/partners/gama-healthcare.svg" },
+      { "name": "3M", "logo": "/assets/partners/3m.svg" },
+      { "name": "Bluesail", "logo": "/assets/partners/bluesail.svg" },
+      { "name": "Medicom", "logo": "/assets/partners/medicom.svg" },
+      { "name": "OmniShield", "logo": "/assets/partners/omnishield.svg" },
+      { "name": "Pharmavest", "logo": "/assets/partners/pharmavest.svg" },
+      { "name": "Winner", "logo": "/assets/partners/winner-medical.svg" },
+      { "name": "Abu Sarhad Holding", "logo": "/assets/partners/abu-sarhad-holding.svg" },
+      { "name": "Anmar United", "logo": "/assets/partners/anmar-united.svg" },
+      { "name": "Munchkin", "logo": "/assets/partners/munchkin.svg" },
+      { "name": "Dr. Brown's", "logo": "/assets/partners/dr-browns.svg" }
+    ]
+  }
+}

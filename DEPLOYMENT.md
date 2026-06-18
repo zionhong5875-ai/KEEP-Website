@@ -1,4 +1,4 @@
-# KEEP Deployment Notes
+# VINNER Deployment Notes
 
 ## Production Stack
 
@@ -26,8 +26,8 @@ Required for email:
 
 ```text
 RESEND_API_KEY=
-CONTACT_FROM=KEEP Website <noreply@your-domain.com>
-CONTACT_TO=sales@your-domain.com
+CONTACT_FROM=VINNER Website <noreply@vinnercare.cn>
+CONTACT_TO=hongzihao@vinnercare.cn
 ```
 
 Required for Feishu Bitable storage:
@@ -71,7 +71,7 @@ backend:
   auth_endpoint: oauth
 ```
 
-Then invite editors to the GitHub repository with limited write access. Editors use `/admin/` to change copy, images, SKUs, news, blogs, and resources.
+Then invite editors to the GitHub repository with limited write access. Editors use `/admin/` to change site settings, homepage content, product lines, SKUs, certificates, contacts, news, blogs, digital resources, images, and PDF downloads.
 
 Create a GitHub OAuth App:
 

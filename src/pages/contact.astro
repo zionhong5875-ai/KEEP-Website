@@ -1,0 +1,76 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "../components/PageHero.astro";
+import ContactForm from "../components/ContactForm.astro";
+import contact from "../data/site/contact.json";
+import settings from "../data/site/siteSettings.json";
+import { text, attrs } from "../utils/i18n";
+---
+
+<BaseLayout
+  title={contact.meta.title}
+  description={contact.meta.description}
+>
+  <PageHero
+    eyebrow={contact.hero.eyebrow}
+    title={contact.hero.title}
+    body={contact.hero.body}
+    image={contact.hero.image}
+    alt={contact.hero.alt}
+    light={contact.hero.light}
+  />
+
+  <section class="contact-page-section contact-directory" aria-labelledby="contact-directory-title">
+    <div class="about-section-heading">
+      <p class="section-kicker" {...attrs(contact.directory.kicker)}>{text(contact.directory.kicker)}</p>
+      <h2 id="contact-directory-title" {...attrs(contact.directory.title)}>{text(contact.directory.title)}</h2>
+    </div>
+    <div class="contact-person-grid">
+      {contact.directory.people.map((person, index) => (
+        <article class="contact-person-card">
+          <img class="contact-person-logo" src={settings.brand.logo} alt={settings.brand.logoAlt} loading="lazy" />
+          <span class="contact-person-index">{String(index + 1).padStart(2, "0")}</span>
+          <h3>{person.name}</h3>
+          <p {...attrs(person.role)}>{text(person.role)}</p>
+          <div class="contact-person-links">
+            <a href={`tel:${person.phone.replaceAll(" ", "")}`}>
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.6 10.8c1.5 3 3.6 5.1 6.6 6.6l2.2-2.2c.3-.3.8-.4 1.2-.3 1.3.4 2.6.6 4 .6.7 0 1.2.5 1.2 1.2v3.5c0 .7-.5 1.2-1.2 1.2C10.7 21.9 2.1 13.3 2.1 3.4c0-.7.5-1.2 1.2-1.2h3.5c.7 0 1.2.5 1.2 1.2 0 1.4.2 2.7.6 4 .1.4 0 .8-.3 1.2l-1.7 2.2Z"></path></svg>
+              <span>{person.phone}</span>
+            </a>
+            <a href={`mailto:${person.email}`}>
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3.8 5.5h16.4c.7 0 1.3.6 1.3 1.3v10.4c0 .7-.6 1.3-1.3 1.3H3.8c-.7 0-1.3-.6-1.3-1.3V6.8c0-.7.6-1.3 1.3-1.3Z"></path><path d="m3 7 9 6 9-6"></path></svg>
+              <span>{person.email}</span>
+            </a>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="contact-page-section contact-locations" aria-labelledby="contact-location-title">
+    <div class="about-section-heading">
+      <p class="section-kicker" {...attrs(contact.locationsSection.kicker)}>{text(contact.locationsSection.kicker)}</p>
+      <h2 id="contact-location-title" {...attrs(contact.locationsSection.title)}>{text(contact.locationsSection.title)}</h2>
+    </div>
+    <div class="contact-location-grid">
+      {contact.locationsSection.locations.map((location) => (
+        <article class="contact-location-card">
+          <span {...attrs(location.label)}>{text(location.label)}</span>
+          <h3 {...attrs(location.company)}>{text(location.company)}</h3>
+          <div>
+            <strong {...attrs(location.addressLabel)}>{text(location.addressLabel)}</strong>
+            <p {...attrs(location.address)}>{text(location.address)}</p>
+          </div>
+          {location.phone && (
+            <div>
+              <strong {...attrs(location.phoneLabel)}>{text(location.phoneLabel)}</strong>
+              <p><a href={`tel:${location.phone.replaceAll(" ", "").replace("-", "")}`}>{location.phone}</a></p>
+            </div>
+          )}
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <ContactForm />
+</BaseLayout>

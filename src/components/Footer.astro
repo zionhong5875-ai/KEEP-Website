@@ -1,36 +1,91 @@
 ---
-const nav = [
-  { href: "/", zh: "首页", en: "Home" },
-  { href: "/products/", zh: "产品", en: "Products" },
-  { href: "/about/", zh: "关于我们", en: "About" },
-  { href: "/#contact", zh: "联系", en: "Contact" },
-  { href: "/resources/", zh: "博客与资源", en: "Blog & Resources" }
+import settings from "../data/site/siteSettings.json";
+import products from "../data/site/products.json";
+import { attrs, text } from "../utils/i18n";
+import { getProductLineHref, getProductLineMeta } from "../utils/productLines.js";
+
+const aboutLinks = [
+  { href: "/about/factory/", label: settings.navigation.factory },
+  { href: "/about/factory-qualification/", label: settings.navigation.factoryQualification }
 ];
 
-const legal = [
-  { href: "/privacy/", zh: "隐私政策", en: "Privacy Policy" },
-  { href: "/cookies/", zh: "Cookie 政策", en: "Cookie Policy" },
-  { href: "/disclaimer/", zh: "免责声明", en: "Disclaimer" },
-  { href: "/copyright/", zh: "版权信息", en: "Copyright" }
+const resourceLinks = [
+  { href: "/resources/#downloads", label: settings.footer.downloads }
 ];
 ---
 
 <footer class="site-footer">
-  <div class="footer-main">
-    <div>
-      <a class="footer-brand" href="/">KEEP</a>
-      <p>MEDIKEEP · CAREKEEP · INDUKEEP</p>
+  <p class="footer-kicker" {...attrs(settings.footer.kicker)}>{text(settings.footer.kicker)}</p>
+  <div class="footer-grid">
+    <section class="footer-column" aria-labelledby="footer-products-title">
+      <h2 id="footer-products-title"><a href="/products/" {...attrs(settings.footer.products)}>{text(settings.footer.products)}</a></h2>
+      <nav aria-label="Product links">
+        {products.lines.map((line) => {
+          const meta = getProductLineMeta(line);
+          const label = {
+            zh: `${meta.brand} ${text(meta.title)}`,
+            en: `${meta.brand} ${meta.title.en}`
+          };
+          return <a href={getProductLineHref(line)} {...attrs(label)}>{label.zh}</a>;
+        })}
+      </nav>
+    </section>
+
+    <section class="footer-column" aria-labelledby="footer-about-title">
+      <h2 id="footer-about-title"><a href="/about/vinner/" {...attrs(settings.navigation.about)}>{text(settings.navigation.about)}</a></h2>
+      <nav aria-label="Company links">
+        {aboutLinks.map((item) => <a href={item.href} {...attrs(item.label)}>{text(item.label)}</a>)}
+      </nav>
+    </section>
+
+    <section class="footer-column" aria-labelledby="footer-resources-title">
+      <h2 id="footer-resources-title"><a href="/resources/" {...attrs(settings.footer.resources)}>{text(settings.footer.resources)}</a></h2>
+      <nav aria-label="Resource links">
+        {resourceLinks.map((item) => <a href={item.href} {...attrs(item.label)}>{text(item.label)}</a>)}
+      </nav>
+    </section>
+
+    <section class="footer-column footer-contact-column" aria-labelledby="footer-contact-title">
+      <h2 id="footer-contact-title"><a href="/contact/" {...attrs(settings.footer.contact)}>{text(settings.footer.contact)}</a></h2>
+    </section>
+
+    <section class="footer-column" aria-labelledby="footer-legal-title">
+      <h2 id="footer-legal-title" {...attrs(settings.footer.policies)}>{text(settings.footer.policies)}</h2>
+      <nav aria-label="Policy links">
+        {settings.footer.legal.map((item) => <a href={item.href} data-zh={item.zh} data-en={item.en}>{item.zh}</a>)}
+      </nav>
+    </section>
+  </div>
+
+  <div class="footer-brand-row">
+    <a class="footer-logo" href="/" aria-label="VINNER home">
+      <img src={settings.brand.logo} alt={settings.brand.logoAlt} loading="lazy" />
+    </a>
+
+    <div class="footer-social-block">
+      <h2 {...attrs(settings.footer.follow)}>{text(settings.footer.follow)}</h2>
+      <div class="footer-socials" aria-label="Social media links">
+        {settings.footer.socials.map((item) => (
+          <a href={item.href} aria-label={item.name} title={item.name}>
+            <img src={item.icon} alt="" loading="lazy" />
+          </a>
+        ))}
+      </div>
     </div>
-    <nav>
-      {nav.map((item) => <a href={item.href} data-zh={item.zh} data-en={item.en}>{item.zh}</a>)}
-    </nav>
+
+    <section class="footer-qr" aria-labelledby="footer-wechat-title">
+      <h2 id="footer-wechat-title" {...attrs(settings.footer.wechatTitle)}>{text(settings.footer.wechatTitle)}</h2>
+      <div class="footer-qr-row">
+        <img src={settings.footer.wechatQr} alt={settings.footer.wechatAlt} loading="lazy" />
+        <p {...attrs(settings.footer.wechatText)}>{text(settings.footer.wechatText)}</p>
+      </div>
+    </section>
   </div>
 
-  <div class="footer-legal">
-    {legal.map((item) => <a href={item.href} data-zh={item.zh} data-en={item.en}>{item.zh}</a>)}
+  <div class="footer-bottom">
+    <p class="footer-copyright">{settings.footer.copyright}</p>
+    <div class="footer-company" {...attrs(settings.footer.company)}>
+      {text(settings.footer.company)}
+    </div>
   </div>
-
-  <p class="source-note" data-zh="Prototype 站点使用公开图片素材；联系表单当前已迁移为 Astro API 接口。" data-en="This prototype uses publicly sourced photography; the contact form has been migrated to an Astro API endpoint.">
-    Prototype 站点使用公开图片素材；联系表单当前已迁移为 Astro API 接口。
-  </p>
 </footer>

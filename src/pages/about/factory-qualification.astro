@@ -1,0 +1,40 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import qualification from "../../data/site/factoryQualification.json";
+import { text, attrs } from "../../utils/i18n";
+---
+
+<BaseLayout
+  title={qualification.meta.title}
+  description={qualification.meta.description}
+>
+  <section class="split-section">
+    <div>
+      <p class="section-kicker" {...attrs(qualification.intro.kicker)}>{text(qualification.intro.kicker)}</p>
+      <h2 {...attrs(qualification.intro.title)}>{text(qualification.intro.title)}</h2>
+    </div>
+    <div>
+      <p {...attrs(qualification.intro.body)}>{text(qualification.intro.body)}</p>
+    </div>
+  </section>
+
+  <section class="certification-section" aria-labelledby="certification-title">
+    <div class="about-section-heading">
+      <p class="section-kicker" {...attrs(qualification.certificatesSection.kicker)}>{text(qualification.certificatesSection.kicker)}</p>
+      <h2 id="certification-title" {...attrs(qualification.certificatesSection.title)}>{text(qualification.certificatesSection.title)}</h2>
+    </div>
+    <div class="certification-grid">
+      {qualification.certificatesSection.items.map((certificate) => (
+        <article class="certification-card">
+          <a class="certification-thumb" href={certificate.href} target="_blank" rel="noopener" aria-label={`View ${certificate.title}`}>
+            <img src={certificate.thumb} alt={`${certificate.title} preview`} loading="lazy" />
+          </a>
+          <span>{certificate.type}</span>
+          <h3>{certificate.title}</h3>
+          <p {...attrs(certificate.description)}>{text(certificate.description)}</p>
+          <a href={certificate.href} target="_blank" rel="noopener" data-zh="查看 / 下载 PDF" data-en="View / Download PDF">查看 / 下载 PDF</a>
+        </article>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,48 @@
+{
+  "meta": {
+    "title": {
+      "zh": "工厂资质 | VINNER",
+      "en": "Factory Qualification | VINNER"
+    },
+    "description": {
+      "zh": "查看 VINNER 工厂质量体系、生产许可、GMP、审核报告与安全验证等资质文件。",
+      "en": "View VINNER factory quality systems, manufacturing licenses, GMP, audit reports, and security verification documents."
+    }
+  },
+  "intro": {
+    "kicker": {
+      "zh": "资料入口",
+      "en": "Document Access"
+    },
+    "title": {
+      "zh": "客户可以直接打开或下载对应资质文件。",
+      "en": "Customers can open or download each qualification file directly."
+    },
+    "body": {
+      "zh": "资质文件按质量体系、GMP、生产许可、环境与安全、社会责任审核和安全验证等维度整理。后续如果有新版证书，只需要替换对应 PDF 文件并更新标题即可。",
+      "en": "Documents are organized by quality systems, GMP, manufacturing licenses, environment and safety, social audit, and security verification. When new certificates are available, replace the relevant PDF and update the title."
+    }
+  },
+  "certificatesSection": {
+    "kicker": {
+      "zh": "证书与报告",
+      "en": "Certificates & Reports"
+    },
+    "title": {
+      "zh": "工厂资质文件。",
+      "en": "Factory qualification files."
+    },
+    "items": [
+      { "title": "ISO13485", "description": { "zh": "医疗器械质量管理体系认证", "en": "Medical device quality management system certification" }, "href": "/assets/certifications/iso13485-vinner.pdf", "thumb": "/assets/certifications/thumbs/iso13485-vinner.pdf.png", "type": "Quality" },
+      { "title": "ISO9001", "description": { "zh": "质量管理体系认证", "en": "Quality management system certification" }, "href": "/assets/certifications/iso9001.pdf", "thumb": "/assets/certifications/thumbs/iso9001.pdf.png", "type": "Quality" },
+      { "title": "ISO22716", "description": { "zh": "化妆品良好生产规范认证", "en": "Cosmetics Good Manufacturing Practices certification" }, "href": "/assets/certifications/iso22716-vinner.pdf", "thumb": "/assets/certifications/thumbs/iso22716-vinner.pdf.png", "type": "GMP" },
+      { "title": "FDA Cosmetic GMP", "description": { "zh": "FDA 化妆品 GMP 相关认证资料", "en": "FDA cosmetic GMP documentation" }, "href": "/assets/certifications/fda-cosmetic-gmp-vinner.pdf", "thumb": "/assets/certifications/thumbs/fda-cosmetic-gmp-vinner.pdf.png", "type": "GMP" },
+      { "title": "ISO14001 & ISO45001", "description": { "zh": "环境管理与职业健康安全管理体系认证", "en": "Environmental management and occupational health and safety certifications" }, "href": "/assets/certifications/iso14001-45001.pdf", "thumb": "/assets/certifications/thumbs/iso14001-45001.pdf.png", "type": "EHS" },
+      { "title": "FSC", "description": { "zh": "FSC 相关认证资料", "en": "FSC certification documentation" }, "href": "/assets/certifications/fsc-vinner.pdf", "thumb": "/assets/certifications/thumbs/fsc-vinner.pdf.png", "type": "Material" },
+      { "title": "Cosmetic Product License", "description": { "zh": "化妆品生产许可资料", "en": "Manufacturing License of Cosmetic Product" }, "href": "/assets/certifications/manufacturing-license-cosmetic-product-vinner.pdf", "thumb": "/assets/certifications/thumbs/manufacturing-license-cosmetic-product-vinner.pdf.png", "type": "License" },
+      { "title": "Disinfectant License", "description": { "zh": "消毒产品生产企业许可资料", "en": "Manufacturing License of Disinfectant" }, "href": "/assets/certifications/manufacturing-license-disinfectant-vinner.pdf", "thumb": "/assets/certifications/thumbs/manufacturing-license-disinfectant-vinner.pdf.png", "type": "License" },
+      { "title": "SEDEX 4P Audit", "description": { "zh": "SEDEX 4P 审核报告", "en": "SEDEX 4P Audit Report" }, "href": "/assets/certifications/sedex-4p-audit-report-vinner.pdf", "thumb": "/assets/certifications/thumbs/sedex-4p-audit-report-vinner.pdf.png", "type": "Audit" },
+      { "title": "Global Security Verification", "description": { "zh": "全球安全验证资料", "en": "Global Security Verification documentation" }, "href": "/assets/certifications/global-security-verification-vinner.pdf", "thumb": "/assets/certifications/thumbs/global-security-verification-vinner.pdf.png", "type": "Security" }
+    ]
+  }
+}

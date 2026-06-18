@@ -22,14 +22,18 @@ export function getStaticPaths() {
 
 const { line, sku, related } = Astro.props;
 const pageTitle = {
-  zh: `${sku.title} | KEEP`,
-  en: `${sku.title} | KEEP`
+  zh: `${sku.title} | VINNER`,
+  en: `${sku.title} | VINNER`
 };
 const pageDescription = sku.intro || sku.body;
 const specLabel = (spec) => text(Array.isArray(spec) ? spec[0] : spec.label);
 const specValue = (spec) => text(Array.isArray(spec) ? spec[1] : spec.value);
 const gallery = sku.gallery?.length ? sku.gallery : [{ image: sku.image, alt: sku.alt }];
 const galleryTotal = gallery.length;
+const hasDownloadHref = (href) =>
+  typeof href === "string" && href.trim() && href !== "#" && href !== "/resources/#downloads";
+const availableDownloads = (sku.downloads || []).filter((download) => hasDownloadHref(download.href));
+const relatedProducts = related.slice(0, 3);
 ---
 
 <BaseLayout title={pageTitle} description={pageDescription}>
@@ -44,8 +48,10 @@ const galleryTotal = gallery.length;
       </p>
       <p class="product-intro" {...attrs(sku.intro)}>{text(sku.intro)}</p>
       <div class="button-row">
-        <a class="button button-accent" href="#downloads" data-zh="下载资料" data-en="Download resources">下载资料</a>
-        <a class="button button-dark" href="/#contact" data-zh="咨询方案" data-en="Request a brief">咨询方案</a>
+        {availableDownloads.length > 0 && (
+          <a class="button button-accent" href="#downloads" data-zh="下载资料" data-en="Download resources">下载资料</a>
+        )}
+        <a class="button button-dark" href="/contact/" data-zh="咨询方案" data-en="Request a brief">咨询方案</a>
       </div>
     </div>
     <div class="product-gallery" data-product-carousel aria-label="Product images">
@@ -56,10 +62,6 @@ const galleryTotal = gallery.length;
               <img src={image.image} alt={image.alt} />
             </figure>
           ))}
-        </div>
-        <div class="product-gallery-caption">
-          <p>{sku.title}</p>
-          <span>{sku.itemNo}</span>
         </div>
         <div class="gallery-controls product-gallery-controls" data-aria-label-zh="产品图片轮播控制" data-aria-label-en="Product image carousel controls" aria-label="产品图片轮播控制">
           <button type="button" class="gallery-arrow" data-product-prev data-aria-label-zh="上一张产品图" data-aria-label-en="Previous product image" aria-label="上一张产品图">
@@ -143,29 +145,31 @@ const galleryTotal = gallery.length;
     </ol>
   </section>
 
-  <section class="product-detail-section download-panel" id="downloads" aria-labelledby="downloads-title">
-    <div>
-      <p class="section-kicker" data-zh="数字资源" data-en="Digital resources">数字资源</p>
-      <h2 id="downloads-title" data-zh="SDS、说明书和应用海报集中下载。" data-en="SDS, brochures, and posters in one place.">SDS、说明书和应用海报集中下载。</h2>
-    </div>
-    <div class="download-card-grid">
-      {sku.downloads.map((download) => (
-        <a class="download-card" href={download.href}>
-          <span>{download.type}</span>
-          <strong {...attrs(download.title)}>{text(download.title)}</strong>
-        </a>
-      ))}
-    </div>
-  </section>
+  {availableDownloads.length > 0 && (
+    <section class="product-detail-section download-panel" id="downloads" aria-labelledby="downloads-title">
+      <div>
+        <p class="section-kicker" data-zh="数字资源" data-en="Digital resources">数字资源</p>
+        <h2 id="downloads-title" data-zh="SDS、说明书和应用海报集中下载。" data-en="SDS, brochures, and posters in one place.">SDS、说明书和应用海报集中下载。</h2>
+      </div>
+      <div class="download-card-grid">
+        {availableDownloads.map((download) => (
+          <a class="download-card" href={download.href} target="_blank" rel="noopener noreferrer">
+            <span>{download.type}</span>
+            <strong {...attrs(download.title)}>{text(download.title)}</strong>
+          </a>
+        ))}
+      </div>
+    </section>
+  )}
 
-  {related.length > 0 && (
-    <section class="product-detail-section related-products" aria-labelledby="related-title">
+  {relatedProducts.length > 0 && (
+    <section class="product-detail-section related-products product-related-section" aria-labelledby="related-title">
       <div class="detail-split-heading">
         <p class="section-kicker" {...attrs(line.name)}>{text(line.name)}</p>
         <h2 id="related-title" data-zh="同一产品线的其他选择。" data-en="Other products in the same line.">同一产品线的其他选择。</h2>
       </div>
       <div class="related-grid">
-        {related.map((item) => (
+        {relatedProducts.map((item) => (
           <a class="related-card" href={`/products/${item.slug}/`}>
             <figure><img src={item.image} alt={item.alt} /></figure>
             <span>{item.code}</span>

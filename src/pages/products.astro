@@ -1,59 +1,35 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import PageHero from "../components/PageHero.astro";
 import products from "../data/site/products.json";
 import { text, attrs } from "../utils/i18n";
-
-const specLabel = (spec) => text(Array.isArray(spec) ? spec[0] : spec.label);
-const specValue = (spec) => text(Array.isArray(spec) ? spec[1] : spec.value);
+import { getProductLineHref, getProductLineMeta } from "../utils/productLines";
 ---
 
 <BaseLayout title={products.meta.title} description={products.meta.description}>
-  <PageHero eyebrow={products.hero.eyebrow} title={products.hero.title} body={products.hero.body} />
-
-  <section class="specs sku-section" id="sku" aria-labelledby="specs-title">
-    <div class="specs-heading">
-      <p class="section-kicker" data-zh="规格指南" data-en="Specification guide">规格指南</p>
-      <div>
-        <h2 id="specs-title" data-zh="按 SKU 进入真实使用场景。" data-en="Enter the real environment through each SKU.">按 SKU 进入真实使用场景。</h2>
-        <p data-zh="每个 SKU 都有明确场景、包装节奏和规格边界，可根据目标市场、法规要求和终端作业方式继续定制。" data-en="Each SKU has a clear environment, pack rhythm, and specification boundary, and can be extended for market, regulatory, and end-use requirements.">
-          每个 SKU 都有明确场景、包装节奏和规格边界，可根据目标市场、法规要求和终端作业方式继续定制。
-        </p>
-      </div>
+  <section class="product-line-showcase" aria-labelledby="page-title">
+    <div class="product-line-showcase-heading">
+      <p class="eyebrow" {...attrs(products.hero.eyebrow)}>{text(products.hero.eyebrow)}</p>
+      <h1 id="page-title" data-zh="选择产品线。" data-en="Choose a product line.">选择产品线。</h1>
+      <p {...attrs(products.hero.body)}>{text(products.hero.body)}</p>
     </div>
 
-    {products.lines.map((line) => (
-      <div class="sku-line">
-        <div class="sku-line-head">
-          <p class="line-index">{line.index}</p>
-          <h3 {...attrs(line.name)}>{text(line.name)}</h3>
-        </div>
-        <div class="sku-scroll" data-scroll-region="x" tabindex="0" aria-label={`${line.index} SKU 横向滚动列表`}>
-          <div class:list={["sku-grid", line.single && "sku-grid-single"]}>
-            {line.skus.map((sku) => (
-              <article class:list={["sku-card", line.single && "sku-card-wide"]}>
-                <a class="sku-card-media-link" href={`/products/${sku.slug}/`} aria-label={`View ${sku.title}`}>
-                  <figure><img src={sku.image} alt={sku.alt} /></figure>
-                </a>
-                <div class="sku-card-copy">
-                  <span>{sku.code}</span>
-                  <h4><a href={`/products/${sku.slug}/`}>{sku.title}</a></h4>
-                  <p {...attrs(sku.body)}>{text(sku.body)}</p>
-                  <dl>
-                    {sku.specs.map((spec) => (
-                      <div>
-                        <dt {...attrs(Array.isArray(spec) ? spec[0] : spec.label)}>{specLabel(spec)}</dt>
-                        <dd {...attrs(Array.isArray(spec) ? spec[1] : spec.value)}>{specValue(spec)}</dd>
-                      </div>
-                    ))}
-                  </dl>
-                  <a class="sku-card-link" href={`/products/${sku.slug}/`} data-zh="查看详情" data-en="View details">查看详情</a>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </div>
-    ))}
+    <div class="product-line-tile-grid">
+      {products.lines.map((line) => {
+        const meta = getProductLineMeta(line);
+        return (
+          <a class="product-line-tile" href={getProductLineHref(line)} aria-label={`View ${meta.brand}`}>
+            <span class="product-line-tile-media" aria-hidden="true">
+              <img src={meta.image} alt={meta.alt} />
+            </span>
+            <span class="product-line-tile-copy">
+              <span>{line.index}</span>
+              <strong>{meta.brand}</strong>
+              <em {...attrs(meta.title)}>{text(meta.title)}</em>
+              <small data-zh="进入系列" data-en="View series">进入系列</small>
+            </span>
+          </a>
+        );
+      })}
+    </div>
   </section>
 </BaseLayout>

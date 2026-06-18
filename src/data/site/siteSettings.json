@@ -1,0 +1,131 @@
+{
+  "brand": {
+    "name": "VINNER",
+    "logo": "/assets/footer/vinner-logo-footer.png",
+    "logoAlt": "VINNER 维尼健康"
+  },
+  "navigation": {
+    "home": {
+      "zh": "首页",
+      "en": "Home"
+    },
+    "products": {
+      "zh": "产品",
+      "en": "Products"
+    },
+    "about": {
+      "zh": "关于维尼",
+      "en": "About Vinner"
+    },
+    "factory": {
+      "zh": "工厂介绍",
+      "en": "Factory"
+    },
+    "factoryQualification": {
+      "zh": "工厂资质",
+      "en": "Factory Qualification"
+    },
+    "contact": {
+      "zh": "联系",
+      "en": "Contact"
+    },
+    "resources": {
+      "zh": "博客与资源",
+      "en": "Blog & Resources"
+    }
+  },
+  "footer": {
+    "kicker": {
+      "zh": "页面总览",
+      "en": "Page overview"
+    },
+    "products": {
+      "zh": "产品",
+      "en": "Products"
+    },
+    "resources": {
+      "zh": "博客与资源",
+      "en": "Resources"
+    },
+    "downloads": {
+      "zh": "资料下载",
+      "en": "Downloads"
+    },
+    "contact": {
+      "zh": "联系我们",
+      "en": "Contact"
+    },
+    "policies": {
+      "zh": "政策",
+      "en": "Policies"
+    },
+    "follow": {
+      "zh": "关注我们",
+      "en": "Follow us"
+    },
+    "wechatTitle": {
+      "zh": "微信公众号",
+      "en": "WeChat"
+    },
+    "wechatQr": "/assets/footer/wechat-qr.jpg",
+    "wechatAlt": "维尼健康微信公众号二维码",
+    "wechatText": {
+      "zh": "扫码关注维尼健康",
+      "en": "Scan to follow VINNER"
+    },
+    "copyright": "© VINNER Health 2026",
+    "company": {
+      "zh": "维尼健康（深圳）股份有限公司 · MEDIKEEP · CAREKEEP · INDUKEEP · OEM/ODM",
+      "en": "Vinner Health (Shenzhen) Co., Ltd. · MEDIKEEP · CAREKEEP · INDUKEEP · OEM/ODM"
+    },
+    "socials": [
+      {
+        "name": "X",
+        "href": "#",
+        "icon": "/assets/footer/social/x.svg"
+      },
+      {
+        "name": "Facebook",
+        "href": "#",
+        "icon": "/assets/footer/social/facebook.svg"
+      },
+      {
+        "name": "Instagram",
+        "href": "#",
+        "icon": "/assets/footer/social/instagram.svg"
+      },
+      {
+        "name": "抖音",
+        "href": "#",
+        "icon": "/assets/footer/social/douyin.svg"
+      },
+      {
+        "name": "YouTube",
+        "href": "#",
+        "icon": "/assets/footer/social/youtube.svg"
+      }
+    ],
+    "legal": [
+      {
+        "href": "/privacy/",
+        "zh": "隐私政策",
+        "en": "Privacy Policy"
+      },
+      {
+        "href": "/cookies/",
+        "zh": "Cookie 政策",
+        "en": "Cookie Policy"
+      },
+      {
+        "href": "/disclaimer/",
+        "zh": "免责声明",
+        "en": "Disclaimer"
+      },
+      {
+        "href": "/copyright/",
+        "zh": "版权信息",
+        "en": "Copyright"
+      }
+    ]
+  }
+}

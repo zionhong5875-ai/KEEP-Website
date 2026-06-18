@@ -1,13 +1,14 @@
-# KEEP CMS Setup
+# VINNER CMS Setup
 
 This Astro site is CMS-ready through Decap CMS. The editing entry is `/admin/`.
 
 ## What editors can change
 
-- Homepage hero, intro, product lines, and gallery
-- About page hero copy and image
-- Product lines, SKU cards, product images, and specifications
-- News, blog cards, and digital resource cards
+- Site settings, navigation text, Footer, social links, and WeChat QR code
+- Homepage hero, company intro, metrics, R&D section, product-line section, partners, news, and blog headings
+- Product lines, series-page copy, SKU cards, product images, specifications, gallery images, SDS, Brochure, and downloads
+- About Vinner, factory introduction, factory qualification certificates, and contact-page content
+- News, blog cards, digital resource cards, and PDF downloads such as SDS files
 - Legal policy text
 
 ## Local editing
@@ -89,10 +90,11 @@ OAUTH_GITHUB_CLIENT_SECRET
 1. Open `/admin/`.
 2. Log in with the invited GitHub account.
 3. Choose `官网内容`.
-4. Edit `首页`, `产品页`, `关于我们`, `博客与资源`, or `合规页面`.
+4. Edit `全站设置`, `首页`, `产品与 SKU`, `关于维尼`, `工厂介绍`, `工厂资质`, `联系页面`, `新闻、博客与数字资源`, or `合规页面`.
 5. To replace an image, click the image field and upload/select a file.
-6. Click `Publish`. The CMS commits the change to GitHub.
-7. Vercel rebuilds the website automatically after the commit.
+6. To add SDS or PDF downloads, use the `上传文件` field in `博客与资源 > 数字资源` or in a product SKU's `下载资源`.
+7. Click `Publish`. The CMS commits the change to GitHub.
+8. Vercel rebuilds the website automatically after the commit.
 
 For the non-technical editor handoff, use `BUSINESS_EDITOR_GUIDE.md`.
 

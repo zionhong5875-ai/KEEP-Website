@@ -1,12 +1,12 @@
 {
   "meta": {
     "title": {
-      "zh": "产品 | KEEP",
-      "en": "Products | KEEP"
+      "zh": "产品 | VINNER",
+      "en": "Products | VINNER"
     },
     "description": {
-      "zh": "浏览 KEEP 旗下 MEDIKEEP、CAREKEEP、INDUKEEP 擦拭产品规格与应用场景。",
-      "en": "Browse specifications and use cases across the MEDIKEEP, CAREKEEP, and INDUKEEP wiping lines."
+      "zh": "浏览 VINNER 旗下 MEDIKEEP、CAREKEEP、INDUKEEP 与 OEM/ODM 擦拭产品规格与应用场景。",
+      "en": "Browse specifications and use cases across the MEDIKEEP, CAREKEEP, INDUKEEP, and OEM/ODM wiping lines."
     }
   },
   "hero": {
@@ -15,13 +15,15 @@
       "en": "Products"
     },
     "title": {
-      "zh": "三条产品线。<br />一套洁净系统。",
-      "en": "Three lines.<br />One clean<br />system."
+      "zh": "医疗、护理与工业擦拭产品。",
+      "en": "Medical, care, and industrial wiping products."
     },
     "body": {
-      "zh": "规格可以变化，但产品逻辑保持一致：明确场景、稳定擦拭、可靠包装、批次可追溯。",
-      "en": "Formats can change, but the logic stays constant: clear use case, stable wiping, reliable packaging, and batch traceability."
-    }
+      "zh": "MEDIKEEP 面向医疗感染控制，CAREKEEP 面向个人护理清洁，INDUKEEP 面向工业油污与高强度擦拭，OEM/ODM 面向定制开发与品牌代工。四条产品线共享稳定基材、可靠包装和批次追溯体系。",
+      "en": "MEDIKEEP serves medical infection control, CAREKEEP supports personal care cleansing, INDUKEEP handles industrial oil and high-strength wiping, and OEM/ODM supports custom development and private-label manufacturing. All four lines share stable substrates, reliable packaging, and batch traceability."
+    },
+    "image": "/assets/gallery-product.jpg",
+    "alt": "VINNER 擦拭产品和使用场景"
   },
   "lines": [
     {
@@ -30,6 +32,40 @@
         "zh": "INFECTION CONTROL",
         "en": "INFECTION CONTROL"
       },
+      "slug": "medikeep",
+      "brand": "MEDIKEEP",
+      "title": {
+        "zh": "医疗感染控制擦拭",
+        "en": "Medical infection-control wipes"
+      },
+      "summary": {
+        "zh": "面向医院、诊所、实验室和公共卫生场景，围绕表面消毒、皮肤准备和感染控制流程建立产品组合。",
+        "en": "Built for hospitals, clinics, labs, and public-health settings across surface disinfection, skin preparation, and infection-control workflows."
+      },
+      "products": {
+        "zh": "主要包括酒精消毒湿巾、临床表面消毒湿巾和 CHG 清洁巾。",
+        "en": "Includes alcohol disinfectant wipes, clinical surface disinfectant wipes, and CHG wash cloths."
+      },
+      "detail": {
+        "zh": "MEDIKEEP 强调有效成分、材料兼容性、低残留和可追溯批次，帮助医疗和护理团队把高频接触面、设备表面和患者护理流程管理得更稳定。",
+        "en": "MEDIKEEP focuses on active ingredients, material compatibility, low residue, and batch traceability so care teams can manage high-touch surfaces, equipment, and patient-care workflows with more control."
+      },
+      "image": "/assets/gallery-infection.jpg",
+      "alt": "医疗感染控制擦拭场景",
+      "uses": [
+        {
+          "zh": "医院、诊所和实验室的高频接触面清洁",
+          "en": "High-touch surface cleaning in hospitals, clinics, and labs"
+        },
+        {
+          "zh": "感染控制、护理准备和临床区域日常维护",
+          "en": "Infection control, care preparation, and clinical-area maintenance"
+        },
+        {
+          "zh": "需要 SDS、批次和合规资料支持的客户项目",
+          "en": "Customer projects requiring SDS, batch, and compliance documentation"
+        }
+      ],
       "skus": [
         {
           "slug": "alcohol-disinfectant-wipes",
@@ -159,7 +195,7 @@
                 "zh": "安全数据表",
                 "en": "Safety Data Sheet"
               },
-              "href": "/resources/#downloads"
+              "href": ""
             },
             {
               "type": "Brochure",
@@ -167,7 +203,7 @@
                 "zh": "产品说明书",
                 "en": "Product brochure"
               },
-              "href": "/resources/#downloads"
+              "href": ""
             },
             {
               "type": "Poster",
@@ -175,7 +211,7 @@
                 "zh": "场景海报",
                 "en": "Use-case poster"
               },
-              "href": "/resources/#downloads"
+              "href": ""
             }
           ]
         },
@@ -307,7 +343,7 @@
                 "zh": "安全数据表",
                 "en": "Safety Data Sheet"
               },
-              "href": "/resources/#downloads"
+              "href": ""
             },
             {
               "type": "Brochure",
@@ -315,7 +351,7 @@
                 "zh": "产品说明书",
                 "en": "Product brochure"
               },
-              "href": "/resources/#downloads"
+              "href": ""
             },
             {
               "type": "Poster",
@@ -323,7 +359,7 @@
                 "zh": "临床区域海报",
                 "en": "Clinical-zone poster"
               },
-              "href": "/resources/#downloads"
+              "href": ""
             }
           ]
         },
@@ -455,7 +491,7 @@
                 "zh": "安全数据表",
                 "en": "Safety Data Sheet"
               },
-              "href": "/resources/#downloads"
+              "href": ""
             },
             {
               "type": "Brochure",
@@ -463,7 +499,7 @@
                 "zh": "产品说明书",
                 "en": "Product brochure"
               },
-              "href": "/resources/#downloads"
+              "href": ""
             },
             {
               "type": "Poster",
@@ -471,7 +507,7 @@
                 "zh": "护理流程海报",
                 "en": "Care-protocol poster"
               },
-              "href": "/resources/#downloads"
+              "href": ""
             }
           ]
         }
@@ -483,62 +519,100 @@
         "zh": "PERSONAL CARE",
         "en": "PERSONAL CARE"
       },
+      "slug": "carekeep",
+      "brand": "CAREKEEP",
+      "title": {
+        "zh": "个人护理清洁湿巾",
+        "en": "Personal care cleansing wipes"
+      },
+      "summary": {
+        "zh": "面向床旁护理、老年护理、家庭护理和外出清洁，强调温和肤感、免冲洗效率和使用尊严。",
+        "en": "For bedside care, elderly care, home care, and on-the-go cleansing, with a focus on gentle skin feel, no-rinse efficiency, and dignified use."
+      },
+      "products": {
+        "zh": "主要包括免冲洗沐浴湿巾、沐浴手套、洗发浴帽、乳霜护理湿巾和纯水婴儿湿巾。",
+        "en": "Includes no-rinse bathing wipes, bathing gloves, shampoo caps, cream care wipes, and pure water baby wipes."
+      },
+      "detail": {
+        "zh": "CAREKEEP 更关注皮肤接触体验、含液量、布感和包装便利性。它覆盖床旁沐浴、头发清洁、失禁皮肤护理、母婴清洁和家庭温和清洁等场景。",
+        "en": "CAREKEEP centers on skin contact, liquid loading, cloth feel, and pack convenience across bedside bathing, hair cleansing, incontinence skin care, baby care, and gentle family cleansing."
+      },
+      "image": "/assets/gallery-care.jpg",
+      "alt": "个人护理清洁湿巾使用场景",
+      "uses": [
+        {
+          "zh": "卧床、术后、老年和长期照护人群",
+          "en": "Bedridden, post-operative, elderly, and long-term-care users"
+        },
+        {
+          "zh": "无需清水、脸盆或毛巾的床旁沐浴流程",
+          "en": "Bedside bathing without water, basins, or towels"
+        },
+        {
+          "zh": "母婴护理、家庭护理、旅行和应急清洁场景",
+          "en": "Baby care, home care, travel, and emergency cleansing scenarios"
+        }
+      ],
       "skus": [
         {
-          "slug": "rinse-free-bath-wipes",
-          "code": "CAREKEEP 01",
-          "itemNo": "CK-RBW-40F",
-          "title": "Rinse-free Bath Wipes",
-          "image": "/assets/sku-bath-wipes.jpg",
-          "alt": "Rinse-free Bath Wipes 产品场景",
+          "slug": "vinnerlove-rinse-free-bathing-wipes",
+          "code": "VINNERLOVE 01",
+          "itemNo": "VLBBW8",
+          "title": "VINNERLOVE Rinse-free Bathing Wipes",
+          "image": "/assets/carekeep/vlbbw8-pic1.png",
+          "alt": "VINNERLOVE 免冲洗沐浴湿巾包装正反面",
           "body": {
-            "zh": "为卧床护理、旅行和日常身体清洁提供免冲洗护理体验。",
-            "en": "A no-rinse body-care format for bedside care, travel, and everyday cleansing."
+            "zh": "8片式免冲洗全身沐浴湿巾，兼顾清洁、保湿和床旁护理效率。",
+            "en": "An 8-wipe no-rinse full-body bathing system for cleansing, moisturizing, and efficient bedside care."
           },
           "intro": {
-            "zh": "免冲洗身体清洁湿巾，适合卧床护理、差旅和不便沐浴场景。",
-            "en": "No-rinse body cleansing wipes for bedside care, travel, and moments when bathing is inconvenient."
+            "zh": "VINNERLOVE 免冲洗沐浴湿巾将身体清洁与皮肤保湿整合到一包 8 片的床旁沐浴方案，适合卧床、术后、老年护理、长期照护和旅行应急清洁。",
+            "en": "VINNERLOVE Rinse-free Bathing Wipes combine body cleansing and skin moisturizing in one 8-wipe bedside bathing system for bedridden, post-operative, elderly-care, long-term-care, travel, and emergency cleansing scenarios."
           },
           "gallery": [
             {
-              "image": "/assets/sku-bath-wipes.jpg",
-              "alt": "Rinse-free Bath Wipes 翻盖包装"
+              "image": "/assets/carekeep/vlbbw8-pic1.png",
+              "alt": "VINNERLOVE 免冲洗沐浴湿巾包装正反面"
+            },
+            {
+              "image": "/assets/carekeep/vlbbw8-pic2.png",
+              "alt": "VINNERLOVE 免冲洗沐浴湿巾使用场景"
             },
             {
               "image": "/assets/carekeep-hands.jpg",
-              "alt": "温和个人护理场景"
+              "alt": "温和个人护理和身体清洁场景"
             },
             {
               "image": "/assets/gallery-care.jpg",
-              "alt": "家庭护理和清洁用品"
+              "alt": "家庭护理和床旁清洁用品"
             }
           ],
           "highlights": [
             {
-              "zh": "免冲洗配方，减少护理流程对水源的依赖。",
-              "en": "No-rinse lotion reduces reliance on water during care routines."
+              "zh": "100gsm 超厚无纺布与 20 x 30 cm 大尺寸设计，覆盖面积更大，适合全身清洁护理。",
+              "en": "100gsm ultra-thick nonwoven and a 20 x 30 cm oversized sheet give broader coverage for full-body care."
             },
             {
-              "zh": "亲肤柔感基材，适合大面积身体清洁。",
-              "en": "Soft skin-friendly substrate suits larger-area body cleansing."
+              "zh": "每包 8 片，对应身体 8 个部位，帮助护理流程更卫生、更规范。",
+              "en": "Each 8-wipe pack maps to eight body zones, helping care teams follow a cleaner and more standardized routine."
             },
             {
-              "zh": "翻盖软包控制开封后的湿润度。",
-              "en": "Flip-top pack helps retain moisture after opening."
+              "zh": "免冲洗护理液可减少用水、脸盆和毛巾依赖，并支持微波加热提升舒适度。",
+              "en": "The no-rinse lotion reduces reliance on water, basins, and towels, with microwave warming support for comfort."
             }
           ],
           "usage": [
             {
-              "zh": "打开翻盖，取出一片湿巾。",
-              "en": "Open the flip lid and remove one wipe."
+              "zh": "打开包装，每次取出一片湿巾；如需温热体验，可将整包在低于 750W 的微波炉中加热不超过 15 秒，并在使用前测试温度。",
+              "en": "Open the pack and remove one wipe at a time. For a warm bathing experience, microwave the whole pack below 750W for no more than 15 seconds and test wipe temperature before use."
             },
             {
-              "zh": "按身体区域分区擦拭，必要时更换新片。",
-              "en": "Clean by body zone and switch to a new wipe when needed."
+              "zh": "建议按 8 片式顺序清洁颈部与躯干、背部、左右手臂与腋下、臀部、腹股沟、左右腿足；每片湿巾用于一个身体部位。",
+              "en": "Use the 8-wipe sequence across neck and torso, back, left and right arm with axilla, buttocks, groin, and left and right leg with foot; use one wipe per body area."
             },
             {
-              "zh": "使用后无需冲洗；如皮肤不适请停止使用。",
-              "en": "No rinsing is required; stop use if skin irritation occurs."
+              "zh": "使用后无需冲洗；用过的湿巾请丢弃且不要冲入马桶，开封后请重新密封以保持湿润。",
+              "en": "No rinsing is required. Dispose of used wipes and do not flush; reseal the pack after opening to retain moisture."
             }
           ],
           "specs": [
@@ -548,8 +622,8 @@
                 "en": "Format"
               },
               "value": {
-                "zh": "200 x 220 mm / 40 wipes flip-top pack",
-                "en": "200 x 220 mm / 40 wipes flip-top pack"
+                "zh": "20 x 30 cm / 8 wipes pack",
+                "en": "20 x 30 cm / 8 wipes pack"
               }
             },
             {
@@ -558,8 +632,8 @@
                 "en": "Substrate"
               },
               "value": {
-                "zh": "柔感可降解混纺布",
-                "en": "Soft biodegradable blend"
+                "zh": "100gsm 超厚无纺布",
+                "en": "100gsm ultra-thick nonwoven fabric"
               }
             },
             {
@@ -568,85 +642,115 @@
                 "en": "Formula"
               },
               "value": {
-                "zh": "pH-balanced no-rinse lotion",
-                "en": "pH-balanced no-rinse lotion"
+                "zh": "免冲洗清洁护理液",
+                "en": "No-rinse cleansing care lotion"
+              }
+            },
+            {
+              "label": {
+                "zh": "加热方式",
+                "en": "Heating method"
+              },
+              "value": {
+                "zh": "可微波加热，低于 750W 且不超过 15 秒",
+                "en": "Microwavable below 750W for no more than 15 seconds"
+              }
+            },
+            {
+              "label": {
+                "zh": "使用用途",
+                "en": "Use"
+              },
+              "value": {
+                "zh": "全身床旁沐浴护理",
+                "en": "Full-body bedside bathing care"
+              }
+            },
+            {
+              "label": {
+                "zh": "皮肤相容性",
+                "en": "Skin compatibility"
+              },
+              "value": {
+                "zh": "经皮肤科医生测试",
+                "en": "Dermatologically tested"
               }
             }
           ],
           "downloads": [
             {
-              "type": "Brochure",
+              "type": "SDS",
               "title": {
-                "zh": "产品说明书",
-                "en": "Product brochure"
+                "zh": "安全数据表",
+                "en": "Safety Data Sheet"
               },
-              "href": "/resources/#downloads"
+              "href": "/assets/uploads/vinnerlove-rinse-free-bathing-wipes-sds.pdf"
             },
             {
-              "type": "Poster",
+              "type": "Brochure",
               "title": {
-                "zh": "护理场景海报",
-                "en": "Care-use poster"
+                "zh": "产品手册",
+                "en": "Product brochure"
               },
-              "href": "/resources/#downloads"
+              "href": "/assets/uploads/vinnerlove-rinse-free-bathing-wipes-brochure.pdf"
             }
           ]
         },
         {
-          "slug": "rinse-free-bath-gloves",
-          "code": "CAREKEEP 02",
-          "itemNo": "CK-RBG-8G",
-          "title": "Rinse-free Bath Gloves",
-          "image": "/assets/sku-bath-gloves.jpg",
-          "alt": "Rinse-free Bath Gloves 产品场景",
+          "slug": "vinnerlove-rinse-free-bathing-gloves",
+          "code": "VINNERLOVE 02",
+          "itemNo": "VLBBG8",
+          "title": "VINNERLOVE Rinse-free Bathing Gloves",
+          "image": "/assets/carekeep/vlbbg8-pic1.png",
+          "alt": "VINNERLOVE 免冲洗沐浴手套床旁护理场景",
           "body": {
-            "zh": "手套型结构提升抓握和覆盖面积，适合护理人员高效操作。",
-            "en": "A glove format improves grip and coverage for faster caregiver handling."
+            "zh": "8片式免冲洗沐浴手套，贴合手部，更适合床旁全身清洁护理。",
+            "en": "An 8-glove no-rinse bathing system that fits the hand for full-body bedside cleansing."
           },
           "intro": {
-            "zh": "免冲洗手套型清洁产品，让护理人员在移动、翻身和身体清洁时更容易控制接触面。",
-            "en": "A no-rinse glove format that gives caregivers better contact control during repositioning and body cleansing."
+            "zh": "VINNERLOVE 免冲洗沐浴手套将免冲洗清洁护理液与手套式布料结合，便于护理人员在床旁完成更可控、更体面的全身清洁流程。",
+            "en": "VINNERLOVE Rinse-free Bathing Gloves combine a no-rinse cleansing lotion with a glove format, helping caregivers perform controlled and dignified bedside full-body cleansing."
           },
           "gallery": [
             {
-              "image": "/assets/sku-bath-gloves.jpg",
-              "alt": "Rinse-free Bath Gloves 包装与手套结构"
+              "image": "/assets/carekeep/vlbbg8-pic1.png",
+              "alt": "VINNERLOVE 免冲洗沐浴手套床旁护理场景"
+            },
+            {
+              "image": "/assets/carekeep-hands.jpg",
+              "alt": "温和个人护理和身体清洁场景"
             },
             {
               "image": "/assets/gallery-care.jpg",
-              "alt": "个人护理产品应用场景"
-            },
-            {
-              "image": "/assets/resource-blog-care.jpg",
-              "alt": "护理用品和文档资料"
+              "alt": "家庭护理和床旁清洁用品"
             }
           ],
           "highlights": [
             {
-              "zh": "手套结构提升抓握稳定性，减少滑脱。",
-              "en": "Glove shape improves grip stability and reduces slipping."
+              "zh": "80gsm 超厚多层无纺布，柔软亲肤、厚实耐用，吸液性更佳。",
+              "en": "80gsm ultra-thick multilayer nonwoven is soft, durable, and highly absorbent."
             },
             {
-              "zh": "双层柔感基材，兼顾覆盖和舒适触感。",
-              "en": "Dual-layer soft substrate balances coverage and comfort."
+              "zh": "手套式结构贴合手部，清洁时更易操控和移动，提高床旁沐浴效率。",
+              "en": "The glove format fits the hand for easier control and movement during bedside bathing."
             },
             {
-              "zh": "适合护理机构、家庭护理和旅行护理包。",
-              "en": "Fits care facilities, home care, and travel care kits."
+              "zh": "每包 8 片对应身体 8 个部位，支持更卫生、规范的护理流程。",
+              "en": "Each 8-glove pack maps to eight body zones for a cleaner and more standardized care routine."
             }
           ],
           "usage": [
             {
-              "zh": "取出手套并套入手部，确认湿润面覆盖掌心。",
-              "en": "Remove the glove and wear it with the wet surface covering the palm."
+              "zh": "打开包装，每次取出一只手套；如需温热体验，可将整包在低于 750W 的微波炉中加热不超过 15 秒，并在使用前测试温度。",
+              "en": "Open the pack and remove one glove at a time. For warming, microwave the whole pack below 750W for no more than 15 seconds and test temperature before use."
             },
             {
-              "zh": "按护理流程擦拭身体区域，避免重复污染。",
-              "en": "Clean body areas according to care procedure and avoid recontamination."
+              "zh": "建议按 8 片式沐浴顺序清洁不同身体部位；每只手套用于一个身体部位。",
+              "en": "Use the 8-piece bathing sequence across different body zones; use one glove per body area."
             },
             {
-              "zh": "使用后丢弃，不可重复使用。",
-              "en": "Dispose after use; do not reuse."
+              "zh": "使用后无需冲洗；用过的手套请丢弃且不要冲入马桶，开封后请重新密封以保持湿润。",
+              "en": "No rinsing is required. Dispose of used gloves and do not flush; reseal after opening to retain moisture."
             }
           ],
           "specs": [
@@ -656,8 +760,18 @@
                 "en": "Format"
               },
               "value": {
-                "zh": "250 x 160 mm / 8 gloves pack",
-                "en": "250 x 160 mm / 8 gloves pack"
+                "zh": "16 x 22 cm / 8 gloves pack",
+                "en": "16 x 22 cm / 8 gloves pack"
+              }
+            },
+            {
+              "label": {
+                "zh": "结构",
+                "en": "Structure"
+              },
+              "value": {
+                "zh": "方形手套",
+                "en": "Square-shaped glove"
               }
             },
             {
@@ -666,8 +780,8 @@
                 "en": "Substrate"
               },
               "value": {
-                "zh": "双层柔感无纺布",
-                "en": "Dual-layer soft nonwoven"
+                "zh": "80gsm 超厚无纺布",
+                "en": "80gsm ultra-thick nonwoven fabric"
               }
             },
             {
@@ -676,85 +790,109 @@
                 "en": "Formula"
               },
               "value": {
-                "zh": "rinse-free cleansing lotion",
-                "en": "rinse-free cleansing lotion"
+                "zh": "免冲洗清洁护理液",
+                "en": "No-rinse cleansing care lotion"
+              }
+            },
+            {
+              "label": {
+                "zh": "加热方式",
+                "en": "Heating method"
+              },
+              "value": {
+                "zh": "可微波加热，低于 750W 且不超过 15 秒",
+                "en": "Microwavable below 750W for no more than 15 seconds"
+              }
+            },
+            {
+              "label": {
+                "zh": "皮肤相容性",
+                "en": "Skin compatibility"
+              },
+              "value": {
+                "zh": "经皮肤科医生测试",
+                "en": "Dermatologically tested"
               }
             }
           ],
           "downloads": [
             {
-              "type": "Brochure",
+              "type": "SDS",
               "title": {
-                "zh": "产品说明书",
-                "en": "Product brochure"
+                "zh": "安全数据表",
+                "en": "Safety Data Sheet"
               },
-              "href": "/resources/#downloads"
+              "href": "/assets/uploads/vinnerlove-rinse-free-bathing-gloves-sds.pdf"
             },
             {
-              "type": "Poster",
+              "type": "Brochure",
               "title": {
-                "zh": "护理流程海报",
-                "en": "Care-protocol poster"
+                "zh": "产品手册",
+                "en": "Product brochure"
               },
-              "href": "/resources/#downloads"
+              "href": "/assets/uploads/vinnerlove-rinse-free-bathing-gloves-brochure.pdf"
             }
           ]
         },
         {
-          "slug": "continence-care-wipes",
-          "code": "CAREKEEP 03",
-          "itemNo": "CK-CCW-80S",
-          "title": "Continence Care Wipes",
-          "image": "/assets/sku-continence-wipes.jpg",
-          "alt": "Continence Care Wipes 产品场景",
+          "slug": "vinnerlove-rinse-free-shampoo-cap",
+          "code": "VINNERLOVE 03",
+          "itemNo": "VLSHMC1",
+          "title": "VINNERLOVE Rinse-free Shampoo Cap",
+          "image": "/assets/carekeep/vlshmc1-pic1.png",
+          "alt": "VINNERLOVE 免冲洗洗发浴帽包装正反面",
           "body": {
-            "zh": "针对成人失禁护理，兼顾清洁、舒缓和皮肤屏障保护。",
-            "en": "For continence care routines that need cleansing, soothing, and skin barrier support together."
+            "zh": "免冲洗洗发浴帽，帮助床旁洗发更体面、更轻松。",
+            "en": "A no-rinse shampoo cap that makes bedside hair cleansing easier and more dignified."
           },
           "intro": {
-            "zh": "失禁护理湿巾将清洁、舒缓与屏障护理整合到同一流程，适合长期护理与家庭护理。",
-            "en": "A continence-care wipe that combines cleansing, soothing, and barrier support for long-term care and home care."
+            "zh": "VINNERLOVE 免冲洗洗发浴帽适用于传统洗头不便的护理场景，可在卧姿或坐姿下完成头发与头皮清洁，减少取水、脸盆、毛巾和现场清理。",
+            "en": "VINNERLOVE Rinse-free Shampoo Cap supports hair and scalp cleansing when traditional washing is difficult, reducing water, basins, towels, and clean-up during bedside care."
           },
           "gallery": [
             {
-              "image": "/assets/sku-continence-wipes.jpg",
-              "alt": "Continence Care Wipes 软包包装"
+              "image": "/assets/carekeep/vlshmc1-pic1.png",
+              "alt": "VINNERLOVE 免冲洗洗发浴帽包装正反面"
+            },
+            {
+              "image": "/assets/carekeep/vlshmc1-pic2.png",
+              "alt": "VINNERLOVE 免冲洗洗发浴帽使用方式"
             },
             {
               "image": "/assets/carekeep-hands.jpg",
-              "alt": "亲肤护理应用场景"
+              "alt": "温和个人护理和身体清洁场景"
             },
             {
-              "image": "/assets/resource-manuals.jpg",
-              "alt": "护理资源与操作说明"
+              "image": "/assets/gallery-care.jpg",
+              "alt": "家庭护理和床旁清洁用品"
             }
           ],
           "highlights": [
             {
-              "zh": "大尺寸加厚布面，适合成人护理高频更换场景。",
-              "en": "Large thick cloth suits frequent adult-care changes."
+              "zh": "85gsm 超厚多层无纺布，柔软舒适且厚实耐用，适合头发与头皮清洁护理。",
+              "en": "85gsm ultra-thick multilayer nonwoven is soft, comfortable, and durable for hair and scalp cleansing."
             },
             {
-              "zh": "舒缓护理配方，兼顾清洁和皮肤屏障支持。",
-              "en": "Soothing care formula supports cleansing and skin-barrier comfort."
+              "zh": "充分浸润清洁液，帮助湿润头发与头皮，使清洁过程更充分、舒适。",
+              "en": "Richly loaded cleansing lotion helps wet hair and scalp for a more comfortable cleansing process."
             },
             {
-              "zh": "软包翻盖易取用，便于床旁和护理车配置。",
-              "en": "Flip-top soft pack is easy to place bedside or on care carts."
+              "zh": "开包即用，使用后直接丢弃，简化床旁洗发流程并减少共用器具风险。",
+              "en": "Ready to use and disposable after use, simplifying bedside shampooing and reducing shared-tool risk."
             }
           ],
           "usage": [
             {
-              "zh": "从翻盖取出湿巾，按护理区域单向擦拭。",
-              "en": "Remove a wipe from the flip lid and wipe one-way across the care area."
+              "zh": "打开包装，取出一个浴帽；如需温热体验，未开封产品可用不超过 550W 的微波炉加热不超过 15 秒。",
+              "en": "Open the pack and remove one cap. For warmth, microwave the unopened product at no more than 550W for no more than 15 seconds."
             },
             {
-              "zh": "根据污染程度更换新片，避免重复污染。",
-              "en": "Use a new wipe according to soil level to avoid recontamination."
+              "zh": "将浴帽戴在头上，轻轻揉搓头发和头皮，直至清洁完成。",
+              "en": "Place the cap on the head and gently massage hair and scalp until cleansing is complete."
             },
             {
-              "zh": "外用产品，请勿冲入马桶。",
-              "en": "For external use only; do not flush."
+              "zh": "无需冲洗；如有需要可用毛巾擦干，使用后请妥善丢弃。",
+              "en": "No rinsing is required. Towel dry if needed and dispose of the used cap properly."
             }
           ],
           "specs": [
@@ -764,8 +902,8 @@
                 "en": "Format"
               },
               "value": {
-                "zh": "200 x 300 mm / 80 wipes soft pack",
-                "en": "200 x 300 mm / 80 wipes soft pack"
+                "zh": "30 cm diameter / 1 cap pack",
+                "en": "30 cm diameter / 1 cap pack"
               }
             },
             {
@@ -774,8 +912,8 @@
                 "en": "Substrate"
               },
               "value": {
-                "zh": "加厚亲肤水刺布",
-                "en": "Thick skin-friendly spunlace"
+                "zh": "85gsm 超厚多层无纺布",
+                "en": "85gsm ultra-thick multilayer nonwoven"
               }
             },
             {
@@ -784,8 +922,318 @@
                 "en": "Formula"
               },
               "value": {
-                "zh": "aloe + barrier-care formula",
-                "en": "aloe + barrier-care formula"
+                "zh": "免冲洗清洁护理液",
+                "en": "No-rinse cleansing care lotion"
+              }
+            },
+            {
+              "label": {
+                "zh": "加热方式",
+                "en": "Heating method"
+              },
+              "value": {
+                "zh": "可微波加热，低于 550W 且不超过 15 秒",
+                "en": "Microwavable below 550W for no more than 15 seconds"
+              }
+            },
+            {
+              "label": {
+                "zh": "使用用途",
+                "en": "Use"
+              },
+              "value": {
+                "zh": "免冲洗头发与头皮清洁护理",
+                "en": "No-rinse hair and scalp cleansing care"
+              }
+            },
+            {
+              "label": {
+                "zh": "皮肤相容性",
+                "en": "Skin compatibility"
+              },
+              "value": {
+                "zh": "经皮肤科医生测试",
+                "en": "Dermatologically tested"
+              }
+            }
+          ],
+          "downloads": [
+            {
+              "type": "SDS",
+              "title": {
+                "zh": "安全数据表",
+                "en": "Safety Data Sheet"
+              },
+              "href": "/assets/uploads/vinnerlove-shampoo-cap-sds.pdf"
+            },
+            {
+              "type": "Brochure",
+              "title": {
+                "zh": "产品手册",
+                "en": "Product brochure"
+              },
+              "href": "/assets/uploads/vinnerlove-shampoo-cap-brochure.pdf"
+            }
+          ]
+        },
+        {
+          "slug": "vinnerlove-cream-care-wipes",
+          "code": "VINNERLOVE 04",
+          "itemNo": "VLCONCW25",
+          "title": "VINNERLOVE Cream Care Wipes",
+          "image": "/assets/carekeep/vlconcw25-pic1.png",
+          "alt": "VINNERLOVE 失禁护理乳霜湿巾包装正反面",
+          "body": {
+            "zh": "4合1乳霜护理湿巾，一步完成清洁、保湿、舒缓和屏障防护。",
+            "en": "A 4-in-1 cream care wipe for cleansing, moisturizing, soothing, and barrier protection in one step."
+          },
+          "intro": {
+            "zh": "VINNERLOVE 失禁护理乳霜湿巾适用于失禁护理、脆弱老年肌肤、皮肤褶皱、MASD 易感肌和压疮风险护理，通过一个简单步骤提供清洁、保湿、舒缓和屏障防护。",
+            "en": "VINNERLOVE Cream Care Wipes support incontinence care, fragile elderly skin, skin folds, MASD-prone skin, and pressure-injury risk care with cleansing, moisturizing, soothing, and barrier protection in one step."
+          },
+          "gallery": [
+            {
+              "image": "/assets/carekeep/vlconcw25-pic1.png",
+              "alt": "VINNERLOVE 失禁护理乳霜湿巾包装正反面"
+            },
+            {
+              "image": "/assets/carekeep/vlconcw25-pic2.png",
+              "alt": "VINNERLOVE 失禁护理乳霜湿巾产品细节"
+            },
+            {
+              "image": "/assets/carekeep-hands.jpg",
+              "alt": "温和个人护理和身体清洁场景"
+            },
+            {
+              "image": "/assets/gallery-care.jpg",
+              "alt": "家庭护理和床旁清洁用品"
+            }
+          ],
+          "highlights": [
+            {
+              "zh": "4合1护理逻辑：清洁、保湿、舒缓、屏障防护，减少传统多步骤护理复杂度。",
+              "en": "A 4-in-1 care logic combines cleansing, moisturizing, soothing, and barrier protection to simplify multi-step care."
+            },
+            {
+              "zh": "金黄洋甘菊提取物、金缕梅提取物与屏障体系，帮助舒缓脆弱及潮湿暴露皮肤。",
+              "en": "Chamomile extract, witch hazel extract, and a barrier system help soothe fragile and moisture-exposed skin."
+            },
+            {
+              "zh": "含 4% 二甲基硅油和 6% 液体石蜡，在皮肤表面形成透气防护层。",
+              "en": "4% dimethicone and 6% liquid paraffin form a breathable protective barrier on skin."
+            }
+          ],
+          "usage": [
+            {
+              "zh": "打开包装，取出一片湿巾，轻柔清洁受影响或潮湿暴露的皮肤区域。",
+              "en": "Open the pack and remove one wipe, then gently cleanse affected or moisture-exposed skin."
+            },
+            {
+              "zh": "必要时让皮肤自然干燥，无需冲洗；每个身体部位建议使用新的湿巾。",
+              "en": "Allow skin to air dry if needed. No rinsing is required; use a fresh wipe for each body area."
+            },
+            {
+              "zh": "开封后请重新密封包装，使用后丢弃且不要冲入马桶；若皮肤问题持续或加重，请寻求专业医护评估。",
+              "en": "Reseal after opening. Dispose after use and do not flush; seek professional care if skin issues persist or worsen."
+            }
+          ],
+          "specs": [
+            {
+              "label": {
+                "zh": "规格",
+                "en": "Format"
+              },
+              "value": {
+                "zh": "25 wipes pack",
+                "en": "25 wipes pack"
+              }
+            },
+            {
+              "label": {
+                "zh": "产品类型",
+                "en": "Product type"
+              },
+              "value": {
+                "zh": "含乳霜配方的 4合1 皮肤护理湿巾",
+                "en": "4-in-1 skin care wipe with cream formula"
+              }
+            },
+            {
+              "label": {
+                "zh": "基材",
+                "en": "Substrate"
+              },
+              "value": {
+                "zh": "60gsm 加厚无纺布",
+                "en": "60gsm thickened nonwoven fabric"
+              }
+            },
+            {
+              "label": {
+                "zh": "屏障体系",
+                "en": "Barrier system"
+              },
+              "value": {
+                "zh": "4% 二甲基硅油 + 6% 液体石蜡",
+                "en": "4% dimethicone + 6% liquid paraffin"
+              }
+            },
+            {
+              "label": {
+                "zh": "适用部位",
+                "en": "Application area"
+              },
+              "value": {
+                "zh": "仅限皮肤外用",
+                "en": "External skin use only"
+              }
+            },
+            {
+              "label": {
+                "zh": "皮肤相容性",
+                "en": "Skin compatibility"
+              },
+              "value": {
+                "zh": "pH 平衡，经皮肤科测试",
+                "en": "pH-balanced and dermatologically tested"
+              }
+            }
+          ],
+          "downloads": [
+            {
+              "type": "SDS",
+              "title": {
+                "zh": "安全数据表",
+                "en": "Safety Data Sheet"
+              },
+              "href": "/assets/uploads/vinnerlove-cream-care-wipes-sds.pdf"
+            },
+            {
+              "type": "Brochure",
+              "title": {
+                "zh": "产品手册",
+                "en": "Product brochure"
+              },
+              "href": "/assets/uploads/vinnerlove-cream-care-wipes-brochure.pdf"
+            }
+          ]
+        },
+        {
+          "slug": "homekeep-pure-water-baby-wipes",
+          "code": "HOMEKEEP 01",
+          "itemNo": "HKPWW60",
+          "title": "HOMEKEEP Pure Water Baby Wipes",
+          "image": "/assets/carekeep/hkpww60-pic1.png",
+          "alt": "HOMEKEEP 纯水婴儿湿巾包装",
+          "body": {
+            "zh": "植物基纯水婴儿湿巾，专为新生儿、敏感肌和全家温和清洁设计。",
+            "en": "Plant-based pure water baby wipes designed for newborns, sensitive skin, and gentle family cleansing."
+          },
+          "intro": {
+            "zh": "HOMEKEEP 纯水婴儿湿巾采用 99%+ 纯净水、100% 植物基纤维和极简配方，适合宝宝、敏感肌、老人及全家日常温和清洁护理。",
+            "en": "HOMEKEEP Pure Water Baby Wipes use 99%+ purified water, 100% plant-based fibers, and a minimal formula for babies, sensitive skin, elderly users, and gentle daily family care."
+          },
+          "gallery": [
+            {
+              "image": "/assets/carekeep/hkpww60-pic1.png",
+              "alt": "HOMEKEEP 纯水婴儿湿巾包装"
+            },
+            {
+              "image": "/assets/carekeep-hands.jpg",
+              "alt": "温和个人护理和身体清洁场景"
+            },
+            {
+              "image": "/assets/gallery-care.jpg",
+              "alt": "家庭护理和床旁清洁用品"
+            }
+          ],
+          "highlights": [
+            {
+              "zh": "99%+ 纯净水配方，仅保留必要成分，减少对娇嫩肌肤的不必要刺激。",
+              "en": "99%+ purified water formula keeps only necessary ingredients to reduce unnecessary irritation."
+            },
+            {
+              "zh": "100% 植物基纤维，不含塑料基纤维，柔软亲肤。",
+              "en": "100% plant-based fibers with no plastic-based fibers, soft and skin-friendly."
+            },
+            {
+              "zh": "65gsm 高端加厚布与高达 3.5 倍含液量，带来柔润舒适的清洁体验。",
+              "en": "65gsm premium thick fabric and up to 3.5x liquid loading provide a soft, moist, comfortable cleansing experience."
+            }
+          ],
+          "usage": [
+            {
+              "zh": "打开包装，每次取出一片湿巾，轻柔擦拭所需清洁部位。",
+              "en": "Open the pack and remove one wipe, then gently wipe the area to be cleaned."
+            },
+            {
+              "zh": "适用于手部、面部、身体及尿布区域清洁；使用后无需冲洗。",
+              "en": "Suitable for hands, face, body, and diaper-area cleansing. No rinsing is required."
+            },
+            {
+              "zh": "开封后请重新密封包装以保持湿润；使用后请妥善丢弃且不要冲入马桶。",
+              "en": "Reseal after opening to retain moisture. Dispose after use and do not flush."
+            }
+          ],
+          "specs": [
+            {
+              "label": {
+                "zh": "规格",
+                "en": "Format"
+              },
+              "value": {
+                "zh": "20 x 18 cm / 60 wipes pack",
+                "en": "20 x 18 cm / 60 wipes pack"
+              }
+            },
+            {
+              "label": {
+                "zh": "基材",
+                "en": "Substrate"
+              },
+              "value": {
+                "zh": "100% 植物基纤维",
+                "en": "100% plant-based fiber"
+              }
+            },
+            {
+              "label": {
+                "zh": "布克重",
+                "en": "Fabric weight"
+              },
+              "value": {
+                "zh": "65gsm 高端加厚布",
+                "en": "65gsm premium thick fabric"
+              }
+            },
+            {
+              "label": {
+                "zh": "配方",
+                "en": "Formula"
+              },
+              "value": {
+                "zh": "纯水配方",
+                "en": "Pure water formula"
+              }
+            },
+            {
+              "label": {
+                "zh": "适用对象",
+                "en": "Suitable for"
+              },
+              "value": {
+                "zh": "新生儿及敏感肌",
+                "en": "Newborns and sensitive skin"
+              }
+            },
+            {
+              "label": {
+                "zh": "不添加",
+                "en": "Free from"
+              },
+              "value": {
+                "zh": "酒精、香精、对羟基苯甲酸酯",
+                "en": "Alcohol, fragrance, and parabens"
               }
             }
           ],
@@ -793,18 +1241,10 @@
             {
               "type": "Brochure",
               "title": {
-                "zh": "产品说明书",
+                "zh": "产品手册",
                 "en": "Product brochure"
               },
-              "href": "/resources/#downloads"
-            },
-            {
-              "type": "Poster",
-              "title": {
-                "zh": "长期护理海报",
-                "en": "Long-term care poster"
-              },
-              "href": "/resources/#downloads"
+              "href": "/assets/uploads/homekeep-pure-water-baby-wipes-brochure.pdf"
             }
           ]
         }
@@ -816,6 +1256,40 @@
         "zh": "工业擦拭",
         "en": "INDUSTRIAL WIPING"
       },
+      "slug": "indukeep",
+      "brand": "INDUKEEP",
+      "title": {
+        "zh": "工业高强度擦拭",
+        "en": "Industrial high-strength wiping"
+      },
+      "summary": {
+        "zh": "面向设备维护、油污处理、喷涂前处理和车间清洁，强调吸附、耐撕裂和低尘表现。",
+        "en": "For equipment maintenance, oil removal, pre-coating preparation, and workshop cleaning, emphasizing pickup, tear resistance, and low-lint performance."
+      },
+      "products": {
+        "zh": "主要包括重油污擦拭布和高强度工业擦拭解决方案。",
+        "en": "Includes heavy-duty oil-removal wipes and durable industrial wiping solutions."
+      },
+      "detail": {
+        "zh": "INDUKEEP 服务更粗重的作业现场，重点在湿态强度、耐溶剂、吸油能力和低尘控制之间取得平衡，帮助工厂减少返工和材料浪费。",
+        "en": "INDUKEEP serves demanding work sites by balancing wet strength, solvent resistance, oil pickup, and low-lint control, helping plants reduce rework and material waste."
+      },
+      "image": "/assets/gallery-industrial.jpg",
+      "alt": "工业擦拭和设备维护场景",
+      "uses": [
+        {
+          "zh": "设备维护、维修站点和车间日常清洁",
+          "en": "Equipment maintenance, service bays, and daily workshop cleaning"
+        },
+        {
+          "zh": "重油污、溶剂和高频摩擦场景",
+          "en": "Heavy oil, solvent, and repeated-friction environments"
+        },
+        {
+          "zh": "喷涂前处理、金属和机械表面擦拭",
+          "en": "Pre-coating preparation and wiping of metal or mechanical surfaces"
+        }
+      ],
       "single": true,
       "skus": [
         {
@@ -914,7 +1388,7 @@
                 "zh": "安全数据表",
                 "en": "Safety Data Sheet"
               },
-              "href": "/resources/#downloads"
+              "href": ""
             },
             {
               "type": "Brochure",
@@ -922,7 +1396,7 @@
                 "zh": "产品说明书",
                 "en": "Product brochure"
               },
-              "href": "/resources/#downloads"
+              "href": ""
             },
             {
               "type": "Poster",
@@ -930,11 +1404,53 @@
                 "zh": "车间应用海报",
                 "en": "Workshop poster"
               },
-              "href": "/resources/#downloads"
+              "href": ""
             }
           ]
         }
       ]
+    },
+    {
+      "index": "04 / OEM/ODM",
+      "name": {
+        "zh": "定制开发与品牌代工",
+        "en": "OEM / ODM"
+      },
+      "slug": "oem-odm",
+      "brand": "OEM/ODM",
+      "title": {
+        "zh": "定制开发与品牌代工",
+        "en": "Custom development and private-label manufacturing"
+      },
+      "summary": {
+        "zh": "面向品牌客户、渠道商和区域项目，从需求拆解、样品打样、包装开发到批量交付，提供湿巾产品 OEM/ODM 支持。",
+        "en": "For brands, distributors, and regional programs, supporting wipes OEM/ODM from requirement mapping and sampling to packaging development and batch delivery."
+      },
+      "products": {
+        "zh": "覆盖配方定制、基材选择、尺寸规格、包装形式、标签文件和合规资料。",
+        "en": "Covers formula customization, substrate selection, size format, packaging, labeling, and compliance documents."
+      },
+      "detail": {
+        "zh": "OEM/ODM 以客户目标市场和使用场景为起点，协同研发、生产、包装和法规资料，帮助客户把概念快速转化为可量产、可交付、可备案的湿巾产品。",
+        "en": "OEM/ODM starts from the customer's target market and use case, coordinating R&D, production, packaging, and regulatory documents to turn ideas into scalable wipe products."
+      },
+      "image": "/assets/gallery-product.jpg",
+      "alt": "湿巾 OEM ODM 定制开发与包装交付",
+      "uses": [
+        {
+          "zh": "品牌定制、渠道自有品牌和跨区域项目",
+          "en": "Brand customization, private label, and cross-region programs"
+        },
+        {
+          "zh": "配方、基材、尺寸、包装和标签协同开发",
+          "en": "Co-development of formula, substrate, size, packaging, and label"
+        },
+        {
+          "zh": "样品、合规资料、批次交付和长期复购支持",
+          "en": "Sampling, compliance documents, batch delivery, and repeat-order support"
+        }
+      ],
+      "skus": []
     }
   ]
 }

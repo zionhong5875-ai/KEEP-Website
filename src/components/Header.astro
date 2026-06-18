@@ -1,15 +1,33 @@
 ---
+import settings from "../data/site/siteSettings.json";
+
 const nav = [
-  { href: "/", zh: "首页", en: "Home" },
-  { href: "/products/", zh: "产品", en: "Products" },
-  { href: "/about/", zh: "关于我们", en: "About" },
-  { href: "/#contact", zh: "联系", en: "Contact" },
-  { href: "/resources/", zh: "博客与资源", en: "Blog & Resources" }
+  { href: "/", label: settings.navigation.home },
+  {
+    href: "/products/",
+    label: settings.navigation.products,
+    children: [
+      { href: "/products/series/medikeep/", zh: "MEDIKEEP", en: "MEDIKEEP" },
+      { href: "/products/series/carekeep/", zh: "CAREKEEP", en: "CAREKEEP" },
+      { href: "/products/series/indukeep/", zh: "INDUKEEP", en: "INDUKEEP" },
+      { href: "/products/series/oem-odm/", zh: "OEM/ODM", en: "OEM/ODM" }
+    ]
+  },
+  {
+    href: "/about/vinner/",
+    label: settings.navigation.about,
+    children: [
+      { href: "/about/factory/", ...settings.navigation.factory },
+      { href: "/about/factory-qualification/", ...settings.navigation.factoryQualification }
+    ]
+  },
+  { href: "/contact/", label: settings.navigation.contact },
+  { href: "/resources/", label: settings.navigation.resources }
 ];
 ---
 
 <header class="site-header" data-header>
-  <a class="brand" href="/" data-aria-label-zh="KEEP 首页" data-aria-label-en="KEEP home" aria-label="KEEP 首页">KEEP</a>
+  <a class="brand" href="/" data-aria-label-zh="VINNER 首页" data-aria-label-en="VINNER home" aria-label="VINNER 首页">{settings.brand.name}</a>
 
   <div class="header-tools">
     <button class="menu-toggle" type="button" data-menu-toggle data-aria-label-zh="打开导航" data-aria-label-en="Open navigation" aria-label="打开导航" aria-expanded="false">
@@ -19,11 +37,28 @@ const nav = [
   </div>
 
   <nav class="site-nav" data-nav>
-    {nav.map((item) => <a href={item.href} data-zh={item.zh} data-en={item.en}>{item.zh}</a>)}
+    {nav.map((item) => (
+      <div class:list={["site-nav-item", item.children?.length ? "has-subnav" : ""]}>
+        <a class="site-nav-link" href={item.href} data-zh={item.label.zh} data-en={item.label.en}>{item.label.zh}</a>
+        {item.children?.length && (
+          <div class="site-subnav" aria-label={item.label.zh}>
+            {item.children.map((child) => (
+              <a href={child.href} data-zh={child.zh} data-en={child.en}>{child.zh}</a>
+            ))}
+          </div>
+        )}
+      </div>
+    ))}
   </nav>
 </header>
 
-<div class="lang-switch lang-switch-floating" role="group" data-aria-label-zh="语言切换" data-aria-label-en="Language switcher" aria-label="语言切换">
-  <button class="lang-switch__button is-active" type="button" data-lang-button="zh" aria-pressed="true">中</button>
-  <button class="lang-switch__button" type="button" data-lang-button="en" aria-pressed="false">EN</button>
+<div class="lang-switch-floating">
+  <div class="lang-switch-contrast" aria-hidden="true">
+    <span>中</span>
+    <span>EN</span>
+  </div>
+  <div class="lang-switch" role="group" data-aria-label-zh="语言切换" data-aria-label-en="Language switcher" aria-label="语言切换">
+    <button class="lang-switch__button is-active" type="button" data-lang-button="zh" aria-pressed="true">中</button>
+    <button class="lang-switch__button" type="button" data-lang-button="en" aria-pressed="false">EN</button>
+  </div>
 </div>

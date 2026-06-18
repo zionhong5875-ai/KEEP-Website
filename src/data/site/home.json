@@ -2,11 +2,11 @@
   "meta": {
     "title": {
       "zh": "VINNER | 感染控制、个人护理与工业擦拭",
-      "en": "KEEP | Infection Control, Personal Care & Industrial Wiping"
+      "en": "VINNER | Infection Control, Personal Care & Industrial Wiping"
     },
     "description": {
-      "zh": "KEEP 旗下 MEDIKEEP、CAREKEEP、INDUKEEP 为感染控制、个人护理和工业擦拭场景提供专业湿巾与擦拭解决方案。",
-      "en": "KEEP brings MEDIKEEP, CAREKEEP, and INDUKEEP to infection control, personal care, and industrial wiping environments."
+      "zh": "VINNER 旗下 MEDIKEEP、CAREKEEP、INDUKEEP 为感染控制、个人护理和工业擦拭场景提供专业湿巾与擦拭解决方案。",
+      "en": "VINNER brings MEDIKEEP, CAREKEEP, and INDUKEEP to infection control, personal care, and industrial wiping environments."
     }
   },
   "hero": {
@@ -21,8 +21,8 @@
       "en": "Clean<br />kept in<br />motion."
     },
     "body": {
-      "zh": "从医疗感染控制到日常护理，<br />再到高强度工业擦拭，<br />KEEP 以克制、可靠、可追溯<br />的产品体系服务关键环境。",
-      "en": "From infection control to personal care and high-duty industrial wiping, KEEP supports critical environments with disciplined, dependable, traceable product systems."
+      "zh": "从医疗感染控制到日常护理，<br />再到高强度工业擦拭，<br />VINNER 以克制、可靠、可追溯<br />的产品体系服务关键环境。",
+      "en": "From infection control to personal care and high-duty industrial wiping, VINNER supports critical environments with disciplined, dependable, traceable product systems."
     }
   },
   "intro": {
@@ -108,9 +108,121 @@
       "image": "/assets/gallery-product.jpg",
       "alt": "专业擦拭产品包装与洁净产品细节",
       "caption": {
-        "zh": "KEEP / Product Formats",
-        "en": "KEEP / Product Formats"
+        "zh": "VINNER / Product Formats",
+        "en": "VINNER / Product Formats"
       }
     }
-  ]
+  ],
+  "company": {
+    "kicker": {
+      "zh": "公司介绍",
+      "en": "Company"
+    },
+    "title": {
+      "zh": "二十年湿巾研发与制造。",
+      "en": "Twenty years in wipes R&D and manufacturing."
+    },
+    "paragraphs": [
+      {
+        "zh": "维尼健康（深圳）股份有限公司成立于 2004 年，2015 年成功挂牌新三板，是一家从事湿巾产品研发、生产、销售的专业制造商。",
+        "en": "Vinner Health (Shenzhen) Co., Ltd. was founded in 2004 and listed on the NEEQ in 2015. The company specializes in wet wipes R&D, manufacturing, and sales."
+      },
+      {
+        "zh": "公司以专业化、精细化的研-产-销一体驱动，采用 ODM/OEM 和联合研发的模式，为国内外品牌客户提供差异化、高品质的湿巾产品与服务。",
+        "en": "The company combines professional R&D, manufacturing, and sales capabilities, using ODM/OEM and joint-development models to serve domestic and international brands with differentiated, high-quality wipe products and services."
+      }
+    ],
+    "videoSrc": "https://www.youtube.com/embed/02D-pVy0ujY?si=3hs7EyIY9h-A-UPu",
+    "videoTitle": "Vinner Factory Promotional Video",
+    "stats": [
+      { "icon": "clock", "label": { "zh": "我们的经验", "en": "Experience" }, "number": "20+", "body": { "zh": "年湿巾研发与生产经验", "en": "years of wet wipes R&D and manufacturing experience" } },
+      { "icon": "clock", "label": { "zh": "我们的经验", "en": "Experience" }, "number": "15+", "body": { "zh": "年医疗消毒湿巾生产经验", "en": "years of medical disinfectant wipes manufacturing experience" } },
+      { "icon": "capacity", "label": { "zh": "我们的工厂", "en": "Factory" }, "number": "95%+", "body": { "zh": "自动化率", "en": "automation rate" } },
+      { "icon": "capacity", "label": { "zh": "我们的工厂", "en": "Factory" }, "number": "80亿+", "body": { "zh": "片以上湿巾年产能", "en": "wipes annual capacity" } }
+    ]
+  },
+  "productLinesSection": {
+    "kicker": {
+      "zh": "产品线",
+      "en": "Product Lines"
+    },
+    "title": {
+      "zh": "四条产品线，覆盖医疗、护理、工业与定制。",
+      "en": "Four product lines across medical, care, industrial, and custom programs."
+    },
+    "cta": {
+      "zh": "进入系列",
+      "en": "View series"
+    }
+  },
+  "rd": {
+    "kicker": {
+      "zh": "研发基因",
+      "en": "R&D DNA"
+    },
+    "title": {
+      "zh": "把湿巾做成可验证、可复用的系统。",
+      "en": "Turning wipes into validated, repeatable systems."
+    },
+    "body": {
+      "zh": "配方、基材、包装和法规资料共同构成产品稳定性。VINNER 将研发投入、实验室验证和合作网络沉淀为客户可以复用的开发能力。",
+      "en": "Formula, substrate, packaging, and regulatory documents all shape product stability. VINNER turns R&D investment, lab validation, and partner networks into reusable development capability for customers."
+    },
+    "metrics": [
+      { "icon": "investment", "number": "3%+", "body": { "zh": "以上销售额投入研发", "en": "of sales invested in R&D" } },
+      { "icon": "formula", "number": "500+", "body": { "zh": "成熟湿巾配方", "en": "mature wipe formulas" } },
+      { "icon": "network", "number": "20+", "body": { "zh": "家合作实验室与大学", "en": "partner laboratories and universities" } },
+      { "icon": "patent", "number": "30+", "body": { "zh": "知识产权专利", "en": "intellectual property patents" } },
+      { "icon": "lab", "number": "3", "body": { "zh": "个独立实验室", "en": "independent laboratories" } }
+    ]
+  },
+  "insights": {
+    "news": {
+      "kicker": {
+        "zh": "新闻",
+        "en": "News"
+      },
+      "title": {
+        "zh": "项目、质量与供应动态。",
+        "en": "Project, quality, and supply updates."
+      }
+    },
+    "blog": {
+      "kicker": {
+        "zh": "博客",
+        "en": "Blog"
+      },
+      "title": {
+        "zh": "擦拭系统知识。",
+        "en": "Wiping system thinking."
+      }
+    }
+  },
+  "partners": {
+    "kicker": {
+      "zh": "合作伙伴",
+      "en": "Partners"
+    },
+    "title": {
+      "zh": "服务国内外品牌客户与渠道伙伴。",
+      "en": "Serving brand customers and channel partners worldwide."
+    },
+    "items": [
+      { "name": "全棉时代", "logo": "/assets/partners/purcotton.svg" },
+      { "name": "Walmart", "logo": "/assets/partners/walmart.svg" },
+      { "name": "洁柔", "logo": "/assets/partners/cns.svg" },
+      { "name": "Bela Andersen", "logo": "/assets/partners/bela-andersen.svg" },
+      { "name": "GAMA Healthcare", "logo": "/assets/partners/gama-healthcare.svg" },
+      { "name": "3M", "logo": "/assets/partners/3m.svg" },
+      { "name": "Bluesail", "logo": "/assets/partners/bluesail.svg" },
+      { "name": "Medicom", "logo": "/assets/partners/medicom.svg" },
+      { "name": "OmniShield", "logo": "/assets/partners/omnishield.svg" },
+      { "name": "Pharmavest", "logo": "/assets/partners/pharmavest.svg" },
+      { "name": "Winner", "logo": "/assets/partners/winner-medical.svg" },
+      { "name": "Abu Sarhad Holding", "logo": "/assets/partners/abu-sarhad-holding.svg" },
+      { "name": "Anmar United", "logo": "/assets/partners/anmar-united.svg" },
+      { "name": "Munchkin", "logo": "/assets/partners/munchkin.svg" },
+      { "name": "Dr. Brown's", "logo": "/assets/partners/dr-browns.svg" }
+    ]
+  }
 }

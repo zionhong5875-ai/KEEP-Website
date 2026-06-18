@@ -9,6 +9,13 @@ type ContactPayload = {
 };
 
 const required = ["name", "email"] as const;
+const defaultContactTo = "hongzihao@vinnercare.cn";
+const needLabels: Record<string, string> = {
+  medikeep: "MEDIKEEP",
+  carekeep: "CAREKEEP",
+  indukeep: "INDUKEEP",
+  oem: "OEM / Custom"
+};
 
 function asString(value: unknown) {
   return typeof value === "string" ? value.trim() : "";
@@ -27,9 +34,17 @@ function isEmail(value: string) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
 }
 
+function getContactTo() {
+  return import.meta.env.CONTACT_TO || defaultContactTo;
+}
+
+function getNeedLabel(value = "") {
+  return needLabels[value] || value || "-";
+}
+
 function hasConfiguredDestination() {
   return Boolean(
-    (import.meta.env.RESEND_API_KEY && import.meta.env.CONTACT_TO) ||
+    (import.meta.env.RESEND_API_KEY && getContactTo()) ||
       (import.meta.env.FEISHU_APP_ID &&
         import.meta.env.FEISHU_APP_SECRET &&
         import.meta.env.FEISHU_BITABLE_APP_TOKEN &&
@@ -40,12 +55,20 @@ function hasConfiguredDestination() {
 
 async function sendEmail(payload: ContactPayload) {
   const apiKey = import.meta.env.RESEND_API_KEY;
-  const to = import.meta.env.CONTACT_TO;
-  const from = import.meta.env.CONTACT_FROM || "KEEP Website <noreply@example.com>";
+  const to = getContactTo();
+  const from = import.meta.env.CONTACT_FROM || "VINNER Website <noreply@vinnercare.cn>";
 
   if (!apiKey || !to) {
     return { skipped: true };
   }
+
+  const fields = [
+    ["Name", payload.name],
+    ["Email", payload.email],
+    ["Company", payload.company || "-"],
+    ["Request type", getNeedLabel(payload.need)],
+    ["Project brief", payload.message || "-"]
+  ];
 
   const response = await fetch("https://api.resend.com/emails", {
     method: "POST",
@@ -56,14 +79,23 @@ async function sendEmail(payload: ContactPayload) {
     body: JSON.stringify({
       from,
       to,
-      subject: `KEEP website inquiry - ${payload.name}`,
+      reply_to: payload.email,
+      subject: `VINNER website inquiry - ${payload.name}`,
+      text: fields.map(([label, value]) => `${label}: ${value}`).join("\n\n"),
       html: `
-        <h2>New KEEP website inquiry</h2>
-        <p><strong>Name:</strong> ${escapeHtml(payload.name)}</p>
-        <p><strong>Email:</strong> ${escapeHtml(payload.email)}</p>
-        <p><strong>Company:</strong> ${escapeHtml(payload.company || "-")}</p>
-        <p><strong>Need:</strong> ${escapeHtml(payload.need || "-")}</p>
-        <p><strong>Message:</strong><br />${escapeHtml(payload.message || "-").replace(/\n/g, "<br />")}</p>
+        <h2>New VINNER website inquiry</h2>
+        <table cellpadding="8" cellspacing="0" style="border-collapse:collapse;width:100%;max-width:720px;">
+          ${fields
+            .map(
+              ([label, value]) => `
+                <tr>
+                  <th align="left" style="border:1px solid #d9dde3;background:#f5f7f8;width:180px;">${escapeHtml(label)}</th>
+                  <td style="border:1px solid #d9dde3;">${escapeHtml(value).replace(/\n/g, "<br />")}</td>
+                </tr>
+              `
+            )
+            .join("")}
+        </table>
       `
     })
   });
@@ -126,9 +158,9 @@ async function saveToFeishuBitable(payload: ContactPayload) {
           Name: payload.name,
           Email: payload.email,
           Company: payload.company || "",
-          Need: payload.need || "",
+          Need: getNeedLabel(payload.need),
           Message: payload.message || "",
-          Source: "KEEP Website",
+          Source: "VINNER Website",
           CreatedAt: new Date().toISOString()
         }
       })
@@ -155,7 +187,7 @@ async function notifyFeishu(payload: ContactPayload) {
     body: JSON.stringify({
       msg_type: "text",
       content: {
-        text: `KEEP 官网新询盘\n姓名：${payload.name}\n邮箱：${payload.email}\n公司：${payload.company || "-"}\n需求：${payload.need || "-"}\n说明：${payload.message || "-"}`
+        text: `VINNER 官网新询盘\n姓名：${payload.name}\n邮箱：${payload.email}\n公司：${payload.company || "-"}\n需求：${getNeedLabel(payload.need)}\n说明：${payload.message || "-"}`
       }
     })
   });

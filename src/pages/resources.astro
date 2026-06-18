@@ -3,10 +3,19 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import PageHero from "../components/PageHero.astro";
 import resources from "../data/site/resources.json";
 import { text, attrs } from "../utils/i18n";
+
+const hasDownloadHref = (href) => typeof href === "string" && href.trim() && href !== "#";
 ---
 
 <BaseLayout title={resources.meta.title} description={resources.meta.description}>
-  <PageHero eyebrow="Resources" title={resources.hero.title} body={resources.hero.body} />
+  <PageHero
+    eyebrow="Resources"
+    title={resources.hero.title}
+    body={resources.hero.body}
+    image={resources.hero.image}
+    alt={resources.hero.alt}
+    light={false}
+  />
 
   <section class="resource-section" aria-labelledby="news-title">
     <div class="resource-heading">
@@ -67,7 +76,7 @@ import { text, attrs } from "../utils/i18n";
       <p class="section-kicker">Digital Resources</p>
       <div>
         <h2 id="digital-title" data-zh="数字资源" data-en="Digital Resources">数字资源</h2>
-        <p data-zh="产品说明书、SDS、安全使用指南和选型表。当前可后续接入真实下载链接。" data-en="Product manuals, SDS files, safe-use guides, and selection sheets. These can later connect to real download links.">产品说明书、SDS、安全使用指南和选型表。当前可后续接入真实下载链接。</p>
+        <p data-zh="产品说明书、SDS、安全使用指南和选型表。上传文件后，客户可直接打开或下载资料。" data-en="Product manuals, SDS files, safe-use guides, and selection sheets. Once files are uploaded, customers can open or download them directly.">产品说明书、SDS、安全使用指南和选型表。上传文件后，客户可直接打开或下载资料。</p>
       </div>
     </div>
     <div class="download-grid">
@@ -81,7 +90,9 @@ import { text, attrs } from "../utils/i18n";
                 <span>{item.label}</span>
                 <h3>{item.title}</h3>
                 <p {...attrs(item.body)}>{text(item.body)}</p>
-                <a href="#" data-zh="查看资料" data-en="Open resource">查看资料</a>
+                {hasDownloadHref(item.href) && (
+                  <a href={item.href} target="_blank" rel="noopener noreferrer" data-zh="查看资料" data-en="Open resource">查看资料</a>
+                )}
               </div>
             </article>
           ))}

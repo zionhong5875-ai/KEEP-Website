@@ -1,4 +1,4 @@
-const STORAGE_KEY = "keep-language";
+const STORAGE_KEY = "vinner-language";
 const supportedLanguages = ["zh", "en"];
 
 const getInitialLanguage = () => {
@@ -54,6 +54,10 @@ const applyLanguage = (language) => {
     button.setAttribute("aria-pressed", String(isActive));
     button.classList.toggle("is-active", isActive);
   });
+
+  document.querySelectorAll(".lang-switch").forEach((switcher) => {
+    switcher.dataset.activeLang = lang;
+  });
 };
 
 const setupLanguageSwitch = () => {
@@ -93,13 +97,46 @@ const setupFloatingLanguageContrast = () => {
     ".site-footer"
   ].join(",");
 
-  const isDarkColor = (color) => {
-    const match = color.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)/);
+  const parseRgbColor = (color) => {
+    const match = color.match(/rgba?\(\s*(\d+),\s*(\d+),\s*(\d+)(?:,\s*([\d.]+))?\s*\)/);
     if (!match) {
+      return null;
+    }
+
+    const [, red, green, blue, alpha = "1"] = match;
+    return {
+      red: Number(red),
+      green: Number(green),
+      blue: Number(blue),
+      alpha: Number(alpha)
+    };
+  };
+
+  const isTransparentColor = (color) => {
+    const parsed = parseRgbColor(color);
+    return !parsed || parsed.alpha <= 0.05;
+  };
+
+  const getEffectiveBackgroundColor = (element) => {
+    let current = element;
+    while (current) {
+      const color = window.getComputedStyle(current).backgroundColor;
+      if (!isTransparentColor(color)) {
+        return color;
+      }
+      current = current.parentElement;
+    }
+
+    return window.getComputedStyle(document.body).backgroundColor;
+  };
+
+  const isDarkColor = (color) => {
+    const parsed = parseRgbColor(color);
+    if (!parsed || parsed.alpha <= 0.05) {
       return false;
     }
 
-    const [, red, green, blue] = match.map(Number);
+    const { red, green, blue } = parsed;
     return (red * 299 + green * 587 + blue * 114) / 1000 < 118;
   };
 
@@ -113,13 +150,15 @@ const setupFloatingLanguageContrast = () => {
       .filter((element) => !element.closest(".lang-switch-floating") && !element.closest(".site-header"));
 
     const target = elements[0];
-    const shouldInvert = Boolean(
-      target?.closest(mediaSelectors) ||
-      target?.closest(darkSectionSelectors) ||
-      (target && isDarkColor(window.getComputedStyle(target).backgroundColor))
+    const onMedia = Boolean(target?.closest(mediaSelectors));
+    const onDark = Boolean(
+      !onMedia &&
+        (target?.closest(darkSectionSelectors) ||
+          (target && isDarkColor(getEffectiveBackgroundColor(target))))
     );
 
-    switcher.classList.toggle("is-on-media", shouldInvert);
+    switcher.classList.toggle("is-on-media", onMedia);
+    switcher.classList.toggle("is-on-dark", onDark);
   };
 
   updateContrast();

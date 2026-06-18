@@ -1,0 +1,84 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PageHero from "../../components/PageHero.astro";
+import factory from "../../data/site/factory.json";
+import { text, attrs } from "../../utils/i18n";
+---
+
+<BaseLayout
+  title={factory.meta.title}
+  description={factory.meta.description}
+>
+  <PageHero
+    eyebrow={factory.hero.eyebrow}
+    title={factory.hero.title}
+    body={factory.hero.body}
+    image={factory.hero.image}
+    alt={factory.hero.alt}
+    light={factory.hero.light}
+  />
+
+  <section class="factory-intro split-section">
+    <div>
+      <p class="section-kicker" {...attrs(factory.intro.kicker)}>{text(factory.intro.kicker)}</p>
+      <h2 {...attrs(factory.intro.title)}>{text(factory.intro.title)}</h2>
+    </div>
+    <div>
+      {factory.intro.paragraphs.map((paragraph) => (
+        <p {...attrs(paragraph)}>{text(paragraph)}</p>
+      ))}
+    </div>
+  </section>
+
+  <section class="factory-metrics about-metrics" aria-labelledby="factory-metrics-title">
+    <div class="about-section-heading">
+      <p class="section-kicker" {...attrs(factory.metricsSection.kicker)}>{text(factory.metricsSection.kicker)}</p>
+      <h2 id="factory-metrics-title" {...attrs(factory.metricsSection.title)}>{text(factory.metricsSection.title)}</h2>
+    </div>
+    <div class="metric-grid factory-metric-grid">
+      {factory.metricsSection.items.map((metric) => (
+        <article class="metric-card">
+          <strong class="metric-number">{metric.number}</strong>
+          <p {...attrs(metric.label)}>{text(metric.label)}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="factory-zone-section" aria-labelledby="factory-zone-title">
+    <div class="about-section-heading">
+      <p class="section-kicker" {...attrs(factory.zonesSection.kicker)}>{text(factory.zonesSection.kicker)}</p>
+      <h2 id="factory-zone-title" {...attrs(factory.zonesSection.title)}>{text(factory.zonesSection.title)}</h2>
+    </div>
+
+    <div class="factory-zone-grid">
+      {factory.zonesSection.items.map((zone) => (
+        <article class="factory-zone-card">
+          <figure>
+            <img src={zone.image} alt={zone.alt} loading="lazy" />
+          </figure>
+          <div>
+            <span>{zone.index}</span>
+            <h3 {...attrs(zone.title)}>{text(zone.title)}</h3>
+            <p {...attrs(zone.body)}>{text(zone.body)}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="factory-history" aria-labelledby="factory-history-title">
+    <div class="about-section-heading">
+      <p class="section-kicker" {...attrs(factory.historySection.kicker)}>{text(factory.historySection.kicker)}</p>
+      <h2 id="factory-history-title" {...attrs(factory.historySection.title)}>{text(factory.historySection.title)}</h2>
+    </div>
+    <ol class="factory-history-list">
+      {factory.historySection.items.map((item) => (
+        <li>
+          <strong>{item.year}</strong>
+          <p {...attrs(item.body)}>{text(item.body)}</p>
+        </li>
+      ))}
+    </ol>
+  </section>
+</BaseLayout>

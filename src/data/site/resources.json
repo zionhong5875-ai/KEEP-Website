@@ -1,12 +1,12 @@
 {
   "meta": {
     "title": {
-      "zh": "博客与资源 | KEEP",
-      "en": "Blog & Resources | KEEP"
+      "zh": "博客与资源 | VINNER",
+      "en": "Blog & Resources | VINNER"
     },
     "description": {
-      "zh": "KEEP 博客与资源中心，包含公司新闻、专业博客、产品说明书、SDS 与数字资料。",
-      "en": "KEEP's blog and resource hub for news, articles, product manuals, SDS files, and digital documentation."
+      "zh": "VINNER 博客与资源中心，包含公司新闻、专业博客、产品说明书、SDS 与数字资料。",
+      "en": "VINNER's blog and resource hub for news, articles, product manuals, SDS files, and digital documentation."
     }
   },
   "hero": {
@@ -15,11 +15,63 @@
       "en": "News,<br />thinking &<br />documents."
     },
     "body": {
-      "zh": "这里汇集 KEEP 的最新动态、擦拭系统知识、产品说明书、SDS 和应用资料，帮助客户更快完成选型、培训和内部审批。",
+      "zh": "这里汇集 VINNER 的最新动态、擦拭系统知识、产品说明书、SDS 和应用资料，帮助客户更快完成选型、培训和内部审批。",
       "en": "A hub for company updates, wiping-system knowledge, manuals, SDS files, and support documents to speed selection, training, and internal review."
-    }
+    },
+    "image": "/assets/resource-documents.jpg",
+    "alt": "VINNER 数字资料、产品文档和擦拭系统资源"
   },
   "news": [
+    {
+      "date": "2026.06 / Partnership",
+      "title": {
+        "zh": "维尼健康董事长刘春静先生受邀访问 GAMA Healthcare",
+        "en": "Vinner chairman Mr. Liu Chunjing invited to visit GAMA Healthcare"
+      },
+      "body": {
+        "zh": "双方围绕长期合作与未来发展机会展开战略交流。",
+        "en": "The visit focused on strategic discussions around long-term cooperation and future development opportunities."
+      },
+      "image": "/assets/news/vinner-gama-healthcare-strategic-discussion.png",
+      "alt": "维尼健康团队活动与企业交流场景",
+      "slug": "vinner-gama-healthcare-strategic-discussion",
+      "sections": [
+        {
+          "heading": {
+            "zh": "受邀访问",
+            "en": "Invited visit"
+          },
+          "body": {
+            "zh": "维尼健康（深圳）股份有限公司董事长刘春静先生受邀访问 GAMA Healthcare Ltd.，就双方长期合作与未来发展机会进行战略交流。",
+            "en": "Mr. Liu Chunjing, Chairman of Vinner (Shenzhen) Health Product Co., Ltd., was invited to visit GAMA Healthcare Ltd. for strategic discussions on long-term cooperation and future development opportunities between the two companies."
+          }
+        },
+        {
+          "heading": {
+            "zh": "合作方向",
+            "en": "Cooperation direction"
+          },
+          "body": {
+            "zh": "本次交流聚焦品牌客户合作、产品供应协同和未来项目机会，为双方后续沟通建立更清晰的方向。",
+            "en": "The discussion focused on brand cooperation, supply collaboration, and future project opportunities, creating a clearer direction for continued communication between the two teams."
+          }
+        },
+        {
+          "heading": {
+            "zh": "持续连接",
+            "en": "Continued connection"
+          },
+          "body": {
+            "zh": "VINNER 将继续通过稳定制造、产品研发和项目响应能力，服务国内外品牌客户与渠道伙伴。",
+            "en": "VINNER will continue supporting domestic and international brand customers and channel partners through stable manufacturing, product development, and project response capabilities."
+          }
+        }
+      ],
+      "quote": {
+        "zh": "长期合作来自稳定交付，也来自持续面对面沟通。",
+        "en": "Long-term cooperation is built through stable delivery and continued face-to-face communication."
+      }
+    },
     {
       "date": "2026.04 / Product Line",
       "title": {
@@ -60,8 +112,8 @@
             "en": "Next step"
           },
           "body": {
-            "zh": "KEEP 将继续把材料兼容、批次追溯和数字资源整合到 MEDIKEEP 的资料包中，方便医院、经销商和 OEM 客户完成内部审核。",
-            "en": "KEEP will continue integrating material compatibility, batch traceability, and digital resources into MEDIKEEP documentation packs for hospitals, distributors, and OEM customers."
+            "zh": "VINNER 将继续把材料兼容、批次追溯和数字资源整合到 MEDIKEEP 的资料包中，方便医院、经销商和 OEM 客户完成内部审核。",
+            "en": "VINNER will continue integrating material compatibility, batch traceability, and digital resources into MEDIKEEP documentation packs for hospitals, distributors, and OEM customers."
           }
         }
       ],
@@ -73,8 +125,8 @@
     {
       "date": "2026.03 / Supply",
       "title": {
-        "zh": "KEEP 启动跨区域 OEM 快速打样流程",
-        "en": "KEEP launches cross-region OEM rapid sampling workflow"
+        "zh": "VINNER 启动跨区域 OEM 快速打样流程",
+        "en": "VINNER launches cross-region OEM rapid sampling workflow"
       },
       "body": {
         "zh": "标准化基材、配方、包装和标签信息，让客户从概念到样品更顺畅。",
@@ -160,8 +212,8 @@
             "en": "Continuous updates"
           },
           "body": {
-            "zh": "后续 KEEP 将把更多下载资源接入 CMS，方便业务团队维护最新版本。",
-            "en": "KEEP will connect more downloadable resources to the CMS so business teams can maintain the latest versions."
+            "zh": "后续 VINNER 将把更多下载资源接入 CMS，方便业务团队维护最新版本。",
+            "en": "VINNER will connect more downloadable resources to the CMS so business teams can maintain the latest versions."
           }
         }
       ],
@@ -275,13 +327,104 @@
   ],
   "downloads": [
     {
+      "type": "SDS",
+      "label": "Safety Data Sheet",
+      "title": "VINNERLOVE Rinse-free Bathing Wipes SDS",
+      "body": {
+        "zh": "VLBBW8 免冲洗沐浴湿巾的安全数据表，适用于内部审核、客户备案和合规资料提交。",
+        "en": "Safety Data Sheet for VLBBW8 Rinse-free Bathing Wipes, prepared for internal review, customer records, and compliance documentation."
+      },
+      "href": "/assets/uploads/vinnerlove-rinse-free-bathing-wipes-sds.pdf"
+    },
+    {
+      "type": "PDF",
+      "label": "Product Brochure",
+      "title": "VINNERLOVE Rinse-free Bathing Wipes Brochure",
+      "body": {
+        "zh": "包含 VLBBW8 产品参数、关键亮点、使用场景与 8 片式床旁沐浴使用说明。",
+        "en": "Includes VLBBW8 specifications, key features, use scenarios, and the 8-wipe bedside bathing protocol."
+      },
+      "href": "/assets/uploads/vinnerlove-rinse-free-bathing-wipes-brochure.pdf"
+    },
+    {
+      "type": "SDS",
+      "label": "Safety Data Sheet",
+      "title": "VINNERLOVE Rinse-free Bathing Gloves SDS",
+      "body": {
+        "zh": "VLBBG8 免冲洗沐浴手套的安全数据表，适用于客户备案和合规资料提交。",
+        "en": "Safety Data Sheet for VLBBG8 Rinse-free Bathing Gloves for customer records and compliance documentation."
+      },
+      "href": "/assets/uploads/vinnerlove-rinse-free-bathing-gloves-sds.pdf"
+    },
+    {
+      "type": "PDF",
+      "label": "Product Brochure",
+      "title": "VINNERLOVE Rinse-free Bathing Gloves Brochure",
+      "body": {
+        "zh": "包含 VLBBG8 产品参数、关键亮点、使用场景与手套式床旁沐浴使用说明。",
+        "en": "Includes VLBBG8 specifications, key features, use scenarios, and glove-format bedside bathing instructions."
+      },
+      "href": "/assets/uploads/vinnerlove-rinse-free-bathing-gloves-brochure.pdf"
+    },
+    {
+      "type": "SDS",
+      "label": "Safety Data Sheet",
+      "title": "VINNERLOVE Rinse-free Shampoo Cap SDS",
+      "body": {
+        "zh": "VLSHMC1 免冲洗洗发浴帽的安全数据表，适用于内部审核、客户备案和合规资料提交。",
+        "en": "Safety Data Sheet for VLSHMC1 Rinse-free Shampoo Cap for internal review, customer records, and compliance documentation."
+      },
+      "href": "/assets/uploads/vinnerlove-shampoo-cap-sds.pdf"
+    },
+    {
+      "type": "PDF",
+      "label": "Product Brochure",
+      "title": "VINNERLOVE Rinse-free Shampoo Cap Brochure",
+      "body": {
+        "zh": "包含 VLSHMC1 产品参数、床旁洗发优势、使用场景与使用说明。",
+        "en": "Includes VLSHMC1 specifications, bedside shampooing advantages, use scenarios, and instructions."
+      },
+      "href": "/assets/uploads/vinnerlove-shampoo-cap-brochure.pdf"
+    },
+    {
+      "type": "SDS",
+      "label": "Safety Data Sheet",
+      "title": "VINNERLOVE Cream Care Wipes SDS",
+      "body": {
+        "zh": "VLCONCW25 失禁护理乳霜湿巾的安全数据表，适用于客户备案和合规资料提交。",
+        "en": "Safety Data Sheet for VLCONCW25 Cream Care Wipes for customer records and compliance documentation."
+      },
+      "href": "/assets/uploads/vinnerlove-cream-care-wipes-sds.pdf"
+    },
+    {
+      "type": "PDF",
+      "label": "Product Brochure",
+      "title": "VINNERLOVE Cream Care Wipes Brochure",
+      "body": {
+        "zh": "包含 VLCONCW25 4合1乳霜护理湿巾的产品详情、适用场景、MASD/压疮风险护理说明与使用方式。",
+        "en": "Includes VLCONCW25 4-in-1 cream care wipe details, use scenarios, MASD/pressure-injury risk care notes, and instructions."
+      },
+      "href": "/assets/uploads/vinnerlove-cream-care-wipes-brochure.pdf"
+    },
+    {
+      "type": "PDF",
+      "label": "Product Brochure",
+      "title": "HOMEKEEP Pure Water Baby Wipes Brochure",
+      "body": {
+        "zh": "包含 HKPWW60 纯水婴儿湿巾的产品参数、极简配方、使用场景与使用说明。",
+        "en": "Includes HKPWW60 Pure Water Baby Wipes specifications, minimal formula, use scenarios, and instructions."
+      },
+      "href": "/assets/uploads/homekeep-pure-water-baby-wipes-brochure.pdf"
+    },
+    {
       "type": "PDF",
       "label": "Product Manual",
       "title": "MEDIKEEP Infection Control Wipes Product Guide",
       "body": {
         "zh": "包含三款 MEDIKEEP SKU 的尺寸、包装、应用场景和储存建议。",
         "en": "Includes size, pack format, use case, and storage guidance across the three MEDIKEEP SKUs."
-      }
+      },
+      "href": ""
     },
     {
       "type": "SDS",
@@ -290,7 +433,8 @@
       "body": {
         "zh": "酒精型消毒湿巾的安全信息、储存条件、运输和应急处理摘要。",
         "en": "Safety, storage, transport, and emergency handling summary for alcohol disinfectant wipes."
-      }
+      },
+      "href": ""
     },
     {
       "type": "PDF",
@@ -299,7 +443,8 @@
       "body": {
         "zh": "按使用对象、护理频次和包装场景选择 Bath Wipes、Bath Gloves 和 Continence Care Wipes。",
         "en": "Choose Bath Wipes, Bath Gloves, and Continence Care Wipes by user type, care frequency, and packaging context."
-      }
+      },
+      "href": ""
     }
   ]
 }

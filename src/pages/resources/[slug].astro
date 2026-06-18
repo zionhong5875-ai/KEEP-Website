@@ -22,10 +22,14 @@ export function getStaticPaths() {
 
 const { item, type, meta, related } = Astro.props;
 const title = {
-  zh: `${text(item.title)} | KEEP`,
-  en: `${text(item.title)} | KEEP`
+  zh: `${text(item.title)} | VINNER`,
+  en: `${text(item.title)} | VINNER`
 };
 const description = item.body;
+const articleParagraphs = [item.body, ...item.sections.map((section) => section.body)];
+const relatedTitle = type.zh === "博客"
+  ? { zh: "更多博客。", en: "More blog posts." }
+  : { zh: "更多新闻。", en: "More news." };
 ---
 
 <BaseLayout title={title} description={description}>
@@ -43,26 +47,19 @@ const description = item.body;
       </figure>
     </header>
 
-    <section class="resource-article-body" aria-label="Article body">
-      <aside class="resource-article-aside">
-        <p class="section-kicker" data-zh="重点" data-en="Key point">重点</p>
-        <blockquote {...attrs(item.quote)}>{text(item.quote)}</blockquote>
-      </aside>
+    <section class="resource-article-body resource-article-story" id="article" aria-label="Article body">
       <div class="resource-article-content">
-        {item.sections.map((section) => (
-          <section>
-            <h2 {...attrs(section.heading)}>{text(section.heading)}</h2>
-            <p {...attrs(section.body)}>{text(section.body)}</p>
-          </section>
+        {articleParagraphs.map((paragraph) => (
+          <p {...attrs(paragraph)}>{text(paragraph)}</p>
         ))}
       </div>
     </section>
   </article>
 
-  <section class="product-detail-section related-products" aria-labelledby="related-resources-title">
+  <section class="product-detail-section related-products resource-related-section" aria-labelledby="related-resources-title">
     <div class="detail-split-heading">
       <p class="section-kicker" data-zh="继续阅读" data-en="Keep reading">继续阅读</p>
-      <h2 id="related-resources-title" data-zh="更多新闻与观点。" data-en="More news and thinking.">更多新闻与观点。</h2>
+      <h2 id="related-resources-title" {...attrs(relatedTitle)}>{text(relatedTitle)}</h2>
     </div>
     <div class="related-resource-grid">
       {related.map((entry) => (

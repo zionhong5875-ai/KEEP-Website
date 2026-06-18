@@ -1,28 +1,28 @@
 {
   "meta": {
     "title": {
-      "zh": "关于我们 | KEEP",
-      "en": "About | KEEP"
+      "zh": "关于我们 | VINNER",
+      "en": "About | VINNER"
     },
     "description": {
-      "zh": "了解 KEEP 如何围绕医疗感染控制、个人护理和工业擦拭建立专业擦拭产品体系。",
-      "en": "Learn how KEEP builds wiping systems for infection control, personal care, and industrial environments."
+      "zh": "了解 VINNER 如何围绕医疗感染控制、个人护理和工业擦拭建立专业擦拭产品体系。",
+      "en": "Learn how VINNER builds wiping systems for infection control, personal care, and industrial environments."
     }
   },
   "hero": {
     "image": "/assets/about-hero.jpg",
     "alt": "专业洁净制造与质量控制环境",
     "eyebrow": {
-      "zh": "About KEEP",
-      "en": "About KEEP"
+      "zh": "About VINNER",
+      "en": "About VINNER"
     },
     "title": {
       "zh": "为关键洁净工作而建。",
       "en": "Built for<br />clean-critical<br />work."
     },
     "body": {
-      "zh": "KEEP 将擦拭产品视为关键流程的一部分。我们用稳定材料、场景配方和可追溯供应，把日常清洁动作变成可靠的标准动作。",
-      "en": "KEEP treats wiping products as part of a critical process. Stable materials, scenario-led formulations, and traceable supply turn ordinary cleaning into dependable routine."
+      "zh": "VINNER 将擦拭产品视为关键流程的一部分。我们用稳定材料、场景配方和可追溯供应，把日常清洁动作变成可靠的标准动作。",
+      "en": "VINNER treats wiping products as part of a critical process. Stable materials, scenario-led formulations, and traceable supply turn ordinary cleaning into dependable routine."
     }
   }
 }
