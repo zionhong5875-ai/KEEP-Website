@@ -27,6 +27,8 @@ const title = {
 };
 const description = item.body;
 const articleParagraphs = [item.body, ...item.sections.map((section) => section.body)];
+const gallery = Array.isArray(item.gallery) ? item.gallery : [];
+const hasRichSections = item.sections.some((section) => Array.isArray(section.media) && section.media.length > 0);
 const relatedTitle = type.zh === "博客"
   ? { zh: "更多博客。", en: "More blog posts." }
   : { zh: "更多新闻。", en: "More news." };
@@ -49,11 +51,46 @@ const relatedTitle = type.zh === "博客"
 
     <section class="resource-article-body resource-article-story" id="article" aria-label="Article body">
       <div class="resource-article-content">
-        {articleParagraphs.map((paragraph) => (
-          <p {...attrs(paragraph)}>{text(paragraph)}</p>
-        ))}
+        {hasRichSections ? (
+          <>
+            <p class="resource-article-lead" {...attrs(item.body)}>{text(item.body)}</p>
+            {item.sections.map((section) => (
+              <section class="resource-day-entry">
+                <div class="resource-day-copy">
+                  <h2 {...attrs(section.heading)}>{text(section.heading)}</h2>
+                  <p {...attrs(section.body)}>{text(section.body)}</p>
+                </div>
+                {Array.isArray(section.media) && section.media.length > 0 && (
+                  <div class="resource-day-media">
+                    {section.media.map((media) => (
+                      <figure>
+                        <img src={media.image} alt={media.alt} />
+                        <figcaption {...attrs(media.caption)}>{text(media.caption)}</figcaption>
+                      </figure>
+                    ))}
+                  </div>
+                )}
+              </section>
+            ))}
+          </>
+        ) : (
+          articleParagraphs.map((paragraph) => (
+            <p {...attrs(paragraph)}>{text(paragraph)}</p>
+          ))
+        )}
       </div>
     </section>
+
+    {gallery.length > 0 && (
+      <section class="resource-article-gallery" aria-label="Article gallery">
+        {gallery.map((media) => (
+          <figure>
+            <img src={media.image} alt={media.alt} />
+            <figcaption {...attrs(media.caption)}>{text(media.caption)}</figcaption>
+          </figure>
+        ))}
+      </section>
+    )}
   </article>
 
   <section class="product-detail-section related-products resource-related-section" aria-labelledby="related-resources-title">

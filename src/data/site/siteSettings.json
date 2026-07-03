@@ -80,29 +80,24 @@
     },
     "socials": [
       {
-        "name": "X",
-        "href": "#",
-        "icon": "/assets/footer/social/x.svg"
-      },
-      {
         "name": "Facebook",
-        "href": "#",
+        "href": "https://www.facebook.com/profile.php?id=61589502546587",
         "icon": "/assets/footer/social/facebook.svg"
       },
       {
         "name": "Instagram",
-        "href": "#",
+        "href": "https://www.instagram.com/vinnerhealth2004/",
         "icon": "/assets/footer/social/instagram.svg"
       },
       {
-        "name": "抖音",
-        "href": "#",
-        "icon": "/assets/footer/social/douyin.svg"
+        "name": "YouTube",
+        "href": "https://www.youtube.com/@VinnerHealthcare-n7j",
+        "icon": "/assets/footer/social/youtube.svg"
       },
       {
-        "name": "YouTube",
-        "href": "#",
-        "icon": "/assets/footer/social/youtube.svg"
+        "name": "LinkedIn",
+        "href": "https://www.linkedin.com/company/vinner-healthcare",
+        "icon": "/assets/footer/social/linkedin.svg"
       }
     ],
     "legal": [

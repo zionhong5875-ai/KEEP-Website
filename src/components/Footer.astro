@@ -15,7 +15,6 @@ const resourceLinks = [
 ---
 
 <footer class="site-footer">
-  <p class="footer-kicker" {...attrs(settings.footer.kicker)}>{text(settings.footer.kicker)}</p>
   <div class="footer-grid">
     <section class="footer-column" aria-labelledby="footer-products-title">
       <h2 id="footer-products-title"><a href="/products/" {...attrs(settings.footer.products)}>{text(settings.footer.products)}</a></h2>
@@ -66,7 +65,7 @@ const resourceLinks = [
       <h2 {...attrs(settings.footer.follow)}>{text(settings.footer.follow)}</h2>
       <div class="footer-socials" aria-label="Social media links">
         {settings.footer.socials.map((item) => (
-          <a href={item.href} aria-label={item.name} title={item.name}>
+          <a href={item.href} aria-label={item.name} title={item.name} target="_blank" rel="noopener noreferrer">
             <img src={item.icon} alt="" loading="lazy" />
           </a>
         ))}

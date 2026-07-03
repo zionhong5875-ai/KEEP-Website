@@ -1,8 +1,13 @@
 ---
 import { text, htmlAttrs, attrs } from "../utils/i18n";
 
-const { eyebrow, title, body, image, alt, light = true } = Astro.props;
-const classes = ["page-hero", light ? "page-hero-light" : "", image ? "page-hero-image" : ""].filter(Boolean).join(" ");
+const { eyebrow, title, body, image, alt, light = true, contrast = false } = Astro.props;
+const classes = [
+  "page-hero",
+  light ? "page-hero-light" : "",
+  image ? "page-hero-image" : "",
+  contrast ? "page-hero-contrast" : ""
+].filter(Boolean).join(" ");
 ---
 
 <section class={classes} aria-labelledby="page-title">
