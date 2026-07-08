@@ -56,14 +56,14 @@
       "en": "Capacity, automation, and R&D systems support long-term delivery."
     },
     "items": [
-      { "number": "20+", "label": { "zh": "年湿巾研发与生产经验", "en": "years of wet wipes R&D and manufacturing experience" } },
-      { "number": "15+", "label": { "zh": "年医疗消毒湿巾生产经验", "en": "years of medical disinfectant wipes manufacturing experience" } },
-      { "number": "95%+", "label": { "zh": "自动化率", "en": "automation rate" } },
-      { "number": "80亿+", "label": { "zh": "片以上湿巾年产能", "en": "wipes annual capacity" } },
-      { "number": "500+", "label": { "zh": "成熟湿巾配方", "en": "mature wipe formulas" } },
-      { "number": "3", "label": { "zh": "个独立实验室", "en": "independent laboratories" } },
-      { "number": "30+", "label": { "zh": "知识产权专利", "en": "intellectual property patents" } },
-      { "number": "20+", "label": { "zh": "家合作实验室与大学", "en": "partner laboratories and universities" } }
+      { "number": { "zh": "20+", "en": "20+" }, "label": { "zh": "年湿巾研发与生产经验", "en": "years of wet wipes R&D and manufacturing experience" } },
+      { "number": { "zh": "15+", "en": "15+" }, "label": { "zh": "年医疗消毒湿巾生产经验", "en": "years of medical disinfectant wipes manufacturing experience" } },
+      { "number": { "zh": "95%+", "en": "95%+" }, "label": { "zh": "自动化率", "en": "automation rate" } },
+      { "number": { "zh": "80亿+", "en": "8B+" }, "label": { "zh": "片以上湿巾年产能", "en": "wipes annual capacity" } },
+      { "number": { "zh": "500+", "en": "500+" }, "label": { "zh": "成熟湿巾配方", "en": "mature wipe formulas" } },
+      { "number": { "zh": "3", "en": "3" }, "label": { "zh": "个独立实验室", "en": "independent laboratories" } },
+      { "number": { "zh": "30+", "en": "30+" }, "label": { "zh": "知识产权专利", "en": "intellectual property patents" } },
+      { "number": { "zh": "20+", "en": "20+" }, "label": { "zh": "家合作实验室与大学", "en": "partner laboratories and universities" } }
     ]
   },
   "zonesSection": {

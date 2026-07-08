@@ -38,7 +38,7 @@ import { text, attrs } from "../../utils/i18n";
     <div class="metric-grid factory-metric-grid">
       {factory.metricsSection.items.map((metric) => (
         <article class="metric-card">
-          <strong class="metric-number">{metric.number}</strong>
+          <strong class="metric-number" {...attrs(metric.number)}>{text(metric.number)}</strong>
           <p {...attrs(metric.label)}>{text(metric.label)}</p>
         </article>
       ))}

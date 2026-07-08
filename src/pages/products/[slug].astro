@@ -34,6 +34,11 @@ const hasDownloadHref = (href) =>
   typeof href === "string" && href.trim() && href !== "#" && href !== "/resources/#downloads";
 const availableDownloads = (sku.downloads || []).filter((download) => hasDownloadHref(download.href));
 const relatedProducts = related.slice(0, 3);
+const lineDisplayName = line.name.en || text(line.name);
+const relatedLineTitle = {
+  zh: `${line.brand} / ${lineDisplayName}`,
+  en: `${line.brand} / ${lineDisplayName}`
+};
 ---
 
 <BaseLayout title={pageTitle} description={pageDescription}>
@@ -84,9 +89,8 @@ const relatedProducts = related.slice(0, 3);
   </section>
 
   <section class="product-detail-section product-detail-overview" aria-labelledby="overview-title">
-    <div>
-      <p class="section-kicker" data-zh="产品定位" data-en="Product position">产品定位</p>
-      <h2 id="overview-title" data-zh="稳定、直接、可验证。" data-en="Stable, direct, verifiable.">稳定、直接、可验证。</h2>
+    <div class="detail-section-heading">
+      <h2 id="overview-title" class="detail-section-label" data-zh="产品定位" data-en="Product position">产品定位</h2>
     </div>
     <div class="detail-highlight-grid">
       {sku.highlights.map((highlight) => (
@@ -99,9 +103,8 @@ const relatedProducts = related.slice(0, 3);
   </section>
 
   <section class="product-detail-section product-spec-block" aria-labelledby="spec-title">
-    <div class="detail-split-heading">
-      <p class="section-kicker" data-zh="规格与结构" data-en="Format & build">规格与结构</p>
-      <h2 id="spec-title" data-zh="把产品参数压进清晰的现场语言。" data-en="Product parameters translated into field language.">把产品参数压进清晰的现场语言。</h2>
+    <div class="detail-section-heading">
+      <h2 id="spec-title" class="detail-section-label" data-zh="规格与结构" data-en="Format & build">规格与结构</h2>
     </div>
     <dl class="detail-spec-list">
       {sku.specs.map((spec) => (
@@ -113,27 +116,9 @@ const relatedProducts = related.slice(0, 3);
     </dl>
   </section>
 
-  {sku.killPerformance?.length && (
-    <section class="product-detail-section product-performance" aria-labelledby="performance-title">
-      <div class="detail-split-heading">
-        <p class="section-kicker" data-zh="微生物控制" data-en="Microbial control">微生物控制</p>
-        <h2 id="performance-title" data-zh="为感染控制场景保留验证空间。" data-en="Designed with validation space for infection-control use.">为感染控制场景保留验证空间。</h2>
-      </div>
-      <dl class="performance-grid">
-        {sku.killPerformance.map((item) => (
-          <div>
-            <dt {...attrs(item.label)}>{text(item.label)}</dt>
-            <dd {...attrs(item.value)}>{text(item.value)}</dd>
-          </div>
-        ))}
-      </dl>
-    </section>
-  )}
-
   <section class="product-detail-section usage-section" aria-labelledby="usage-title">
-    <div class="detail-split-heading">
-      <p class="section-kicker" data-zh="使用流程" data-en="Use protocol">使用流程</p>
-      <h2 id="usage-title" data-zh="少一点解释，多一点确定性。" data-en="Less explanation, more certainty.">少一点解释，多一点确定性。</h2>
+    <div class="detail-section-heading">
+      <h2 id="usage-title" class="detail-section-label" data-zh="使用流程" data-en="Use protocol">使用流程</h2>
     </div>
     <ol class="usage-steps">
       {sku.usage.map((step, index) => (
@@ -147,9 +132,8 @@ const relatedProducts = related.slice(0, 3);
 
   {availableDownloads.length > 0 && (
     <section class="product-detail-section download-panel" id="downloads" aria-labelledby="downloads-title">
-      <div>
-        <p class="section-kicker" data-zh="数字资源" data-en="Digital resources">数字资源</p>
-        <h2 id="downloads-title" data-zh="SDS、说明书和应用海报集中下载。" data-en="SDS, brochures, and posters in one place.">SDS、说明书和应用海报集中下载。</h2>
+      <div class="detail-section-heading">
+        <h2 id="downloads-title" class="detail-section-label" data-zh="数字资源" data-en="Digital resources">数字资源</h2>
       </div>
       <div class="download-card-grid">
         {availableDownloads.map((download) => (
@@ -165,8 +149,8 @@ const relatedProducts = related.slice(0, 3);
   {relatedProducts.length > 0 && (
     <section class="product-detail-section related-products product-related-section" aria-labelledby="related-title">
       <div class="detail-split-heading">
-        <p class="section-kicker" {...attrs(line.name)}>{text(line.name)}</p>
-        <h2 id="related-title" data-zh="同一产品线的其他选择。" data-en="Other products in the same line.">同一产品线的其他选择。</h2>
+        <p class="section-kicker" data-zh="相关产品" data-en="Related products">相关产品</p>
+        <h2 id="related-title" {...attrs(relatedLineTitle)}>{text(relatedLineTitle)}</h2>
       </div>
       <div class="related-grid">
         {relatedProducts.map((item) => (

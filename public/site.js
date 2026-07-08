@@ -227,6 +227,98 @@ if (toggle && nav) {
   });
 }
 
+document.querySelectorAll("[data-home-carousel]").forEach((homeCarousel) => {
+  const slides = Array.from(homeCarousel.querySelectorAll("[data-home-slide]"));
+  const dots = Array.from(homeCarousel.querySelectorAll("[data-home-dot]"));
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let activeIndex = 0;
+  let timer = null;
+  let pointerStartX = 0;
+  let pointerStartY = 0;
+  let isDragging = false;
+
+  if (slides.length <= 1) {
+    return;
+  }
+
+  const showSlide = (index) => {
+    activeIndex = (index + slides.length) % slides.length;
+
+    slides.forEach((slide, slideIndex) => {
+      const isActive = slideIndex === activeIndex;
+      slide.classList.toggle("is-active", isActive);
+      slide.setAttribute("aria-hidden", String(!isActive));
+    });
+
+    dots.forEach((dot, dotIndex) => {
+      const isActive = dotIndex === activeIndex;
+      dot.classList.toggle("is-active", isActive);
+      dot.setAttribute("aria-selected", String(isActive));
+    });
+  };
+
+  const stopAutoplay = () => {
+    if (timer) {
+      window.clearInterval(timer);
+      timer = null;
+    }
+  };
+
+  const startAutoplay = () => {
+    if (reduceMotion || timer) {
+      return;
+    }
+
+    timer = window.setInterval(() => {
+      showSlide(activeIndex + 1);
+    }, 5600);
+  };
+
+  dots.forEach((dot) => {
+    dot.addEventListener("click", () => {
+      stopAutoplay();
+      showSlide(Number(dot.dataset.homeDot || 0));
+      startAutoplay();
+    });
+  });
+
+  homeCarousel.addEventListener("pointerdown", (event) => {
+    if (event.pointerType === "mouse" && event.button !== 0) {
+      return;
+    }
+
+    isDragging = true;
+    pointerStartX = event.clientX;
+    pointerStartY = event.clientY;
+  });
+
+  homeCarousel.addEventListener("pointerup", (event) => {
+    if (!isDragging) {
+      return;
+    }
+
+    isDragging = false;
+    const deltaX = event.clientX - pointerStartX;
+    const deltaY = event.clientY - pointerStartY;
+
+    if (Math.abs(deltaX) > 46 && Math.abs(deltaX) > Math.abs(deltaY)) {
+      stopAutoplay();
+      showSlide(deltaX < 0 ? activeIndex + 1 : activeIndex - 1);
+      startAutoplay();
+    }
+  });
+
+  homeCarousel.addEventListener("pointercancel", () => {
+    isDragging = false;
+  });
+
+  homeCarousel.addEventListener("mouseenter", stopAutoplay);
+  homeCarousel.addEventListener("mouseleave", startAutoplay);
+
+  showSlide(0);
+  startAutoplay();
+});
+
 const carousel = document.querySelector("[data-carousel]");
 
 if (carousel) {

@@ -9,6 +9,7 @@ import { getProductLineHref, getProductLineMeta } from "../utils/productLines.js
 
 const companyStats = home.company.stats;
 const rdMetrics = home.rd.metrics;
+const heroSlides = home.hero.slides?.length ? home.hero.slides : [home.hero];
 
 const metricIcons = {
   clock: ["M24 8a16 16 0 1 0 0 32 16 16 0 0 0 0-32Z", "M24 15v10l8 5", "M15 7l-5 6", "M33 7l5 6"],
@@ -28,19 +29,36 @@ const newsItems = resources.news;
 ---
 
 <BaseLayout title={home.meta.title} description={home.meta.description}>
-  <section class="hero" id="top" aria-labelledby="hero-title">
-    <img class="hero-image" src={home.hero.image} alt={home.hero.alt} />
-    <div class="hero-scrim"></div>
-    <div class="hero-content">
-      <p class="eyebrow" {...attrs(home.hero.eyebrow)}>{text(home.hero.eyebrow)}</p>
-      <h1 id="hero-title" set:html={text(home.hero.title)} {...htmlAttrs(home.hero.title)} />
-      <div class="hero-bottom">
-        <p set:html={text(home.hero.body)} {...htmlAttrs(home.hero.body)} />
-        <div class="button-row">
-          <a class="button button-accent" href="#lines" data-zh="查看产品线" data-en="View product lines">查看产品线</a>
-          <a class="button button-dark" href="#contact" data-zh="获取方案" data-en="Request a brief">获取方案</a>
-        </div>
-      </div>
+  <section class="hero hero-carousel" id="top" aria-labelledby="hero-title" data-home-carousel>
+    <div class="hero-slide-track">
+      {heroSlides.map((slide, index) => (
+        <article class:list={["hero-slide", index === 0 && "is-active"]} data-home-slide aria-hidden={index === 0 ? "false" : "true"}>
+          <img class="hero-image" src={slide.image} alt={slide.alt} />
+          <div class="hero-scrim"></div>
+          <div class="hero-content">
+            <p class="eyebrow" {...attrs(slide.eyebrow)}>{text(slide.eyebrow)}</p>
+            <h1 id={index === 0 ? "hero-title" : `hero-title-${index + 1}`} set:html={text(slide.title)} {...htmlAttrs(slide.title)} />
+            <div class="hero-bottom">
+              <p set:html={text(slide.body)} {...htmlAttrs(slide.body)} />
+              <div class="button-row">
+                <a class="button button-accent" href="#lines" data-zh="查看产品线" data-en="View product lines">查看产品线</a>
+                <a class="button button-dark" href="#contact" data-zh="获取方案" data-en="Request a brief">获取方案</a>
+              </div>
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+    <div class="hero-carousel-dots" role="tablist" aria-label="Home carousel">
+      {heroSlides.map((_, index) => (
+        <button
+          class:list={["hero-carousel-dot", index === 0 && "is-active"]}
+          type="button"
+          data-home-dot={index}
+          aria-label={`Show slide ${index + 1}`}
+          aria-selected={index === 0 ? "true" : "false"}
+        ></button>
+      ))}
     </div>
   </section>
 
@@ -76,7 +94,7 @@ const newsItems = resources.news;
           </span>
           <div>
             <h3 {...attrs(item.label)}>{text(item.label)}</h3>
-            <strong>{item.number}</strong>
+            <strong {...attrs(item.number)}>{text(item.number)}</strong>
             <p {...attrs(item.body)}>{text(item.body)}</p>
           </div>
         </article>
@@ -126,7 +144,7 @@ const newsItems = resources.news;
             </svg>
           </span>
           <div>
-            <strong>{metric.number}</strong>
+            <strong {...attrs(metric.number)}>{text(metric.number)}</strong>
             <p {...attrs(metric.body)}>{text(metric.body)}</p>
           </div>
         </article>

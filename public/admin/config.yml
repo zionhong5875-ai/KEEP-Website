@@ -43,11 +43,24 @@ hero_fields: &hero_fields
     - { label: 图片, name: image, widget: image, required: false }
     - { label: 图片描述 Alt, name: alt, widget: string, required: false }
     - { label: 深色文字模式, name: light, widget: boolean, required: false }
+    - label: 首页轮播图（仅首页使用）
+      name: slides
+      widget: list
+      required: false
+      collapsed: true
+      summary: "{{fields.eyebrow.zh}}"
+      fields:
+        - { label: 小标题, name: eyebrow, <<: *i18n_text }
+        - { label: 大标题, name: title, <<: *i18n_markdown }
+        - { label: 说明文字, name: body, <<: *i18n_markdown }
+        - { label: 图片, name: image, widget: image }
+        - { label: 图片描述 Alt, name: alt, widget: string }
+        - { label: 深色文字模式, name: light, widget: boolean, required: false }
 
 metric_fields: &metric_fields
   widget: object
   fields:
-    - { label: 数字, name: number, widget: string }
+    - { label: 数字, name: number, <<: *i18n_text }
     - { label: 说明, name: label, <<: *i18n_text }
 
 partner_fields: &partner_fields
@@ -75,6 +88,16 @@ article_fields: &article_fields
       fields:
         - { label: 小标题, name: heading, <<: *i18n_text, required: false }
         - { label: 正文, name: body, <<: *i18n_textarea }
+        - label: 段落图片
+          name: media
+          widget: list
+          required: false
+          collapsed: true
+          summary: "{{fields.caption.zh}}"
+          fields:
+            - { label: 图片, name: image, widget: image }
+            - { label: 图片描述 Alt, name: alt, widget: string }
+            - { label: 图片说明, name: caption, <<: *i18n_text }
 
 policy_fields: &policy_fields
   widget: object
@@ -173,11 +196,11 @@ collections:
               - label: 公司数字
                 name: stats
                 widget: list
-                summary: "{{fields.number}} {{fields.body.zh}}"
+                summary: "{{fields.number.zh}} {{fields.body.zh}}"
                 fields:
                   - { label: Icon Key, name: icon, widget: string, hint: "clock / capacity" }
                   - { label: 分组标题, name: label, <<: *i18n_text }
-                  - { label: 数字, name: number, widget: string }
+                  - { label: 数字, name: number, <<: *i18n_text }
                   - { label: 说明, name: body, <<: *i18n_text }
           - label: 产品线模块
             name: productLinesSection
@@ -196,10 +219,10 @@ collections:
               - label: 研发数字
                 name: metrics
                 widget: list
-                summary: "{{fields.number}} {{fields.body.zh}}"
+                summary: "{{fields.number.zh}} {{fields.body.zh}}"
                 fields:
                   - { label: Icon Key, name: icon, widget: string, hint: "investment / formula / network / patent / lab" }
-                  - { label: 数字, name: number, widget: string }
+                  - { label: 数字, name: number, <<: *i18n_text }
                   - { label: 说明, name: body, <<: *i18n_text }
           - label: 新闻与博客模块标题
             name: insights
@@ -374,7 +397,7 @@ collections:
                 name: items
                 widget: list
                 fields:
-                  - { label: 数字, name: number, widget: string }
+                  - { label: 数字, name: number, <<: *i18n_text }
                   - { label: 说明, name: label, <<: *i18n_text }
           - label: 发展历史
             name: timelineSection
@@ -430,7 +453,7 @@ collections:
                 name: items
                 widget: list
                 fields:
-                  - { label: 数字, name: number, widget: string }
+                  - { label: 数字, name: number, <<: *i18n_text }
                   - { label: 说明, name: label, <<: *i18n_text }
           - label: 现场区域
             name: zonesSection
@@ -557,6 +580,16 @@ collections:
                 fields:
                   - { label: 小标题, name: heading, <<: *i18n_text, required: false }
                   - { label: 正文, name: body, <<: *i18n_textarea }
+                  - label: 段落图片
+                    name: media
+                    widget: list
+                    required: false
+                    collapsed: true
+                    summary: "{{fields.caption.zh}}"
+                    fields:
+                      - { label: 图片, name: image, widget: image }
+                      - { label: 图片描述 Alt, name: alt, widget: string }
+                      - { label: 图片说明, name: caption, <<: *i18n_text }
           - label: 博客
             name: blogs
             widget: list
@@ -577,6 +610,16 @@ collections:
                 fields:
                   - { label: 小标题, name: heading, <<: *i18n_text, required: false }
                   - { label: 正文, name: body, <<: *i18n_textarea }
+                  - label: 段落图片
+                    name: media
+                    widget: list
+                    required: false
+                    collapsed: true
+                    summary: "{{fields.caption.zh}}"
+                    fields:
+                      - { label: 图片, name: image, widget: image }
+                      - { label: 图片描述 Alt, name: alt, widget: string }
+                      - { label: 图片说明, name: caption, <<: *i18n_text }
           - label: 数字资源 / PDF 下载
             name: downloads
             widget: list

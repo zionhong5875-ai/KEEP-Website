@@ -27,7 +27,15 @@ const nav = [
 ---
 
 <header class="site-header" data-header>
-  <a class="brand" href="/" data-aria-label-zh="VINNER 首页" data-aria-label-en="VINNER home" aria-label="VINNER 首页">{settings.brand.name}</a>
+  <a class="brand" href="/" data-aria-label-zh="VINNER 首页" data-aria-label-en="VINNER home" aria-label="VINNER 首页">
+    <span class="brand-mark" aria-hidden="true">
+      <svg viewBox="0 0 36 48" focusable="false">
+        <path class="brand-mark__leaf brand-mark__leaf--teal" d="M15.6 1.8C7.7 8.1 3.7 15.3 4.1 23.2c0.3 6.4 4.4 11.3 8.4 16.1 2.5 3 4.9 5.8 5.9 8.7 5.2-9.1 4.6-18.2-1.7-27.3C13.1 15.5 12.7 9.2 15.6 1.8Z" />
+        <path class="brand-mark__leaf brand-mark__leaf--green" d="M25.6 12.7c5.7 6.1 6.3 13.9 1.9 23.3-1.7-4.3-4.8-8.2-9.1-11.8 0.5-4.8 2.9-8.6 7.2-11.5Z" />
+      </svg>
+    </span>
+    <span>{settings.brand.name}</span>
+  </a>
 
   <div class="header-tools">
     <button class="menu-toggle" type="button" data-menu-toggle data-aria-label-zh="打开导航" data-aria-label-en="Open navigation" aria-label="打开导航" aria-expanded="false">
@@ -51,6 +59,13 @@ const nav = [
     ))}
   </nav>
 </header>
+
+<span class="brand-mark-fixed" aria-hidden="true">
+  <svg viewBox="0 0 36 48" focusable="false">
+    <path class="brand-mark-fixed__leaf brand-mark-fixed__leaf--teal" d="M15.6 1.8C7.7 8.1 3.7 15.3 4.1 23.2c0.3 6.4 4.4 11.3 8.4 16.1 2.5 3 4.9 5.8 5.9 8.7 5.2-9.1 4.6-18.2-1.7-27.3C13.1 15.5 12.7 9.2 15.6 1.8Z" />
+    <path class="brand-mark-fixed__leaf brand-mark-fixed__leaf--green" d="M25.6 12.7c5.7 6.1 6.3 13.9 1.9 23.3-1.7-4.3-4.8-8.2-9.1-11.8 0.5-4.8 2.9-8.6 7.2-11.5Z" />
+  </svg>
+</span>
 
 <div class="lang-switch-floating">
   <div class="lang-switch-contrast" aria-hidden="true">

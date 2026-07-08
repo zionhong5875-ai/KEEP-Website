@@ -43,22 +43,6 @@ const hasProducts = line.skus.length > 0;
     </div>
   </section>
 
-  <section class="series-intro" aria-labelledby="series-intro-title">
-    <div class="series-intro-copy">
-      <p class="section-kicker" data-zh="系列定位" data-en="Series Position">系列定位</p>
-      <h2 id="series-intro-title" {...attrs(meta.summary)}>{text(meta.summary)}</h2>
-      <p {...attrs(meta.detail)}>{text(meta.detail)}</p>
-    </div>
-    <div class="series-use-grid">
-      {meta.uses.map((item) => (
-        <article>
-          <span aria-hidden="true">+</span>
-          <p {...attrs(item)}>{text(item)}</p>
-        </article>
-      ))}
-    </div>
-  </section>
-
   <section class="series-products" aria-labelledby="series-products-title">
     <div class="series-products-heading">
       <p class="section-kicker" data-zh="系列产品" data-en="Series Products">系列产品</p>
@@ -102,5 +86,21 @@ const hasProducts = line.skus.length > 0;
         ))}
       </div>
     )}
+  </section>
+
+  <section class="series-intro" aria-labelledby="series-intro-title">
+    <div class="series-intro-copy">
+      <p class="section-kicker" data-zh="系列定位" data-en="Series Position">系列定位</p>
+      <h2 id="series-intro-title" {...attrs(meta.summary)}>{text(meta.summary)}</h2>
+      <p {...attrs(meta.detail)}>{text(meta.detail)}</p>
+    </div>
+    <div class="series-use-grid">
+      {meta.uses.map((item) => (
+        <article>
+          <span aria-hidden="true">+</span>
+          <p {...attrs(item)}>{text(item)}</p>
+        </article>
+      ))}
+    </div>
   </section>
 </BaseLayout>

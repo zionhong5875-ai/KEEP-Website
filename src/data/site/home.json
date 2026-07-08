@@ -10,8 +10,8 @@
     }
   },
   "hero": {
-    "image": "/assets/uploads/chatgpt-image-2026年5月15日-00_23_24.png",
-    "alt": "洁净实验环境中的专业防护场景",
+    "image": "/assets/home-carousel/carousel-1.png",
+    "alt": "VINNER 首页专业擦拭系统场景",
     "eyebrow": {
       "zh": "专业擦拭系统",
       "en": "Professional Wiping Systems"
@@ -23,7 +23,57 @@
     "body": {
       "zh": "从医疗感染控制到日常护理，<br />再到高强度工业擦拭，<br />VINNER 以克制、可靠、可追溯<br />的产品体系服务关键环境。",
       "en": "From infection control to personal care and high-duty industrial wiping, VINNER supports critical environments with disciplined, dependable, traceable product systems."
-    }
+    },
+    "slides": [
+      {
+        "image": "/assets/home-carousel/carousel-1.png",
+        "alt": "VINNER 首页专业擦拭系统场景",
+        "eyebrow": {
+          "zh": "专业擦拭系统",
+          "en": "Professional Wiping Systems"
+        },
+        "title": {
+          "zh": "让洁净<br />持续运行。",
+          "en": "Clean<br />kept in<br />motion."
+        },
+        "body": {
+          "zh": "从医疗感染控制到日常护理，<br />再到高强度工业擦拭，<br />VINNER 以克制、可靠、可追溯<br />的产品体系服务关键环境。",
+          "en": "From infection control to personal care and high-duty industrial wiping, VINNER supports critical environments with disciplined, dependable, traceable product systems."
+        }
+      },
+      {
+        "image": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=2400&q=80",
+        "alt": "医疗实验与专业健康场景",
+        "eyebrow": {
+          "zh": "感染控制与护理",
+          "en": "Infection Control & Care"
+        },
+        "title": {
+          "zh": "把接触面<br />交给可靠。",
+          "en": "Reliable care<br />for every<br />contact surface."
+        },
+        "body": {
+          "zh": "面向医院、诊所、护理和公共卫生场景，<br />用稳定配方、材料兼容和批次追溯，<br />支持更可控的日常清洁流程。",
+          "en": "For hospitals, clinics, care settings, and public hygiene programs, VINNER combines stable formulas, material compatibility, and batch traceability."
+        }
+      },
+      {
+        "image": "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?auto=format&fit=crop&w=2400&q=80",
+        "alt": "制造现场与工业生产协作场景",
+        "eyebrow": {
+          "zh": "OEM/ODM 与制造",
+          "en": "OEM/ODM Manufacturing"
+        },
+        "title": {
+          "zh": "从需求<br />到样品。",
+          "en": "From brief<br />to sample."
+        },
+        "body": {
+          "zh": "围绕基材、配方、包装和法规资料，<br />把客户需求拆解为可验证、可生产、<br />可交付的湿巾方案。",
+          "en": "Substrates, formulas, packaging, and compliance files are structured into wipe programs that can be sampled, validated, and delivered."
+        }
+      }
+    ]
   },
   "intro": {
     "kicker": {
@@ -135,10 +185,10 @@
     "videoSrc": "https://www.youtube.com/embed/02D-pVy0ujY?si=3hs7EyIY9h-A-UPu",
     "videoTitle": "Vinner Factory Promotional Video",
     "stats": [
-      { "icon": "clock", "label": { "zh": "我们的经验", "en": "Experience" }, "number": "20+", "body": { "zh": "年湿巾研发与生产经验", "en": "years of wet wipes R&D and manufacturing experience" } },
-      { "icon": "clock", "label": { "zh": "我们的经验", "en": "Experience" }, "number": "15+", "body": { "zh": "年医疗消毒湿巾生产经验", "en": "years of medical disinfectant wipes manufacturing experience" } },
-      { "icon": "capacity", "label": { "zh": "我们的工厂", "en": "Factory" }, "number": "95%+", "body": { "zh": "自动化率", "en": "automation rate" } },
-      { "icon": "capacity", "label": { "zh": "我们的工厂", "en": "Factory" }, "number": "80亿+", "body": { "zh": "片以上湿巾年产能", "en": "wipes annual capacity" } }
+      { "icon": "clock", "label": { "zh": "我们的经验", "en": "Experience" }, "number": { "zh": "20+", "en": "20+" }, "body": { "zh": "年湿巾研发与生产经验", "en": "years of wet wipes R&D and manufacturing experience" } },
+      { "icon": "clock", "label": { "zh": "我们的经验", "en": "Experience" }, "number": { "zh": "15+", "en": "15+" }, "body": { "zh": "年医疗消毒湿巾生产经验", "en": "years of medical disinfectant wipes manufacturing experience" } },
+      { "icon": "capacity", "label": { "zh": "我们的工厂", "en": "Factory" }, "number": { "zh": "95%+", "en": "95%+" }, "body": { "zh": "自动化率", "en": "automation rate" } },
+      { "icon": "capacity", "label": { "zh": "我们的工厂", "en": "Factory" }, "number": { "zh": "80亿+", "en": "8B+" }, "body": { "zh": "片以上湿巾年产能", "en": "wipes annual capacity" } }
     ]
   },
   "productLinesSection": {
@@ -169,11 +219,11 @@
       "en": "Formula, substrate, packaging, and regulatory documents all shape product stability. VINNER turns R&D investment, lab validation, and partner networks into reusable development capability for customers."
     },
     "metrics": [
-      { "icon": "investment", "number": "3%+", "body": { "zh": "以上销售额投入研发", "en": "of sales invested in R&D" } },
-      { "icon": "formula", "number": "500+", "body": { "zh": "成熟湿巾配方", "en": "mature wipe formulas" } },
-      { "icon": "network", "number": "20+", "body": { "zh": "家合作实验室与大学", "en": "partner laboratories and universities" } },
-      { "icon": "patent", "number": "30+", "body": { "zh": "知识产权专利", "en": "intellectual property patents" } },
-      { "icon": "lab", "number": "3", "body": { "zh": "个独立实验室", "en": "independent laboratories" } }
+      { "icon": "investment", "number": { "zh": "3%+", "en": "3%+" }, "body": { "zh": "以上销售额投入研发", "en": "of sales invested in R&D" } },
+      { "icon": "formula", "number": { "zh": "500+", "en": "500+" }, "body": { "zh": "成熟湿巾配方", "en": "mature wipe formulas" } },
+      { "icon": "network", "number": { "zh": "20+", "en": "20+" }, "body": { "zh": "家合作实验室与大学", "en": "partner laboratories and universities" } },
+      { "icon": "patent", "number": { "zh": "30+", "en": "30+" }, "body": { "zh": "知识产权专利", "en": "intellectual property patents" } },
+      { "icon": "lab", "number": { "zh": "3", "en": "3" }, "body": { "zh": "个独立实验室", "en": "independent laboratories" } }
     ]
   },
   "insights": {
