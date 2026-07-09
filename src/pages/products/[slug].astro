@@ -39,9 +39,30 @@ const relatedLineTitle = {
   zh: `${line.brand} / ${lineDisplayName}`,
   en: `${line.brand} / ${lineDisplayName}`
 };
+const siteUrl = import.meta.env.PUBLIC_SITE_URL || "https://keep-website-ochre.vercel.app";
+const absoluteUrl = (value) => new URL(value, siteUrl).toString();
+const productSchema = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  name: sku.title,
+  sku: sku.itemNo || sku.code,
+  brand: {
+    "@type": "Brand",
+    name: line.brand
+  },
+  category: `${line.brand} ${text(line.title)}`,
+  description: text(pageDescription),
+  image: gallery.map((image) => absoluteUrl(image.image)),
+  url: absoluteUrl(`/products/${sku.slug}/`),
+  additionalProperty: sku.specs.map((spec) => ({
+    "@type": "PropertyValue",
+    name: specLabel(spec),
+    value: specValue(spec)
+  }))
+};
 ---
 
-<BaseLayout title={pageTitle} description={pageDescription}>
+<BaseLayout title={pageTitle} description={pageDescription} image={gallery[0]?.image || sku.image} ogType="product" schema={productSchema}>
   <section class="product-detail-hero" aria-labelledby="product-title">
     <div class="product-detail-copy">
       <a class="back-link" href="/products/" data-zh="返回产品页" data-en="Back to products">返回产品页</a>

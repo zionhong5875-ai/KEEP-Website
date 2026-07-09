@@ -8,6 +8,7 @@ import { text, attrs } from "../../utils/i18n";
 <BaseLayout
   title={about.meta.title}
   description={about.meta.description}
+  image={about.hero.image}
 >
   <PageHero
     eyebrow={about.hero.eyebrow}
@@ -68,7 +69,7 @@ import { text, attrs } from "../../utils/i18n";
     <div class="partner-wall" aria-label="Partner brands">
       {about.partnersSection.items.map((partner) => (
         <span>
-          <img src={partner.logo} alt={partner.name} loading="lazy" />
+          <img src={partner.logo} alt={`${partner.name} partner logo`} loading="lazy" />
         </span>
       ))}
     </div>

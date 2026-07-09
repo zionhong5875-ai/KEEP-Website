@@ -7,6 +7,7 @@ import { text, attrs } from "../../utils/i18n";
 <BaseLayout
   title={qualification.meta.title}
   description={qualification.meta.description}
+  image={qualification.certificatesSection.items[0].thumb}
 >
   <section class="split-section">
     <div>
@@ -27,7 +28,7 @@ import { text, attrs } from "../../utils/i18n";
       {qualification.certificatesSection.items.map((certificate) => (
         <article class="certification-card">
           <a class="certification-thumb" href={certificate.href} target="_blank" rel="noopener" aria-label={`View ${certificate.title}`}>
-            <img src={certificate.thumb} alt={`${certificate.title} preview`} loading="lazy" />
+            <img src={certificate.thumb} alt={`VINNER ${certificate.title} factory qualification certificate preview`} loading="lazy" />
           </a>
           <span>{certificate.type}</span>
           <h3>{certificate.title}</h3>

@@ -5,7 +5,7 @@ import { text, attrs } from "../utils/i18n";
 import { getProductLineHref, getProductLineMeta } from "../utils/productLines";
 ---
 
-<BaseLayout title={products.meta.title} description={products.meta.description}>
+<BaseLayout title={products.meta.title} description={products.meta.description} image={products.hero.image}>
   <section class="product-line-showcase" aria-labelledby="page-title">
     <div class="product-line-showcase-heading">
       <p class="eyebrow" {...attrs(products.hero.eyebrow)}>{text(products.hero.eyebrow)}</p>

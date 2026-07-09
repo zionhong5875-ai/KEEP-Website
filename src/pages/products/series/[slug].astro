@@ -31,7 +31,7 @@ const getSkuPrimaryAlt = (sku) => sku.gallery?.[0]?.alt || sku.alt;
 const hasProducts = line.skus.length > 0;
 ---
 
-<BaseLayout title={pageTitle} description={pageDescription}>
+<BaseLayout title={pageTitle} description={pageDescription} image={meta.image}>
   <section class="page-hero page-hero-image series-page-hero" aria-labelledby="series-title">
     <img src={meta.image} alt={meta.alt} />
     <div class="page-hero-scrim"></div>

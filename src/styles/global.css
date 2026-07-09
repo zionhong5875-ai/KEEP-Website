@@ -481,7 +481,7 @@ body.menu-open .lang-switch__button[aria-pressed="true"] {
   min-height: 100svh;
   flex-direction: column;
   justify-content: space-between;
-  padding: 112px clamp(22px, 5vw, 68px) 48px;
+  padding: 112px clamp(22px, 5vw, 68px) clamp(116px, 14vh, 156px);
 }
 
 .hero-carousel {
@@ -537,6 +537,13 @@ body.menu-open .lang-switch__button[aria-pressed="true"] {
   background: var(--color-tiffany-blue);
 }
 
+.hero-actions {
+  position: absolute;
+  z-index: 4;
+  right: clamp(22px, 5vw, 68px);
+  bottom: clamp(22px, 3.2vh, 36px);
+}
+
 .eyebrow,
 .section-kicker,
 .line-index {
@@ -573,10 +580,7 @@ html:lang(zh-CN) .resource-heading h2 {
 }
 
 .hero-bottom {
-  display: grid;
-  grid-template-columns: minmax(280px, 560px) auto;
-  gap: var(--spacing-23);
-  align-items: end;
+  display: block;
 }
 
 .hero-bottom p {
@@ -4407,6 +4411,19 @@ html:lang(en) .factory-intro > div:last-child p {
   .quality-inner {
     padding-top: 76px;
     padding-bottom: 76px;
+  }
+
+  .hero-content {
+    padding-bottom: 154px;
+  }
+
+  .hero-actions {
+    right: clamp(22px, 5vw, 68px);
+    bottom: 58px;
+  }
+
+  .hero-carousel-dots {
+    bottom: 24px;
   }
 
   .hero h1 {

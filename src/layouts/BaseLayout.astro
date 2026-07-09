@@ -2,9 +2,56 @@
 import "../styles/global.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import settings from "../data/site/siteSettings.json";
 import { text, attrs } from "../utils/i18n";
 
-const { title, description } = Astro.props;
+const {
+  title,
+  description,
+  image = "/assets/home-carousel/carousel-1.png",
+  ogType = "website",
+  schema = []
+} = Astro.props;
+
+const siteUrl = import.meta.env.PUBLIC_SITE_URL || "https://keep-website-ochre.vercel.app";
+const pageUrl = new URL(Astro.url.pathname, siteUrl).toString();
+const imageUrl = image ? new URL(image, siteUrl).toString() : undefined;
+const pageTitle = text(title);
+const pageDescription = text(description);
+const pageSchema = Array.isArray(schema) ? schema : [schema];
+const structuredData = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "VINNER Health",
+    alternateName: ["VINNER", "维尼健康"],
+    url: siteUrl,
+    logo: new URL(settings.brand.logo, siteUrl).toString(),
+    sameAs: settings.footer.socials.map((item) => item.href).filter(Boolean),
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        contactType: "sales",
+        email: "hongzihao@vinnercare.cn",
+        telephone: "+86 15013995875",
+        areaServed: "Worldwide",
+        availableLanguage: ["zh-CN", "en"]
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "VINNER",
+    url: siteUrl,
+    inLanguage: ["zh-CN", "en"],
+    publisher: {
+      "@type": "Organization",
+      name: "VINNER Health"
+    }
+  },
+  ...pageSchema.filter(Boolean)
+];
 ---
 
 <!doctype html>
@@ -12,12 +59,26 @@ const { title, description } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content={text(description)} {...attrs(description)} />
+    <meta name="description" content={pageDescription} {...attrs(description)} />
     <meta name="theme-color" content="#ffffff" />
+    <link rel="canonical" href={pageUrl} />
+    <meta property="og:site_name" content="VINNER" />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={pageDescription} />
+    <meta property="og:url" content={pageUrl} />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:locale:alternate" content="en_US" />
+    {imageUrl && <meta property="og:image" content={imageUrl} />}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={pageDescription} />
+    {imageUrl && <meta name="twitter:image" content={imageUrl} />}
     <link rel="icon" href="/favicon.ico?v=vinner" sizes="any" />
     <link rel="icon" type="image/png" href="/favicon.png?v=vinner" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=vinner" />
-    <title {...attrs(title)}>{text(title)}</title>
+    <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+    <title {...attrs(title)}>{pageTitle}</title>
   </head>
   <body>
     <a class="skip-link" href="#main-content" data-zh="跳到主要内容" data-en="Skip to main content">跳到主要内容</a>

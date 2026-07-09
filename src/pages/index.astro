@@ -28,7 +28,7 @@ const blogItems = resources.blogs;
 const newsItems = resources.news;
 ---
 
-<BaseLayout title={home.meta.title} description={home.meta.description}>
+<BaseLayout title={home.meta.title} description={home.meta.description} image={heroSlides[0].image}>
   <section class="hero hero-carousel" id="top" aria-labelledby="hero-title" data-home-carousel>
     <div class="hero-slide-track">
       {heroSlides.map((slide, index) => (
@@ -40,14 +40,16 @@ const newsItems = resources.news;
             <h1 id={index === 0 ? "hero-title" : `hero-title-${index + 1}`} set:html={text(slide.title)} {...htmlAttrs(slide.title)} />
             <div class="hero-bottom">
               <p set:html={text(slide.body)} {...htmlAttrs(slide.body)} />
-              <div class="button-row">
-                <a class="button button-accent" href="#lines" data-zh="查看产品线" data-en="View product lines">查看产品线</a>
-                <a class="button button-dark" href="#contact" data-zh="获取方案" data-en="Request a brief">获取方案</a>
-              </div>
             </div>
           </div>
         </article>
       ))}
+    </div>
+    <div class="hero-actions">
+      <div class="button-row">
+        <a class="button button-accent" href="#lines" data-zh="查看产品线" data-en="View product lines">查看产品线</a>
+        <a class="button button-dark" href="#contact" data-zh="获取方案" data-en="Request a brief">获取方案</a>
+      </div>
     </div>
     <div class="hero-carousel-dots" role="tablist" aria-label="Home carousel">
       {heroSlides.map((_, index) => (
@@ -210,7 +212,7 @@ const newsItems = resources.news;
     <div class="partner-wall" aria-label="Partner brands">
       {home.partners.items.map((partner) => (
         <span>
-          <img src={partner.logo} alt={partner.name} loading="lazy" />
+          <img src={partner.logo} alt={`${partner.name} partner logo`} loading="lazy" />
         </span>
       ))}
     </div>

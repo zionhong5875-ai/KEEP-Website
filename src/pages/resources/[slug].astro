@@ -32,9 +32,29 @@ const hasRichSections = item.sections.some((section) => Array.isArray(section.me
 const relatedTitle = type.zh === "博客"
   ? { zh: "更多博客。", en: "More blog posts." }
   : { zh: "更多新闻。", en: "More news." };
+const siteUrl = import.meta.env.PUBLIC_SITE_URL || "https://keep-website-ochre.vercel.app";
+const absoluteUrl = (value) => new URL(value, siteUrl).toString();
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": type.zh === "新闻" ? "NewsArticle" : "Article",
+  headline: text(item.title),
+  description: text(description),
+  image: absoluteUrl(item.image),
+  url: absoluteUrl(`/resources/${item.slug}/`),
+  author: {
+    "@type": "Organization",
+    name: "VINNER Health"
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "VINNER Health"
+  },
+  articleSection: text(type),
+  inLanguage: ["zh-CN", "en"]
+};
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout title={title} description={description} image={item.image} ogType="article" schema={articleSchema}>
   <article class="resource-detail">
     <header class="resource-detail-hero">
       <div class="resource-detail-copy">
