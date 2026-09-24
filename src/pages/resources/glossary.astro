@@ -1,0 +1,79 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import GlossaryBrowser from "../../components/GlossaryBrowser.astro";
+import { searchConfig } from "../../utils/search-config.mjs";
+import { glossaryMetaDescription, glossaryPath, glossaryTerms } from "../../utils/glossary.mjs";
+import { absoluteUrl } from "../../utils/schema";
+import { localizedPath } from "../../utils/i18n";
+const en = Astro.locals.language === "en";
+const language = en ? "en" : "zh";
+const t = (zh: string, english: string) => en ? english : zh;
+const glossaryTitle = { zh: "知识与术语", en: "Glossary" };
+const glossaryDescription = {
+  zh: "探索与湿巾及感染预防相关的测试标准、法规、成分与术语，帮助团队快速理解产品与合规信息。",
+  en: "Explore testing standards, regulations, ingredients and terminology related to wet wipes and infection prevention."
+};
+const pageUrl = absoluteUrl(localizedPath("/resources/glossary/", language), searchConfig.siteUrl);
+const termNodes = glossaryTerms.map((term) => {
+  const url = absoluteUrl(localizedPath(glossaryPath(term.slug), language), searchConfig.siteUrl);
+  return {
+    "@type": "DefinedTerm",
+    "@id": `${url}#defined-term`,
+    name: term.title[language],
+    description: glossaryMetaDescription(term, language),
+    url,
+    inLanguage: language === "en" ? "en" : "zh-CN"
+  };
+});
+const glossaryListId = `${pageUrl}#terms`;
+const glossarySchema = [
+  {
+    "@type": "ItemList",
+    "@id": glossaryListId,
+    name: glossaryTitle[language],
+    numberOfItems: glossaryTerms.length,
+    itemListElement: termNodes.map((term, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      item: { "@id": term["@id"] }
+    }))
+  },
+  {
+    "@type": "DefinedTermSet",
+    "@id": `${pageUrl}#glossary`,
+    name: glossaryTitle[language],
+    description: glossaryDescription[language],
+    url: pageUrl,
+    inLanguage: language === "en" ? "en" : "zh-CN",
+    hasDefinedTerm: termNodes.map((term) => ({ "@id": term["@id"] }))
+  },
+  ...termNodes
+];
+---
+<BaseLayout
+  title={{ zh: "知识与术语 | VINNER", en: "Glossary | VINNER" }}
+  description={glossaryDescription}
+  image="/assets/resource-library.jpg"
+  pageType="CollectionPage"
+  mainEntityId={glossaryListId}
+  schema={glossarySchema}
+  breadcrumbs={[{ name: { zh: "首页", en: "Home" }, path: "/" }, { name: { zh: "资源", en: "Resources" }, path: "/resources/" }, { name: glossaryTitle, path: "/resources/glossary/" }]}
+>
+  <section class="glossary">
+    <header class="glossary-intro">
+      <a href="/resources/">{t("资源", "Resources")}</a>
+      <h1>{t("知识与术语", "Glossary")}</h1>
+      <p>{t(glossaryDescription.zh, glossaryDescription.en)}</p>
+    </header>
+    <GlossaryBrowser terms={glossaryTerms} />
+  </section>
+</BaseLayout>
+<style>
+  .glossary { padding: 150px 5% 100px; max-width: 1600px; margin: auto; }
+  .glossary-intro { max-width: 850px; margin-bottom: 64px; }
+  .glossary-intro > a { font-size: 15px; border-bottom: 1px solid; }
+  .glossary h1 { font-size: 72px; line-height: 1.1; margin: 24px 0; letter-spacing: 0; }
+  .glossary-intro p { font-size: 21px; line-height: 1.6; color: var(--color-slate-mist); }
+  @media(max-width: 900px) { .glossary h1 {font-size: 54px;} }
+  @media(max-width: 640px) { .glossary {padding: 120px 6% 64px;} .glossary h1 {font-size: 40px;} .glossary-intro {margin-bottom: 32px;} .glossary-intro p {font-size: 18px;} }
+</style>

@@ -1,5 +1,5 @@
 ---
-import { text, htmlAttrs, attrs } from "../utils/i18n";
+import { text, htmlAttrs, attrs, imageAttrs } from "../utils/i18n";
 
 const { eyebrow, title, body, image, alt, light = true, contrast = false } = Astro.props;
 const classes = [
@@ -11,11 +11,11 @@ const classes = [
 ---
 
 <section class={classes} aria-labelledby="page-title">
-  {image && <img src={image} alt={alt} />}
+  {image && <img src={image} {...imageAttrs(alt)} />}
   {image && <div class="page-hero-scrim"></div>}
   <div>
     {eyebrow && <p class="eyebrow" {...attrs(eyebrow)}>{text(eyebrow)}</p>}
     <h1 id="page-title" set:html={text(title)} {...htmlAttrs(title)} />
-    {body && <p {...attrs(body)}>{text(body)}</p>}
+    {body && <p set:html={text(body)} {...htmlAttrs(body)} />}
   </div>
 </section>

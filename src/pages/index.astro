@@ -1,11 +1,17 @@
 ---
+import { searchConfig } from "../utils/search-config.mjs";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ContactForm from "../components/ContactForm.astro";
+import PartnersSection from "../components/PartnersSection.astro";
+import GlossaryLinkedText from "../components/GlossaryLinkedText.astro";
 import home from "../data/site/home.json";
-import products from "../data/site/products.json";
-import resources from "../data/site/resources.json";
-import { text, attrs, htmlAttrs } from "../utils/i18n";
+import about from "../data/site/aboutVinner.json";
+import products from "../data/site/products.json" with { type: "json" };
+import resources from "../data/site/resources.json" with { type: "json" };
+import { text, attrs, htmlAttrs, imageAttrs, localizedPath } from "../utils/i18n";
 import { getProductLineHref, getProductLineMeta } from "../utils/productLines.js";
+import { sortResourcesByDate } from "../utils/resources.js";
+import { absoluteUrl, schemaIds } from "../utils/schema";
 
 const companyStats = home.company.stats;
 const rdMetrics = home.rd.metrics;
@@ -24,20 +30,61 @@ const metricIcons = {
   lab: ["M15 8h18", "M19 8v10L11 36c-1 2 1 5 4 5h18c3 0 5-3 4-5l-8-18V8", "M16 30h16", "M22 18h4"]
 };
 
-const blogItems = resources.blogs;
-const newsItems = resources.news;
+const blogItems = sortResourcesByDate(resources.blogs);
+const newsItems = sortResourcesByDate(resources.news);
+const siteUrl = searchConfig.siteUrl;
+const language = Astro.locals.language || "zh";
+const ids = schemaIds(siteUrl);
+const pageUrl = absoluteUrl(localizedPath("/", language), siteUrl);
+const productLinesId = `${pageUrl}#product-lines`;
+const homeSchema = {
+  "@type": "ItemList",
+  "@id": productLinesId,
+  name: language === "en" ? "Vinner product lines" : "维尼产品线",
+  numberOfItems: products.lines.length,
+  itemListElement: products.lines.map((line, index) => {
+    const meta = getProductLineMeta(line);
+    const url = absoluteUrl(localizedPath(`/products/series/${meta.slug}/`, language), siteUrl);
+    return {
+      "@type": "ListItem",
+      position: index + 1,
+      item: {
+        "@type": "CollectionPage",
+        "@id": `${url}#webpage`,
+        name: text(meta.name, language),
+        description: text(meta.summary, language),
+        url,
+        image: absoluteUrl(meta.image, siteUrl)
+      }
+    };
+  })
+};
 ---
 
-<BaseLayout title={home.meta.title} description={home.meta.description} image={heroSlides[0].image}>
+<BaseLayout
+  title={home.meta.title}
+  description={home.meta.description}
+  image={heroSlides[0].image}
+  schema={homeSchema}
+  mainEntityId={ids.organization}
+  pageProperties={{
+    about: { "@id": ids.organization },
+    hasPart: { "@id": productLinesId }
+  }}
+>
   <section class="hero hero-carousel" id="top" aria-labelledby="hero-title" data-home-carousel>
     <div class="hero-slide-track">
       {heroSlides.map((slide, index) => (
         <article class:list={["hero-slide", index === 0 && "is-active"]} data-home-slide aria-hidden={index === 0 ? "false" : "true"}>
-          <img class="hero-image" src={slide.image} alt={slide.alt} />
+          <img class="hero-image" src={slide.image} {...imageAttrs(slide.alt)} />
           <div class="hero-scrim"></div>
-          <div class="hero-content">
-            <p class="eyebrow" {...attrs(slide.eyebrow)}>{text(slide.eyebrow)}</p>
-            <h1 id={index === 0 ? "hero-title" : `hero-title-${index + 1}`} set:html={text(slide.title)} {...htmlAttrs(slide.title)} />
+          <div class:list={["hero-content", !text(slide.eyebrow) && "hero-content-no-eyebrow"]}>
+            {text(slide.eyebrow) && <p class="eyebrow" {...attrs(slide.eyebrow)}>{text(slide.eyebrow)}</p>}
+            {index === 0 ? (
+              <h1 id="hero-title" set:html={text(slide.title)} {...htmlAttrs(slide.title)} />
+            ) : (
+              <p class="hero-slide-title" set:html={text(slide.title)} {...htmlAttrs(slide.title)} />
+            )}
             <div class="hero-bottom">
               <p set:html={text(slide.body)} {...htmlAttrs(slide.body)} />
             </div>
@@ -64,13 +111,22 @@ const newsItems = resources.news;
     </div>
   </section>
 
-  <section class="home-company section-pad" aria-labelledby="home-company-title">
+  <section class="home-company section-pad" aria-labelledby="home-company-hq-title">
     <div class="home-company-copy">
       <p class="section-kicker" {...attrs(home.company.kicker)}>{text(home.company.kicker)}</p>
-      <h2 id="home-company-title" {...attrs(home.company.title)}>{text(home.company.title)}</h2>
-      {home.company.paragraphs.map((paragraph) => (
-        <p {...attrs(paragraph)}>{text(paragraph)}</p>
-      ))}
+      <div class="home-company-locations">
+        {home.company.locations.map((location, index) => (
+          <div class="home-company-location">
+            <h2 id={index === 0 ? "home-company-hq-title" : undefined} {...attrs(location.title)}>{text(location.title)}</h2>
+            {location.paragraphs.filter((paragraph) => paragraph.zh || paragraph.en).map((paragraph) => (
+              <p><GlossaryLinkedText value={paragraph} context="paragraph" /></p>
+            ))}
+          </div>
+        ))}
+      </div>
+      <div class="button-row home-company-actions">
+        <a class="button button-accent" href="/about/vinner/" data-zh="关于维尼" data-en="About Vinner">关于维尼</a>
+      </div>
     </div>
 
     <div class="home-company-video" aria-label="VINNER video">
@@ -97,7 +153,7 @@ const newsItems = resources.news;
           <div>
             <h3 {...attrs(item.label)}>{text(item.label)}</h3>
             <strong {...attrs(item.number)}>{text(item.number)}</strong>
-            <p {...attrs(item.body)}>{text(item.body)}</p>
+            <p><GlossaryLinkedText value={item.body} context="body" /></p>
           </div>
         </article>
       ))}
@@ -114,13 +170,18 @@ const newsItems = resources.news;
       {products.lines.map((line) => {
         const meta = getProductLineMeta(line);
         return (
-          <a class="product-line-tile" href={getProductLineHref(line)} aria-label={`View ${meta.brand}`}>
+          <a
+            class="product-line-tile"
+            data-line-slug={meta.slug}
+            href={getProductLineHref(line)}
+            aria-label={`View ${meta.name.en}`}
+          >
             <span class="product-line-tile-media" aria-hidden="true">
               <img src={meta.image} alt={meta.alt} loading="lazy" />
             </span>
             <span class="product-line-tile-copy">
-              <span>{line.index}</span>
-              <strong>{meta.brand}</strong>
+              <span {...attrs(meta.indexLabel)}>{text(meta.indexLabel)}</span>
+              <strong {...attrs(meta.name)}>{text(meta.name)}</strong>
               <em {...attrs(meta.title)}>{text(meta.title)}</em>
               <small {...attrs(home.productLinesSection.cta)}>{text(home.productLinesSection.cta)}</small>
             </span>
@@ -134,7 +195,7 @@ const newsItems = resources.news;
     <div class="home-rd-copy">
       <p class="section-kicker" {...attrs(home.rd.kicker)}>{text(home.rd.kicker)}</p>
       <h2 id="rd-title" {...attrs(home.rd.title)}>{text(home.rd.title)}</h2>
-      <p {...attrs(home.rd.body)}>{text(home.rd.body)}</p>
+      <p><GlossaryLinkedText value={home.rd.body} context="body" /></p>
     </div>
 
     <div class="home-rd-metrics" aria-label="R&D metrics">
@@ -163,14 +224,16 @@ const newsItems = resources.news;
       <div class="home-insight-scroll" data-scroll-region="x" tabindex="0" aria-label="首页新闻横向滚动列表">
         <div class="home-compact-article-grid">
           {newsItems.map((item) => (
-            <article class="article-card home-compact-card">
+            <article class="article-card compact-resource-card">
               <a class="article-card-media-link" href={`/resources/${item.slug}/`} aria-label={`Read ${text(item.title)}`}>
-                <figure><img src={item.image} alt={item.alt} loading="lazy" /></figure>
+                <figure>
+                  <img src={item.image} {...imageAttrs(item.alt)} loading="lazy" />
+                </figure>
               </a>
               <div class="article-card-copy">
                 <span>{item.date}</span>
                 <h3><a href={`/resources/${item.slug}/`} {...attrs(item.title)}>{text(item.title)}</a></h3>
-                <p {...attrs(item.body)}>{text(item.body)}</p>
+                <p><GlossaryLinkedText value={item.body} context="body" /></p>
                 <a href={`/resources/${item.slug}/`} data-zh="阅读更新" data-en="Read update">阅读更新</a>
               </div>
             </article>
@@ -187,14 +250,16 @@ const newsItems = resources.news;
       <div class="home-insight-scroll" data-scroll-region="x" tabindex="0" aria-label="首页博客横向滚动列表">
         <div class="home-compact-article-grid home-compact-article-grid-blog">
           {blogItems.map((item) => (
-            <article class="article-card home-compact-card">
+            <article class="article-card compact-resource-card">
               <a class="article-card-media-link" href={`/resources/${item.slug}/`} aria-label={`Read ${text(item.title)}`}>
-                <figure><img src={item.image} alt={item.alt} loading="lazy" /></figure>
+                <figure>
+                  <img src={item.image} {...imageAttrs(item.alt)} loading="lazy" />
+                </figure>
               </a>
               <div class="article-card-copy">
-                <span>{item.category}</span>
+                <span>{item.date || item.category}</span>
                 <h3><a href={`/resources/${item.slug}/`} {...attrs(item.title)}>{text(item.title)}</a></h3>
-                <p {...attrs(item.body)}>{text(item.body)}</p>
+                <p><GlossaryLinkedText value={item.body} context="body" /></p>
                 <a href={`/resources/${item.slug}/`} data-zh="阅读文章" data-en="Read article">阅读文章</a>
               </div>
             </article>
@@ -204,19 +269,11 @@ const newsItems = resources.news;
     </div>
   </section>
 
-  <section class="partner-section home-partner-section" id="partners" aria-labelledby="partners-title">
-    <div class="about-section-heading">
-      <p class="section-kicker" {...attrs(home.partners.kicker)}>{text(home.partners.kicker)}</p>
-      <h2 id="partners-title" {...attrs(home.partners.title)}>{text(home.partners.title)}</h2>
-    </div>
-    <div class="partner-wall" aria-label="Partner brands">
-      {home.partners.items.map((partner) => (
-        <span>
-          <img src={partner.logo} alt={`${partner.name} partner logo`} loading="lazy" />
-        </span>
-      ))}
-    </div>
-  </section>
+  <PartnersSection
+    section={about.partnersSection}
+    id="partners-title"
+    className="home-partner-section"
+  />
 
-  <ContactForm />
+  <ContactForm kicker={{ zh: "联系表单", en: "Contact Form" }} />
 </BaseLayout>

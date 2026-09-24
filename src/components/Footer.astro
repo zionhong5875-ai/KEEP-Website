@@ -1,16 +1,18 @@
 ---
 import settings from "../data/site/siteSettings.json";
-import products from "../data/site/products.json";
+import products from "../data/site/products.json" with { type: "json" };
 import { attrs, text } from "../utils/i18n";
 import { getProductLineHref, getProductLineMeta } from "../utils/productLines.js";
 
 const aboutLinks = [
-  { href: "/about/factory/", label: settings.navigation.factory },
   { href: "/about/factory-qualification/", label: settings.navigation.factoryQualification }
 ];
 
 const resourceLinks = [
-  { href: "/resources/#downloads", label: settings.footer.downloads }
+  { href: "/resources/news/", label: { zh: "新闻", en: "News" } },
+  { href: "/resources/blogs/", label: { zh: "博客", en: "Blogs" } },
+  { href: "/resources/glossary/", label: { zh: "知识与术语", en: "Glossary" } },
+  { href: "/resources/files/", label: { zh: "数字资源", en: "Digital Resources" } }
 ];
 ---
 
@@ -19,14 +21,11 @@ const resourceLinks = [
     <section class="footer-column" aria-labelledby="footer-products-title">
       <h2 id="footer-products-title"><a href="/products/" {...attrs(settings.footer.products)}>{text(settings.footer.products)}</a></h2>
       <nav aria-label="Product links">
-        {products.lines.map((line) => {
-          const meta = getProductLineMeta(line);
-          const label = {
-            zh: `${meta.brand} ${text(meta.title)}`,
-            en: `${meta.brand} ${meta.title.en}`
-          };
-          return <a href={getProductLineHref(line)} {...attrs(label)}>{label.zh}</a>;
-        })}
+            {products.lines.map((line) => {
+              const meta = getProductLineMeta(line);
+              const label = meta.name;
+              return <a href={getProductLineHref(line)} {...attrs(label)}>{label.zh}</a>;
+            })}
       </nav>
     </section>
 

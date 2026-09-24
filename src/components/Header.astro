@@ -7,22 +7,30 @@ const nav = [
     href: "/products/",
     label: settings.navigation.products,
     children: [
-      { href: "/products/series/medikeep/", zh: "MEDIKEEP", en: "MEDIKEEP" },
-      { href: "/products/series/carekeep/", zh: "CAREKEEP", en: "CAREKEEP" },
-      { href: "/products/series/indukeep/", zh: "INDUKEEP", en: "INDUKEEP" },
-      { href: "/products/series/oem-odm/", zh: "OEM/ODM", en: "OEM/ODM" }
+      { href: "/products/series/medikeep/", zh: "感染控制", en: "INFECTION CONTROL" },
+      { href: "/products/series/carekeep/", zh: "清洁护理", en: "CLEANSING & CARE" },
+      { href: "/products/series/indukeep/", zh: "工业擦拭", en: "INDUSTRIAL WIPING" },
+      { href: "/products/series/oem-odm/", zh: "定制开发", en: "OEM/ODM" }
     ]
   },
   {
     href: "/about/vinner/",
     label: settings.navigation.about,
     children: [
-      { href: "/about/factory/", ...settings.navigation.factory },
       { href: "/about/factory-qualification/", ...settings.navigation.factoryQualification }
     ]
   },
   { href: "/contact/", label: settings.navigation.contact },
-  { href: "/resources/", label: settings.navigation.resources }
+  {
+    href: "/resources/",
+    label: settings.navigation.resources,
+    children: [
+      { href: "/resources/news/", zh: "新闻", en: "News" },
+      { href: "/resources/blogs/", zh: "博客", en: "Blogs" },
+      { href: "/resources/glossary/", zh: "知识与术语", en: "Glossary" },
+      { href: "/resources/files/", zh: "数字资源", en: "Digital Resources" }
+    ]
+  }
 ];
 ---
 
@@ -67,11 +75,11 @@ const nav = [
   </svg>
 </span>
 
-<div class="lang-switch-floating">
-  <div class="lang-switch-contrast" aria-hidden="true">
+<div class="lang-switch-contrast" aria-hidden="true">
     <span>中</span>
     <span>EN</span>
-  </div>
+</div>
+<div class="lang-switch-floating">
   <div class="lang-switch" role="group" data-aria-label-zh="语言切换" data-aria-label-en="Language switcher" aria-label="语言切换">
     <button class="lang-switch__button is-active" type="button" data-lang-button="zh" aria-pressed="true">中</button>
     <button class="lang-switch__button" type="button" data-lang-button="en" aria-pressed="false">EN</button>

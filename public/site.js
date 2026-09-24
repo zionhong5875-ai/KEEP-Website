@@ -2,12 +2,18 @@ const STORAGE_KEY = "vinner-language";
 const supportedLanguages = ["zh", "en"];
 
 const getInitialLanguage = () => {
-  const saved = window.localStorage.getItem(STORAGE_KEY);
-  if (saved && supportedLanguages.includes(saved)) {
-    return saved;
-  }
+  return window.location.pathname === "/en" || window.location.pathname.startsWith("/en/") ? "en" : "zh";
+};
 
-  return document.documentElement.lang.startsWith("en") ? "en" : "zh";
+const localizedLanguageUrl = (language) => {
+  const currentPath = window.location.pathname;
+  const basePath = currentPath === "/en" || currentPath === "/en/"
+    ? "/"
+    : currentPath.startsWith("/en/")
+      ? currentPath.slice(3)
+      : currentPath;
+  const pathname = language === "en" ? `/en${basePath}` : basePath;
+  return `${pathname}${window.location.search}${window.location.hash}`;
 };
 
 const applyLanguage = (language) => {
@@ -18,7 +24,7 @@ const applyLanguage = (language) => {
 
   document.querySelectorAll("[data-zh][data-en]").forEach((element) => {
     const value = element.dataset[lang];
-    if (!value) {
+    if (value === undefined) {
       return;
     }
 
@@ -49,6 +55,13 @@ const applyLanguage = (language) => {
     }
   });
 
+  document.querySelectorAll("[data-alt-zh][data-alt-en]").forEach((element) => {
+    const alt = element.dataset[`alt${lang === "zh" ? "Zh" : "En"}`];
+    if (alt !== undefined) {
+      element.setAttribute("alt", alt);
+    }
+  });
+
   document.querySelectorAll("[data-lang-button]").forEach((button) => {
     const isActive = button.dataset.langButton === lang;
     button.setAttribute("aria-pressed", String(isActive));
@@ -66,104 +79,230 @@ const setupLanguageSwitch = () => {
 
   document.querySelectorAll("[data-lang-button]").forEach((button) => {
     button.addEventListener("click", () => {
-      applyLanguage(button.dataset.langButton || "zh");
+      const language = button.dataset.langButton || "zh";
+      if (language !== initialLanguage) {
+        window.location.assign(localizedLanguageUrl(language));
+      }
     });
   });
 };
 
-const setupFloatingLanguageContrast = () => {
-  const switcher = document.querySelector(".lang-switch-floating");
-  if (!switcher) {
+const setupSectionIndicator = () => {
+  const indicator = document.querySelector("[data-section-indicator]");
+  const list = indicator?.querySelector("[data-section-indicator-list]");
+  const main = document.querySelector("#main-content");
+
+  if (!indicator || !list || !main) {
     return;
   }
 
-  const mediaSelectors = [
-    ".hero",
-    ".page-hero-image",
-    ".gallery",
-    ".product-gallery-main",
-    ".resource-detail-image",
-    ".about-image",
-    ".line-media",
-    ".download-feature"
-  ].join(",");
-
-  const darkSectionSelectors = [
-    ".line-panel-dark",
-    ".resource-section-dark",
-    ".product-performance",
-    ".related-products",
-    ".quality",
-    ".site-footer"
-  ].join(",");
-
-  const parseRgbColor = (color) => {
-    const match = color.match(/rgba?\(\s*(\d+),\s*(\d+),\s*(\d+)(?:,\s*([\d.]+))?\s*\)/);
-    if (!match) {
-      return null;
+  const nestedArticleSections = (element) => {
+    if (!element.matches("article.resource-detail")) {
+      return [element];
     }
 
-    const [, red, green, blue, alpha = "1"] = match;
+    return Array.from(element.children).filter((child) =>
+      child.matches("header, section, aside")
+    );
+  };
+
+  const candidates = Array.from(main.children).flatMap((element) =>
+    element.matches("[data-section-indicator-container]")
+      ? Array.from(element.children)
+      : [element]
+  );
+
+  const targets = candidates
+    .filter((element) =>
+      element.matches("section, article, [data-section-indicator-section]") &&
+      element.dataset.sectionIndicator !== "false"
+    )
+    .flatMap(nestedArticleSections)
+    .filter((element) => element.dataset.sectionIndicator !== "false");
+
+  if (targets.length < 2) {
+    return;
+  }
+
+  const labelOverrides = [
+    [".resource-detail-hero", { zh: "文章概览", en: "Article overview" }],
+    [".resource-article-body", { zh: "文章正文", en: "Article" }],
+    [".resource-article-quote", { zh: "文章引言", en: "Feature quote" }],
+    [".resource-article-gallery", { zh: "图片资料", en: "Gallery" }],
+    [".resource-related-section", { zh: "继续阅读", en: "Keep reading" }],
+    [".home-insights", { zh: "博客与资源", en: "Insights" }],
+    [".series-products", { zh: "产品系列", en: "Products" }],
+    [".product-line-showcase", { zh: "产品线", en: "Product lines" }]
+  ];
+
+  const normalizedText = (value) =>
+    (value || "")
+      .replace(/<[^>]+>/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+
+  const getSectionLabel = (section, index) => {
+    if (section.dataset.sectionLabelZh || section.dataset.sectionLabelEn) {
+      return {
+        zh: section.dataset.sectionLabelZh || section.dataset.sectionLabelEn,
+        en: section.dataset.sectionLabelEn || section.dataset.sectionLabelZh
+      };
+    }
+
+    const override = labelOverrides.find(([selector]) => section.matches(selector));
+    if (override) {
+      return override[1];
+    }
+
+    const labelledBy = section.getAttribute("aria-labelledby");
+    const labelledElement = labelledBy ? document.getElementById(labelledBy.split(" ")[0]) : null;
+    const labelElement =
+      section.querySelector(":scope > .section-kicker[data-zh][data-en]") ||
+      section.querySelector(":scope > * > .section-kicker[data-zh][data-en]") ||
+      section.querySelector(":scope > .eyebrow[data-zh][data-en]") ||
+      labelledElement ||
+      section.querySelector("h1, h2, h3");
+    const fallback = `Section ${index + 1}`;
+
     return {
-      red: Number(red),
-      green: Number(green),
-      blue: Number(blue),
-      alpha: Number(alpha)
+      zh: normalizedText(labelElement?.dataset.zh || labelElement?.textContent) || `板块 ${index + 1}`,
+      en: normalizedText(labelElement?.dataset.en || labelElement?.textContent) || fallback
     };
   };
 
-  const isTransparentColor = (color) => {
-    const parsed = parseRgbColor(color);
-    return !parsed || parsed.alpha <= 0.05;
-  };
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const items = targets.map((target, index) => {
+    const id = target.id || `page-section-${index + 1}`;
+    const label = getSectionLabel(target, index);
+    target.id = id;
+    target.classList.add("section-indicator-target");
 
-  const getEffectiveBackgroundColor = (element) => {
-    let current = element;
-    while (current) {
-      const color = window.getComputedStyle(current).backgroundColor;
-      if (!isTransparentColor(color)) {
-        return color;
-      }
-      current = current.parentElement;
-    }
+    const item = document.createElement("li");
+    const button = document.createElement("button");
+    const labelElement = document.createElement("span");
+    const mark = document.createElement("span");
 
-    return window.getComputedStyle(document.body).backgroundColor;
+    button.type = "button";
+    button.className = "section-indicator-button";
+    button.dataset.ariaLabelZh = `前往${label.zh}`;
+    button.dataset.ariaLabelEn = `Go to ${label.en}`;
+    button.setAttribute("aria-label", document.body.dataset.language === "en" ? `Go to ${label.en}` : `前往${label.zh}`);
+    button.setAttribute("aria-controls", id);
+    labelElement.className = "section-indicator-label";
+    labelElement.dataset.zh = label.zh;
+    labelElement.dataset.en = label.en;
+    labelElement.textContent = document.body.dataset.language === "en" ? label.en : label.zh;
+    mark.className = "section-indicator-mark";
+    mark.setAttribute("aria-hidden", "true");
+
+    button.append(labelElement, mark);
+    item.append(button);
+    list.append(item);
+
+    button.addEventListener("click", () => {
+      target.scrollIntoView({
+        behavior: reduceMotion.matches ? "auto" : "smooth",
+        block: "start"
+      });
+    });
+
+    return { target, button };
+  });
+
+  let activeIndex = -1;
+  let animationFrame = 0;
+
+  const parseColor = (color) => {
+    const match = color.match(/rgba?\(\s*(\d+),\s*(\d+),\s*(\d+)(?:,\s*([\d.]+))?\s*\)/);
+    if (!match) return null;
+    return {
+      red: Number(match[1]),
+      green: Number(match[2]),
+      blue: Number(match[3]),
+      alpha: Number(match[4] || 1)
+    };
   };
 
   const isDarkColor = (color) => {
-    const parsed = parseRgbColor(color);
-    if (!parsed || parsed.alpha <= 0.05) {
-      return false;
-    }
+    const parsed = parseColor(color);
+    if (!parsed || parsed.alpha < 0.08) return false;
+    return (parsed.red * 299 + parsed.green * 587 + parsed.blue * 114) / 1000 < 128;
+  };
 
-    const { red, green, blue } = parsed;
-    return (red * 299 + green * 587 + blue * 114) / 1000 < 118;
+  const effectiveBackground = (element) => {
+    let current = element;
+    while (current && current !== document.documentElement) {
+      const style = window.getComputedStyle(current);
+      const color = parseColor(style.backgroundColor);
+      if (color && color.alpha >= 0.08) return style.backgroundColor;
+      current = current.parentElement;
+    }
+    return window.getComputedStyle(document.body).backgroundColor;
   };
 
   const updateContrast = () => {
-    const rect = switcher.getBoundingClientRect();
-    const x = Math.min(window.innerWidth - 1, Math.max(0, rect.left + rect.width / 2));
-    const y = Math.min(window.innerHeight - 1, Math.max(0, rect.top + rect.height / 2));
-
-    const elements = document
+    const rect = indicator.getBoundingClientRect();
+    const x = Math.max(0, Math.min(window.innerWidth - 1, rect.left + rect.width / 2));
+    const y = Math.max(0, Math.min(window.innerHeight - 1, rect.top + rect.height / 2));
+    const underlay = document
       .elementsFromPoint(x, y)
-      .filter((element) => !element.closest(".lang-switch-floating") && !element.closest(".site-header"));
-
-    const target = elements[0];
-    const onMedia = Boolean(target?.closest(mediaSelectors));
+      .find((element) => !element.closest("[data-section-indicator]") && !element.closest(".site-header"));
+    const section = items[activeIndex]?.target;
+    const onMedia = Boolean(
+      underlay?.matches("img, video") ||
+      underlay?.closest(".hero, .page-hero-image, .resource-detail-image, .gallery")
+    );
     const onDark = Boolean(
       !onMedia &&
-        (target?.closest(darkSectionSelectors) ||
-          (target && isDarkColor(getEffectiveBackgroundColor(target))))
+      (underlay?.closest(".resource-section-dark, .related-products, .site-footer, .line-panel-dark") ||
+        isDarkColor(effectiveBackground(underlay || section || document.body)))
     );
 
-    switcher.classList.toggle("is-on-media", onMedia);
-    switcher.classList.toggle("is-on-dark", onDark);
+    indicator.classList.toggle("is-on-media", onMedia);
+    indicator.classList.toggle("is-on-dark", onDark);
   };
 
-  updateContrast();
-  window.addEventListener("scroll", updateContrast, { passive: true });
-  window.addEventListener("resize", updateContrast);
+  const updateActive = () => {
+    animationFrame = 0;
+    const marker = window.innerHeight * 0.42;
+    let nextIndex = 0;
+
+    items.forEach(({ target }, index) => {
+      if (target.getBoundingClientRect().top <= marker) {
+        nextIndex = index;
+      }
+    });
+
+    if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 4) {
+      nextIndex = items.length - 1;
+    }
+
+    if (nextIndex !== activeIndex) {
+      activeIndex = nextIndex;
+      items.forEach(({ button }, index) => {
+        const isActive = index === activeIndex;
+        button.classList.toggle("is-active", isActive);
+        if (isActive) {
+          button.setAttribute("aria-current", "location");
+        } else {
+          button.removeAttribute("aria-current");
+        }
+      });
+    }
+
+    updateContrast();
+  };
+
+  const requestUpdate = () => {
+    if (!animationFrame) {
+      animationFrame = window.requestAnimationFrame(updateActive);
+    }
+  };
+
+  indicator.hidden = false;
+  updateActive();
+  window.addEventListener("scroll", requestUpdate, { passive: true });
+  window.addEventListener("resize", requestUpdate);
 };
 
 document.addEventListener("keydown", (event) => {
@@ -466,39 +605,4 @@ document.querySelectorAll("[data-scroll-region]").forEach((region) => {
 });
 
 setupLanguageSwitch();
-setupFloatingLanguageContrast();
-
-document.querySelectorAll("[data-contact-form]").forEach((form) => {
-  const status = form.querySelector("[data-contact-status]");
-
-  form.addEventListener("submit", async (event) => {
-    event.preventDefault();
-
-    if (status) {
-      status.textContent = document.body.dataset.language === "en" ? "Sending..." : "正在发送...";
-    }
-
-    const payload = Object.fromEntries(new FormData(form).entries());
-
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload)
-      });
-
-      if (!response.ok) {
-        throw new Error("Submission failed");
-      }
-
-      form.reset();
-      if (status) {
-        status.textContent = document.body.dataset.language === "en" ? "Sent. We will contact you soon." : "已发送，我们会尽快联系你。";
-      }
-    } catch {
-      if (status) {
-        status.textContent = document.body.dataset.language === "en" ? "Could not send. Please email us directly." : "发送失败，请直接通过邮箱联系我们。";
-      }
-    }
-  });
-});
+setupSectionIndicator();

@@ -2,13 +2,19 @@ backend:
   name: github
   repo: zionhong5875-ai/KEEP-Website
   branch: main
-  site_domain: keep-website-ochre.vercel.app
-  base_url: https://keep-website-ochre.vercel.app
+  site_domain: vinner-steel.vercel.app
+  base_url: https://vinner-steel.vercel.app
   auth_endpoint: oauth
+  commit_messages:
+    create: "CMS: create {{collection}} {{slug}}"
+    update: "CMS: update {{collection}} {{slug}}"
+    delete: "CMS: delete {{collection}} {{slug}}"
+    uploadMedia: "CMS: upload {{path}}"
+    deleteMedia: "CMS: delete {{path}}"
 
-local_backend: true
 media_folder: public/assets/uploads
 public_folder: /assets/uploads
+publish_mode: simple
 
 i18n_text: &i18n_text
   widget: object
@@ -69,47 +75,147 @@ partner_fields: &partner_fields
     - { label: 名称, name: name, widget: string }
     - { label: Logo, name: logo, widget: image }
 
-article_fields: &article_fields
-  widget: object
+bilingual_paragraphs: &bilingual_paragraphs
+  widget: list
+  required: false
   fields:
-    - { label: URL Slug, name: slug, widget: string }
-    - { label: 日期/分类, name: date, widget: string, required: false }
-    - { label: 分类, name: category, widget: string, required: false }
-    - { label: 标题, name: title, <<: *i18n_text }
-    - { label: 摘要, name: body, <<: *i18n_textarea }
+    - { label: 中文, name: zh, widget: text }
+    - { label: English, name: en, widget: text }
+
+bilingual_bullets: &bilingual_bullets
+  widget: list
+  required: false
+  fields:
+    - { label: 中文, name: zh, widget: text }
+    - { label: English, name: en, widget: text }
+
+article_media: &article_media
+  widget: list
+  required: false
+  collapsed: true
+  summary: "{{fields.caption.zh}}"
+  fields:
     - { label: 图片, name: image, widget: image }
-    - { label: 图片描述 Alt, name: alt, widget: string }
-    - { label: 金句/重点, name: quote, <<: *i18n_textarea, required: false }
-    - label: 正文段落
-      name: sections
-      widget: list
+    - { label: 图片描述 Alt, name: alt, <<: *i18n_text }
+    - { label: 图片说明, name: caption, <<: *i18n_text }
+    - label: 图片来源
+      name: source
+      widget: object
       required: false
-      summary: "{{fields.heading.zh}}"
       fields:
-        - { label: 小标题, name: heading, <<: *i18n_text, required: false }
-        - { label: 正文, name: body, <<: *i18n_textarea }
-        - label: 段落图片
-          name: media
-          widget: list
-          required: false
-          collapsed: true
-          summary: "{{fields.caption.zh}}"
+        - { label: 来源链接, name: url, widget: string }
+        - { label: 来源名称, name: label, <<: *i18n_text }
+
+article_table: &article_table
+  widget: object
+  required: false
+  fields:
+    - { label: 表格注释, name: caption, <<: *i18n_text }
+    - label: 表头
+      name: headers
+      widget: list
+      fields:
+        - { label: 中文, name: zh, widget: string }
+        - { label: English, name: en, widget: string }
+    - label: 表格行
+      name: rows
+      widget: list
+      field:
+        label: 一行
+        name: row
+        widget: list
+        field:
+          label: 单元格
+          name: cell
+          widget: object
           fields:
-            - { label: 图片, name: image, widget: image }
-            - { label: 图片描述 Alt, name: alt, widget: string }
-            - { label: 图片说明, name: caption, <<: *i18n_text }
+            - { label: 中文, name: zh, widget: text }
+            - { label: English, name: en, widget: text }
+
+article_page_window: &article_page_window
+  widget: object
+  required: false
+  fields:
+    - { label: 页面链接, name: href, widget: string }
+    - { label: 图片, name: image, widget: image }
+    - { label: 图片描述 Alt, name: alt, <<: *i18n_text }
+    - { label: 小标题, name: kicker, <<: *i18n_text }
+    - { label: 标题, name: title, <<: *i18n_text }
+    - { label: 说明, name: body, <<: *i18n_textarea }
+    - { label: 链接文案, name: link, <<: *i18n_text }
+
+article_section_field_definitions: &article_section_field_definitions
+  - { label: 标题层级（1/2/3）, name: level, widget: number, required: false, value_type: int }
+  - { label: 小标题, name: heading, <<: *i18n_text, required: false }
+  - { label: 正文, name: body, <<: *i18n_textarea, required: false }
+  - label: 正文段落
+    name: paragraphs
+    <<: *bilingual_paragraphs
+  - label: 要点列表
+    name: bullets
+    <<: *bilingual_bullets
+  - label: 段落图片
+    name: media
+    <<: *article_media
+  - label: 表格
+    name: table
+    <<: *article_table
+  - label: 表后段落
+    name: paragraphsAfter
+    <<: *bilingual_paragraphs
+  - label: 相关页面窗口
+    name: pageWindow
+    <<: *article_page_window
+  - label: 文中链接段落
+    name: linkedParagraph
+    widget: object
+    required: false
+    fields:
+      - { label: 跳转链接, name: href, widget: string }
+      - { label: 链接文字, name: text, <<: *i18n_textarea }
+  - { label: 关联产品线 Slug, name: productLineSlug, widget: string, required: false }
+  - { label: 关联产品 Slug, name: productSlug, widget: string, required: false }
+  - label: 子章节
+    name: subsections
+    widget: list
+    required: false
+    fields:
+      - { label: 小标题, name: heading, <<: *i18n_text }
+      - { label: 正文, name: body, <<: *i18n_textarea, required: false }
+      - label: 正文段落
+        name: paragraphs
+        <<: *bilingual_paragraphs
+      - label: 要点列表
+        name: bullets
+        <<: *bilingual_bullets
+      - label: 后续段落
+        name: paragraphsAfter
+        <<: *bilingual_paragraphs
+
+article_section_fields: &article_section_fields
+  widget: object
+  fields: *article_section_field_definitions
 
 policy_fields: &policy_fields
   widget: object
   fields:
+    - { label: 页面栏目, name: eyebrow, <<: *i18n_text }
     - { label: 标题, name: title, <<: *i18n_text }
+    - { label: 摘要, name: summary, <<: *i18n_textarea }
+    - { label: 更新日期, name: updatedAt, widget: string }
+    - { label: 生效日期, name: effectiveAt, widget: string }
     - label: 正文段落
       name: body
       widget: list
       summary: "{{fields.heading.zh}}"
       fields:
         - { label: 小标题, name: heading, <<: *i18n_text }
-        - { label: 内容, name: text, <<: *i18n_markdown }
+        - label: 正文段落
+          name: paragraphs
+          <<: *bilingual_paragraphs
+        - label: 要点列表
+          name: items
+          <<: *bilingual_bullets
 
 collections:
   - name: site
@@ -191,6 +297,15 @@ collections:
                 fields:
                   - { label: 中文, name: zh, widget: text }
                   - { label: English, name: en, widget: text }
+              - label: 总部与制造基地介绍
+                name: locations
+                widget: list
+                summary: "{{fields.title.zh}}"
+                fields:
+                  - { label: 标题, name: title, <<: *i18n_textarea }
+                  - label: 介绍段落
+                    name: paragraphs
+                    <<: *bilingual_paragraphs
               - { label: YouTube Embed 地址, name: videoSrc, widget: string }
               - { label: 视频标题, name: videoTitle, widget: string }
               - label: 公司数字
@@ -240,13 +355,13 @@ collections:
                 fields:
                   - { label: 小标题, name: kicker, <<: *i18n_text }
                   - { label: 标题, name: title, <<: *i18n_text }
-          - label: 合作伙伴模块
+          - label: 合作伙伴与采购方模块
             name: partners
             widget: object
             fields:
               - { label: 小标题, name: kicker, <<: *i18n_text }
               - { label: 标题, name: title, <<: *i18n_text }
-              - label: 合作伙伴
+              - label: 合作伙伴与采购方
                 name: items
                 widget: list
                 summary: "{{fields.name}}"
@@ -268,7 +383,9 @@ collections:
             collapsed: true
             fields:
               - { label: 序号, name: index, widget: string, required: false }
+              - { label: 双语序号, name: indexLabel, <<: *i18n_text, required: false }
               - { label: 产品线名称, name: name, <<: *i18n_text, required: false }
+              - { label: 副标题, name: title, <<: *i18n_text, required: false }
               - { label: 深色模块, name: dark, widget: boolean, required: false }
               - { label: 图片, name: image, widget: image, required: false }
               - { label: 图片描述 Alt, name: alt, widget: string, required: false }
@@ -296,6 +413,7 @@ collections:
             summary: "{{fields.index}} {{fields.brand}}"
             fields:
               - { label: 序号, name: index, widget: string }
+              - { label: 双语序号, name: indexLabel, <<: *i18n_text }
               - { label: 产品线短名称, name: name, <<: *i18n_text }
               - { label: URL Slug, name: slug, widget: string }
               - { label: 品牌显示名, name: brand, widget: string }
@@ -322,6 +440,10 @@ collections:
                   - { label: SKU 编号, name: code, widget: string }
                   - { label: 货号, name: itemNo, widget: string, required: false }
                   - { label: SKU 名称, name: title, widget: string }
+                  - { label: 计划中产品（不生成详情页）, name: comingSoon, widget: boolean, required: false, default: false }
+                  - { label: 双语展示名称, name: displayName, <<: *i18n_text, required: false }
+                  - { label: 产品分组, name: group, <<: *i18n_text, required: false }
+                  - { label: 卡片标签, name: cardLabel, <<: *i18n_text, required: false }
                   - { label: 主图, name: image, widget: image }
                   - { label: 主图 Alt, name: alt, widget: string }
                   - { label: 列表摘要, name: body, <<: *i18n_textarea }
@@ -339,7 +461,21 @@ collections:
                     fields:
                       - { label: 中文, name: zh, widget: string }
                       - { label: English, name: en, widget: string }
-                  - label: 杀菌/抗菌性能（MEDIKEEP 使用）
+                  - label: 产品特点（计划中产品卡片）
+                    name: features
+                    widget: list
+                    required: false
+                    fields:
+                      - { label: 中文, name: zh, widget: string }
+                      - { label: English, name: en, widget: string }
+                  - label: 适用场景（计划中产品卡片）
+                    name: applications
+                    widget: list
+                    required: false
+                    fields:
+                      - { label: 中文, name: zh, widget: string }
+                      - { label: English, name: en, widget: string }
+                  - label: 杀菌/抗菌性能（感染控制产品使用）
                     name: killPerformance
                     widget: list
                     required: false
@@ -375,6 +511,58 @@ collections:
         fields:
           - { label: SEO, name: meta, <<: *seo_fields }
           - { label: 首屏, name: hero, <<: *hero_fields }
+          - label: 总部介绍
+            name: headquartersSection
+            widget: object
+            fields:
+              - { label: 图片, name: image, widget: image }
+              - { label: 图片描述 Alt, name: imageAlt, widget: string }
+              - { label: 小标题, name: kicker, <<: *i18n_text }
+              - { label: 标题, name: title, <<: *i18n_text }
+              - label: 段落
+                name: paragraphs
+                <<: *bilingual_paragraphs
+          - label: 制造基地介绍
+            name: facilitySection
+            widget: object
+            fields:
+              - { label: 图片, name: image, widget: image }
+              - { label: 图片描述 Alt, name: imageAlt, widget: string }
+              - { label: 小标题, name: kicker, <<: *i18n_text }
+              - { label: 标题, name: title, <<: *i18n_text }
+              - label: 段落
+                name: paragraphs
+                <<: *bilingual_paragraphs
+          - label: 工厂区域模块
+            name: factoryAreasSection
+            widget: object
+            fields:
+              - label: 制造现场
+                name: production
+                widget: object
+                fields:
+                  - { label: 小标题, name: kicker, <<: *i18n_text }
+                  - { label: 标题, name: title, <<: *i18n_text }
+              - label: 质量与交付
+                name: support
+                widget: object
+                fields:
+                  - { label: 小标题, name: kicker, <<: *i18n_text }
+                  - { label: 标题, name: title, <<: *i18n_text }
+          - label: 主营业务与产品矩阵
+            name: businessSection
+            widget: object
+            fields:
+              - { label: 小标题, name: kicker, <<: *i18n_text }
+              - { label: 标题, name: title, <<: *i18n_text }
+              - { label: 按钮文案, name: cta, <<: *i18n_text }
+              - label: 业务与产品线
+                name: items
+                widget: list
+                fields:
+                  - { label: 产品线 Slug, name: lineSlug, widget: string }
+                  - { label: 标题, name: title, <<: *i18n_text }
+                  - { label: 说明, name: body, <<: *i18n_textarea }
           - label: 公司介绍
             name: intro
             widget: object
@@ -411,7 +599,29 @@ collections:
                 fields:
                   - { label: 年份, name: year, widget: string }
                   - { label: 内容, name: body, <<: *i18n_textarea }
-          - label: 合作伙伴
+          - label: 资质体系
+            name: qualificationSection
+            widget: object
+            fields:
+              - { label: 小标题, name: kicker, <<: *i18n_text }
+              - { label: 标题, name: title, <<: *i18n_textarea }
+              - { label: 引言, name: intro, <<: *i18n_textarea }
+              - label: 资质列表
+                name: items
+                <<: *bilingual_paragraphs
+              - { label: 按钮文案, name: cta, <<: *i18n_text }
+          - label: 维尼价值观
+            name: valuesSection
+            widget: object
+            fields:
+              - { label: 小标题, name: kicker, <<: *i18n_text }
+              - { label: 标题, name: title, <<: *i18n_textarea }
+              - { label: 引言, name: intro, <<: *i18n_textarea }
+              - label: 价值观列表
+                name: items
+                <<: *bilingual_paragraphs
+              - { label: 按钮文案, name: cta, <<: *i18n_text }
+          - label: 合作伙伴与采购方
             name: partnersSection
             widget: object
             fields:
@@ -524,6 +734,7 @@ collections:
             name: directory
             widget: object
             fields:
+              - { label: 名片 Logo, name: logo, widget: image }
               - { label: 小标题, name: kicker, <<: *i18n_text }
               - { label: 标题, name: title, <<: *i18n_textarea }
               - label: 成员
@@ -532,6 +743,7 @@ collections:
                 summary: "{{fields.name}}"
                 fields:
                   - { label: 姓名, name: name, widget: string }
+                  - { label: 作者资料 ID（博客作者）, name: authorId, widget: select, required: false, options: [zion-hong, lanny-shi], hint: "作者姓名和职位统一读取 src/data/site/authors.json" }
                   - { label: 职位, name: role, <<: *i18n_text }
                   - { label: 电话, name: phone, widget: string }
                   - { label: 邮箱, name: email, widget: string }
@@ -552,6 +764,24 @@ collections:
                   - { label: 地址, name: address, <<: *i18n_textarea }
                   - { label: 电话标题, name: phoneLabel, <<: *i18n_text, required: false }
                   - { label: 电话, name: phone, widget: string, required: false }
+
+      - label: 博客作者资料
+        name: authors
+        file: src/data/site/authors.json
+        format: json
+        fields:
+          - label: Zion Hong / 洪梓豪
+            name: zion-hong
+            widget: object
+            fields:
+              - { label: 姓名, name: name, <<: *i18n_text }
+              - { label: 职位, name: role, <<: *i18n_text }
+          - label: Lanny Shi / 石穆朗
+            name: lanny-shi
+            widget: object
+            fields:
+              - { label: 姓名, name: name, <<: *i18n_text }
+              - { label: 职位, name: role, <<: *i18n_text }
 
       - label: 新闻、博客与数字资源
         name: resources
@@ -577,49 +807,30 @@ collections:
                 widget: list
                 required: false
                 summary: "{{fields.heading.zh}}"
-                fields:
-                  - { label: 小标题, name: heading, <<: *i18n_text, required: false }
-                  - { label: 正文, name: body, <<: *i18n_textarea }
-                  - label: 段落图片
-                    name: media
-                    widget: list
-                    required: false
-                    collapsed: true
-                    summary: "{{fields.caption.zh}}"
-                    fields:
-                      - { label: 图片, name: image, widget: image }
-                      - { label: 图片描述 Alt, name: alt, widget: string }
-                      - { label: 图片说明, name: caption, <<: *i18n_text }
+                fields: *article_section_field_definitions
           - label: 博客
             name: blogs
             widget: list
             summary: "{{fields.category}} {{fields.title.zh}}"
             fields:
               - { label: URL Slug, name: slug, widget: string }
+              - { label: 作者, name: authorId, widget: select, options: [{ label: "洪梓豪 / Zion Hong", value: zion-hong }, { label: "石穆朗 / Lanny Shi", value: lanny-shi }] }
+              - { label: 发布日期, name: date, widget: string, hint: "YYYY.MM.DD / Blog编号" }
+              - { label: 内容更新日期, name: updatedAt, widget: string, required: false, hint: "YYYY.MM.DD；仅实际修改内容后更新，不填构建日期" }
               - { label: 分类, name: category, widget: string }
               - { label: 标题, name: title, <<: *i18n_text }
               - { label: 摘要, name: body, <<: *i18n_textarea }
               - { label: 图片, name: image, widget: image }
-              - { label: 图片描述 Alt, name: alt, widget: string }
+              - { label: 图片描述 Alt, name: alt, <<: *i18n_text }
+              - { label: 图片说明, name: imageCaption, <<: *i18n_text, required: false }
               - { label: 金句/重点, name: quote, <<: *i18n_textarea, required: false }
+              - { label: SEO 标题与描述, name: meta, <<: *seo_fields, required: false }
               - label: 正文段落
                 name: sections
                 widget: list
                 required: false
                 summary: "{{fields.heading.zh}}"
-                fields:
-                  - { label: 小标题, name: heading, <<: *i18n_text, required: false }
-                  - { label: 正文, name: body, <<: *i18n_textarea }
-                  - label: 段落图片
-                    name: media
-                    widget: list
-                    required: false
-                    collapsed: true
-                    summary: "{{fields.caption.zh}}"
-                    fields:
-                      - { label: 图片, name: image, widget: image }
-                      - { label: 图片描述 Alt, name: alt, widget: string }
-                      - { label: 图片说明, name: caption, <<: *i18n_text }
+                fields: *article_section_field_definitions
           - label: 数字资源 / PDF 下载
             name: downloads
             widget: list

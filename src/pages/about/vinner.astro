@@ -1,77 +1,226 @@
 ---
+import { searchConfig } from "../../utils/search-config.mjs";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import PageHero from "../../components/PageHero.astro";
+import PartnersSection from "../../components/PartnersSection.astro";
+import MediaCaption from "../../components/MediaCaption.astro";
+import GlossaryLinkedText from "../../components/GlossaryLinkedText.astro";
 import about from "../../data/site/aboutVinner.json";
+import factory from "../../data/site/factory.json";
 import { text, attrs } from "../../utils/i18n";
+import { schemaIds } from "../../utils/schema";
+
+const siteUrl = searchConfig.siteUrl;
+const ids = schemaIds(siteUrl);
+
+const manufacturingFlow = [
+  factory.zonesSection.items[2],
+  factory.zonesSection.items[1],
+  factory.zonesSection.items[0],
+  factory.zonesSection.items[3],
+  factory.zonesSection.items[4]
+];
+const productionAreas = manufacturingFlow.slice(0, 3);
+const supportAreas = manufacturingFlow.slice(3);
 ---
 
 <BaseLayout
   title={about.meta.title}
   description={about.meta.description}
   image={about.hero.image}
+  pageType="AboutPage"
+  breadcrumbs={[
+    { name: { zh: "首页", en: "Home" }, path: "/" },
+    { name: { zh: "关于维尼", en: "About Vinner" }, path: "/about/vinner/" }
+  ]}
+  mainEntityId={ids.organization}
+  pageProperties={{ about: { "@id": ids.organization } }}
 >
-  <PageHero
-    eyebrow={about.hero.eyebrow}
-    title={about.hero.title}
-    body={about.hero.body}
-    image={about.hero.image}
-    alt={about.hero.alt}
-    light={about.hero.light}
-  />
+  <div class="about-vinner-page" data-section-indicator-container>
+    <PageHero
+      eyebrow={about.hero.eyebrow}
+      title={about.hero.title}
+      body={about.hero.body}
+      image={about.hero.image}
+      alt={about.hero.alt}
+      light={about.hero.light}
+    />
 
-  <section class="split-section about-company-intro">
-    <div>
-      <p class="section-kicker" {...attrs(about.intro.kicker)}>{text(about.intro.kicker)}</p>
-      <h2 {...attrs(about.intro.title)}>{text(about.intro.title)}</h2>
-    </div>
-    <div>
-      {about.intro.paragraphs.map((paragraph) => (
-        <p {...attrs(paragraph)}>{text(paragraph)}</p>
-      ))}
-    </div>
-  </section>
+    <section class="about-location-section" aria-labelledby="about-hq-title">
+      <div class="about-location-copy">
+        <p class="section-kicker" {...attrs(about.headquartersSection.kicker)}>{text(about.headquartersSection.kicker)}</p>
+        <h2 id="about-hq-title" {...attrs(about.headquartersSection.title)}>{text(about.headquartersSection.title)}</h2>
+        {about.headquartersSection.paragraphs.map((paragraph) => (
+          <p><GlossaryLinkedText value={paragraph} context="paragraph" /></p>
+        ))}
+      </div>
+      <figure class="about-location-media">
+        <img src={about.headquartersSection.image} alt={about.headquartersSection.imageAlt} loading="lazy" />
+        <MediaCaption caption={{ zh: about.headquartersSection.imageAlt, en: "Vinner Health headquarters in Shenzhen, China" }} />
+      </figure>
+    </section>
 
-  <section class="about-metrics" aria-labelledby="about-metrics-title">
-    <div class="about-section-heading">
-      <p class="section-kicker" {...attrs(about.metricsSection.kicker)}>{text(about.metricsSection.kicker)}</p>
-      <h2 id="about-metrics-title" {...attrs(about.metricsSection.title)}>{text(about.metricsSection.title)}</h2>
-    </div>
-    <div class="metric-grid">
-      {about.metricsSection.items.map((metric) => (
-        <article class="metric-card">
-          <strong class="metric-number" {...attrs(metric.number)}>{text(metric.number)}</strong>
-          <p {...attrs(metric.label)}>{text(metric.label)}</p>
-        </article>
-      ))}
-    </div>
-  </section>
+    <section class="about-location-section" aria-labelledby="about-facility-title">
+      <div class="about-location-copy">
+        <p class="section-kicker" {...attrs(about.facilitySection.kicker)}>{text(about.facilitySection.kicker)}</p>
+        <h2 id="about-facility-title" {...attrs(about.facilitySection.title)}>{text(about.facilitySection.title)}</h2>
+        {about.facilitySection.paragraphs.map((paragraph) => (
+          <p><GlossaryLinkedText value={paragraph} context="paragraph" /></p>
+        ))}
+      </div>
+      <figure class="about-location-media">
+        <img src={about.facilitySection.image} alt={about.facilitySection.imageAlt} loading="lazy" />
+        <MediaCaption caption={{ zh: about.facilitySection.imageAlt, en: "Vinner Health wet wipes manufacturing facility in Huanggang, China" }} />
+      </figure>
+    </section>
 
-  <section class="about-timeline" aria-labelledby="about-history-title">
-    <div class="about-section-heading">
-      <p class="section-kicker" {...attrs(about.timelineSection.kicker)}>{text(about.timelineSection.kicker)}</p>
-      <h2 id="about-history-title" {...attrs(about.timelineSection.title)}>{text(about.timelineSection.title)}</h2>
-    </div>
-    <ol class="timeline-list">
-      {about.timelineSection.items.map((item) => (
-        <li>
-          <strong>{item.year}</strong>
-          <p {...attrs(item.body)}>{text(item.body)}</p>
-        </li>
-      ))}
-    </ol>
-  </section>
+    <section class="about-factory-areas-section" aria-labelledby="about-production-areas-title">
+      <div class="about-section-heading">
+        <p class="section-kicker" {...attrs(about.factoryAreasSection.production.kicker)}>{text(about.factoryAreasSection.production.kicker)}</p>
+        <h2 id="about-production-areas-title" {...attrs(about.factoryAreasSection.production.title)}>{text(about.factoryAreasSection.production.title)}</h2>
+      </div>
+      <div class="about-factory-area-grid about-factory-area-grid-three">
+        {productionAreas.map((area, index) => (
+          <article class="about-factory-area-card">
+            <figure>
+              <img src={area.image} alt={area.alt} loading="lazy" />
+            </figure>
+            <div>
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              <h3 {...attrs(area.title)}>{text(area.title)}</h3>
+              <p><GlossaryLinkedText value={area.body} context="body" /></p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
 
-  <section class="partner-section" aria-labelledby="partner-title">
-    <div class="about-section-heading">
-      <p class="section-kicker" {...attrs(about.partnersSection.kicker)}>{text(about.partnersSection.kicker)}</p>
-      <h2 id="partner-title" {...attrs(about.partnersSection.title)}>{text(about.partnersSection.title)}</h2>
-    </div>
-    <div class="partner-wall" aria-label="Partner brands">
-      {about.partnersSection.items.map((partner) => (
-        <span>
-          <img src={partner.logo} alt={`${partner.name} partner logo`} loading="lazy" />
-        </span>
-      ))}
-    </div>
-  </section>
+    <section class="about-factory-areas-section about-factory-support-section" aria-labelledby="about-support-areas-title">
+      <div class="about-section-heading">
+        <p class="section-kicker" {...attrs(about.factoryAreasSection.support.kicker)}>{text(about.factoryAreasSection.support.kicker)}</p>
+        <h2 id="about-support-areas-title" {...attrs(about.factoryAreasSection.support.title)}>{text(about.factoryAreasSection.support.title)}</h2>
+      </div>
+      <div class="about-factory-area-grid about-factory-area-grid-two">
+        {supportAreas.map((area, index) => (
+          <article class="about-factory-area-card">
+            <figure>
+              <img src={area.image} alt={area.alt} loading="lazy" />
+            </figure>
+            <div>
+              <span>{String(index + 4).padStart(2, "0")}</span>
+              <h3 {...attrs(area.title)}>{text(area.title)}</h3>
+              <p><GlossaryLinkedText value={area.body} context="body" /></p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="about-business-section" aria-labelledby="about-business-title">
+      <div class="about-section-heading">
+        <p class="section-kicker" {...attrs(about.businessSection.kicker)}>{text(about.businessSection.kicker)}</p>
+        <h2 id="about-business-title" {...attrs(about.businessSection.title)}>{text(about.businessSection.title)}</h2>
+      </div>
+      <div class="about-business-copy-grid">
+        {about.businessSection.items.map((item, index) => (
+          <article class="about-business-card">
+            <span>{String(index + 1).padStart(2, "0")}</span>
+            <h3 {...attrs(item.title)}>{text(item.title)}</h3>
+            <p><GlossaryLinkedText value={item.body} context="body" /></p>
+          </article>
+        ))}
+      </div>
+      <div class="button-row about-business-actions">
+        <a class="button button-accent" href="/products/" {...attrs(about.businessSection.cta)}>{text(about.businessSection.cta)}</a>
+      </div>
+    </section>
+
+    <section class="about-metrics" aria-labelledby="about-metrics-title">
+      <div class="about-section-heading">
+        <p class="section-kicker" {...attrs(about.metricsSection.kicker)}>{text(about.metricsSection.kicker)}</p>
+        <h2 id="about-metrics-title" {...attrs(about.metricsSection.title)}>{text(about.metricsSection.title)}</h2>
+      </div>
+      <div class="metric-grid">
+        {about.metricsSection.items.map((metric) => (
+          <article class="metric-card">
+            <strong class="metric-number" {...attrs(metric.number)}>{text(metric.number)}</strong>
+            <p {...attrs(metric.label)}>{text(metric.label)}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="capability about-content-section" aria-labelledby="about-qualification-title">
+      <div>
+        <p class="section-kicker" {...attrs(about.qualificationSection.kicker)}>{text(about.qualificationSection.kicker)}</p>
+        <h2 id="about-qualification-title" {...attrs(about.qualificationSection.title)}>{text(about.qualificationSection.title)}</h2>
+      </div>
+      <div class="capability-list">
+        <p class="about-content-lead"><GlossaryLinkedText value={about.qualificationSection.intro} context="intro" /></p>
+        {about.qualificationSection.items.map((item) => (
+          <div class="capability-item">
+            <span aria-hidden="true">•</span>
+            <p><GlossaryLinkedText value={item} context="bullet" /></p>
+          </div>
+        ))}
+        <div class="button-row about-content-actions">
+          <a class="button button-accent" href="/about/factory-qualification/" {...attrs(about.qualificationSection.cta)}>{text(about.qualificationSection.cta)}</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="value-band capability about-content-section about-values-section" aria-labelledby="about-values-title">
+      <div>
+        <p class="section-kicker" {...attrs(about.valuesSection.kicker)}>{text(about.valuesSection.kicker)}</p>
+        <h2 id="about-values-title" {...attrs(about.valuesSection.title)}>{text(about.valuesSection.title)}</h2>
+      </div>
+      <div class="about-values-content">
+        <p class="about-content-lead" {...attrs(about.valuesSection.intro)}>{text(about.valuesSection.intro)}</p>
+        <ul class="about-bullet-list">
+          {about.valuesSection.items.map((item) => (
+            <li><GlossaryLinkedText value={item} context="bullet" /></li>
+          ))}
+        </ul>
+        <div class="button-row about-content-actions">
+          <a class="button button-accent" href="/about/factory-qualification/" {...attrs(about.valuesSection.cta)}>{text(about.valuesSection.cta)}</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-timeline" aria-labelledby="about-history-title">
+      <div class="about-section-heading">
+        <p class="section-kicker" {...attrs(about.timelineSection.kicker)}>{text(about.timelineSection.kicker)}</p>
+        <h2 id="about-history-title" {...attrs(about.timelineSection.title)}>{text(about.timelineSection.title)}</h2>
+      </div>
+      <ol class="timeline-list">
+        {about.timelineSection.items.map((item) => (
+          <li>
+            <div class="timeline-entry">
+              <strong>{item.year}</strong>
+              <p><GlossaryLinkedText value={item.body} context="timeline" /></p>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </section>
+
+    <PartnersSection section={about.partnersSection} id="partner-title" />
+  </div>
 </BaseLayout>
+
+<style>
+  .about-vinner-page > .about-factory-areas-section { height: auto; min-height: 100svh; overflow: visible; }
+  .about-factory-area-card figure {
+    display: block;
+    height: clamp(190px, 28vh, 310px);
+    aspect-ratio: auto;
+    background: transparent;
+  }
+  .about-factory-area-grid-two .about-factory-area-card figure { height: clamp(250px, 36vh, 400px); }
+  .about-factory-area-card img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+</style>

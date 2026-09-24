@@ -1,21 +1,70 @@
 ---
+import { searchConfig } from "../../utils/search-config.mjs";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import qualification from "../../data/site/factoryQualification.json";
-import { text, attrs } from "../../utils/i18n";
+import qualification from "../../data/site/factoryQualification.json" with { type: "json" };
+import GlossaryLinkedText from "../../components/GlossaryLinkedText.astro";
+import { text, attrs, localizedPath } from "../../utils/i18n";
+import { absoluteUrl, schemaIds, credentialAnchor, credentialId } from "../../utils/schema";
+
+const siteUrl = searchConfig.siteUrl;
+const language = Astro.locals.language || "zh";
+const ids = schemaIds(siteUrl);
+const pageUrl = absoluteUrl(localizedPath("/about/factory-qualification/", language), siteUrl);
+const credentialListId = `${pageUrl}#credentials`;
+const credentialType = (item) => {
+  if (item.type === "License") return "GovernmentPermit";
+  if (item.type === "Audit") return "Report";
+  return "Certification";
+};
+const credentialNodes = qualification.certificatesSection.items.map((item) => ({
+  "@type": credentialType(item),
+  "@id": credentialId(item, siteUrl),
+  name: item.title,
+  description: text(item.description, language),
+  url: `${pageUrl}#${credentialAnchor(item)}`,
+  image: absoluteUrl(item.thumb, siteUrl),
+  about: { "@id": ids.factory }
+}));
+const qualificationSchema = [
+  {
+    "@type": "ItemList",
+    "@id": credentialListId,
+    name: text(qualification.certificatesSection.title, language),
+    numberOfItems: credentialNodes.length,
+    itemListElement: credentialNodes.map((node, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      item: { "@id": node["@id"] }
+    }))
+  },
+  ...credentialNodes
+];
 ---
 
 <BaseLayout
   title={qualification.meta.title}
   description={qualification.meta.description}
   image={qualification.certificatesSection.items[0].thumb}
+  pageType="CollectionPage"
+  breadcrumbs={[
+    { name: { zh: "首页", en: "Home" }, path: "/" },
+    { name: { zh: "关于维尼", en: "About Vinner" }, path: "/about/vinner/" },
+    { name: { zh: "资质体系", en: "Qualifications" }, path: "/about/factory-qualification/" }
+  ]}
+  mainEntityId={credentialListId}
+  pageProperties={{
+    about: { "@id": ids.factory },
+    mentions: { "@id": ids.organization }
+  }}
+  schema={qualificationSchema}
 >
-  <section class="split-section">
+  <section class="split-section qualification-hero">
     <div>
       <p class="section-kicker" {...attrs(qualification.intro.kicker)}>{text(qualification.intro.kicker)}</p>
-      <h2 {...attrs(qualification.intro.title)}>{text(qualification.intro.title)}</h2>
+      <h1 {...attrs(qualification.intro.title)}>{text(qualification.intro.title)}</h1>
     </div>
-    <div>
-      <p {...attrs(qualification.intro.body)}>{text(qualification.intro.body)}</p>
+    <div class="qualification-hero-copy">
+      <p><GlossaryLinkedText value={qualification.intro.body} context="hero" /></p>
     </div>
   </section>
 
@@ -26,14 +75,14 @@ import { text, attrs } from "../../utils/i18n";
     </div>
     <div class="certification-grid">
       {qualification.certificatesSection.items.map((certificate) => (
-        <article class="certification-card">
-          <a class="certification-thumb" href={certificate.href} target="_blank" rel="noopener" aria-label={`View ${certificate.title}`}>
+        <article class="certification-card" id={credentialAnchor(certificate)}>
+          <figure class="certification-thumb">
             <img src={certificate.thumb} alt={`VINNER ${certificate.title} factory qualification certificate preview`} loading="lazy" />
-          </a>
+          </figure>
           <span>{certificate.type}</span>
           <h3>{certificate.title}</h3>
-          <p {...attrs(certificate.description)}>{text(certificate.description)}</p>
-          <a href={certificate.href} target="_blank" rel="noopener" data-zh="查看 / 下载 PDF" data-en="View / Download PDF">查看 / 下载 PDF</a>
+          <p><GlossaryLinkedText value={certificate.description} context="body" /></p>
+          <a href="/contact/" data-zh="联系我们获取" data-en="Contact us to request">联系我们获取</a>
         </article>
       ))}
     </div>

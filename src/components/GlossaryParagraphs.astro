@@ -1,0 +1,35 @@
+---
+// Render document paragraphs as text; only citation numbers become local links.
+const { paragraphs } = Astro.props;
+const referenceLabel = Astro.locals.language === "en" ? "Reference" : "参考文献";
+const blocks: Array<{ type: "paragraph" | "list"; items: string[] }> = [];
+const isBullet = (paragraph: string) => paragraph.startsWith("*")
+  || /^(?:GB(?:\/T|\/Z)?\s|Resealability：|Dispensing：|Moisture Protection：)/.test(paragraph)
+  || (paragraph.length < 90 && /[；;]$/.test(paragraph));
+
+for (const paragraph of paragraphs) {
+  if (isBullet(paragraph)) {
+    const last = blocks.at(-1);
+    if (last?.type === "list") {
+      last.items.push(paragraph.replace(/^\*\s*/, ""));
+    } else {
+      blocks.push({ type: "list", items: [paragraph.replace(/^\*\s*/, "")] });
+    }
+  } else {
+    blocks.push({ type: "paragraph", items: [paragraph] });
+  }
+}
+
+const citationParts = (value: string) => value.split(/(\[\d+\])/g);
+---
+{blocks.map((block) => block.type === "list"
+  ? <ul class="resource-article-list glossary-bullet-list">{block.items.map((item) => <li>{citationParts(item).map((part) => /^\[\d+\]$/.test(part) ? <sup><a href={`#reference-${part.slice(1, -1)}`} aria-label={`${referenceLabel} ${part.slice(1, -1)}`}>{part}</a></sup> : part)}</li>)}</ul>
+  : <p>{citationParts(block.items[0]).map((part) => /^\[\d+\]$/.test(part) ? <sup><a href={`#reference-${part.slice(1, -1)}`} aria-label={`${referenceLabel} ${part.slice(1, -1)}`}>{part}</a></sup> : part)}</p>
+)}
+<style>
+  p { margin: 0 0 22px; font-size: 18px; line-height: 1.85; color: var(--color-slate-mist); overflow-wrap: anywhere; }
+  .glossary-bullet-list { margin: 0 0 22px; }
+  sup { font-size: 12px; line-height: 0; margin-inline: 2px; }
+  a { color: #007c7a; text-decoration: underline; text-underline-offset: 3px; }
+  @media(max-width:640px) { p {font-size:16px;line-height:1.85;} }
+</style>

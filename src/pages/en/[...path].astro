@@ -1,0 +1,6 @@
+---
+// Give server adapters a concrete match before middleware rewrites the request
+// to the shared Chinese route and localizes the rendered HTML.
+const path = Astro.params.path?.replace(/^\/+|\/+$/g, "") || "";
+return Astro.rewrite(`/${path}${path ? "/" : ""}${Astro.url.search}`);
+---

@@ -1,0 +1,26 @@
+---
+import { text, attrs } from "../utils/i18n";
+
+const {
+  section,
+  id = "partners-title",
+  className = ""
+} = Astro.props;
+---
+
+<section
+  class:list={["partner-section", "partner-section-showcase", className]}
+  aria-labelledby={id}
+>
+  <div class="about-section-heading">
+    <p class="section-kicker" {...attrs(section.kicker)}>{text(section.kicker)}</p>
+    <h2 id={id} {...attrs(section.title)}>{text(section.title)}</h2>
+  </div>
+  <div class="partner-wall" aria-label="Partner brands">
+    {section.items.map((partner) => (
+      <span>
+        <img src={partner.logo} alt={`${partner.name} partner logo`} loading="lazy" />
+      </span>
+    ))}
+  </div>
+</section>

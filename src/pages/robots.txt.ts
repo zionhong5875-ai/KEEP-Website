@@ -1,17 +1,11 @@
-const siteUrl = import.meta.env.PUBLIC_SITE_URL || "https://keep-website-ochre.vercel.app";
+import type { APIRoute } from "astro";
+import { searchConfig, canIndexRequest, robotsText } from "../utils/search-config.mjs";
 
-export const prerender = true;
+export const prerender = false;
 
-export const GET = () =>
-  new Response(
-    [
-      "User-agent: *",
-      "Allow: /",
-      `Sitemap: ${new URL("/sitemap.xml", siteUrl).toString()}`
-    ].join("\n"),
-    {
-      headers: {
-        "Content-Type": "text/plain; charset=utf-8"
-      }
-    }
-  );
+export const GET: APIRoute = ({ url }) => new Response(robotsText(searchConfig, canIndexRequest(url)), {
+  headers: {
+    "Content-Type": "text/plain; charset=utf-8",
+    "Cache-Control": "no-store"
+  }
+});

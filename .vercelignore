@@ -1,0 +1,36 @@
+.DS_Store
+.git/
+.astro/
+.vercel/
+node_modules/
+dist/
+.env*
+*.zip
+
+# Local production sources and working files. Published assets live in public/.
+keep-brand-video/
+private-resources/
+tmp/
+Factory_Certification_Assests/
+Factory_Pics/
+HKPWW60_Assests/
+News_Assests/
+OEM 产品线图片/
+VLBBG8_Asssets/
+VLBBW8_Assets/
+VLCONCW25_Assests/
+VLSHMC1_Assests/
+关于维尼页面/
+合作伙伴&采购方 Partners&Buyers/
+
+# Legacy static prototype superseded by the Astro application.
+about.html
+cookies.html
+copyright.html
+disclaimer.html
+index.html
+privacy.html
+products.html
+resources.html
+script.js
+styles.css

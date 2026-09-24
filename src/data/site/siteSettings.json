@@ -30,8 +30,8 @@
       "en": "Contact"
     },
     "resources": {
-      "zh": "博客与资源",
-      "en": "Blog & Resources"
+      "zh": "资源",
+      "en": "Resources"
     }
   },
   "footer": {
@@ -44,12 +44,12 @@
       "en": "Products"
     },
     "resources": {
-      "zh": "博客与资源",
+      "zh": "资源",
       "en": "Resources"
     },
     "downloads": {
-      "zh": "资料下载",
-      "en": "Downloads"
+      "zh": "资料获取",
+      "en": "Resource access"
     },
     "contact": {
       "zh": "联系我们",
@@ -75,8 +75,8 @@
     },
     "copyright": "© VINNER Health 2026",
     "company": {
-      "zh": "维尼健康（深圳）股份有限公司 · MEDIKEEP · CAREKEEP · INDUKEEP · OEM/ODM",
-      "en": "Vinner Health (Shenzhen) Co., Ltd. · MEDIKEEP · CAREKEEP · INDUKEEP · OEM/ODM"
+      "zh": "维尼健康（深圳）股份有限公司 · 感染控制 · 清洁护理 · 工业擦拭 · 定制开发",
+      "en": "Vinner (Shenzhen) Health Products Limited · INFECTION CONTROL · CLEANSING & CARE · INDUSTRIAL WIPING · OEM/ODM"
     },
     "socials": [
       {
@@ -91,7 +91,7 @@
       },
       {
         "name": "YouTube",
-        "href": "https://www.youtube.com/@VinnerHealthcare-n7j",
+        "href": "https://www.youtube.com/channel/UC8cE38PDOigt9CEaDiZ1Ntw",
         "icon": "/assets/footer/social/youtube.svg"
       },
       {

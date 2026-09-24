@@ -1,12 +1,12 @@
 {
   "meta": {
     "title": {
-      "zh": "产品 | VINNER",
-      "en": "Products | VINNER"
+      "zh": "湿巾产品线：感控、清洁护理、工业与 OEM/ODM | VINNER",
+      "en": "Wet Wipes Product Lines & OEM/ODM | VINNER"
     },
     "description": {
-      "zh": "浏览 VINNER 旗下 MEDIKEEP、CAREKEEP、INDUKEEP 与 OEM/ODM 擦拭产品规格与应用场景。",
-      "en": "Browse specifications and use cases across the MEDIKEEP, CAREKEEP, INDUKEEP, and OEM/ODM wiping lines."
+      "zh": "浏览 VINNER 感染控制、个人清洁护理、工业擦拭和 OEM/ODM 湿巾产品线，了解具体产品、规格与应用场景。",
+      "en": "Browse VINNER infection control, personal cleansing, industrial wiping, and OEM/ODM wet wipes lines, with product formats and applications."
     }
   },
   "hero": {
@@ -19,39 +19,43 @@
       "en": "Medical, care, and industrial wiping products."
     },
     "body": {
-      "zh": "MEDIKEEP 面向医疗感染控制，CAREKEEP 面向个人护理清洁，INDUKEEP 面向工业油污与高强度擦拭，OEM/ODM 面向定制开发与品牌代工。四条产品线共享稳定基材、可靠包装和批次追溯体系。",
-      "en": "MEDIKEEP serves medical infection control, CAREKEEP supports personal care cleansing, INDUKEEP handles industrial oil and high-strength wiping, and OEM/ODM supports custom development and private-label manufacturing. All four lines share stable substrates, reliable packaging, and batch traceability."
+      "zh": "感染控制面向消毒湿巾、干巾与皮肤除菌，清洁护理覆盖化妆品、个人护理与清洁，工业擦拭服务强力去污与洁净室擦拭，定制开发提供产品开发与品牌代工。四条产品线共享稳定基材、可靠包装和批次追溯体系。",
+      "en": "INFECTION CONTROL covers disinfectant wipes, dry wipes, and antiseptic skin wipes; CLEANSING & CARE supports cosmetic, personal-care, and cleansing needs; INDUSTRIAL WIPING serves heavy-duty cleaning and cleanroom wiping; and OEM/ODM delivers custom products and private-label manufacturing. All four lines share stable substrates, reliable packaging, and batch traceability."
     },
     "image": "/assets/gallery-product.jpg",
     "alt": "VINNER 擦拭产品和使用场景"
   },
   "lines": [
     {
-      "index": "01 / MEDIKEEP",
+      "index": "01 / INFECTION CONTROL",
+      "indexLabel": {
+        "zh": "01 / 感染控制",
+        "en": "01 / INFECTION CONTROL"
+      },
       "name": {
-        "zh": "INFECTION CONTROL",
+        "zh": "感染控制",
         "en": "INFECTION CONTROL"
       },
       "slug": "medikeep",
-      "brand": "MEDIKEEP",
+      "brand": "INFECTION CONTROL",
       "title": {
-        "zh": "医疗感染控制擦拭",
-        "en": "Medical infection-control wipes"
+        "zh": "消毒湿巾，干巾与皮肤除菌",
+        "en": "Disinfectant Wipes, Dry Wipes & Antiseptic Skin Wipes"
       },
       "summary": {
-        "zh": "面向医院、诊所、实验室和公共卫生场景，围绕表面消毒、皮肤准备和感染控制流程建立产品组合。",
-        "en": "Built for hospitals, clinics, labs, and public-health settings across surface disinfection, skin preparation, and infection-control workflows."
+        "zh": "医疗环境的表面消毒、皮肤除菌与感染控制。",
+        "en": "Surface disinfection, skin antisepsis, and infection control for healthcare environments."
       },
       "products": {
-        "zh": "主要包括酒精消毒湿巾、临床表面消毒湿巾和 CHG 清洁巾。",
-        "en": "Includes alcohol disinfectant wipes, clinical surface disinfectant wipes, and CHG wash cloths."
+        "zh": "规划中的产品包括五类环境表面消毒湿巾，以及复合醇皮肤准备湿巾和 CHG 全身擦浴巾。",
+        "en": "The planned portfolio includes five environmental-surface disinfectant formats plus blended-alcohol skin prep wipes and CHG wash cloths."
       },
       "detail": {
-        "zh": "MEDIKEEP 强调有效成分、材料兼容性、低残留和可追溯批次，帮助医疗和护理团队把高频接触面、设备表面和患者护理流程管理得更稳定。",
-        "en": "MEDIKEEP focuses on active ingredients, material compatibility, low residue, and batch traceability so care teams can manage high-touch surfaces, equipment, and patient-care workflows with more control."
+        "zh": "感染控制系列强调有效成分、材料兼容性、低残留和可追溯批次，帮助医疗和护理团队把高频接触面、设备表面和患者护理流程管理得更稳定。",
+        "en": "INFECTION CONTROL focuses on active ingredients, material compatibility, low residue, and batch traceability so care teams can manage high-touch surfaces, equipment, and patient-care workflows with more control."
       },
       "image": "/assets/gallery-infection.jpg",
-      "alt": "医疗感染控制擦拭场景",
+      "alt": "VINNER 感染控制消毒湿巾与临床擦拭场景",
       "uses": [
         {
           "zh": "医院、诊所和实验室的高频接触面清洁",
@@ -68,477 +72,632 @@
       ],
       "skus": [
         {
-          "slug": "alcohol-disinfectant-wipes",
-          "code": "MEDIKEEP 01",
-          "itemNo": "MK-ADW-8020",
-          "title": "Alcohol Disinfectant Wipes",
-          "image": "/assets/sku-alcohol-wipes.jpg",
-          "alt": "Alcohol Disinfectant Wipes 产品场景",
+          "slug": "vinner-surface-disinfectant-wipes",
+          "code": "INFECTION CONTROL 01",
+          "itemNo": "PLANNED",
+          "title": "VINNER Surface Disinfectant Wipes",
+          "displayName": {
+            "zh": "无醇物表消毒湿巾",
+            "en": "VINNER Surface Disinfectant Wipes"
+          },
+          "comingSoon": true,
+          "group": {
+            "zh": "环境表面消毒系列",
+            "en": "Environmental Surface Disinfection"
+          },
+          "image": "/assets/planned-products/infection-surface.jpg",
+          "alt": "防护人员使用无醇物表消毒湿巾清洁医疗环境工作台",
           "body": {
-            "zh": "适用于高频接触表面、设备外壳和快速挥发清洁需求。",
-            "en": "Built for high-touch surfaces, equipment shells, and fast-evaporation cleaning."
+            "zh": "采用季铵盐消毒体系的即用型无醇湿巾，用于医疗及公共环境中硬质非多孔表面的清洁与消毒。",
+            "en": "Ready-to-use, alcohol-free wipes formulated with a quaternary ammonium compound system for cleaning and disinfecting hard, non-porous surfaces in healthcare and public environments."
           },
           "intro": {
-            "zh": "70% 酒精快速挥发体系，适合医疗空间中高频接触点的日常清洁与消毒前处理。",
-            "en": "A 70% alcohol fast-dry format for daily cleaning and disinfection preparation on high-touch points in clinical spaces."
+            "zh": "采用季铵盐消毒体系的即用型无醇湿巾，用于医疗及公共环境中硬质非多孔表面的清洁与消毒。",
+            "en": "Ready-to-use, alcohol-free wipes formulated with a quaternary ammonium compound system for cleaning and disinfecting hard, non-porous surfaces in healthcare and public environments."
           },
           "gallery": [
             {
-              "image": "/assets/sku-alcohol-wipes.jpg",
-              "alt": "Alcohol Disinfectant Wipes 桶装包装"
-            },
-            {
-              "image": "/assets/gallery-infection.jpg",
-              "alt": "医疗空间接触面擦拭场景"
-            },
-            {
-              "image": "/assets/wipes-pack.jpg",
-              "alt": "洁净擦拭产品包装细节"
+              "image": "/assets/planned-products/infection-surface.jpg",
+              "alt": "防护人员使用无醇物表消毒湿巾清洁医疗环境工作台"
             }
           ],
           "highlights": [
             {
-              "zh": "快速挥发，减少表面残留与等待时间。",
-              "en": "Fast evaporation reduces surface residue and waiting time."
+              "zh": "无醇即用",
+              "en": "Alcohol-free and ready to use"
             },
             {
-              "zh": "低掉屑基材，适合设备外壳、推车、床旁高频表面。",
-              "en": "Low-lint substrate suits equipment shells, carts, and bedside high-touch surfaces."
+              "zh": "季铵盐消毒体系",
+              "en": "Quaternary ammonium system"
             },
             {
-              "zh": "桶装抽取结构，支持连续作业与现场补给。",
-              "en": "Canister dispensing supports continuous work and point-of-use replenishment."
+              "zh": "适合硬质非多孔表面",
+              "en": "For hard, non-porous surfaces"
+            },
+            {
+              "zh": "医疗及公共环境",
+              "en": "Healthcare and public settings"
             }
           ],
-          "killPerformance": [
+          "features": [
             {
-              "label": {
-                "zh": "杀菌体系",
-                "en": "Active system"
-              },
-              "value": {
-                "zh": "70% 酒精快干配方",
-                "en": "70% alcohol fast-dry formula"
-              }
+              "zh": "无醇即用",
+              "en": "Alcohol-free and ready to use"
             },
             {
-              "label": {
-                "zh": "适用对象",
-                "en": "Target use"
-              },
-              "value": {
-                "zh": "硬质、非多孔高频接触表面",
-                "en": "Hard, non-porous high-touch surfaces"
-              }
+              "zh": "季铵盐消毒体系",
+              "en": "Quaternary ammonium system"
             },
             {
-              "label": {
-                "zh": "接触逻辑",
-                "en": "Contact logic"
-              },
-              "value": {
-                "zh": "充分润湿表面，并按当地法规与验证要求执行接触时间。",
-                "en": "Fully wet the surface and follow contact time required by local regulation and validation."
-              }
+              "zh": "适合硬质非多孔表面",
+              "en": "For hard, non-porous surfaces"
+            },
+            {
+              "zh": "医疗及公共环境",
+              "en": "Healthcare and public settings"
             }
           ],
-          "usage": [
+          "applications": [
             {
-              "zh": "打开桶盖并从中心抽取单片湿巾。",
-              "en": "Open the canister and pull one wipe from the center feed."
+              "zh": "医院高频接触面",
+              "en": "Hospital high-touch surfaces"
             },
             {
-              "zh": "按一个方向擦拭目标表面，确保表面被均匀润湿。",
-              "en": "Wipe the target surface in one direction and ensure even wetting."
+              "zh": "公共设施与工作台",
+              "en": "Public facilities and workstations"
             },
             {
-              "zh": "使用后及时合盖，避免液体挥发；废弃物按现场规范处理。",
-              "en": "Close the lid after use to reduce evaporation; dispose of waste according to site procedures."
+              "zh": "设备外表面",
+              "en": "Equipment exterior surfaces"
             }
           ],
-          "specs": [
-            {
-              "label": {
-                "zh": "规格",
-                "en": "Format"
-              },
-              "value": {
-                "zh": "150 x 200 mm / 80 wipes canister",
-                "en": "150 x 200 mm / 80 wipes canister"
-              }
-            },
-            {
-              "label": {
-                "zh": "基材",
-                "en": "Substrate"
-              },
-              "value": {
-                "zh": "低掉屑水刺无纺布",
-                "en": "Low-lint spunlace nonwoven"
-              }
-            },
-            {
-              "label": {
-                "zh": "配方",
-                "en": "Formula"
-              },
-              "value": {
-                "zh": "70% alcohol fast-dry",
-                "en": "70% alcohol fast-dry"
-              }
-            }
-          ],
-          "downloads": [
-            {
-              "type": "SDS",
-              "title": {
-                "zh": "安全数据表",
-                "en": "Safety Data Sheet"
-              },
-              "href": ""
-            },
-            {
-              "type": "Brochure",
-              "title": {
-                "zh": "产品说明书",
-                "en": "Product brochure"
-              },
-              "href": ""
-            },
-            {
-              "type": "Poster",
-              "title": {
-                "zh": "场景海报",
-                "en": "Use-case poster"
-              },
-              "href": ""
-            }
-          ]
+          "killPerformance": [],
+          "usage": [],
+          "specs": [],
+          "downloads": []
         },
         {
-          "slug": "clinical-disinfectant-wipes",
-          "code": "MEDIKEEP 02",
-          "itemNo": "MK-CDW-100S",
-          "title": "Clinical Disinfectant Wipes",
-          "image": "/assets/sku-clinical-wipes.jpg",
-          "alt": "Clinical Disinfectant Wipes 产品场景",
+          "slug": "vinner-alcohol-disinfectant-wipes",
+          "code": "INFECTION CONTROL 02",
+          "itemNo": "PLANNED",
+          "title": "VINNER Alcohol Disinfectant Wipes",
+          "displayName": {
+            "zh": "酒精物表消毒湿巾",
+            "en": "VINNER Alcohol Disinfectant Wipes"
+          },
+          "comingSoon": true,
+          "group": {
+            "zh": "环境表面消毒系列",
+            "en": "Environmental Surface Disinfection"
+          },
+          "image": "/assets/planned-products/industrial-cleanroom.jpg",
+          "alt": "洁净医疗环境中适合酒精消毒湿巾处理的设备表面",
           "body": {
-            "zh": "为诊疗空间、公共区域和非侵入式设备表面提供稳定消毒擦拭。",
-            "en": "Designed for treatment zones, public areas, and non-invasive equipment surfaces with stable disinfecting performance."
+            "zh": "采用酒精消毒体系，可快速清洁并消毒耐酒精的设备及环境表面。",
+            "en": "Alcohol-based wipes designed for rapid cleaning and disinfection of alcohol-compatible equipment and environmental surfaces."
           },
           "intro": {
-            "zh": "低残留临床消毒擦拭方案，适用于医院、诊所与公共卫生空间的日常表面管理。",
-            "en": "A low-residue clinical disinfecting wipe for daily surface management in hospitals, clinics, and public health spaces."
+            "zh": "采用酒精消毒体系，可快速清洁并消毒耐酒精的设备及环境表面。",
+            "en": "Alcohol-based wipes designed for rapid cleaning and disinfection of alcohol-compatible equipment and environmental surfaces."
           },
           "gallery": [
             {
-              "image": "/assets/sku-clinical-wipes.jpg",
-              "alt": "Clinical Disinfectant Wipes 软包产品"
-            },
-            {
-              "image": "/assets/medikeep-lab.jpg",
-              "alt": "洁净医疗环境与感染控制现场"
-            },
-            {
-              "image": "/assets/gallery-infection.jpg",
-              "alt": "临床表面擦拭作业"
+              "image": "/assets/planned-products/industrial-cleanroom.jpg",
+              "alt": "洁净医疗环境中适合酒精消毒湿巾处理的设备表面"
             }
           ],
           "highlights": [
             {
-              "zh": "湿润保持稳定，适合连续擦拭诊疗区域。",
-              "en": "Stable wetting supports continuous wiping across treatment zones."
+              "zh": "酒精消毒体系",
+              "en": "Alcohol-based system"
             },
             {
-              "zh": "翻盖软包便于床旁、护士站和公共区域快速取用。",
-              "en": "Flip-top soft pack enables fast access beside beds, nursing stations, and public areas."
+              "zh": "快速清洁消毒",
+              "en": "Rapid cleaning and disinfection"
             },
             {
-              "zh": "配方与基材兼顾清洁效率和表面兼容性。",
-              "en": "Formula and substrate balance cleaning efficiency with surface compatibility."
+              "zh": "擦后低残留",
+              "en": "Low residue after wiping"
+            },
+            {
+              "zh": "适合耐酒精表面",
+              "en": "For alcohol-compatible surfaces"
             }
           ],
-          "killPerformance": [
+          "features": [
             {
-              "label": {
-                "zh": "杀菌体系",
-                "en": "Active system"
-              },
-              "value": {
-                "zh": "低残留季铵盐体系",
-                "en": "Low-residue QAC system"
-              }
+              "zh": "酒精消毒体系",
+              "en": "Alcohol-based system"
             },
             {
-              "label": {
-                "zh": "使用场景",
-                "en": "Application"
-              },
-              "value": {
-                "zh": "诊疗空间、公共区域、非侵入式设备外表面",
-                "en": "Treatment zones, public areas, and non-invasive equipment exteriors"
-              }
+              "zh": "快速清洁消毒",
+              "en": "Rapid cleaning and disinfection"
             },
             {
-              "label": {
-                "zh": "验证建议",
-                "en": "Validation note"
-              },
-              "value": {
-                "zh": "根据目标市场法规、微生物谱和接触时间进行第三方验证。",
-                "en": "Validate against target-market regulation, organism spectrum, and contact time."
-              }
+              "zh": "擦后低残留",
+              "en": "Low residue after wiping"
+            },
+            {
+              "zh": "适合耐酒精表面",
+              "en": "For alcohol-compatible surfaces"
             }
           ],
-          "usage": [
+          "applications": [
             {
-              "zh": "打开翻盖后取出湿巾，避免手部接触未使用湿巾。",
-              "en": "Open the flip lid and remove one wipe without touching unused wipes."
+              "zh": "医疗设备外表面",
+              "en": "Medical equipment exteriors"
             },
             {
-              "zh": "由洁净区域向污染区域擦拭，单片湿巾不跨区域复用。",
-              "en": "Wipe from clean to contaminated areas and do not reuse one wipe across zones."
+              "zh": "诊疗工作台",
+              "en": "Clinical workstations"
             },
             {
-              "zh": "使用后压紧翻盖，保持包装密封。",
-              "en": "Press the flip lid closed after use to preserve pack seal integrity."
+              "zh": "公共接触面",
+              "en": "Public touchpoints"
             }
           ],
-          "specs": [
-            {
-              "label": {
-                "zh": "规格",
-                "en": "Format"
-              },
-              "value": {
-                "zh": "180 x 200 mm / 100 wipes soft pack",
-                "en": "180 x 200 mm / 100 wipes soft pack"
-              }
-            },
-            {
-              "label": {
-                "zh": "基材",
-                "en": "Substrate"
-              },
-              "value": {
-                "zh": "复合高吸附无纺布",
-                "en": "Composite high-absorbency nonwoven"
-              }
-            },
-            {
-              "label": {
-                "zh": "配方",
-                "en": "Formula"
-              },
-              "value": {
-                "zh": "QAC low-residue system",
-                "en": "QAC low-residue system"
-              }
-            }
-          ],
-          "downloads": [
-            {
-              "type": "SDS",
-              "title": {
-                "zh": "安全数据表",
-                "en": "Safety Data Sheet"
-              },
-              "href": ""
-            },
-            {
-              "type": "Brochure",
-              "title": {
-                "zh": "产品说明书",
-                "en": "Product brochure"
-              },
-              "href": ""
-            },
-            {
-              "type": "Poster",
-              "title": {
-                "zh": "临床区域海报",
-                "en": "Clinical-zone poster"
-              },
-              "href": ""
-            }
-          ]
+          "killPerformance": [],
+          "usage": [],
+          "specs": [],
+          "downloads": []
         },
         {
-          "slug": "chlorhexidine-wash-cloths",
-          "code": "MEDIKEEP 03",
-          "itemNo": "MK-CHG-1P",
-          "title": "Chlorhexidine Wash Cloths",
-          "image": "/assets/sku-chlorhexidine-cloths.jpg",
-          "alt": "Chlorhexidine Wash Cloths 产品场景",
+          "slug": "vinner-sporicidal-wipes",
+          "code": "INFECTION CONTROL 03",
+          "itemNo": "PLANNED",
+          "title": "VINNER Sporicidal Wipes",
+          "displayName": {
+            "zh": "过氧乙酸芽孢湿巾",
+            "en": "VINNER Sporicidal Wipes"
+          },
+          "comingSoon": true,
+          "group": {
+            "zh": "环境表面消毒系列",
+            "en": "Environmental Surface Disinfection"
+          },
+          "image": "/assets/planned-products/infection-surface.jpg",
+          "alt": "高风险医疗区域的环境表面芽孢消毒清洁场景",
           "body": {
-            "zh": "面向临床辅助清洁和术前准备流程的柔软大尺寸擦拭布。",
-            "en": "Soft large-format cloths for clinical support cleaning and pre-op preparation routines."
+            "zh": "采用过氧乙酸氧化消毒体系，用于高风险区域的广谱消毒及细菌芽孢控制。",
+            "en": "Peracetic acid-based wipes developed for broad-spectrum disinfection and bacterial spore control in high-risk environments."
           },
           "intro": {
-            "zh": "柔软大尺寸 CHG 洗护布，支持临床辅助清洁、术前准备与护理流程中的稳定覆盖。",
-            "en": "A soft large-format CHG wash cloth for clinical support cleansing, pre-op preparation, and controlled coverage during care routines."
+            "zh": "采用过氧乙酸氧化消毒体系，用于高风险区域的广谱消毒及细菌芽孢控制。",
+            "en": "Peracetic acid-based wipes developed for broad-spectrum disinfection and bacterial spore control in high-risk environments."
           },
           "gallery": [
             {
-              "image": "/assets/sku-chlorhexidine-cloths.jpg",
-              "alt": "Chlorhexidine Wash Cloths 单片包装"
-            },
-            {
-              "image": "/assets/gallery-infection.jpg",
-              "alt": "感染控制护理现场"
-            },
-            {
-              "image": "/assets/resource-sds.jpg",
-              "alt": "临床产品文件和安全资料"
+              "image": "/assets/planned-products/infection-surface.jpg",
+              "alt": "高风险医疗区域的环境表面芽孢消毒清洁场景"
             }
           ],
           "highlights": [
             {
-              "zh": "加厚柔感布面，减少护理过程中的拉扯感。",
-              "en": "Thicker soft-touch cloth helps reduce pulling during care."
+              "zh": "过氧乙酸氧化体系",
+              "en": "Peracetic acid oxidation system"
             },
             {
-              "zh": "单片包装便于流程分配与批次管理。",
-              "en": "Single pouches support procedure allocation and batch control."
+              "zh": "广谱消毒",
+              "en": "Broad-spectrum disinfection"
             },
             {
-              "zh": "大尺寸设计提升覆盖面积，减少反复取片。",
-              "en": "Large size improves coverage and reduces repeated wipe retrieval."
+              "zh": "细菌芽孢控制",
+              "en": "Bacterial spore control"
+            },
+            {
+              "zh": "面向高风险环境",
+              "en": "For high-risk environments"
             }
           ],
-          "killPerformance": [
+          "features": [
             {
-              "label": {
-                "zh": "抗菌体系",
-                "en": "Antimicrobial system"
-              },
-              "value": {
-                "zh": "CHG 洗护液体系",
-                "en": "CHG wash cloth solution"
-              }
+              "zh": "过氧乙酸氧化体系",
+              "en": "Peracetic acid oxidation system"
             },
             {
-              "label": {
-                "zh": "适用流程",
-                "en": "Procedure fit"
-              },
-              "value": {
-                "zh": "临床辅助清洁、术前准备、护理流程",
-                "en": "Clinical support cleansing, pre-op preparation, and care routines"
-              }
+              "zh": "广谱消毒",
+              "en": "Broad-spectrum disinfection"
             },
             {
-              "label": {
-                "zh": "注意事项",
-                "en": "Use note"
-              },
-              "value": {
-                "zh": "按医疗机构流程与当地法规使用，不用于开放性伤口。",
-                "en": "Use according to facility protocol and local regulation; not intended for open wounds."
-              }
+              "zh": "细菌芽孢控制",
+              "en": "Bacterial spore control"
+            },
+            {
+              "zh": "面向高风险环境",
+              "en": "For high-risk environments"
             }
           ],
-          "usage": [
+          "applications": [
             {
-              "zh": "使用前确认包装完整和批次信息。",
-              "en": "Check pack integrity and batch information before use."
+              "zh": "隔离区域",
+              "en": "Isolation areas"
             },
             {
-              "zh": "打开单片包装后立即使用，按护理流程擦拭目标区域。",
-              "en": "Open the single pouch and use immediately according to the care protocol."
+              "zh": "实验室环境",
+              "en": "Laboratory environments"
             },
             {
-              "zh": "避免重复污染；使用后按医疗废弃物规范处理。",
-              "en": "Avoid recontamination; dispose of used cloth according to medical waste rules."
+              "zh": "高风险临床区域",
+              "en": "High-risk clinical zones"
             }
           ],
-          "specs": [
+          "killPerformance": [],
+          "usage": [],
+          "specs": [],
+          "downloads": []
+        },
+        {
+          "slug": "vinner-ahp-wipes",
+          "code": "INFECTION CONTROL 04",
+          "itemNo": "PLANNED",
+          "title": "VINNER AHP Wipes",
+          "displayName": {
+            "zh": "加速过氧化氢消毒湿巾",
+            "en": "VINNER AHP Wipes"
+          },
+          "comingSoon": true,
+          "group": {
+            "zh": "环境表面消毒系列",
+            "en": "Environmental Surface Disinfection"
+          },
+          "image": "/assets/planned-products/industrial-cleanroom.jpg",
+          "alt": "洁净医疗设施内适合加速过氧化氢消毒湿巾的设备环境",
+          "body": {
+            "zh": "采用加速过氧化氢技术，兼顾快速广谱消毒、较低残留与良好的表面适用性。",
+            "en": "Accelerated hydrogen peroxide wipes combining rapid broad-spectrum disinfection, low residue and broad surface compatibility."
+          },
+          "intro": {
+            "zh": "采用加速过氧化氢技术，兼顾快速广谱消毒、较低残留与良好的表面适用性。",
+            "en": "Accelerated hydrogen peroxide wipes combining rapid broad-spectrum disinfection, low residue and broad surface compatibility."
+          },
+          "gallery": [
             {
-              "label": {
-                "zh": "规格",
-                "en": "Format"
-              },
-              "value": {
-                "zh": "200 x 300 mm / single pouch",
-                "en": "200 x 300 mm / single pouch"
-              }
-            },
-            {
-              "label": {
-                "zh": "基材",
-                "en": "Substrate"
-              },
-              "value": {
-                "zh": "柔感加厚水刺布",
-                "en": "Soft thick spunlace cloth"
-              }
-            },
-            {
-              "label": {
-                "zh": "配方",
-                "en": "Formula"
-              },
-              "value": {
-                "zh": "CHG wash cloth solution",
-                "en": "CHG wash cloth solution"
-              }
+              "image": "/assets/planned-products/industrial-cleanroom.jpg",
+              "alt": "洁净医疗设施内适合加速过氧化氢消毒湿巾的设备环境"
             }
           ],
-          "downloads": [
+          "highlights": [
             {
-              "type": "SDS",
-              "title": {
-                "zh": "安全数据表",
-                "en": "Safety Data Sheet"
-              },
-              "href": ""
+              "zh": "加速过氧化氢技术",
+              "en": "Accelerated hydrogen peroxide"
             },
             {
-              "type": "Brochure",
-              "title": {
-                "zh": "产品说明书",
-                "en": "Product brochure"
-              },
-              "href": ""
+              "zh": "快速广谱消毒",
+              "en": "Rapid broad-spectrum disinfection"
             },
             {
-              "type": "Poster",
-              "title": {
-                "zh": "护理流程海报",
-                "en": "Care-protocol poster"
-              },
-              "href": ""
+              "zh": "较低残留",
+              "en": "Low residue"
+            },
+            {
+              "zh": "良好表面适用性",
+              "en": "Broad surface compatibility"
             }
-          ]
+          ],
+          "features": [
+            {
+              "zh": "加速过氧化氢技术",
+              "en": "Accelerated hydrogen peroxide"
+            },
+            {
+              "zh": "快速广谱消毒",
+              "en": "Rapid broad-spectrum disinfection"
+            },
+            {
+              "zh": "较低残留",
+              "en": "Low residue"
+            },
+            {
+              "zh": "良好表面适用性",
+              "en": "Broad surface compatibility"
+            }
+          ],
+          "applications": [
+            {
+              "zh": "诊疗设备",
+              "en": "Clinical equipment"
+            },
+            {
+              "zh": "床旁环境",
+              "en": "Bedside environments"
+            },
+            {
+              "zh": "公共高频接触面",
+              "en": "Public high-touch surfaces"
+            }
+          ],
+          "killPerformance": [],
+          "usage": [],
+          "specs": [],
+          "downloads": []
+        },
+        {
+          "slug": "vinner-bleach-wipes",
+          "code": "INFECTION CONTROL 05",
+          "itemNo": "PLANNED",
+          "title": "VINNER Bleach Wipes",
+          "displayName": {
+            "zh": "次氯酸钠消毒湿巾",
+            "en": "VINNER Bleach Wipes"
+          },
+          "comingSoon": true,
+          "group": {
+            "zh": "环境表面消毒系列",
+            "en": "Environmental Surface Disinfection"
+          },
+          "image": "/assets/planned-products/infection-surface.jpg",
+          "alt": "防护人员清洁高污染风险区域的硬质环境表面",
+          "body": {
+            "zh": "采用次氯酸钠消毒体系，适用于高污染风险区域及需要芽孢控制的环境表面。",
+            "en": "Sodium hypochlorite-based wipes intended for environmental surfaces in highly contaminated areas and applications requiring sporicidal control."
+          },
+          "intro": {
+            "zh": "采用次氯酸钠消毒体系，适用于高污染风险区域及需要芽孢控制的环境表面。",
+            "en": "Sodium hypochlorite-based wipes intended for environmental surfaces in highly contaminated areas and applications requiring sporicidal control."
+          },
+          "gallery": [
+            {
+              "image": "/assets/planned-products/infection-surface.jpg",
+              "alt": "防护人员清洁高污染风险区域的硬质环境表面"
+            }
+          ],
+          "highlights": [
+            {
+              "zh": "次氯酸钠消毒体系",
+              "en": "Sodium hypochlorite system"
+            },
+            {
+              "zh": "高污染风险管理",
+              "en": "For high-contamination risks"
+            },
+            {
+              "zh": "支持芽孢控制",
+              "en": "Supports sporicidal control"
+            },
+            {
+              "zh": "用于硬质环境表面",
+              "en": "For hard environmental surfaces"
+            }
+          ],
+          "features": [
+            {
+              "zh": "次氯酸钠消毒体系",
+              "en": "Sodium hypochlorite system"
+            },
+            {
+              "zh": "高污染风险管理",
+              "en": "For high-contamination risks"
+            },
+            {
+              "zh": "支持芽孢控制",
+              "en": "Supports sporicidal control"
+            },
+            {
+              "zh": "用于硬质环境表面",
+              "en": "For hard environmental surfaces"
+            }
+          ],
+          "applications": [
+            {
+              "zh": "污染处置区域",
+              "en": "Contamination response areas"
+            },
+            {
+              "zh": "隔离区",
+              "en": "Isolation zones"
+            },
+            {
+              "zh": "环境终末消毒",
+              "en": "Terminal environmental disinfection"
+            }
+          ],
+          "killPerformance": [],
+          "usage": [],
+          "specs": [],
+          "downloads": []
+        },
+        {
+          "slug": "vinner-skin-prep-wipes",
+          "code": "INFECTION CONTROL 06",
+          "itemNo": "PLANNED",
+          "title": "VINNER Skin Prep Wipes",
+          "displayName": {
+            "zh": "复合醇皮肤消毒湿巾",
+            "en": "VINNER Skin Prep Wipes"
+          },
+          "comingSoon": true,
+          "group": {
+            "zh": "皮肤除菌系列",
+            "en": "Skin Antisepsis"
+          },
+          "image": "/assets/planned-products/infection-skin-prep.jpg",
+          "alt": "护士在注射前使用皮肤消毒湿巾准备患者完整皮肤",
+          "body": {
+            "zh": "采用复合醇皮肤消毒体系，用于注射、穿刺或其他医疗操作前的完整皮肤准备。",
+            "en": "Blended-alcohol antiseptic wipes designed for preparing intact skin before injections, punctures and other medical procedures."
+          },
+          "intro": {
+            "zh": "采用复合醇皮肤消毒体系，用于注射、穿刺或其他医疗操作前的完整皮肤准备。",
+            "en": "Blended-alcohol antiseptic wipes designed for preparing intact skin before injections, punctures and other medical procedures."
+          },
+          "gallery": [
+            {
+              "image": "/assets/planned-products/infection-skin-prep.jpg",
+              "alt": "护士在注射前使用皮肤消毒湿巾准备患者完整皮肤"
+            }
+          ],
+          "highlights": [
+            {
+              "zh": "复合醇除菌体系",
+              "en": "Blended-alcohol antiseptic system"
+            },
+            {
+              "zh": "快速皮肤准备",
+              "en": "Rapid skin preparation"
+            },
+            {
+              "zh": "单次即用",
+              "en": "Single-use format"
+            },
+            {
+              "zh": "用于完整皮肤",
+              "en": "For intact skin"
+            }
+          ],
+          "features": [
+            {
+              "zh": "复合醇除菌体系",
+              "en": "Blended-alcohol antiseptic system"
+            },
+            {
+              "zh": "快速皮肤准备",
+              "en": "Rapid skin preparation"
+            },
+            {
+              "zh": "单次即用",
+              "en": "Single-use format"
+            },
+            {
+              "zh": "用于完整皮肤",
+              "en": "For intact skin"
+            }
+          ],
+          "applications": [
+            {
+              "zh": "注射前准备",
+              "en": "Pre-injection preparation"
+            },
+            {
+              "zh": "穿刺前准备",
+              "en": "Pre-puncture preparation"
+            },
+            {
+              "zh": "其他医疗操作",
+              "en": "Other medical procedures"
+            }
+          ],
+          "killPerformance": [],
+          "usage": [],
+          "specs": [],
+          "downloads": []
+        },
+        {
+          "slug": "vinner-chg-wash-cloths",
+          "code": "INFECTION CONTROL 07",
+          "itemNo": "PLANNED",
+          "title": "VINNER CHG Wash Cloths",
+          "displayName": {
+            "zh": "氯己定全身擦浴巾",
+            "en": "VINNER CHG Wash Cloths"
+          },
+          "comingSoon": true,
+          "group": {
+            "zh": "皮肤除菌系列",
+            "en": "Skin Antisepsis"
+          },
+          "image": "/assets/planned-products/infection-chg-care.jpg",
+          "alt": "护理人员为患者提供氯己定免洗全身擦浴护理",
+          "body": {
+            "zh": "含氯己定的免洗型身体擦浴巾，用于患者日常皮肤清洁及医疗环境中的皮肤去定植护理。",
+            "en": "No-rinse chlorhexidine wash cloths designed for routine patient cleansing and skin decolonization support in healthcare settings."
+          },
+          "intro": {
+            "zh": "含氯己定的免洗型身体擦浴巾，用于患者日常皮肤清洁及医疗环境中的皮肤去定植护理。",
+            "en": "No-rinse chlorhexidine wash cloths designed for routine patient cleansing and skin decolonization support in healthcare settings."
+          },
+          "gallery": [
+            {
+              "image": "/assets/planned-products/infection-chg-care.jpg",
+              "alt": "护理人员为患者提供氯己定免洗全身擦浴护理"
+            }
+          ],
+          "highlights": [
+            {
+              "zh": "氯己定护理配方",
+              "en": "Chlorhexidine care formula"
+            },
+            {
+              "zh": "免洗擦浴",
+              "en": "No-rinse cleansing"
+            },
+            {
+              "zh": "全身护理",
+              "en": "Whole-body care"
+            },
+            {
+              "zh": "去定植支持",
+              "en": "Decolonization support"
+            }
+          ],
+          "features": [
+            {
+              "zh": "氯己定护理配方",
+              "en": "Chlorhexidine care formula"
+            },
+            {
+              "zh": "免洗擦浴",
+              "en": "No-rinse cleansing"
+            },
+            {
+              "zh": "全身护理",
+              "en": "Whole-body care"
+            },
+            {
+              "zh": "去定植支持",
+              "en": "Decolonization support"
+            }
+          ],
+          "applications": [
+            {
+              "zh": "重症护理",
+              "en": "Critical care"
+            },
+            {
+              "zh": "术前患者护理",
+              "en": "Preoperative patient care"
+            },
+            {
+              "zh": "日常床旁清洁",
+              "en": "Routine bedside cleansing"
+            }
+          ],
+          "killPerformance": [],
+          "usage": [],
+          "specs": [],
+          "downloads": []
         }
       ]
     },
     {
-      "index": "02 / CAREKEEP",
+      "index": "02 / CLEANSING & CARE",
+      "indexLabel": {
+        "zh": "02 / 清洁护理",
+        "en": "02 / CLEANSING & CARE"
+      },
       "name": {
-        "zh": "PERSONAL CARE",
-        "en": "PERSONAL CARE"
+        "zh": "清洁护理",
+        "en": "CLEANSING & CARE"
       },
       "slug": "carekeep",
-      "brand": "CAREKEEP",
+      "brand": "CLEANSING & CARE",
       "title": {
-        "zh": "个人护理清洁湿巾",
-        "en": "Personal care cleansing wipes"
+        "zh": "化妆品，个人护理与清洁",
+        "en": "Cosmetic, Personal Care and Cleansing"
       },
       "summary": {
-        "zh": "面向床旁护理、老年护理、家庭护理和外出清洁，强调温和肤感、免冲洗效率和使用尊严。",
-        "en": "For bedside care, elderly care, home care, and on-the-go cleansing, with a focus on gentle skin feel, no-rinse efficiency, and dignified use."
+        "zh": "温和清洁与护理，兼顾免冲洗效率和舒适体验。",
+        "en": "Gentle cleansing and care with no-rinse efficiency and comfort."
       },
       "products": {
-        "zh": "主要包括免冲洗沐浴湿巾、沐浴手套、洗发浴帽、乳霜护理湿巾和纯水婴儿湿巾。",
-        "en": "Includes no-rinse bathing wipes, bathing gloves, shampoo caps, cream care wipes, and pure water baby wipes."
+        "zh": "主要包括免冲洗沐浴湿巾、沐浴手套、洗发浴帽、失禁护理湿巾和纯水湿巾。",
+        "en": "Includes no-rinse bathing wipes, bathing gloves, shampoo caps, continence care wipes, and pure water wipes."
       },
       "detail": {
-        "zh": "CAREKEEP 更关注皮肤接触体验、含液量、布感和包装便利性。它覆盖床旁沐浴、头发清洁、失禁皮肤护理、母婴清洁和家庭温和清洁等场景。",
-        "en": "CAREKEEP centers on skin contact, liquid loading, cloth feel, and pack convenience across bedside bathing, hair cleansing, incontinence skin care, baby care, and gentle family cleansing."
+        "zh": "清洁护理系列更关注皮肤接触体验、含液量、布感和包装便利性。它覆盖床旁沐浴、头发清洁、失禁皮肤护理、母婴清洁和家庭温和清洁等场景。",
+        "en": "CLEANSING & CARE centers on skin contact, liquid loading, cloth feel, and pack convenience across bedside bathing, hair cleansing, incontinence skin care, baby care, and gentle family cleansing."
       },
       "image": "/assets/gallery-care.jpg",
-      "alt": "个人护理清洁湿巾使用场景",
+      "alt": "VINNER 清洁护理湿巾与个人护理使用场景",
       "uses": [
         {
           "zh": "卧床、术后、老年和长期照护人群",
@@ -680,7 +839,7 @@
                 "zh": "安全数据表",
                 "en": "Safety Data Sheet"
               },
-              "href": "/assets/uploads/vinnerlove-rinse-free-bathing-wipes-sds.pdf"
+              "href": ""
             },
             {
               "type": "Brochure",
@@ -690,7 +849,11 @@
               },
               "href": "/assets/uploads/vinnerlove-rinse-free-bathing-wipes-brochure.pdf"
             }
-          ]
+          ],
+          "group": {
+            "zh": "免洗清洁系列",
+            "en": "No-Rinse Cleansing Range"
+          }
         },
         {
           "slug": "vinnerlove-rinse-free-bathing-gloves",
@@ -814,7 +977,7 @@
                 "zh": "安全数据表",
                 "en": "Safety Data Sheet"
               },
-              "href": "/assets/uploads/vinnerlove-rinse-free-bathing-gloves-sds.pdf"
+              "href": ""
             },
             {
               "type": "Brochure",
@@ -824,7 +987,11 @@
               },
               "href": "/assets/uploads/vinnerlove-rinse-free-bathing-gloves-brochure.pdf"
             }
-          ]
+          ],
+          "group": {
+            "zh": "免洗清洁系列",
+            "en": "No-Rinse Cleansing Range"
+          }
         },
         {
           "slug": "vinnerlove-rinse-free-shampoo-cap",
@@ -952,7 +1119,7 @@
                 "zh": "安全数据表",
                 "en": "Safety Data Sheet"
               },
-              "href": "/assets/uploads/vinnerlove-shampoo-cap-sds.pdf"
+              "href": ""
             },
             {
               "type": "Brochure",
@@ -962,13 +1129,17 @@
               },
               "href": "/assets/uploads/vinnerlove-shampoo-cap-brochure.pdf"
             }
-          ]
+          ],
+          "group": {
+            "zh": "免洗清洁系列",
+            "en": "No-Rinse Cleansing Range"
+          }
         },
         {
           "slug": "vinnerlove-cream-care-wipes",
           "code": "VINNERLOVE 04",
           "itemNo": "VLCONCW25",
-          "title": "VINNERLOVE Cream Care Wipes",
+          "title": "VINNERLOVE Continence Care Wipes",
           "image": "/assets/carekeep/vlconcw25-pic1.png",
           "alt": "VINNERLOVE 失禁护理乳霜湿巾包装正反面",
           "body": {
@@ -977,7 +1148,7 @@
           },
           "intro": {
             "zh": "VINNERLOVE 失禁护理乳霜湿巾适用于失禁护理、脆弱老年肌肤、皮肤褶皱、MASD 易感肌和压疮风险护理，通过一个简单步骤提供清洁、保湿、舒缓和屏障防护。",
-            "en": "VINNERLOVE Cream Care Wipes support incontinence care, fragile elderly skin, skin folds, MASD-prone skin, and pressure-injury risk care with cleansing, moisturizing, soothing, and barrier protection in one step."
+            "en": "VINNERLOVE Continence Care Wipes support incontinence care, fragile elderly skin, skin folds, MASD-prone skin, and pressure-injury risk care with cleansing, moisturizing, soothing, and barrier protection in one step."
           },
           "gallery": [
             {
@@ -1090,7 +1261,7 @@
                 "zh": "安全数据表",
                 "en": "Safety Data Sheet"
               },
-              "href": "/assets/uploads/vinnerlove-cream-care-wipes-sds.pdf"
+              "href": ""
             },
             {
               "type": "Brochure",
@@ -1100,22 +1271,26 @@
               },
               "href": "/assets/uploads/vinnerlove-cream-care-wipes-brochure.pdf"
             }
-          ]
+          ],
+          "group": {
+            "zh": "乳霜护理系列",
+            "en": "Cream Care Range"
+          }
         },
         {
           "slug": "homekeep-pure-water-baby-wipes",
           "code": "HOMEKEEP 01",
           "itemNo": "HKPWW60",
-          "title": "HOMEKEEP Pure Water Baby Wipes",
+          "title": "HOMEKEEP Pure Water Wipes",
           "image": "/assets/carekeep/hkpww60-pic1.png",
           "alt": "HOMEKEEP 纯水婴儿湿巾包装",
           "body": {
             "zh": "植物基纯水婴儿湿巾，专为新生儿、敏感肌和全家温和清洁设计。",
-            "en": "Plant-based pure water baby wipes designed for newborns, sensitive skin, and gentle family cleansing."
+            "en": "Plant-based pure water wipes designed for newborns, sensitive skin, and gentle family cleansing."
           },
           "intro": {
             "zh": "HOMEKEEP 纯水婴儿湿巾采用 99%+ 纯净水、100% 植物基纤维和极简配方，适合宝宝、敏感肌、老人及全家日常温和清洁护理。",
-            "en": "HOMEKEEP Pure Water Baby Wipes use 99%+ purified water, 100% plant-based fibers, and a minimal formula for babies, sensitive skin, elderly users, and gentle daily family care."
+            "en": "HOMEKEEP Pure Water Wipes use 99%+ purified water, 100% plant-based fibers, and a minimal formula for babies, sensitive skin, elderly users, and gentle daily family care."
           },
           "gallery": [
             {
@@ -1219,6 +1394,14 @@
           ],
           "downloads": [
             {
+              "type": "SDS",
+              "title": {
+                "zh": "安全数据表",
+                "en": "Safety Data Sheet"
+              },
+              "href": ""
+            },
+            {
               "type": "Brochure",
               "title": {
                 "zh": "产品手册",
@@ -1226,33 +1409,41 @@
               },
               "href": "/assets/uploads/homekeep-pure-water-baby-wipes-brochure.pdf"
             }
-          ]
+          ],
+          "group": {
+            "zh": "婴儿纯水护理",
+            "en": "Pure Water Baby Care"
+          }
         }
       ]
     },
     {
-      "index": "03 / INDUKEEP",
+      "index": "03 / INDUSTRIAL WIPING",
+      "indexLabel": {
+        "zh": "03 / 工业擦拭",
+        "en": "03 / INDUSTRIAL WIPING"
+      },
       "name": {
         "zh": "工业擦拭",
         "en": "INDUSTRIAL WIPING"
       },
       "slug": "indukeep",
-      "brand": "INDUKEEP",
+      "brand": "INDUSTRIAL WIPING",
       "title": {
-        "zh": "工业高强度擦拭",
-        "en": "Industrial high-strength wiping"
+        "zh": "工业擦拭巾，强力去污与洁净室擦拭",
+        "en": "Industrial Wipes, Heavy-Duty Cleaning & Cleanroom Wiping"
       },
       "summary": {
-        "zh": "面向设备维护、油污处理、喷涂前处理和车间清洁，强调吸附、耐撕裂和低尘表现。",
-        "en": "For equipment maintenance, oil removal, pre-coating preparation, and workshop cleaning, emphasizing pickup, tear resistance, and low-lint performance."
+        "zh": "工业清洁、强力去污与洁净室精密擦拭。",
+        "en": "Industrial cleaning, heavy-duty soil removal, and precision cleanroom wiping."
       },
       "products": {
-        "zh": "主要包括重油污擦拭布和高强度工业擦拭解决方案。",
-        "en": "Includes heavy-duty oil-removal wipes and durable industrial wiping solutions."
+        "zh": "规划中的产品覆盖通用工业擦拭、超强力去污和洁净室精密擦拭。",
+        "en": "The planned portfolio covers general-purpose industrial wiping, heavy-duty cleaning, and cleanroom precision wiping."
       },
       "detail": {
-        "zh": "INDUKEEP 服务更粗重的作业现场，重点在湿态强度、耐溶剂、吸油能力和低尘控制之间取得平衡，帮助工厂减少返工和材料浪费。",
-        "en": "INDUKEEP serves demanding work sites by balancing wet strength, solvent resistance, oil pickup, and low-lint control, helping plants reduce rework and material waste."
+        "zh": "工业擦拭系列服务更粗重的作业现场，重点在湿态强度、耐溶剂、吸油能力和低尘控制之间取得平衡，帮助工厂减少返工和材料浪费。",
+        "en": "INDUSTRIAL WIPING serves demanding work sites by balancing wet strength, solvent resistance, oil pickup, and low-lint control, helping plants reduce rework and material waste."
       },
       "image": "/assets/gallery-industrial.jpg",
       "alt": "工业擦拭和设备维护场景",
@@ -1273,149 +1464,280 @@
       "single": true,
       "skus": [
         {
-          "slug": "heavy-duty-oil-removal-wipes",
-          "code": "INDUKEEP 01",
-          "itemNo": "IK-HDO-500B",
-          "title": "Heavy Duty Oil Removal Wipes",
-          "image": "/assets/sku-oil-removal.jpg",
-          "alt": "Heavy Duty Oil Removal Wipes 产品场景",
+          "slug": "general-purpose-industrial-wipes",
+          "code": "INDUSTRIAL WIPING 01",
+          "itemNo": "PLANNED",
+          "title": "General-Purpose Industrial Wipes",
+          "displayName": {
+            "zh": "通用工业擦拭巾",
+            "en": "General-Purpose Industrial Wipes"
+          },
+          "comingSoon": true,
+          "image": "/assets/planned-products/industrial-general.jpg",
+          "alt": "工业厂房机械设备与通用工业擦拭维护环境",
           "body": {
-            "zh": "面向机械维修、设备保养、喷涂前处理和油污重清洁的高强度工业擦拭产品。",
-            "en": "A heavy-duty wipe for machinery repair, maintenance, pre-coating prep, and severe oil removal."
+            "zh": "专为日常工业清洁与维护设计的高强度、多用途擦拭巾。",
+            "en": "High-strength, versatile wipes designed for everyday industrial cleaning and maintenance."
           },
           "intro": {
-            "zh": "高吸油、耐撕裂、耐溶剂的工业擦拭布，面向高强度维护、喷涂前处理和油污重清洁。",
-            "en": "A high-absorbency, tear-resistant, solvent-resistant industrial wipe for heavy maintenance, pre-coating prep, and severe oil removal."
+            "zh": "专为日常工业清洁与维护设计的高强度、多用途擦拭巾。",
+            "en": "High-strength, versatile wipes designed for everyday industrial cleaning and maintenance."
           },
           "gallery": [
             {
-              "image": "/assets/sku-oil-removal.jpg",
-              "alt": "Heavy Duty Oil Removal Wipes 工业维修场景"
-            },
-            {
-              "image": "/assets/indukeep-industrial.jpg",
-              "alt": "工业设备维护与洁净作业"
-            },
-            {
-              "image": "/assets/gallery-industrial.jpg",
-              "alt": "制造现场擦拭和维护"
+              "image": "/assets/planned-products/industrial-general.jpg",
+              "alt": "工业厂房机械设备与通用工业擦拭维护环境"
             }
           ],
           "highlights": [
             {
-              "zh": "高吸油能力，适合油污、润滑脂和设备维护残留。",
-              "en": "High oil absorbency for oil, grease, and maintenance residue."
+              "zh": "高吸水吸油",
+              "en": "High absorption"
             },
             {
-              "zh": "增强复合结构，湿态擦拭不易破裂。",
-              "en": "Reinforced composite structure resists tearing during wet wiping."
+              "zh": "湿强度高",
+              "en": "Strong when wet"
             },
             {
-              "zh": "大包装适合车间、产线和维修站点集中补给。",
-              "en": "Bulk pack supports centralized supply for workshops, lines, and service bays."
+              "zh": "低掉絮",
+              "en": "Low lint"
+            },
+            {
+              "zh": "兼容常用清洁剂",
+              "en": "Chemical compatible"
             }
           ],
-          "usage": [
+          "features": [
             {
-              "zh": "按作业区域取用擦拭布，避免将重油污带入洁净工序。",
-              "en": "Take wipes by work zone to avoid carrying heavy soil into cleaner processes."
+              "zh": "高吸水吸油",
+              "en": "High absorption"
             },
             {
-              "zh": "先去除大面积油污，再对关键接触面进行二次精擦。",
-              "en": "Remove bulk oil first, then perform a second fine wipe on critical contact surfaces."
+              "zh": "湿强度高",
+              "en": "Strong when wet"
             },
             {
-              "zh": "含油废弃物按工厂 EHS 规范分类处理。",
-              "en": "Dispose of oil-contaminated waste according to plant EHS procedures."
+              "zh": "低掉絮",
+              "en": "Low lint"
+            },
+            {
+              "zh": "兼容常用清洁剂",
+              "en": "Chemical compatible"
             }
           ],
-          "specs": [
+          "applications": [
             {
-              "label": {
-                "zh": "规格",
-                "en": "Format"
-              },
-              "value": {
-                "zh": "320 x 380 mm / 500 wipes bulk pack",
-                "en": "320 x 380 mm / 500 wipes bulk pack"
-              }
+              "zh": "设备与工作台清洁",
+              "en": "Equipment and workstation cleaning"
             },
             {
-              "label": {
-                "zh": "基材",
-                "en": "Substrate"
-              },
-              "value": {
-                "zh": "木浆复合增强低尘工业布",
-                "en": "Wood-pulp composite low-dust industrial cloth"
-              }
+              "zh": "工具与零部件擦拭",
+              "en": "Tools and component wiping"
             },
             {
-              "label": {
-                "zh": "性能",
-                "en": "Performance"
-              },
-              "value": {
-                "zh": "high oil absorbency / solvent resistant / tear resistant",
-                "en": "high oil absorbency / solvent resistant / tear resistant"
-              }
+              "zh": "油污与液体吸收",
+              "en": "Oil and spill cleanup"
             }
           ],
-          "downloads": [
+          "killPerformance": [],
+          "usage": [],
+          "specs": [],
+          "downloads": []
+        },
+        {
+          "slug": "heavy-duty-cleaning-wipes",
+          "code": "INDUSTRIAL WIPING 02",
+          "itemNo": "PLANNED",
+          "title": "Heavy-Duty Cleaning Wipes",
+          "displayName": {
+            "zh": "超强力去污湿巾",
+            "en": "Heavy-Duty Cleaning Wipes"
+          },
+          "comingSoon": true,
+          "image": "/assets/planned-products/industrial-heavy-duty.jpg",
+          "alt": "维修人员在工业车间进行重油污设备维护清洁",
+          "body": {
+            "zh": "预浸高效清洁配方，用于快速去除顽固油脂、污垢及工业残留。",
+            "en": "Pre-saturated cleaning wipes developed to quickly remove stubborn grease, grime and industrial residues."
+          },
+          "intro": {
+            "zh": "预浸高效清洁配方，用于快速去除顽固油脂、污垢及工业残留。",
+            "en": "Pre-saturated cleaning wipes developed to quickly remove stubborn grease, grime and industrial residues."
+          },
+          "gallery": [
             {
-              "type": "SDS",
-              "title": {
-                "zh": "安全数据表",
-                "en": "Safety Data Sheet"
-              },
-              "href": ""
-            },
-            {
-              "type": "Brochure",
-              "title": {
-                "zh": "产品说明书",
-                "en": "Product brochure"
-              },
-              "href": ""
-            },
-            {
-              "type": "Poster",
-              "title": {
-                "zh": "车间应用海报",
-                "en": "Workshop poster"
-              },
-              "href": ""
+              "image": "/assets/planned-products/industrial-heavy-duty.jpg",
+              "alt": "维修人员在工业车间进行重油污设备维护清洁"
             }
-          ]
+          ],
+          "highlights": [
+            {
+              "zh": "强效去污",
+              "en": "Powerful cleaning"
+            },
+            {
+              "zh": "即取即用",
+              "en": "Ready to use"
+            },
+            {
+              "zh": "高强耐磨",
+              "en": "Strong and durable"
+            },
+            {
+              "zh": "擦后低残留",
+              "en": "Low residue"
+            }
+          ],
+          "features": [
+            {
+              "zh": "强效去污",
+              "en": "Powerful cleaning"
+            },
+            {
+              "zh": "即取即用",
+              "en": "Ready to use"
+            },
+            {
+              "zh": "高强耐磨",
+              "en": "Strong and durable"
+            },
+            {
+              "zh": "擦后低残留",
+              "en": "Low residue"
+            }
+          ],
+          "applications": [
+            {
+              "zh": "设备维修与保养",
+              "en": "Equipment maintenance"
+            },
+            {
+              "zh": "汽车与车间清洁",
+              "en": "Automotive and workshop cleaning"
+            },
+            {
+              "zh": "重油污清除",
+              "en": "Heavy soil removal"
+            }
+          ],
+          "killPerformance": [],
+          "usage": [],
+          "specs": [],
+          "downloads": []
+        },
+        {
+          "slug": "cleanroom-precision-wipes",
+          "code": "INDUSTRIAL WIPING 03",
+          "itemNo": "PLANNED",
+          "title": "Cleanroom Precision Wipes",
+          "displayName": {
+            "zh": "洁净室精密擦拭巾",
+            "en": "Cleanroom Precision Wipes"
+          },
+          "comingSoon": true,
+          "image": "/assets/planned-products/industrial-cleanroom.jpg",
+          "alt": "穿洁净服的工作人员在受控环境内操作精密制造设备",
+          "body": {
+            "zh": "为受控环境和精密制造设计的低颗粒、低掉絮专业擦拭产品。",
+            "en": "Low-particle, low-lint wipes designed for controlled environments and precision manufacturing."
+          },
+          "intro": {
+            "zh": "为受控环境和精密制造设计的低颗粒、低掉絮专业擦拭产品。",
+            "en": "Low-particle, low-lint wipes designed for controlled environments and precision manufacturing."
+          },
+          "gallery": [
+            {
+              "image": "/assets/planned-products/industrial-cleanroom.jpg",
+              "alt": "穿洁净服的工作人员在受控环境内操作精密制造设备"
+            }
+          ],
+          "highlights": [
+            {
+              "zh": "低掉絮、低颗粒释放",
+              "en": "Low lint and particle generation"
+            },
+            {
+              "zh": "低残留、低离子污染",
+              "en": "Low residue and ionic contamination"
+            },
+            {
+              "zh": "柔软表面，不易刮伤",
+              "en": "Soft, non-abrasive surface"
+            },
+            {
+              "zh": "兼容常用洁净室溶剂",
+              "en": "Compatible with common cleanroom solvents"
+            }
+          ],
+          "features": [
+            {
+              "zh": "低掉絮、低颗粒释放",
+              "en": "Low lint and particle generation"
+            },
+            {
+              "zh": "低残留、低离子污染",
+              "en": "Low residue and ionic contamination"
+            },
+            {
+              "zh": "柔软表面，不易刮伤",
+              "en": "Soft, non-abrasive surface"
+            },
+            {
+              "zh": "兼容常用洁净室溶剂",
+              "en": "Compatible with common cleanroom solvents"
+            }
+          ],
+          "applications": [
+            {
+              "zh": "半导体与电子制造",
+              "en": "Semiconductor and electronics manufacturing"
+            },
+            {
+              "zh": "光学产品与精密仪器",
+              "en": "Optics and precision instruments"
+            },
+            {
+              "zh": "医疗器械与实验室环境",
+              "en": "Medical device production and laboratories"
+            }
+          ],
+          "killPerformance": [],
+          "usage": [],
+          "specs": [],
+          "downloads": []
         }
       ]
     },
     {
       "index": "04 / OEM/ODM",
+      "indexLabel": {
+        "zh": "04 / 定制开发",
+        "en": "04 / OEM/ODM"
+      },
       "name": {
-        "zh": "定制开发与品牌代工",
-        "en": "OEM / ODM"
+        "zh": "定制开发",
+        "en": "OEM/ODM"
       },
       "slug": "oem-odm",
       "brand": "OEM/ODM",
       "title": {
-        "zh": "定制开发与品牌代工",
-        "en": "Custom development and private-label manufacturing"
+        "zh": "定制产品，品牌代工",
+        "en": "Custom Products & Private-Label Manufacturing"
       },
       "summary": {
         "zh": "面向品牌客户、渠道商和区域项目，从需求拆解、样品打样、包装开发到批量交付，提供湿巾产品 OEM/ODM 支持。",
         "en": "For brands, distributors, and regional programs, supporting wipes OEM/ODM from requirement mapping and sampling to packaging development and batch delivery."
       },
       "products": {
-        "zh": "覆盖配方定制、基材选择、尺寸规格、包装形式、标签文件和合规资料。",
-        "en": "Covers formula customization, substrate selection, size format, packaging, labeling, and compliance documents."
+        "zh": "覆盖感染控制、化妆品类湿巾和工业擦拭三大方向，支持配方、基材、规格、包装和合规资料协同开发。",
+        "en": "Covers infection control, cosmetic and personal care wipes, and industrial wiping with co-development across formula, substrate, format, packaging, and compliance documents."
       },
       "detail": {
         "zh": "OEM/ODM 以客户目标市场和使用场景为起点，协同研发、生产、包装和法规资料，帮助客户把概念快速转化为可量产、可交付、可备案的湿巾产品。",
         "en": "OEM/ODM starts from the customer's target market and use case, coordinating R&D, production, packaging, and regulatory documents to turn ideas into scalable wipe products."
       },
-      "image": "/assets/gallery-product.jpg",
-      "alt": "湿巾 OEM ODM 定制开发与包装交付",
+      "image": "/assets/oem-hero.png",
+      "alt": "VINNER OEM 湿巾定制包装",
       "uses": [
         {
           "zh": "品牌定制、渠道自有品牌和跨区域项目",
@@ -1430,7 +1752,1566 @@
           "en": "Sampling, compliance documents, batch delivery, and repeat-order support"
         }
       ],
-      "skus": []
+      "skus": [
+        {
+          "slug": "oem-70-ipa-disinfectant-wipes",
+          "code": "OEM INFECTION 01",
+          "itemNo": "OEM/ODM",
+          "title": "70% IPA Disinfectant Wipes",
+          "displayName": {
+            "zh": "含醇消毒湿巾（70% 异丙醇）",
+            "en": "70% IPA Disinfectant Wipes"
+          },
+          "comingSoon": true,
+          "cardLabel": {
+            "zh": "定制开发",
+            "en": "OEM/ODM"
+          },
+          "group": {
+            "zh": "感染控制",
+            "en": "Infection Control"
+          },
+          "image": "/assets/oem-products/70-percent-ipa-disinfectant-wipes.png",
+          "alt": {
+            "zh": "Gloved hands disinfecting a clean work surface",
+            "en": "Gloved hands disinfecting a clean work surface"
+          },
+          "body": {
+            "zh": "70% 异丙醇体系即用型消毒湿巾，可按目标市场调整尺寸、含液量、包装和标签文件。",
+            "en": "Ready-to-use 70% IPA disinfectant wipes with customizable sheet size, liquid loading, pack format, and labeling for target markets."
+          },
+          "intro": {
+            "zh": "70% 异丙醇体系即用型消毒湿巾，可按目标市场调整尺寸、含液量、包装和标签文件。",
+            "en": "Ready-to-use 70% IPA disinfectant wipes with customizable sheet size, liquid loading, pack format, and labeling for target markets."
+          },
+          "gallery": [
+            {
+              "image": "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=900&q=80",
+              "alt": "Gloved hands disinfecting a clean work surface"
+            }
+          ],
+          "highlights": [
+            {
+              "zh": "70% IPA 体系",
+              "en": "70% IPA system"
+            },
+            {
+              "zh": "快速挥发",
+              "en": "Fast evaporation"
+            },
+            {
+              "zh": "低残留擦拭",
+              "en": "Low-residue wiping"
+            }
+          ],
+          "features": [
+            {
+              "zh": "70% IPA 体系",
+              "en": "70% IPA system"
+            },
+            {
+              "zh": "快速挥发",
+              "en": "Fast evaporation"
+            },
+            {
+              "zh": "低残留擦拭",
+              "en": "Low-residue wiping"
+            }
+          ],
+          "applications": [
+            {
+              "zh": "耐醇设备表面",
+              "en": "Alcohol-compatible equipment"
+            },
+            {
+              "zh": "医疗及实验室台面",
+              "en": "Healthcare and lab benches"
+            },
+            {
+              "zh": "渠道自有品牌",
+              "en": "Private-label programs"
+            }
+          ],
+          "specs": [],
+          "downloads": []
+        },
+        {
+          "slug": "oem-alcohol-free-surface-disinfectant-wipes",
+          "code": "OEM INFECTION 02",
+          "itemNo": "OEM/ODM",
+          "title": "Alcohol-Free Surface Disinfectant Wipes",
+          "displayName": {
+            "zh": "无醇物表消毒湿巾（季铵盐体系）",
+            "en": "Alcohol-Free Surface Disinfectant Wipes"
+          },
+          "comingSoon": true,
+          "cardLabel": {
+            "zh": "定制开发",
+            "en": "OEM/ODM"
+          },
+          "group": {
+            "zh": "感染控制",
+            "en": "Infection Control"
+          },
+          "image": "/assets/oem-products/alcohol-free-surface-disinfectant-wipes.png",
+          "alt": {
+            "zh": "Gloved hands disinfecting a clean work surface",
+            "en": "Gloved hands disinfecting a clean work surface"
+          },
+          "body": {
+            "zh": "季铵盐体系无醇物表湿巾，适合硬质非多孔表面的清洁消毒与日常感染控制项目。",
+            "en": "Alcohol-free QAC surface wipes for hard, non-porous surface cleaning, disinfection, and routine infection-control programs."
+          },
+          "intro": {
+            "zh": "季铵盐体系无醇物表湿巾，适合硬质非多孔表面的清洁消毒与日常感染控制项目。",
+            "en": "Alcohol-free QAC surface wipes for hard, non-porous surface cleaning, disinfection, and routine infection-control programs."
+          },
+          "gallery": [
+            {
+              "image": "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=900&q=80",
+              "alt": "Gloved hands disinfecting a clean work surface"
+            }
+          ],
+          "highlights": [
+            {
+              "zh": "无醇配方",
+              "en": "Alcohol-free formula"
+            },
+            {
+              "zh": "季铵盐体系",
+              "en": "QAC system"
+            },
+            {
+              "zh": "材料兼容性友好",
+              "en": "Material-friendly profile"
+            }
+          ],
+          "features": [
+            {
+              "zh": "无醇配方",
+              "en": "Alcohol-free formula"
+            },
+            {
+              "zh": "季铵盐体系",
+              "en": "QAC system"
+            },
+            {
+              "zh": "材料兼容性友好",
+              "en": "Material-friendly profile"
+            }
+          ],
+          "applications": [
+            {
+              "zh": "公共设施",
+              "en": "Public facilities"
+            },
+            {
+              "zh": "护理机构",
+              "en": "Care facilities"
+            },
+            {
+              "zh": "高频接触面",
+              "en": "High-touch surfaces"
+            }
+          ],
+          "specs": [],
+          "downloads": []
+        },
+        {
+          "slug": "oem-sporicidal-paa-wipes",
+          "code": "OEM INFECTION 03",
+          "itemNo": "OEM/ODM",
+          "title": "Sporicidal PAA Wipes",
+          "displayName": {
+            "zh": "除芽孢湿巾（PAA）",
+            "en": "Sporicidal PAA Wipes"
+          },
+          "comingSoon": true,
+          "cardLabel": {
+            "zh": "定制开发",
+            "en": "OEM/ODM"
+          },
+          "group": {
+            "zh": "感染控制",
+            "en": "Infection Control"
+          },
+          "image": "/assets/oem-products/sporicidal-paa-wipes.png",
+          "alt": {
+            "zh": "Controlled clinical and laboratory work environment",
+            "en": "Controlled clinical and laboratory work environment"
+          },
+          "body": {
+            "zh": "PAA 方向除芽孢湿巾项目，可围绕有效成分、基材强度和包装阻隔性进行联合开发。",
+            "en": "PAA-oriented sporicidal wipe programs for co-development around actives, substrate strength, and pack barrier performance."
+          },
+          "intro": {
+            "zh": "PAA 方向除芽孢湿巾项目，可围绕有效成分、基材强度和包装阻隔性进行联合开发。",
+            "en": "PAA-oriented sporicidal wipe programs for co-development around actives, substrate strength, and pack barrier performance."
+          },
+          "gallery": [
+            {
+              "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=900&q=80",
+              "alt": "Controlled clinical and laboratory work environment"
+            }
+          ],
+          "highlights": [
+            {
+              "zh": "PAA 方向",
+              "en": "PAA-oriented"
+            },
+            {
+              "zh": "高等级消毒项目",
+              "en": "High-level disinfection projects"
+            },
+            {
+              "zh": "包装阻隔可定制",
+              "en": "Customizable barrier packaging"
+            }
+          ],
+          "features": [
+            {
+              "zh": "PAA 方向",
+              "en": "PAA-oriented"
+            },
+            {
+              "zh": "高等级消毒项目",
+              "en": "High-level disinfection projects"
+            },
+            {
+              "zh": "包装阻隔可定制",
+              "en": "Customizable barrier packaging"
+            }
+          ],
+          "applications": [
+            {
+              "zh": "重点风险区域",
+              "en": "Higher-risk areas"
+            },
+            {
+              "zh": "医疗消毒项目",
+              "en": "Healthcare disinfection projects"
+            },
+            {
+              "zh": "法规资料协同",
+              "en": "Regulatory document support"
+            }
+          ],
+          "specs": [],
+          "downloads": []
+        },
+        {
+          "slug": "oem-hydrogen-peroxide-disinfectant-wipes",
+          "code": "OEM INFECTION 04",
+          "itemNo": "OEM/ODM",
+          "title": "Hydrogen Peroxide Disinfectant Wipes",
+          "displayName": {
+            "zh": "过氧化氢消毒湿巾",
+            "en": "Hydrogen Peroxide Disinfectant Wipes"
+          },
+          "comingSoon": true,
+          "cardLabel": {
+            "zh": "定制开发",
+            "en": "OEM/ODM"
+          },
+          "group": {
+            "zh": "感染控制",
+            "en": "Infection Control"
+          },
+          "image": "/assets/oem-products/hydrogen-peroxide-disinfectant-wipes.png",
+          "alt": {
+            "zh": "Controlled clinical and laboratory work environment",
+            "en": "Controlled clinical and laboratory work environment"
+          },
+          "body": {
+            "zh": "过氧化氢体系消毒湿巾，支持针对表面兼容性、气味体验和残留控制的定制开发。",
+            "en": "Hydrogen peroxide disinfectant wipes supporting customization for surface compatibility, odor profile, and residue control."
+          },
+          "intro": {
+            "zh": "过氧化氢体系消毒湿巾，支持针对表面兼容性、气味体验和残留控制的定制开发。",
+            "en": "Hydrogen peroxide disinfectant wipes supporting customization for surface compatibility, odor profile, and residue control."
+          },
+          "gallery": [
+            {
+              "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=900&q=80",
+              "alt": "Controlled clinical and laboratory work environment"
+            }
+          ],
+          "highlights": [
+            {
+              "zh": "过氧化氢体系",
+              "en": "Hydrogen peroxide system"
+            },
+            {
+              "zh": "低气味方向",
+              "en": "Low-odor direction"
+            },
+            {
+              "zh": "残留控制",
+              "en": "Residue control"
+            }
+          ],
+          "features": [
+            {
+              "zh": "过氧化氢体系",
+              "en": "Hydrogen peroxide system"
+            },
+            {
+              "zh": "低气味方向",
+              "en": "Low-odor direction"
+            },
+            {
+              "zh": "残留控制",
+              "en": "Residue control"
+            }
+          ],
+          "applications": [
+            {
+              "zh": "医疗环境表面",
+              "en": "Healthcare surfaces"
+            },
+            {
+              "zh": "公共清洁消毒",
+              "en": "Public cleaning and disinfection"
+            },
+            {
+              "zh": "定制消毒方案",
+              "en": "Custom disinfection programs"
+            }
+          ],
+          "specs": [],
+          "downloads": []
+        },
+        {
+          "slug": "oem-2-chg-antiseptic-wipes",
+          "code": "OEM INFECTION 05",
+          "itemNo": "OEM/ODM",
+          "title": "2% CHG Antiseptic Wipes",
+          "displayName": {
+            "zh": "人体除菌湿巾（2% 氯己定体系）",
+            "en": "2% CHG Antiseptic Wipes"
+          },
+          "comingSoon": true,
+          "cardLabel": {
+            "zh": "定制开发",
+            "en": "OEM/ODM"
+          },
+          "group": {
+            "zh": "感染控制",
+            "en": "Infection Control"
+          },
+          "image": "/assets/oem-products/2-percent-chg-antiseptic-wipes.png",
+          "alt": {
+            "zh": "Controlled clinical and laboratory work environment",
+            "en": "Controlled clinical and laboratory work environment"
+          },
+          "body": {
+            "zh": "2% 氯己定体系人体除菌湿巾，可围绕皮肤接触体验、布感和独立包装形式做项目开发。",
+            "en": "2% CHG antiseptic wipes for project development around skin feel, cloth handfeel, and single-use packaging formats."
+          },
+          "intro": {
+            "zh": "2% 氯己定体系人体除菌湿巾，可围绕皮肤接触体验、布感和独立包装形式做项目开发。",
+            "en": "2% CHG antiseptic wipes for project development around skin feel, cloth handfeel, and single-use packaging formats."
+          },
+          "gallery": [
+            {
+              "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=900&q=80",
+              "alt": "Controlled clinical and laboratory work environment"
+            }
+          ],
+          "highlights": [
+            {
+              "zh": "2% CHG 体系",
+              "en": "2% CHG system"
+            },
+            {
+              "zh": "皮肤接触体验",
+              "en": "Skin-contact experience"
+            },
+            {
+              "zh": "独立包装可选",
+              "en": "Single-use packs available"
+            }
+          ],
+          "features": [
+            {
+              "zh": "2% CHG 体系",
+              "en": "2% CHG system"
+            },
+            {
+              "zh": "皮肤接触体验",
+              "en": "Skin-contact experience"
+            },
+            {
+              "zh": "独立包装可选",
+              "en": "Single-use packs available"
+            }
+          ],
+          "applications": [
+            {
+              "zh": "人体皮肤除菌",
+              "en": "Skin antisepsis"
+            },
+            {
+              "zh": "护理准备",
+              "en": "Care preparation"
+            },
+            {
+              "zh": "院内项目开发",
+              "en": "Healthcare program development"
+            }
+          ],
+          "specs": [],
+          "downloads": []
+        },
+        {
+          "slug": "oem-chg-ipa-antiseptic-wipes",
+          "code": "OEM INFECTION 06",
+          "itemNo": "OEM/ODM",
+          "title": "2% CHG + 70% IPA Antiseptic Wipes",
+          "displayName": {
+            "zh": "复合醇除菌湿巾（2% 氯己定+70% 异丙醇）",
+            "en": "2% CHG + 70% IPA Antiseptic Wipes"
+          },
+          "comingSoon": true,
+          "cardLabel": {
+            "zh": "定制开发",
+            "en": "OEM/ODM"
+          },
+          "group": {
+            "zh": "感染控制",
+            "en": "Infection Control"
+          },
+          "image": "/assets/oem-products/2-percent-chg-70-percent-ipa-antiseptic-wipes.png",
+          "alt": {
+            "zh": "Controlled clinical and laboratory work environment",
+            "en": "Controlled clinical and laboratory work environment"
+          },
+          "body": {
+            "zh": "2% 氯己定与 70% 异丙醇复合体系，面向皮肤准备与高标准除菌场景的定制项目。",
+            "en": "A combined 2% CHG and 70% IPA system for skin preparation and high-standard antiseptic wipe programs."
+          },
+          "intro": {
+            "zh": "2% 氯己定与 70% 异丙醇复合体系，面向皮肤准备与高标准除菌场景的定制项目。",
+            "en": "A combined 2% CHG and 70% IPA system for skin preparation and high-standard antiseptic wipe programs."
+          },
+          "gallery": [
+            {
+              "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=900&q=80",
+              "alt": "Controlled clinical and laboratory work environment"
+            }
+          ],
+          "highlights": [
+            {
+              "zh": "复合醇体系",
+              "en": "Blended alcohol system"
+            },
+            {
+              "zh": "2% CHG + 70% IPA",
+              "en": "2% CHG + 70% IPA"
+            },
+            {
+              "zh": "快速干燥",
+              "en": "Fast drying"
+            }
+          ],
+          "features": [
+            {
+              "zh": "复合醇体系",
+              "en": "Blended alcohol system"
+            },
+            {
+              "zh": "2% CHG + 70% IPA",
+              "en": "2% CHG + 70% IPA"
+            },
+            {
+              "zh": "快速干燥",
+              "en": "Fast drying"
+            }
+          ],
+          "applications": [
+            {
+              "zh": "皮肤准备",
+              "en": "Skin preparation"
+            },
+            {
+              "zh": "临床护理流程",
+              "en": "Clinical care workflows"
+            },
+            {
+              "zh": "高标准除菌项目",
+              "en": "High-standard antiseptic programs"
+            }
+          ],
+          "specs": [],
+          "downloads": []
+        },
+        {
+          "slug": "oem-compatible-dry-wipes",
+          "code": "OEM INFECTION 07",
+          "itemNo": "OEM/ODM",
+          "title": "Disinfectant-Compatible Dry Wipes",
+          "displayName": {
+            "zh": "擦拭干巾",
+            "en": "Disinfectant-Compatible Dry Wipes"
+          },
+          "comingSoon": true,
+          "cardLabel": {
+            "zh": "定制开发",
+            "en": "OEM/ODM"
+          },
+          "group": {
+            "zh": "感染控制",
+            "en": "Infection Control"
+          },
+          "image": "/assets/oem-products/disinfectant-compatible-dry-wipes.png",
+          "alt": {
+            "zh": "Cleaning supplies prepared for surface wiping",
+            "en": "Cleaning supplies prepared for surface wiping"
+          },
+          "body": {
+            "zh": "可兼容异丙醇、乙醇、季铵盐、过氧化氢等多种消毒液的擦拭干巾，可定制基材和规格。",
+            "en": "Dry wipes compatible with IPA, ethanol, QAC, hydrogen peroxide, and other disinfectants, with customizable substrates and formats."
+          },
+          "intro": {
+            "zh": "可兼容异丙醇、乙醇、季铵盐、过氧化氢等多种消毒液的擦拭干巾，可定制基材和规格。",
+            "en": "Dry wipes compatible with IPA, ethanol, QAC, hydrogen peroxide, and other disinfectants, with customizable substrates and formats."
+          },
+          "gallery": [
+            {
+              "image": "https://images.unsplash.com/photo-1585421514738-01798e348b17?auto=format&fit=crop&w=900&q=80",
+              "alt": "Cleaning supplies prepared for surface wiping"
+            }
+          ],
+          "highlights": [
+            {
+              "zh": "多消毒液兼容",
+              "en": "Multi-disinfectant compatibility"
+            },
+            {
+              "zh": "低掉毛方向",
+              "en": "Low-lint direction"
+            },
+            {
+              "zh": "规格灵活",
+              "en": "Flexible formats"
+            }
+          ],
+          "features": [
+            {
+              "zh": "多消毒液兼容",
+              "en": "Multi-disinfectant compatibility"
+            },
+            {
+              "zh": "低掉毛方向",
+              "en": "Low-lint direction"
+            },
+            {
+              "zh": "规格灵活",
+              "en": "Flexible formats"
+            }
+          ],
+          "applications": [
+            {
+              "zh": "预浸项目",
+              "en": "Pre-saturation projects"
+            },
+            {
+              "zh": "现场配液擦拭",
+              "en": "On-site solution wiping"
+            },
+            {
+              "zh": "医疗与实验室",
+              "en": "Healthcare and labs"
+            }
+          ],
+          "specs": [],
+          "downloads": []
+        },
+        {
+          "slug": "oem-rinse-free-bathing-wipes",
+          "code": "OEM COSMETIC 01",
+          "itemNo": "OEM/ODM",
+          "title": "Rinse-Free Bathing Wipes",
+          "displayName": {
+            "zh": "免洗沐浴湿巾",
+            "en": "Rinse-Free Bathing Wipes"
+          },
+          "comingSoon": true,
+          "cardLabel": {
+            "zh": "定制开发",
+            "en": "OEM/ODM"
+          },
+          "group": {
+            "zh": "化妆品类湿巾",
+            "en": "Cosmetic & Personal Care Wipes"
+          },
+          "image": "/assets/oem-products/rinse-free-bathing-wipes.png",
+          "alt": {
+            "zh": "Personal care and skin cleansing products on a light surface",
+            "en": "Personal care and skin cleansing products on a light surface"
+          },
+          "body": {
+            "zh": "免洗沐浴湿巾可围绕成人护理、长期照护、旅行和应急清洁等场景定制配方与包装。",
+            "en": "Rinse-free bathing wipes customizable for adult care, long-term care, travel, and emergency cleansing scenarios."
+          },
+          "intro": {
+            "zh": "免洗沐浴湿巾可围绕成人护理、长期照护、旅行和应急清洁等场景定制配方与包装。",
+            "en": "Rinse-free bathing wipes customizable for adult care, long-term care, travel, and emergency cleansing scenarios."
+          },
+          "gallery": [
+            {
+              "image": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=900&q=80",
+              "alt": "Personal care and skin cleansing products on a light surface"
+            }
+          ],
+          "highlights": [
+            {
+              "zh": "免冲洗清洁",
+              "en": "No-rinse cleansing"
+            },
+            {
+              "zh": "可加保湿体系",
+              "en": "Moisturizing options"
+            },
+            {
+              "zh": "多片数包装",
+              "en": "Multiple pack counts"
+            }
+          ],
+          "features": [
+            {
+              "zh": "免冲洗清洁",
+              "en": "No-rinse cleansing"
+            },
+            {
+              "zh": "可加保湿体系",
+              "en": "Moisturizing options"
+            },
+            {
+              "zh": "多片数包装",
+              "en": "Multiple pack counts"
+            }
+          ],
+          "applications": [
+            {
+              "zh": "床旁沐浴",
+              "en": "Bedside bathing"
+            },
+            {
+              "zh": "旅行清洁",
+              "en": "Travel cleansing"
+            },
+            {
+              "zh": "成人护理品牌",
+              "en": "Adult-care brands"
+            }
+          ],
+          "specs": [],
+          "downloads": []
+        },
+        {
+          "slug": "oem-rinse-free-bathing-gloves",
+          "code": "OEM COSMETIC 02",
+          "itemNo": "OEM/ODM",
+          "title": "Rinse-Free Bathing Gloves",
+          "displayName": {
+            "zh": "免洗沐浴手套",
+            "en": "Rinse-Free Bathing Gloves"
+          },
+          "comingSoon": true,
+          "cardLabel": {
+            "zh": "定制开发",
+            "en": "OEM/ODM"
+          },
+          "group": {
+            "zh": "化妆品类湿巾",
+            "en": "Cosmetic & Personal Care Wipes"
+          },
+          "image": "/assets/oem-products/rinse-free-bathing-gloves.png",
+          "alt": {
+            "zh": "Personal care and skin cleansing products on a light surface",
+            "en": "Personal care and skin cleansing products on a light surface"
+          },
+          "body": {
+            "zh": "手套式免洗沐浴产品，便于护理人员控制擦拭动作，可定制厚度、尺寸和含液量。",
+            "en": "Glove-format rinse-free bathing products for controlled caregiver wiping, with customizable thickness, size, and liquid loading."
+          },
+          "intro": {
+            "zh": "手套式免洗沐浴产品，便于护理人员控制擦拭动作，可定制厚度、尺寸和含液量。",
+            "en": "Glove-format rinse-free bathing products for controlled caregiver wiping, with customizable thickness, size, and liquid loading."
+          },
+          "gallery": [
+            {
+              "image": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=900&q=80",
+              "alt": "Personal care and skin cleansing products on a light surface"
+            }
+          ],
+          "highlights": [
+            {
+              "zh": "手套式结构",
+              "en": "Glove format"
+            },
+            {
+              "zh": "厚度可定制",
+              "en": "Customizable thickness"
+            },
+            {
+              "zh": "易于护理操作",
+              "en": "Easy caregiver handling"
+            }
+          ],
+          "features": [
+            {
+              "zh": "手套式结构",
+              "en": "Glove format"
+            },
+            {
+              "zh": "厚度可定制",
+              "en": "Customizable thickness"
+            },
+            {
+              "zh": "易于护理操作",
+              "en": "Easy caregiver handling"
+            }
+          ],
+          "applications": [
+            {
+              "zh": "长期照护",
+              "en": "Long-term care"
+            },
+            {
+              "zh": "卧床人群",
+              "en": "Bedridden users"
+            },
+            {
+              "zh": "护理渠道",
+              "en": "Care channels"
+            }
+          ],
+          "specs": [],
+          "downloads": []
+        },
+        {
+          "slug": "oem-rinse-free-shampoo-cap",
+          "code": "OEM COSMETIC 03",
+          "itemNo": "OEM/ODM",
+          "title": "Rinse-Free Shampoo Cap",
+          "displayName": {
+            "zh": "免洗洗发浴帽",
+            "en": "Rinse-Free Shampoo Cap"
+          },
+          "comingSoon": true,
+          "cardLabel": {
+            "zh": "定制开发",
+            "en": "OEM/ODM"
+          },
+          "group": {
+            "zh": "化妆品类湿巾",
+            "en": "Cosmetic & Personal Care Wipes"
+          },
+          "image": "/assets/oem-products/rinse-free-shampoo-cap.png",
+          "alt": {
+            "zh": "Personal care and skin cleansing products on a light surface",
+            "en": "Personal care and skin cleansing products on a light surface"
+          },
+          "body": {
+            "zh": "免洗洗发浴帽支持香型、护理液、帽体尺寸和单片包装定制，适合床旁头发清洁场景。",
+            "en": "Rinse-free shampoo caps support customization of fragrance, lotion, cap size, and single-pack format for bedside hair cleansing."
+          },
+          "intro": {
+            "zh": "免洗洗发浴帽支持香型、护理液、帽体尺寸和单片包装定制，适合床旁头发清洁场景。",
+            "en": "Rinse-free shampoo caps support customization of fragrance, lotion, cap size, and single-pack format for bedside hair cleansing."
+          },
+          "gallery": [
+            {
+              "image": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=900&q=80",
+              "alt": "Personal care and skin cleansing products on a light surface"
+            }
+          ],
+          "highlights": [
+            {
+              "zh": "帽体尺寸可选",
+              "en": "Selectable cap size"
+            },
+            {
+              "zh": "护理液可定制",
+              "en": "Customizable lotion"
+            },
+            {
+              "zh": "单片包装",
+              "en": "Single-pack format"
+            }
+          ],
+          "features": [
+            {
+              "zh": "帽体尺寸可选",
+              "en": "Selectable cap size"
+            },
+            {
+              "zh": "护理液可定制",
+              "en": "Customizable lotion"
+            },
+            {
+              "zh": "单片包装",
+              "en": "Single-pack format"
+            }
+          ],
+          "applications": [
+            {
+              "zh": "床旁洗发",
+              "en": "Bedside shampooing"
+            },
+            {
+              "zh": "术后护理",
+              "en": "Post-operative care"
+            },
+            {
+              "zh": "养老护理",
+              "en": "Elderly care"
+            }
+          ],
+          "specs": [],
+          "downloads": []
+        },
+        {
+          "slug": "oem-rinse-free-shampoo-wipes",
+          "code": "OEM COSMETIC 04",
+          "itemNo": "OEM/ODM",
+          "title": "Rinse-Free Shampoo Wipes",
+          "displayName": {
+            "zh": "免洗洗发湿巾",
+            "en": "Rinse-Free Shampoo Wipes"
+          },
+          "comingSoon": true,
+          "cardLabel": {
+            "zh": "定制开发",
+            "en": "OEM/ODM"
+          },
+          "group": {
+            "zh": "化妆品类湿巾",
+            "en": "Cosmetic & Personal Care Wipes"
+          },
+          "image": "/assets/oem-products/rinse-free-shampoo-wipes.png",
+          "alt": {
+            "zh": "免洗洗发湿巾产品展示",
+            "en": "Rinse-free shampoo wipes product presentation"
+          },
+          "body": {
+            "zh": "免洗洗发湿巾可定制尺寸、含液量、香型和包装形式，为床旁护理、旅行与应急场景提供便捷的头发清洁方案。",
+            "en": "Rinse-free shampoo wipes with customizable size, liquid loading, fragrance, and pack format for convenient hair cleansing in bedside care, travel, and emergency settings."
+          },
+          "intro": {
+            "zh": "免洗洗发湿巾可定制尺寸、含液量、香型和包装形式，为床旁护理、旅行与应急场景提供便捷的头发清洁方案。",
+            "en": "Rinse-free shampoo wipes with customizable size, liquid loading, fragrance, and pack format for convenient hair cleansing in bedside care, travel, and emergency settings."
+          },
+          "gallery": [
+            {
+              "image": "/assets/oem-products/rinse-free-shampoo-wipes.png",
+              "alt": "Rinse-free shampoo wipes product presentation"
+            }
+          ],
+          "highlights": [
+            {
+              "zh": "免水洗发",
+              "en": "No-rinse hair cleansing"
+            },
+            {
+              "zh": "尺寸与含液量可调",
+              "en": "Customizable size and liquid loading"
+            },
+            {
+              "zh": "便携包装可选",
+              "en": "Portable pack options"
+            }
+          ],
+          "features": [
+            {
+              "zh": "免水洗发",
+              "en": "No-rinse hair cleansing"
+            },
+            {
+              "zh": "尺寸与含液量可调",
+              "en": "Customizable size and liquid loading"
+            },
+            {
+              "zh": "便携包装可选",
+              "en": "Portable pack options"
+            }
+          ],
+          "applications": [
+            {
+              "zh": "床旁头发清洁",
+              "en": "Bedside hair cleansing"
+            },
+            {
+              "zh": "旅行与户外",
+              "en": "Travel and outdoor use"
+            },
+            {
+              "zh": "应急护理",
+              "en": "Emergency care"
+            }
+          ],
+          "specs": [],
+          "downloads": []
+        },
+        {
+          "slug": "oem-cream-care-wipes",
+          "code": "OEM COSMETIC 05",
+          "itemNo": "OEM/ODM",
+          "title": "Continence Care Wipes",
+          "displayName": {
+            "zh": "乳霜护理湿巾",
+            "en": "Continence Care Wipes"
+          },
+          "comingSoon": true,
+          "cardLabel": {
+            "zh": "定制开发",
+            "en": "OEM/ODM"
+          },
+          "group": {
+            "zh": "化妆品类湿巾",
+            "en": "Cosmetic & Personal Care Wipes"
+          },
+          "image": "/assets/oem-products/cream-care-wipes.png",
+          "alt": {
+            "zh": "Personal care and skin cleansing products on a light surface",
+            "en": "Personal care and skin cleansing products on a light surface"
+          },
+          "body": {
+            "zh": "乳霜护理湿巾可定制屏障体系、舒缓成分和布感，适合失禁护理与脆弱皮肤护理项目。",
+            "en": "Continence care wipes with customizable barrier systems, soothing ingredients, and cloth feel for incontinence and fragile-skin care programs."
+          },
+          "intro": {
+            "zh": "乳霜护理湿巾可定制屏障体系、舒缓成分和布感，适合失禁护理与脆弱皮肤护理项目。",
+            "en": "Continence care wipes with customizable barrier systems, soothing ingredients, and cloth feel for incontinence and fragile-skin care programs."
+          },
+          "gallery": [
+            {
+              "image": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=900&q=80",
+              "alt": "Personal care and skin cleansing products on a light surface"
+            }
+          ],
+          "highlights": [
+            {
+              "zh": "屏障护理方向",
+              "en": "Barrier-care direction"
+            },
+            {
+              "zh": "舒缓成分可选",
+              "en": "Optional soothing ingredients"
+            },
+            {
+              "zh": "柔软亲肤",
+              "en": "Soft skin feel"
+            }
+          ],
+          "features": [
+            {
+              "zh": "屏障护理方向",
+              "en": "Barrier-care direction"
+            },
+            {
+              "zh": "舒缓成分可选",
+              "en": "Optional soothing ingredients"
+            },
+            {
+              "zh": "柔软亲肤",
+              "en": "Soft skin feel"
+            }
+          ],
+          "applications": [
+            {
+              "zh": "失禁护理",
+              "en": "Incontinence care"
+            },
+            {
+              "zh": "脆弱肌肤",
+              "en": "Fragile skin"
+            },
+            {
+              "zh": "成人护理渠道",
+              "en": "Adult-care channels"
+            }
+          ],
+          "specs": [],
+          "downloads": []
+        },
+        {
+          "slug": "oem-cooling-wipes",
+          "code": "OEM COSMETIC 06",
+          "itemNo": "OEM/ODM",
+          "title": "Cooling Wipes",
+          "displayName": {
+            "zh": "降温清凉湿巾",
+            "en": "Cooling Wipes"
+          },
+          "comingSoon": true,
+          "cardLabel": {
+            "zh": "定制开发",
+            "en": "OEM/ODM"
+          },
+          "group": {
+            "zh": "化妆品类湿巾",
+            "en": "Cosmetic & Personal Care Wipes"
+          },
+          "image": "/assets/oem-products/cooling-wipes.png",
+          "alt": {
+            "zh": "Personal care and skin cleansing products on a light surface",
+            "en": "Personal care and skin cleansing products on a light surface"
+          },
+          "body": {
+            "zh": "清凉降温湿巾可围绕户外、运动、发热护理和夏季促销渠道做配方与包装定制。",
+            "en": "Cooling wipes can be customized for outdoor, sports, fever-care, and summer promotional channels."
+          },
+          "intro": {
+            "zh": "清凉降温湿巾可围绕户外、运动、发热护理和夏季促销渠道做配方与包装定制。",
+            "en": "Cooling wipes can be customized for outdoor, sports, fever-care, and summer promotional channels."
+          },
+          "gallery": [
+            {
+              "image": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=900&q=80",
+              "alt": "Personal care and skin cleansing products on a light surface"
+            }
+          ],
+          "highlights": [
+            {
+              "zh": "清凉体验",
+              "en": "Cooling feel"
+            },
+            {
+              "zh": "便携包装",
+              "en": "Portable packs"
+            },
+            {
+              "zh": "香型可定制",
+              "en": "Custom fragrance options"
+            }
+          ],
+          "features": [
+            {
+              "zh": "清凉体验",
+              "en": "Cooling feel"
+            },
+            {
+              "zh": "便携包装",
+              "en": "Portable packs"
+            },
+            {
+              "zh": "香型可定制",
+              "en": "Custom fragrance options"
+            }
+          ],
+          "applications": [
+            {
+              "zh": "户外运动",
+              "en": "Outdoor sports"
+            },
+            {
+              "zh": "旅行应急",
+              "en": "Travel use"
+            },
+            {
+              "zh": "季节性零售",
+              "en": "Seasonal retail"
+            }
+          ],
+          "specs": [],
+          "downloads": []
+        },
+        {
+          "slug": "oem-makeup-remover-wipes",
+          "code": "OEM COSMETIC 07",
+          "itemNo": "OEM/ODM",
+          "title": "Makeup Remover Wipes",
+          "displayName": {
+            "zh": "卸妆湿巾",
+            "en": "Makeup Remover Wipes"
+          },
+          "comingSoon": true,
+          "cardLabel": {
+            "zh": "定制开发",
+            "en": "OEM/ODM"
+          },
+          "group": {
+            "zh": "化妆品类湿巾",
+            "en": "Cosmetic & Personal Care Wipes"
+          },
+          "image": "/assets/oem-products/makeup-remover-wipes.png",
+          "alt": {
+            "zh": "Cosmetic care items for facial cleansing and makeup removal",
+            "en": "Cosmetic care items for facial cleansing and makeup removal"
+          },
+          "body": {
+            "zh": "卸妆湿巾可定制清洁体系、肤感、香型和包装调性，服务美妆品牌与零售渠道。",
+            "en": "Makeup remover wipes with customizable cleansing systems, skin feel, fragrance, and packaging tone for beauty brands and retail channels."
+          },
+          "intro": {
+            "zh": "卸妆湿巾可定制清洁体系、肤感、香型和包装调性，服务美妆品牌与零售渠道。",
+            "en": "Makeup remover wipes with customizable cleansing systems, skin feel, fragrance, and packaging tone for beauty brands and retail channels."
+          },
+          "gallery": [
+            {
+              "image": "https://images.unsplash.com/photo-1522338242992-e1a54906a8da?auto=format&fit=crop&w=900&q=80",
+              "alt": "Cosmetic care items for facial cleansing and makeup removal"
+            }
+          ],
+          "highlights": [
+            {
+              "zh": "温和卸妆",
+              "en": "Gentle makeup removal"
+            },
+            {
+              "zh": "肤感可调",
+              "en": "Adjustable skin feel"
+            },
+            {
+              "zh": "品牌包装开发",
+              "en": "Brand packaging development"
+            }
+          ],
+          "features": [
+            {
+              "zh": "温和卸妆",
+              "en": "Gentle makeup removal"
+            },
+            {
+              "zh": "肤感可调",
+              "en": "Adjustable skin feel"
+            },
+            {
+              "zh": "品牌包装开发",
+              "en": "Brand packaging development"
+            }
+          ],
+          "applications": [
+            {
+              "zh": "美妆品牌",
+              "en": "Beauty brands"
+            },
+            {
+              "zh": "旅行装",
+              "en": "Travel packs"
+            },
+            {
+              "zh": "零售渠道",
+              "en": "Retail channels"
+            }
+          ],
+          "specs": [],
+          "downloads": []
+        },
+        {
+          "slug": "oem-sneaker-cleaning-wipes",
+          "code": "OEM COSMETIC 08",
+          "itemNo": "OEM/ODM",
+          "title": "Sneaker Cleaning Wipes",
+          "displayName": {
+            "zh": "球鞋去污湿巾",
+            "en": "Sneaker Cleaning Wipes"
+          },
+          "comingSoon": true,
+          "cardLabel": {
+            "zh": "定制开发",
+            "en": "OEM/ODM"
+          },
+          "group": {
+            "zh": "化妆品类湿巾",
+            "en": "Cosmetic & Personal Care Wipes"
+          },
+          "image": "/assets/oem-products/sneaker-cleaning-wipes.png",
+          "alt": {
+            "zh": "Industrial facility prepared for cleaning and maintenance",
+            "en": "Industrial facility prepared for cleaning and maintenance"
+          },
+          "body": {
+            "zh": "球鞋去污湿巾可定制高摩擦基材、去污体系和便携包装，适合潮流零售及生活方式品牌。",
+            "en": "Sneaker cleaning wipes with customizable high-friction substrates, cleaning systems, and portable packs for lifestyle and streetwear channels."
+          },
+          "intro": {
+            "zh": "球鞋去污湿巾可定制高摩擦基材、去污体系和便携包装，适合潮流零售及生活方式品牌。",
+            "en": "Sneaker cleaning wipes with customizable high-friction substrates, cleaning systems, and portable packs for lifestyle and streetwear channels."
+          },
+          "gallery": [
+            {
+              "image": "https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&fit=crop&w=900&q=80",
+              "alt": "Industrial facility prepared for cleaning and maintenance"
+            }
+          ],
+          "highlights": [
+            {
+              "zh": "高摩擦基材",
+              "en": "High-friction substrate"
+            },
+            {
+              "zh": "便携即用",
+              "en": "Portable and ready to use"
+            },
+            {
+              "zh": "去污体系可调",
+              "en": "Adjustable cleaning system"
+            }
+          ],
+          "features": [
+            {
+              "zh": "高摩擦基材",
+              "en": "High-friction substrate"
+            },
+            {
+              "zh": "便携即用",
+              "en": "Portable and ready to use"
+            },
+            {
+              "zh": "去污体系可调",
+              "en": "Adjustable cleaning system"
+            }
+          ],
+          "applications": [
+            {
+              "zh": "球鞋护理",
+              "en": "Sneaker care"
+            },
+            {
+              "zh": "潮流零售",
+              "en": "Lifestyle retail"
+            },
+            {
+              "zh": "礼赠套装",
+              "en": "Gift sets"
+            }
+          ],
+          "specs": [],
+          "downloads": []
+        },
+        {
+          "slug": "oem-pure-water-baby-wipes",
+          "code": "OEM COSMETIC 09",
+          "itemNo": "OEM/ODM",
+          "title": "Pure Water Wipes",
+          "displayName": {
+            "zh": "婴儿纯水湿巾",
+            "en": "Pure Water Wipes"
+          },
+          "comingSoon": true,
+          "cardLabel": {
+            "zh": "定制开发",
+            "en": "OEM/ODM"
+          },
+          "group": {
+            "zh": "化妆品类湿巾",
+            "en": "Cosmetic & Personal Care Wipes"
+          },
+          "image": "/assets/oem-products/pure-water-baby-wipes.png",
+          "alt": {
+            "zh": "Gentle baby care moment with clean soft textiles",
+            "en": "Gentle baby care moment with clean soft textiles"
+          },
+          "body": {
+            "zh": "婴儿纯水湿巾可定制纯水比例、植物基基材、厚度、片数和家庭装/便携装包装。",
+            "en": "Pure water wipes with customizable water ratio, plant-based substrate, thickness, count, and family or travel pack formats."
+          },
+          "intro": {
+            "zh": "婴儿纯水湿巾可定制纯水比例、植物基基材、厚度、片数和家庭装/便携装包装。",
+            "en": "Pure water wipes with customizable water ratio, plant-based substrate, thickness, count, and family or travel pack formats."
+          },
+          "gallery": [
+            {
+              "image": "https://images.unsplash.com/photo-1546015720-b8b30df5aa27?auto=format&fit=crop&w=900&q=80",
+              "alt": "Gentle baby care moment with clean soft textiles"
+            }
+          ],
+          "highlights": [
+            {
+              "zh": "纯水方向",
+              "en": "Pure-water direction"
+            },
+            {
+              "zh": "植物基基材可选",
+              "en": "Plant-based substrate options"
+            },
+            {
+              "zh": "厚度片数可定制",
+              "en": "Customizable thickness and count"
+            }
+          ],
+          "features": [
+            {
+              "zh": "纯水方向",
+              "en": "Pure-water direction"
+            },
+            {
+              "zh": "植物基基材可选",
+              "en": "Plant-based substrate options"
+            },
+            {
+              "zh": "厚度片数可定制",
+              "en": "Customizable thickness and count"
+            }
+          ],
+          "applications": [
+            {
+              "zh": "婴儿护理",
+              "en": "Baby care"
+            },
+            {
+              "zh": "敏感肌清洁",
+              "en": "Sensitive-skin cleansing"
+            },
+            {
+              "zh": "家庭日用",
+              "en": "Family daily use"
+            }
+          ],
+          "specs": [],
+          "downloads": []
+        },
+        {
+          "slug": "oem-multi-purpose-industrial-dry-wipes",
+          "code": "OEM INDUSTRIAL 01",
+          "itemNo": "OEM/ODM",
+          "title": "Multi-Purpose Industrial Dry Wipes",
+          "displayName": {
+            "zh": "多用途工业擦拭干巾",
+            "en": "Multi-Purpose Industrial Dry Wipes"
+          },
+          "comingSoon": true,
+          "cardLabel": {
+            "zh": "定制开发",
+            "en": "OEM/ODM"
+          },
+          "group": {
+            "zh": "工业擦拭",
+            "en": "Industrial Wiping"
+          },
+          "image": "/assets/oem-products/multi-purpose-industrial-dry-wipes.png",
+          "alt": {
+            "zh": "Industrial facility prepared for cleaning and maintenance",
+            "en": "Industrial facility prepared for cleaning and maintenance"
+          },
+          "body": {
+            "zh": "多用途工业擦拭干巾可定制厚度，强调高吸油、耐磨、可重复使用、低掉毛和化学溶剂兼容。",
+            "en": "Multi-purpose industrial dry wipes with customizable thickness, high oil absorption, abrasion resistance, reusability, low lint, and chemical-solvent compatibility."
+          },
+          "intro": {
+            "zh": "多用途工业擦拭干巾可定制厚度，强调高吸油、耐磨、可重复使用、低掉毛和化学溶剂兼容。",
+            "en": "Multi-purpose industrial dry wipes with customizable thickness, high oil absorption, abrasion resistance, reusability, low lint, and chemical-solvent compatibility."
+          },
+          "gallery": [
+            {
+              "image": "https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&fit=crop&w=900&q=80",
+              "alt": "Industrial facility prepared for cleaning and maintenance"
+            }
+          ],
+          "highlights": [
+            {
+              "zh": "厚度可定制",
+              "en": "Customizable thickness"
+            },
+            {
+              "zh": "高吸油耐磨",
+              "en": "High oil absorption and abrasion resistance"
+            },
+            {
+              "zh": "低掉毛",
+              "en": "Low lint"
+            }
+          ],
+          "features": [
+            {
+              "zh": "厚度可定制",
+              "en": "Customizable thickness"
+            },
+            {
+              "zh": "高吸油耐磨",
+              "en": "High oil absorption and abrasion resistance"
+            },
+            {
+              "zh": "低掉毛",
+              "en": "Low lint"
+            }
+          ],
+          "applications": [
+            {
+              "zh": "设备维护",
+              "en": "Equipment maintenance"
+            },
+            {
+              "zh": "金属加工",
+              "en": "Metalworking"
+            },
+            {
+              "zh": "溶剂擦拭",
+              "en": "Solvent wiping"
+            }
+          ],
+          "specs": [],
+          "downloads": []
+        },
+        {
+          "slug": "oem-industrial-degreasing-wipes",
+          "code": "OEM INDUSTRIAL 02",
+          "itemNo": "OEM/ODM",
+          "title": "Industrial Degreasing Wipes",
+          "displayName": {
+            "zh": "工业去污湿巾",
+            "en": "Industrial Degreasing Wipes"
+          },
+          "comingSoon": true,
+          "cardLabel": {
+            "zh": "定制开发",
+            "en": "OEM/ODM"
+          },
+          "group": {
+            "zh": "工业擦拭",
+            "en": "Industrial Wiping"
+          },
+          "image": "/assets/oem-products/industrial-degreasing-wipes.png",
+          "alt": {
+            "zh": "Industrial facility prepared for cleaning and maintenance",
+            "en": "Industrial facility prepared for cleaning and maintenance"
+          },
+          "body": {
+            "zh": "高摩擦工业去污湿巾，面向重油污、胶黏残留和维修现场，可定制去污体系与基材强度。",
+            "en": "High-friction industrial degreasing wipes for heavy oil, adhesive residue, and maintenance sites, with customizable cleaning systems and substrate strength."
+          },
+          "intro": {
+            "zh": "高摩擦工业去污湿巾，面向重油污、胶黏残留和维修现场，可定制去污体系与基材强度。",
+            "en": "High-friction industrial degreasing wipes for heavy oil, adhesive residue, and maintenance sites, with customizable cleaning systems and substrate strength."
+          },
+          "gallery": [
+            {
+              "image": "https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&fit=crop&w=900&q=80",
+              "alt": "Industrial facility prepared for cleaning and maintenance"
+            }
+          ],
+          "highlights": [
+            {
+              "zh": "高摩擦结构",
+              "en": "High-friction structure"
+            },
+            {
+              "zh": "超强去污方向",
+              "en": "Heavy-duty cleaning direction"
+            },
+            {
+              "zh": "湿态强度高",
+              "en": "High wet strength"
+            }
+          ],
+          "features": [
+            {
+              "zh": "高摩擦结构",
+              "en": "High-friction structure"
+            },
+            {
+              "zh": "超强去污方向",
+              "en": "Heavy-duty cleaning direction"
+            },
+            {
+              "zh": "湿态强度高",
+              "en": "High wet strength"
+            }
+          ],
+          "applications": [
+            {
+              "zh": "维修站点",
+              "en": "Service bays"
+            },
+            {
+              "zh": "重油污清洁",
+              "en": "Heavy-oil cleaning"
+            },
+            {
+              "zh": "工业现场",
+              "en": "Industrial worksites"
+            }
+          ],
+          "specs": [],
+          "downloads": []
+        },
+        {
+          "slug": "oem-cleanroom-cleaning-wipes",
+          "code": "OEM INDUSTRIAL 03",
+          "itemNo": "OEM/ODM",
+          "title": "Cleanroom Cleaning Wipes",
+          "displayName": {
+            "zh": "洁净室清洁湿巾",
+            "en": "Cleanroom Cleaning Wipes"
+          },
+          "comingSoon": true,
+          "cardLabel": {
+            "zh": "定制开发",
+            "en": "OEM/ODM"
+          },
+          "group": {
+            "zh": "工业擦拭",
+            "en": "Industrial Wiping"
+          },
+          "image": "/assets/oem-products/cleanroom-cleaning-wipes.png",
+          "alt": {
+            "zh": "Clean technical workspace for precision wiping",
+            "en": "Clean technical workspace for precision wiping"
+          },
+          "body": {
+            "zh": "洁净室清洁湿巾面向低尘、精密擦拭和受控环境清洁，可围绕基材洁净度与包装方式定制。",
+            "en": "Cleanroom cleaning wipes for low-lint precision wiping and controlled-environment cleaning, customizable around substrate cleanliness and packaging."
+          },
+          "intro": {
+            "zh": "洁净室清洁湿巾面向低尘、精密擦拭和受控环境清洁，可围绕基材洁净度与包装方式定制。",
+            "en": "Cleanroom cleaning wipes for low-lint precision wiping and controlled-environment cleaning, customizable around substrate cleanliness and packaging."
+          },
+          "gallery": [
+            {
+              "image": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=900&q=80",
+              "alt": "Clean technical workspace for precision wiping"
+            }
+          ],
+          "highlights": [
+            {
+              "zh": "低尘方向",
+              "en": "Low-lint direction"
+            },
+            {
+              "zh": "精密擦拭",
+              "en": "Precision wiping"
+            },
+            {
+              "zh": "受控包装",
+              "en": "Controlled packaging"
+            }
+          ],
+          "features": [
+            {
+              "zh": "低尘方向",
+              "en": "Low-lint direction"
+            },
+            {
+              "zh": "精密擦拭",
+              "en": "Precision wiping"
+            },
+            {
+              "zh": "受控包装",
+              "en": "Controlled packaging"
+            }
+          ],
+          "applications": [
+            {
+              "zh": "洁净室维护",
+              "en": "Cleanroom maintenance"
+            },
+            {
+              "zh": "精密设备",
+              "en": "Precision equipment"
+            },
+            {
+              "zh": "电子制造",
+              "en": "Electronics manufacturing"
+            }
+          ],
+          "specs": [],
+          "downloads": []
+        }
+      ]
     }
   ]
 }

@@ -1,0 +1,1401 @@
+[
+  {
+    "slug": "embossing",
+    "category": "fundamentals",
+    "title": {
+      "zh": "压纹",
+      "en": "Embossing"
+    },
+    "definition": {
+      "zh": [
+        "压纹（Embossing），指利用机械压力在薄膜、无纺布或其他片材表面形成特定凹凸纹理或图案的加工过程。",
+        "INDA（美国非织造布工业协会，Association of the Nonwoven Fabrics Industry）对 Embossing 的定义是：通过将材料经过具有特定凸起设计的辊筒之间，将图案压入薄膜或织物/无纺布表面；一个或多个辊筒通常具有设计好的纹理，并可配合加热。[1]",
+        "在湿巾基材中，压纹可以用于改变材料的：",
+        "表面纹理；",
+        "视觉效果；",
+        "触感；",
+        "表面摩擦特性；",
+        "清洁时与污物接触的表面结构。",
+        "因此，常见的 Plain（平纹）、网孔纹、珍珠纹、菱形纹及品牌定制图案，本质上都属于不同的基材表面设计。"
+      ],
+      "en": [
+        "Embossing is the mechanical process of forming raised and recessed patterns on film, nonwoven or another sheet. It can change surface texture, appearance, touch, friction and the contact structure used during cleaning."
+      ]
+    },
+    "summary": {
+      "zh": "压纹（Embossing），指利用机械压力在薄膜、无纺布或其他片材表面形成特定凹凸纹理或图案的加工过程。",
+      "en": "Embossing is the mechanical process of forming raised and recessed patterns on film, nonwoven or another sheet. It can change surface texture, appearance, touch, friction and the contact structure used during cleaning."
+    },
+    "references": [
+      "[1] INDA, Nonwovens Glossary of Terms — Embossing. (非织造材料协会)",
+      "[2] INDA, Nonwovens Glossary of Terms — Mechanical Finishing. (非织造材料协会)"
+    ],
+    "showImportance": false
+  },
+  {
+    "slug": "en-european-standard",
+    "category": "testing",
+    "title": {
+      "zh": "EN（European Standard）标准",
+      "en": "EN (European Standard)"
+    },
+    "definition": {
+      "zh": [
+        "EN，即European Standard，是由欧洲认可的标准化组织，包括 CEN（European Committee for Standardization，欧洲标准化委员会）、CENELEC 和 ETSI 制定并通过的欧洲标准。欧洲标准以 “EN” 作为统一标识，并通过公开、透明和基于共识的标准制定程序形成。[1]",
+        "EN 发布后，CEN/CENELEC 成员国原则上需要将其作为本国国家标准采用，并撤销与其冲突的国家标准，因此同一个 EN 可以在不同欧洲国家以 BS EN、DIN EN、NF EN 等国家版本出现，但其核心 EN 标准内容保持一致。[1]在消毒剂与防腐剂领域，大量 EN 标准由 CEN/TC 216 — Chemical disinfectants and antiseptics 制定，用于评价杀细菌、杀真菌、杀分枝杆菌、杀病毒、杀芽孢以及实际擦拭、手卫生等不同条件下的抗微生物功效。具体应采用哪些测试，则由 EN 14885 建立总体框架。[2]"
+      ],
+      "en": [
+        "EN standards are European standards developed through transparent, consensus-based processes by recognized European standardization organizations. They provide a common framework for evaluating antimicrobial efficacy and other performance claims."
+      ]
+    },
+    "summary": {
+      "zh": "EN，即European Standard，是由欧洲认可的标准化组织，包括 CEN（European Committee for Standardization，欧洲标准化委员会）、CENELEC 和 ETSI 制定并通过的欧洲标准。欧洲标准以 “EN” 作为统一标识，并通过公开、透明和基于共识的标准制定程序形成。[1]",
+      "en": "EN standards are European standards developed through transparent, consensus-based processes by recognized European standardization organizations. They provide a common framework for evaluating antimicrobial efficacy and other performance claims."
+    },
+    "references": [
+      "[1] CEN-CENELEC, European Standards — What is a European Standard (EN)? ([CEN-CENELEC][1])",
+      "[2] EN 14885:2022 — Chemical disinfectants and antiseptics — Application of European Standards for chemical disinfectants and antiseptics."
+    ],
+    "showImportance": false
+  },
+  {
+    "slug": "en-13624",
+    "category": "testing",
+    "title": {
+      "zh": "EN 13624",
+      "en": "EN 13624"
+    },
+    "definition": {
+      "zh": [
+        "EN 13624:2021 — Chemical disinfectants and antiseptics — Quantitative suspension test for the evaluation of fungicidal or yeasticidal activity in the medical area — Test method and requirements (phase 2, step 1)",
+        "中文可译为：化学消毒剂和防腐剂——医疗领域杀真菌或杀酵母菌活性评价的定量悬浮液试验——试验方法和要求（第 2 阶段，第 1 步）。",
+        "EN 13624 是用于评价化学消毒剂和防腐剂在医疗领域中杀真菌活性（Fungicidal Activity）或杀酵母菌活性（Yeasticidal Activity）的定量悬浮液测试标准，属于 Phase 2, Step 1。[1]",
+        "标准规定了产品达到相应 fungicidal 或 yeasticidal 宣称所需要满足的最低测试要求，并根据不同宣称采用相应试验微生物，例如酵母菌和霉菌。[1]"
+      ],
+      "en": [
+        "EN 13624 is a Phase 2 Step 1 quantitative suspension test for evaluating fungicidal or yeasticidal activity of chemical disinfectants and antiseptics in the medical area. It specifies minimum requirements and test organisms for the relevant claims."
+      ]
+    },
+    "summary": {
+      "zh": "EN 13624:2021 — Chemical disinfectants and antiseptics — Quantitative suspension test for the evaluation of fungicidal or yeasticidal activity in the medical area — Test method and",
+      "en": "EN 13624 is a Phase 2 Step 1 quantitative suspension test for evaluating fungicidal or yeasticidal activity of chemical disinfectants and antiseptics in the medical area. It specifies minimum requirements and test organisms for the relevant claims."
+    },
+    "references": [
+      "[1] CEN, EN 13624:2021 — Chemical disinfectants and antiseptics — Quantitative suspension test for the evaluation of fungicidal or yeasticidal activity in the medical area — Test method and requirements (phase 2, step 1). ([EVS][8])"
+    ],
+    "showImportance": false
+  },
+  {
+    "slug": "en-13727",
+    "category": "testing",
+    "title": {
+      "zh": "EN 13727",
+      "en": "EN 13727"
+    },
+    "definition": {
+      "zh": [
+        "EN 13727:2012+A2:2015 — Chemical disinfectants and antiseptics — Quantitative suspension test for the evaluation of bactericidal activity in the medical area — Test method and requirements (phase 2, step 1)",
+        "中文可译为：化学消毒剂和防腐剂——医疗领域杀细菌活性评价的定量悬浮液试验——试验方法和要求（第 2 阶段，第 1 步）。",
+        "EN 13727 是用于评价化学消毒剂和防腐剂在医疗领域中杀细菌活性（Bactericidal Activity）的定量悬浮液测试标准，属于 Phase 2, Step 1。[1]该方法通过将规定数量的试验细菌、干扰物质和待测产品在规定温度、浓度及接触时间下进行反应，再测定处理前后的活菌数量，从而评价产品能否达到标准规定的杀细菌效果。[1]该标准适用于医疗领域中的卫生手消毒、卫生洗手、外科手卫生、器械浸泡消毒以及通过擦拭、喷洒或其他方式进行的表面消毒等用途。[2]"
+      ],
+      "en": [
+        "EN 13727 is a Phase 2 Step 1 quantitative suspension test for evaluating bactericidal activity of chemical disinfectants and antiseptics in the medical area under specified organisms, interference conditions, concentration, temperature and contact time."
+      ]
+    },
+    "summary": {
+      "zh": "EN 13727:2012+A2:2015 — Chemical disinfectants and antiseptics — Quantitative suspension test for the evaluation of bactericidal activity in the medical area — Test method and requ",
+      "en": "EN 13727 is a Phase 2 Step 1 quantitative suspension test for evaluating bactericidal activity of chemical disinfectants and antiseptics in the medical area under specified organisms, interference conditions, concentration, temperature and contact time."
+    },
+    "references": [
+      "[1] N 13727:2012+A2:2015 — Chemical disinfectants and antiseptics — Quantitative suspension test for the evaluation of bactericidal activity in the medical area — Test method and requirements (phase 2, step 1). ([Tienda AENOR][6])",
+      "[2] EN 13727:2012+A2:2015 — Scope and application in the medical area."
+    ],
+    "showImportance": false
+  },
+  {
+    "slug": "en-14348",
+    "category": "testing",
+    "title": {
+      "zh": "EN 14348",
+      "en": "EN 14348"
+    },
+    "definition": {
+      "zh": [
+        "EN 14348:2005 — Chemical disinfectants and antiseptics — Quantitative suspension test for the evaluation of mycobactericidal activity of chemical disinfectants in the medical area including instrument disinfectants — Test methods and requirements (phase 2, step 1)",
+        "中文可译为：化学消毒剂和防腐剂——包括器械消毒剂在内的医疗领域化学消毒剂杀分枝杆菌活性评价定量悬浮液试验——试验方法和要求（第 2 阶段，第 1 步）。",
+        "EN 14348 是用于评价医疗领域化学消毒剂杀分枝杆菌活性（Mycobactericidal Activity）以及相应条件下杀结核分枝杆菌活性（Tuberculocidal Activity）的定量悬浮液试验，属于 Phase 2, Step 1。[1]该标准特别适用于需要评价对分枝杆菌作用的医疗消毒产品，包括医疗器械消毒剂以及其他医疗环境中使用的化学消毒剂。[1]"
+      ],
+      "en": [
+        "EN 14348 is a Phase 2 Step 1 quantitative suspension test for evaluating mycobactericidal and, where applicable, tuberculocidal activity of chemical disinfectants in the medical area, including instrument disinfectants."
+      ]
+    },
+    "summary": {
+      "zh": "EN 14348:2005 — Chemical disinfectants and antiseptics — Quantitative suspension test for the evaluation of mycobactericidal activity of chemical disinfectants in the medical area ",
+      "en": "EN 14348 is a Phase 2 Step 1 quantitative suspension test for evaluating mycobactericidal and, where applicable, tuberculocidal activity of chemical disinfectants in the medical area, including instrument disinfectants."
+    },
+    "references": [
+      "[1] CEN, EN 14348:2005 — Chemical disinfectants and antiseptics — Quantitative suspension test for the evaluation of mycobactericidal activity of chemical disinfectants in the medical area including instrument disinfectants — Test methods and requirements (phase 2, step 1)."
+    ],
+    "showImportance": false
+  },
+  {
+    "slug": "en-14476",
+    "category": "testing",
+    "title": {
+      "zh": "EN 14476",
+      "en": "EN 14476"
+    },
+    "definition": {
+      "zh": [
+        "EN 14476:2025 — Chemical disinfectants and antiseptics — Quantitative suspension test for the evaluation of virucidal activity in the medical area — Test method and requirements (Phase 2/Step 1)",
+        "中文可译为：化学消毒剂和防腐剂——医疗领域杀病毒活性评价定量悬浮液试验——试验方法和要求（第 2 阶段，第 1 步）。",
+        "EN 14476 是用于评价化学消毒剂和防腐剂在医疗领域中杀病毒活性（Virucidal Activity）的定量悬浮液试验，属于 Phase 2, Step 1。[1]该标准通过规定的试验病毒、干扰条件、产品浓度、温度以及接触时间评价产品对病毒感染性的降低能力，并根据不同测试病毒组合支持不同范围的杀病毒宣称。[1]EN 14476 适用于卫生手消毒、卫生洗手、医疗器械浸泡消毒、表面消毒以及纺织物消毒等医疗领域用途。"
+      ],
+      "en": [
+        "EN 14476 is a Phase 2 Step 1 quantitative suspension test for evaluating virucidal activity in the medical area. It evaluates reductions in viral infectivity under specified virus, interference, concentration, temperature and contact-time conditions."
+      ]
+    },
+    "summary": {
+      "zh": "EN 14476:2025 — Chemical disinfectants and antiseptics — Quantitative suspension test for the evaluation of virucidal activity in the medical area — Test method and requirements (P",
+      "en": "EN 14476 is a Phase 2 Step 1 quantitative suspension test for evaluating virucidal activity in the medical area. It evaluates reductions in viral infectivity under specified virus, interference, concentration, temperature and contact-time conditions."
+    },
+    "references": [
+      "[1] CEN, EN 14476:2025 — Chemical disinfectants and antiseptics — Quantitative suspension test for the evaluation of virucidal activity in the medical area — Test method and requirements (Phase 2/Step 1)."
+    ],
+    "showImportance": false
+  },
+  {
+    "slug": "en-14885",
+    "category": "testing",
+    "title": {
+      "zh": "EN 14885",
+      "en": "EN 14885"
+    },
+    "definition": {
+      "zh": [
+        "EN 14885:2022 — Chemical disinfectants and antiseptics — Application of European Standards for chemical disinfectants and antiseptics",
+        "中文可译为：化学消毒剂和防腐剂——化学消毒剂和防腐剂欧洲标准的应用。",
+        "EN 14885 是欧洲化学消毒剂和防腐剂功效测试体系的总框架标准。它规定产品为了支持相应的杀微生物功效宣称，应符合哪些具体欧洲标准，同时统一了相关 EN 标准所使用的术语和定义。[1]",
+        "注意，EN 14885本身并非一个单独的“杀菌实验”，它是一个规定性的框架。例如医疗领域中的 EN 13727、EN 13624、EN 14348、EN 14476、EN 17126、EN 16615 和 EN 1500 等标准，都可以在 EN 14885 建立的整体框架下理解。[1]该体系通常区分不同测试阶段，例如 Phase 2, Step 1 主要评价产品在悬浮液条件下的抗微生物活性，而 Phase 2, Step 2 则进一步模拟特定实际使用场景，如表面擦拭和手卫生。[1]",
+        "当前基础版本为 EN 14885:2022，并有 AC:2023 勘误文件。[2]"
+      ],
+      "en": [
+        "EN 14885 is the framework standard for European efficacy testing of chemical disinfectants and antiseptics. It connects product claims with the specific EN test methods that should be used, including Phase 2 Step 1 suspension tests and Phase 2 Step 2 practical-use tests."
+      ]
+    },
+    "summary": {
+      "zh": "EN 14885:2022 — Chemical disinfectants and antiseptics — Application of European Standards for chemical disinfectants and antiseptics",
+      "en": "EN 14885 is the framework standard for European efficacy testing of chemical disinfectants and antiseptics. It connects product claims with the specific EN test methods that should be used, including Phase 2 Step 1 suspension tests and Phase 2 Step 2 practical-use tests."
+    },
+    "references": [
+      "[1] EN 14885:2022 — Chemical disinfectants and antiseptics — Application of European Standards for chemical disinfectants and antiseptics.",
+      "[2] DIN Media, EN 14885:2022 + AC:2023."
+    ],
+    "showImportance": false
+  },
+  {
+    "slug": "en-1500",
+    "category": "testing",
+    "title": {
+      "zh": "EN 1500",
+      "en": "EN 1500"
+    },
+    "definition": {
+      "zh": [
+        "EN 1500:2013 — Chemical disinfectants and antiseptics — Hygienic handrub — Test method and requirements (phase 2/step 2)",
+        "中文可译为：化学消毒剂和防腐剂——卫生手消毒——试验方法和要求（第 2 阶段，第 2 步）。",
+        "EN 1500 是用于评价卫生手消毒剂（Hygienic Handrub）实际使用功效的欧洲标准，属于 Phase 2, Step 2。[1]与实验室悬浮液试验不同，EN 1500 采用人体手部实际测试，通过标准化程序评价待测卫生手消毒产品降低手部暂居微生物菌群（transient microbial flora）的能力，并与规定的参照程序进行比较。[2]",
+        "综上，EN 1500回答了一个问题，即“按照规定的方法实际用于人的双手时，该产品能否达到卫生手消毒所要求的功效“。而大部分测试回答的问题是“某种消毒液在试管中能否杀死某种细菌”。"
+      ],
+      "en": [
+        "EN 1500 is a Phase 2 Step 2 practical-use standard for evaluating the efficacy of hygienic handrub products on human hands. It compares the product with a reference procedure to assess reduction of transient microbial flora."
+      ]
+    },
+    "summary": {
+      "zh": "EN 1500:2013 — Chemical disinfectants and antiseptics — Hygienic handrub — Test method and requirements (phase 2/step 2)",
+      "en": "EN 1500 is a Phase 2 Step 2 practical-use standard for evaluating the efficacy of hygienic handrub products on human hands. It compares the product with a reference procedure to assess reduction of transient microbial flora."
+    },
+    "references": [
+      "[1] CEN, EN 1500:2013 — Chemical disinfectants and antiseptics — Hygienic handrub — Test method and requirements (phase 2/step 2).",
+      "[2] BSI, BS EN 1500:2013 — Hygienic handrub — Test method and requirements."
+    ],
+    "showImportance": false
+  },
+  {
+    "slug": "en-16615",
+    "category": "testing",
+    "title": {
+      "zh": "EN 16615",
+      "en": "EN 16615"
+    },
+    "definition": {
+      "zh": [
+        "EN 16615:2026 — Chemical disinfectants and antiseptics — Quantitative test method for the evaluation of bactericidal and yeasticidal and/or fungicidal and/or tuberculocidal and/or mycobactericidal activity on non-porous surfaces with mechanical action employing wipes or mops in the medical area (4-field test) — Test method and requirements (phase 2, step 2)",
+        "中文可译为：化学消毒剂和防腐剂——采用湿巾或拖布在具有机械作用条件下，对医疗领域非多孔表面上的杀细菌、杀酵母菌和/或杀真菌、杀结核分枝杆菌和/或杀分枝杆菌活性进行评价的定量试验方法（四区域试验）——试验方法和要求（第 2 阶段，第 2 步）。",
+        "EN 16615 是医疗领域非常重要的实际擦拭功效测试标准，属于 Phase 2, Step 2。与 EN 13727 等悬浮液试验不同，它将消毒剂、湿巾/拖布、机械擦拭动作以及表面污染物传播作为一个整体进行评价。[1]其典型方法采用 4-field test（四区域试验），通过在非多孔表面进行规定方式的擦拭，评价产品是否能够有效降低受污染区域的微生物数量，同时避免将微生物传播至其他区域。[1]",
+        "当前版本 EN 16615:2026 已取代 EN 16615:2015，并将评价范围扩展为 bactericidal、yeasticidal 和/或 fungicidal、tuberculocidal 和/或 mycobactericidal activity。[2]"
+      ],
+      "en": [
+        "EN 16615 is a Phase 2 Step 2 practical-use test for evaluating bactericidal, yeasticidal, fungicidal, tuberculocidal and mycobactericidal activity on non-porous surfaces using wipes or mops with mechanical action. Its four-field method assesses both microbial reduction and prevention of transfer to adjacent areas."
+      ]
+    },
+    "summary": {
+      "zh": "EN 16615:2026 — Chemical disinfectants and antiseptics — Quantitative test method for the evaluation of bactericidal and yeasticidal and/or fungicidal and/or tuberculocidal and/or ",
+      "en": "EN 16615 is a Phase 2 Step 2 practical-use test for evaluating bactericidal, yeasticidal, fungicidal, tuberculocidal and mycobactericidal activity on non-porous surfaces using wipes or mops with mechanical action. Its four-field method assesses both microbial reduction and prevention of transfer to adjacent areas."
+    },
+    "references": [
+      "[1] CEN, EN 16615:2026 — Chemical disinfectants and antiseptics — Quantitative test method ... employing wipes or mops in the medical area (4-field test) — Test method and requirements (phase 2, step 2).",
+      "[2] BSI, BS EN 16615:2026 — Scope and current edition."
+    ],
+    "showImportance": false
+  },
+  {
+    "slug": "en-17126",
+    "category": "testing",
+    "title": {
+      "zh": "EN 17126",
+      "en": "EN 17126"
+    },
+    "definition": {
+      "zh": [
+        "EN 17126:2018 — Chemical disinfectants and antiseptics — Quantitative suspension test for the evaluation of sporicidal activity of chemical disinfectants in the medical area — Test method and requirements (phase 2, step 1)",
+        "中文可译为：化学消毒剂和防腐剂——医疗领域化学消毒剂杀芽孢活性评价定量悬浮液试验——试验方法和要求（第 2 阶段，第 1 步）。",
+        "EN 17126 是用于评价医疗领域化学消毒剂杀细菌芽孢活性（Sporicidal Activity）的定量悬浮液试验，属于 Phase 2, Step 1。[1]该标准规定了产品在指定试验菌芽孢、干扰条件、浓度、温度和接触时间下达到杀芽孢宣称所需满足的最低功效要求。[1]"
+      ],
+      "en": [
+        "EN 17126 is a Phase 2 Step 1 quantitative suspension test for evaluating sporicidal activity of chemical disinfectants in the medical area under specified spores, interference conditions, concentration, temperature and contact time."
+      ]
+    },
+    "summary": {
+      "zh": "EN 17126:2018 — Chemical disinfectants and antiseptics — Quantitative suspension test for the evaluation of sporicidal activity of chemical disinfectants in the medical area — Test",
+      "en": "EN 17126 is a Phase 2 Step 1 quantitative suspension test for evaluating sporicidal activity of chemical disinfectants in the medical area under specified spores, interference conditions, concentration, temperature and contact time."
+    },
+    "references": [
+      "[1] CEN, EN 17126:2018 — Chemical disinfectants and antiseptics — Quantitative suspension test for the evaluation of sporicidal activity of chemical disinfectants in the medical area — Test method and requirements (phase 2, step 1)."
+    ],
+    "showImportance": false
+  },
+  {
+    "slug": "en-17846",
+    "category": "testing",
+    "title": {
+      "zh": "EN 17846",
+      "en": "EN 17846"
+    },
+    "definition": {
+      "zh": [
+        "EN 17846:2023 — Chemical disinfectants and antiseptics — Quantitative test method for the evaluation of sporicidal activity against Clostridioides difficile on non-porous surfaces with mechanical action employing wipes in the medical area (4-field test) — Test method and requirements (phase 2, step 2)",
+        "中文可译为：化学消毒剂和防腐剂——采用湿巾在机械作用条件下，对医疗领域非多孔表面上的艰难梭菌芽孢杀灭活性进行评价的定量试验方法（四区域试验）——试验方法和要求（第 2 阶段，第 2 步）。",
+        "EN 17846 是专门用于评价消毒产品在实际擦拭条件下对 Clostridioides difficile（艰难梭菌）芽孢杀灭能力的 Phase 2, Step 2 测试标准。[1]该标准采用 4-field test。首先在指定测试区域接种并干燥 C. difficile 芽孢，然后使用浸有待测消毒产品的湿巾按照规定轨迹擦拭四个区域，同时评价产品对芽孢的杀灭能力以及擦拭过程中是否发生微生物传播。[1]该标准特别适用于包括预浸湿即用型消毒湿巾（pre-impregnated ready-to-use wipes）在内的实际表面消毒应用。[2]"
+      ],
+      "en": [
+        "EN 17846 is a Phase 2 Step 2 four-field test for evaluating sporicidal activity against Clostridioides difficile on non-porous surfaces with mechanical action using wipes. It is relevant to practical surface disinfection, including pre-impregnated ready-to-use disinfectant wipes."
+      ]
+    },
+    "summary": {
+      "zh": "EN 17846:2023 — Chemical disinfectants and antiseptics — Quantitative test method for the evaluation of sporicidal activity against Clostridioides difficile on non-porous surfaces ",
+      "en": "EN 17846 is a Phase 2 Step 2 four-field test for evaluating sporicidal activity against Clostridioides difficile on non-porous surfaces with mechanical action using wipes. It is relevant to practical surface disinfection, including pre-impregnated ready-to-use disinfectant wipes."
+    },
+    "references": [
+      "[1] CEN, EN 17846:2023 — Chemical disinfectants and antiseptics — Quantitative test method for the evaluation of sporicidal activity against Clostridioides difficile on non-porous surfaces with mechanical action employing wipes in the medical area (4-field test) — Test method and requirements (phase 2, step 2).",
+      "[2] BSI, BS EN 17846:2023 — Scope and application to wipes. ([BSI Knowledge][19])"
+    ],
+    "showImportance": false
+  },
+  {
+    "slug": "flip-top-lid",
+    "category": "fundamentals",
+    "title": {
+      "zh": "翻盖",
+      "en": "Flip-top Lid / Flip-top Closure"
+    },
+    "definition": {
+      "zh": [
+        "翻盖（Flip-top Lid / Flip-top Closure），指安装在湿巾包装取用开口上、通过铰链进行开启和闭合的刚性或半刚性盖体，是多抽湿巾常见的包装封口和取用结构。",
+        "在典型软包湿巾中，Flip-top Lid 固定于柔性包装表面，打开上盖后通过内部开口抽取湿巾，使用后重新关闭上盖，以减少包装与外部空气之间的交换并帮助保持包装密封。[1]",
+        "翻盖通常具有三个主要功能：",
+        "Resealability：使用后重新关闭；",
+        "Dispensing：提供稳定、易操作的取巾开口；",
+        "Moisture Protection：减少湿巾在反复使用过程中的水分损失。",
+        "部分湿巾包装同时使用内部拉贴（Resealable Label）与外部 Flip-top Lid；也有设计直接将翻盖密封在包装开口周围。具体结构取决于包装设计、使用频次、成本和密封要求。"
+      ],
+      "en": [
+        "A flip-top lid is a rigid or semi-rigid hinged closure fitted over the dispensing opening of a wet wipe pack. It supports resealing, stable dispensing and moisture protection, and may be combined with an internal resealable label."
+      ]
+    },
+    "summary": {
+      "zh": "翻盖（Flip-top Lid / Flip-top Closure），指安装在湿巾包装取用开口上、通过铰链进行开启和闭合的刚性或半刚性盖体，是多抽湿巾常见的包装封口和取用结构。",
+      "en": "A flip-top lid is a rigid or semi-rigid hinged closure fitted over the dispensing opening of a wet wipe pack. It supports resealing, stable dispensing and moisture protection, and may be combined with an internal resealable label."
+    },
+    "references": [
+      "[1] Wet Wipes Container with Flexible Dispensing Orifice — flexible package、flip-top lid 及密封结构。 (Google 专利)"
+    ],
+    "illustration": {
+      "src": "/assets/glossary/wet-wipes-packaging-structure.png",
+      "alt": {
+        "zh": "湿巾包装结构示意图，标注翻盖、拉贴和卷膜包装",
+        "en": "Wet wipe packaging structure showing the lid, resealable label and rollstock flexible packaging"
+      },
+      "caption": {
+        "zh": "湿巾包装结构示意图",
+        "en": "Wet wipe packaging structure"
+      }
+    },
+    "showImportance": false
+  },
+  {
+    "slug": "fsc-chain-of-custody",
+    "category": "factory",
+    "title": {
+      "zh": "FSC 产销监管链认证",
+      "en": "FSC Chain of Custody Certification"
+    },
+    "definition": {
+      "zh": [
+        "森林管理委员会（FSC）产销监管链认证（Forest Stewardship Council (FSC) Chain of Custody Certification",
+        "FSC Chain of Custody（CoC）认证用于验证符合 FSC 要求的森林来源材料，在从原料采购到加工、制造和分销的供应链过程中得到适当识别和追踪。[1]",
+        "FSC 要求 CoC 认证组织建立相应管理体系，对 FSC 材料进行识别和追踪，并保存相关生产、采购和销售记录。[1]"
+      ],
+      "en": [
+        "Forest Stewardship Council (FSC) Chain of Custody Certification",
+        "FSC Chain of Custody (CoC) certification verifies that forest-based materials meeting FSC requirements are appropriately identified and tracked through the supply chain, from sourcing to processing, manufacturing and distribution.[1]",
+        "FSC requires CoC-certified organizations to establish management systems to identify and track FSC materials and to maintain relevant production, purchasing and sales records.[1]"
+      ]
+    },
+    "importance": {
+      "zh": [
+        "FSC CoC Certification 可以帮助采购方验证森林来源材料在供应链中的可追溯性，为无纺布纤维、纸浆和包装材料等森林来源材料的责任采购提供依据。"
+      ],
+      "en": [
+        "FSC CoC certification helps buyers verify the traceability of forest-based materials through the supply chain, supporting responsible sourcing of materials such as nonwoven fibers, pulp and packaging."
+      ]
+    },
+    "references": [
+      "[1] Forest Stewardship Council (FSC), Chain of Custody Certification.",
+      "[2] VINNER Health Huanggang Branch, FSC Chain of Custody Certificate, issued by Soil Association Certification Limited.",
+      "[3] Certificate statement concerning product-level FSC claims and certification scope."
+    ],
+    "summary": {
+      "zh": "FSC Chain of Custody（CoC）认证用于验证符合 FSC 要求的森林来源材料，在从原料采购到加工、制造和分销的供应链过程中得到适当识别和追踪。",
+      "en": "FSC Chain of Custody (CoC) certification verifies that forest-based materials meeting FSC requirements are appropriately identified and tracked through the supply chain, from sourcing to processing, manufacturing and distribution."
+    }
+  },
+  {
+    "slug": "gb-national-standard",
+    "category": "testing",
+    "title": {
+      "zh": "GB（国标）",
+      "en": "GB (Chinese National Standard)"
+    },
+    "definition": {
+      "zh": [
+        "GB，即Chinese National Standards（中国国家标准），是中华人民共和国国家标准体系的标准代号之一。根据中国《国家标准管理办法》，中国国家标准包括强制性国家标准、推荐性国家标准以及国家标准化指导性技术文件。[1]",
+        "其中：",
+        "GB 表示强制性国家标准；",
+        "GB/T 表示推荐性国家标准；",
+        "GB/Z 表示国家标准化指导性技术文件。[1]",
+        "因此，“GB”在日常使用中经常被广义地用于表示中国国家标准体系，但在具体引用标准时，应区分 `GB` 与 `GB/T` 的法律和标准属性。国家标准编号一般由标准代号、标准顺序号以及发布年份组成，例如 `GB/T 38502-2020`。[1]"
+      ],
+      "en": [
+        "GB is one of the designations in China’s national standards system. GB identifies mandatory national standards, GB/T identifies recommended standards, and GB/Z identifies national standardization guidance documents."
+      ]
+    },
+    "summary": {
+      "zh": "GB，即Chinese National Standards（中国国家标准），是中华人民共和国国家标准体系的标准代号之一。根据中国《国家标准管理办法》，中国国家标准包括强制性国家标准、推荐性国家标准以及国家标准化指导性技术文件。[1]",
+      "en": "GB is one of the designations in China’s national standards system. GB identifies mandatory national standards, GB/T identifies recommended standards, and GB/Z identifies national standardization guidance documents."
+    },
+    "references": [
+      "[1] 国家市场监督管理总局，《国家标准管理办法》，关于国家标准分类、代号及编号的规定。"
+    ],
+    "showImportance": false
+  },
+  {
+    "slug": "gsv",
+    "category": "factory",
+    "title": {
+      "zh": "全球供应链安全验证（GSV）",
+      "en": "Global Security Verification (GSV)"
+    },
+    "definition": {
+      "zh": [
+        "全球供应链安全验证（Global Security Verification, GSV）",
+        "Global Security Verification（GSV）是 Intertek 建立的全球供应链安全验证项目，旨在帮助进口商和供应商识别并降低跨境货物运输及全球供应链中的安全风险。[1]",
+        "GSV 综合了包括 C-TPAT、PIP 和 AEO 在内的多项国际供应链安全体系，并通过统一的方法对供应链安全实践进行评估。[1]",
+        "GSV 2.0 的评估领域包括风险评估、业务合作伙伴安全、网络安全、运输工具与国际运输设备安全、封条安全、程序安全、实体安全、访问控制、人员安全以及教育培训等。[2]"
+      ],
+      "en": [
+        "Global Security Verification (GSV)",
+        "Global Security Verification (GSV) is a global supply chain security verification program developed by Intertek. It helps importers and suppliers identify and reduce security risks in cross-border freight transportation and global supply chains.[1]",
+        "GSV incorporates multiple international supply chain security frameworks, including C-TPAT, PIP and AEO, and uses a harmonized approach to assess supply chain security practices.[1]",
+        "GSV 2.0 assessment areas include risk assessment, business partner security, cybersecurity, conveyance and international transportation instrument security, seal security, procedural security, physical security, access controls, personnel security, and education and training.[2]"
+      ]
+    },
+    "importance": {
+      "zh": [
+        "GSV 可以帮助国际买家判断供应商是否建立了系统性的全球供应链安全控制体系，尤其适用于涉及出口、集装箱运输和跨境供应链的制造企业。"
+      ],
+      "en": [
+        "GSV helps international buyers assess whether a supplier has established systematic controls for global supply chain security. It is especially relevant to manufacturers involved in exports, container shipping and cross-border supply chains."
+      ]
+    },
+    "references": [
+      "[1] Intertek, Global Security Verification (GSV).",
+      "[2] Intertek, Global Security Verification 2.0 — Updated CTPAT Minimum Security Criteria."
+    ],
+    "summary": {
+      "zh": "Global Security Verification（GSV）是 Intertek 建立的全球供应链安全验证项目，旨在帮助进口商和供应商识别并降低跨境货物运输及全球供应链中的安全风险。",
+      "en": "Global Security Verification (GSV) is a global supply chain security verification program developed by Intertek. It helps importers and suppliers identify and reduce security risks in cross-border freight transportation and global supply chains."
+    }
+  },
+  {
+    "slug": "gmp",
+    "category": "factory",
+    "title": {
+      "zh": "良好生产规范（GMP）",
+      "en": "Good Manufacturing Practice (GMP)"
+    },
+    "definition": {
+      "zh": [
+        "良好生产规范（Good Manufacturing Practice，GMP）是用于确保产品按照与其预期用途相适应的质量标准，持续地进行生产和质量控制的一套原则和管理体系。WHO 将 GMP 视为质量保证的重要组成部分，其核心在于通过对人员、厂房、材料、生产过程、质量控制和文件记录等环节实施系统管理，降低仅依靠最终产品检验无法完全消除的生产风险。[1]",
+        "需要注意的是，GMP 并不是全球只有一套统一的标准或认证。不同产品类别以及不同国家和地区，可以通过法规、国际标准或监管机构指南等不同方式落实 GMP 原则。",
+        "例如，医疗器械领域广泛采用 ISO 13485 作为国际认可的医疗器械质量管理体系标准；[2]化妆品领域则广泛采用 ISO 22716 作为化妆品生产、控制、储存和运输的国际 GMP 指南。[3]此外，不同国家或地区还可能发布自己的 GMP 法规或指导文件，例如美国 FDA 发布的 Cosmetic GMP Guidance。"
+      ],
+      "en": [
+        "Good Manufacturing Practice (GMP) is a set of principles and management systems designed to ensure that products are consistently manufactured and controlled to quality standards appropriate to their intended use. WHO regards GMP as an important part of quality assurance. Its core purpose is to systematically manage personnel, premises, materials, production processes, quality control and documentation to reduce manufacturing risks that cannot be fully eliminated through final product testing alone.[1]",
+        "GMP is not a single, globally uniform standard or certification. Different product categories, countries and regions may implement GMP principles through regulations, international standards or guidance issued by regulatory authorities.",
+        "For example, ISO 13485 is widely used as an internationally recognized quality management system standard for medical devices;[2] ISO 22716 is widely used as international GMP guidance for the production, control, storage and shipment of cosmetics.[3] Countries and regions may also issue their own GMP regulations or guidance, such as the U.S. FDA's Cosmetic GMP Guidance."
+      ]
+    },
+    "importance": {
+      "zh": [
+        "对于医疗器械、化妆品等受监管产品，目标市场通常会对制造商的质量管理体系或 GMP 管理提出要求。ISO 13485、ISO 22716 等国际标准因此经常被用于法规合规、客户审核、招标以及供应商准入。",
+        "需要区分的是，法规要求企业符合某种质量体系或 GMP 要求，并不总是等同于法律强制要求企业持有某一张 ISO 第三方认证证书。具体要求应根据产品类别和目标市场判断。",
+        "即使当地法规并没有规定特定的 GMP 认证，通过独立第三方 GMP 审核或认证仍然是一种有效的供应商筛选方式，可以帮助采购方判断制造商在厂房卫生、人员管理、生产控制、质量控制、文件管理和追溯等方面是否建立了系统性的管理机制。"
+      ],
+      "en": [
+        "For regulated products such as medical devices and cosmetics, target markets typically impose requirements on manufacturers' quality management systems or GMP practices. International standards such as ISO 13485 and ISO 22716 are therefore frequently used for regulatory compliance, customer audits, tenders and supplier qualification.",
+        "A legal requirement to comply with a quality system or GMP requirements does not always mean that holding a particular third-party ISO certificate is legally mandatory. The specific requirements depend on the product category and target market.",
+        "Even where local regulations do not prescribe a particular GMP certification, an independent third-party GMP audit or certification can be an effective supplier screening tool. It helps buyers assess whether a manufacturer has established systematic controls for premises hygiene, personnel, production, quality control, documentation and traceability."
+      ]
+    },
+    "references": [
+      "[1] World Health Organization (WHO), Good Manufacturing Practices.",
+      "[2] International Organization for Standardization (ISO), ISO 13485:2016 — Medical devices — Quality management systems — Requirements for regulatory purposes.",
+      "[3] International Organization for Standardization (ISO), ISO 22716:2007 — Cosmetics — Good Manufacturing Practices (GMP) — Guidelines on Good Manufacturing Practices."
+    ],
+    "summary": {
+      "zh": "良好生产规范（Good Manufacturing Practice，GMP）是用于确保产品按照与其预期用途相适应的质量标准，持续地进行生产和质量控制的一套原则和管理体系。",
+      "en": "Good Manufacturing Practice (GMP) is a set of principles and management systems designed to ensure that products are consistently manufactured and controlled to quality standards appropriate to their intended use. WHO regards GMP as an important part of quality assurance. Its core purpose is to systematically manage personnel, premises, materials, production processes, quality control and documentation to reduce manufacturing risks that cannot be fully eliminated through final product testing alone."
+    }
+  },
+  {
+    "slug": "basis-weight",
+    "category": "fundamentals",
+    "title": {
+      "zh": "克重",
+      "en": "Grammage / Basis Weight"
+    },
+    "definition": {
+      "zh": [
+        "克重（Grammage / Basis Weight），通常以 GSM 表示，即 Grams per Square Metre（克/平方米），指材料单位面积的质量。",
+        "例如：",
+        "60 GSM = 每平方米该材料的质量为 60 g。",
+        "INDA（美国非织造布工业协会，Association of the Nonwoven Fabrics Industry）将 Basis Weight 定义为单位面积织物的重量，常用单位包括 grams per square metre；ISO 9073-1:2023 则是专门规定无纺布单位面积质量测定方法的国际标准。[1][2]",
+        "在湿巾规格中，GSM 是描述无纺布用量和结构的重要参数。通常情况下，在纤维组成和制造工艺相近时，更高 GSM 意味着单位面积含有更多材料，成品往往会表现得更加厚实。"
+      ],
+      "en": [
+        "Basis weight, commonly expressed as GSM, is the mass of material per square metre. It is an important wet wipe specification because, when fiber composition and process are comparable, higher GSM generally produces a thicker-feeling material."
+      ]
+    },
+    "summary": {
+      "zh": "克重（Grammage / Basis Weight），通常以 GSM 表示，即 Grams per Square Metre（克/平方米），指材料单位面积的质量。",
+      "en": "Basis weight, commonly expressed as GSM, is the mass of material per square metre. It is an important wet wipe specification because, when fiber composition and process are comparable, higher GSM generally produces a thicker-feeling material."
+    },
+    "references": [
+      "[1] INDA, Nonwovens Glossary of Terms — Basis Weight. (非织造材料协会)",
+      "[2] ISO, ISO 9073-1:2023 — Nonwovens — Test methods — Part 1: Determination of mass per unit area. (ISO)"
+    ],
+    "showImportance": false
+  },
+  {
+    "slug": "iso-13485",
+    "category": "factory",
+    "title": {
+      "zh": "ISO 13485",
+      "en": "ISO 13485"
+    },
+    "definition": {
+      "zh": [
+        "ISO 13485 医疗器械 — 质量管理体系 — 用于法规目的的要求（Medical devices — Quality management systems — Requirements for regulatory purposes）",
+        "ISO 13485 是专门针对医疗器械行业制定的国际质量管理体系标准，规定了组织为持续满足客户要求以及适用于医疗器械的法规要求而需要建立的质量管理体系要求。[1]",
+        "该标准强调医疗器械领域的法规符合性、风险管理、过程控制、验证、文件管理和产品可追溯性等要求。ISO 官方将其描述为医疗器械设计和制造领域国际认可的质量管理体系标准。[1]"
+      ],
+      "en": [
+        "ISO 13485 — Medical devices — Quality management systems — Requirements for regulatory purposes",
+        "ISO 13485 is an international quality management system standard specifically developed for the medical device industry. It specifies requirements for a quality management system that enables organizations to consistently meet customer requirements and applicable medical device regulatory requirements.[1]",
+        "The standard emphasizes regulatory compliance, risk management, process control, validation, documentation and product traceability in the medical device sector. ISO describes it as an internationally recognized quality management system standard for medical device design and manufacturing.[1]"
+      ]
+    },
+    "importance": {
+      "zh": [
+        "ISO 13485 是医疗器械国际供应链中最重要的质量管理体系标准之一。",
+        "对于医疗器械采购方，它能够帮助判断制造商是否拥有专门面向医疗器械生产和法规要求建立的质量管理能力，而不只是通用制造业质量管理体系。"
+      ],
+      "en": [
+        "ISO 13485 is one of the most important quality management system standards in the international medical device supply chain.",
+        "For medical device buyers, it helps establish whether a manufacturer has quality management capabilities specifically designed for medical device production and regulatory requirements, beyond a general manufacturing quality management system."
+      ]
+    },
+    "references": [
+      "[1] International Organization for Standardization (ISO), ISO 13485:2016 — Medical devices — Quality management systems — Requirements for regulatory purposes."
+    ],
+    "summary": {
+      "zh": "ISO 13485 是专门针对医疗器械行业制定的国际质量管理体系标准，规定了组织为持续满足客户要求以及适用于医疗器械的法规要求而需要建立的质量管理体系要求。",
+      "en": "ISO 13485 is an international quality management system standard specifically developed for the medical device industry. It specifies requirements for a quality management system that enables organizations to consistently meet customer requirements and applicable medical device regulatory requirements."
+    }
+  },
+  {
+    "slug": "iso-14001",
+    "category": "factory",
+    "title": {
+      "zh": "ISO 14001",
+      "en": "ISO 14001"
+    },
+    "definition": {
+      "zh": [
+        "ISO 14001环境管理体系 — 要求及使用指南（ Environmental management systems — Requirements with guidance for use）",
+        "ISO 14001 是国际认可的环境管理体系（EMS）标准，为组织建立、实施和持续改进环境管理体系提供框架，使企业能够系统管理自身环境影响、适用法规义务以及环境目标。[1]",
+        "该体系涉及资源使用、废弃物管理、环境因素、环境绩效监测以及持续改进等方面。[1]"
+      ],
+      "en": [
+        "ISO 14001 — Environmental management systems — Requirements with guidance for use",
+        "ISO 14001 is an internationally recognized environmental management system (EMS) standard. It provides a framework for establishing, implementing and continually improving an environmental management system, enabling organizations to systematically manage their environmental impacts, applicable regulatory obligations and environmental objectives.[1]",
+        "The system addresses areas such as resource use, waste management, environmental aspects, environmental performance monitoring and continual improvement.[1]"
+      ]
+    },
+    "importance": {
+      "zh": [
+        "ISO 14001 可以帮助采购方判断制造商是否已经将环境管理纳入企业日常运营，而不是只依靠零散的环保措施。",
+        "对于重视 ESG、可持续采购和供应链环境绩效的国际客户，它也是评价供应商环境管理能力的重要参考。"
+      ],
+      "en": [
+        "ISO 14001 helps buyers assess whether a manufacturer has integrated environmental management into day-to-day operations, rather than relying only on isolated environmental measures.",
+        "For international customers that prioritize ESG, sustainable procurement and supply chain environmental performance, it is also an important reference for evaluating a supplier's environmental management capabilities."
+      ]
+    },
+    "references": [
+      "[1] International Organization for Standardization (ISO), ISO 14001:2026 — Environmental management systems — Requirements with guidance for use."
+    ],
+    "summary": {
+      "zh": "ISO 14001 是国际认可的环境管理体系（EMS）标准，为组织建立、实施和持续改进环境管理体系提供框架，使企业能够系统管理自身环境影响、适用法规义务以及环境目标。",
+      "en": "ISO 14001 is an internationally recognized environmental management system (EMS) standard. It provides a framework for establishing, implementing and continually improving an environmental management system, enabling organizations to systematically manage their environmental impacts, applicable regulatory obligations and environmental objectives."
+    }
+  },
+  {
+    "slug": "iso-22716",
+    "category": "factory",
+    "title": {
+      "zh": "ISO 22716",
+      "en": "ISO 22716"
+    },
+    "definition": {
+      "zh": [
+        "ISO 22716化妆品 — 良好生产规范（GMP）— 良好生产规范指南（Cosmetics — Good Manufacturing Practices (GMP) — Guidelines on Good Manufacturing Practices）",
+        "ISO 22716 是针对化妆品行业制定的国际 GMP 指南，其官方适用范围包括化妆品的生产、控制、储存和运输。[1]",
+        "该标准主要关注产品质量相关的 GMP 管理。ISO 官方同时明确指出，ISO 22716 整体上并不覆盖工厂员工职业安全或环境保护，也不适用于研发活动和成品分销。[1]"
+      ],
+      "en": [
+        "ISO 22716 — Cosmetics — Good Manufacturing Practices (GMP) — Guidelines on Good Manufacturing Practices",
+        "ISO 22716 is international GMP guidance developed for the cosmetics industry. Its official scope covers the production, control, storage and shipment of cosmetic products.[1]",
+        "The standard primarily addresses GMP management related to product quality. ISO also states that ISO 22716 as a whole does not cover occupational safety for factory personnel or environmental protection, and does not apply to research and development activities or the distribution of finished products.[1]"
+      ]
+    },
+    "importance": {
+      "zh": [
+        "对于化妆湿巾、个人护理湿巾等产品，ISO 22716 是国际市场广泛认可的化妆品 GMP 框架之一。",
+        "它可以帮助品牌和采购方判断制造商是否在人员、厂房、设备、原料、生产、质量控制、偏差、投诉、召回和文件记录等方面建立了与化妆品生产相适应的管理体系。"
+      ],
+      "en": [
+        "For cosmetic wipes and personal care wipes, ISO 22716 is one of the internationally recognized cosmetic GMP frameworks.",
+        "It helps brands and buyers assess whether a manufacturer has established management systems appropriate to cosmetics production across personnel, premises, equipment, raw materials, production, quality control, deviations, complaints, recalls and documentation."
+      ]
+    },
+    "references": [
+      "[1] International Organization for Standardization (ISO), ISO 22716:2007 — Cosmetics — Good Manufacturing Practices (GMP) — Guidelines on Good Manufacturing Practices."
+    ],
+    "summary": {
+      "zh": "ISO 22716 是针对化妆品行业制定的国际 GMP 指南，其官方适用范围包括化妆品的生产、控制、储存和运输。",
+      "en": "ISO 22716 is international GMP guidance developed for the cosmetics industry. Its official scope covers the production, control, storage and shipment of cosmetic products."
+    }
+  },
+  {
+    "slug": "iso-45001",
+    "category": "factory",
+    "title": {
+      "zh": "ISO 45001",
+      "en": "ISO 45001"
+    },
+    "definition": {
+      "zh": [
+        "ISO 45001职业健康安全管理体系 — 要求及使用指南（Occupational health and safety management systems — Requirements with guidance for use）",
+        "ISO 45001 是职业健康与安全管理体系（OH&S）的国际标准，规定了组织管理职业健康安全风险和改善职业健康安全绩效所需的管理体系要求。[1]",
+        "其核心内容包括领导作用、员工参与、危险源识别、风险评估、法规要求、应急准备、事故调查和持续改进等。[1]"
+      ],
+      "en": [
+        "ISO 45001 — Occupational health and safety management systems — Requirements with guidance for use",
+        "ISO 45001 is an international standard for occupational health and safety (OH&S) management systems. It specifies management system requirements for managing occupational health and safety risks and improving OH&S performance.[1]",
+        "Its core topics include leadership, worker participation, hazard identification, risk assessment, legal requirements, emergency preparedness, incident investigation and continual improvement.[1]"
+      ]
+    },
+    "importance": {
+      "zh": [
+        "ISO 45001 表明制造商不仅关注产品质量，也通过系统化的管理体系识别和控制员工职业健康与安全风险。",
+        "对于大型品牌、零售商以及跨国企业，它也经常成为供应商 ESG、社会责任和供应链审核的重要参考。"
+      ],
+      "en": [
+        "ISO 45001 indicates that a manufacturer addresses not only product quality but also the identification and control of occupational health and safety risks through a systematic management system.",
+        "For major brands, retailers and multinational companies, it is often an important reference in supplier ESG, social responsibility and supply chain audits."
+      ]
+    },
+    "references": [
+      "[1] International Organization for Standardization (ISO), ISO 45001:2018 — Occupational health and safety management systems — Requirements with guidance for use."
+    ],
+    "summary": {
+      "zh": "ISO 45001 是职业健康与安全管理体系（OH&S）的国际标准，规定了组织管理职业健康安全风险和改善职业健康安全绩效所需的管理体系要求。",
+      "en": "ISO 45001 is an international standard for occupational health and safety (OH&S) management systems. It specifies management system requirements for managing occupational health and safety risks and improving OH&S performance."
+    }
+  },
+  {
+    "slug": "iso-9001",
+    "category": "factory",
+    "title": {
+      "zh": "ISO 9001",
+      "en": "ISO 9001"
+    },
+    "definition": {
+      "zh": [
+        "ISO9001质量管理体系 — 要求（Quality management systems — Requirements）是国际通用的质量管理体系（QMS）标准，规定了组织建立、实施、维护和持续改进质量管理体系的要求，以帮助组织持续满足客户要求并提高质量管理绩效。[1]",
+        "ISO 9001 属于通用管理体系标准，适用于不同规模和行业的组织，而不是针对某一种特定产品或行业设计。[1]"
+      ],
+      "en": [
+        "ISO 9001 — Quality management systems — Requirements is an internationally used quality management system (QMS) standard. It specifies requirements for establishing, implementing, maintaining and continually improving a quality management system to help organizations consistently meet customer requirements and improve quality management performance.[1]",
+        "ISO 9001 is a generic management system standard applicable to organizations of different sizes and industries, rather than being designed for a particular product or sector.[1]"
+      ]
+    },
+    "importance": {
+      "zh": [
+        "ISO 9001 可以帮助采购方判断制造商是否已经建立系统化的质量管理框架，包括过程控制、绩效监测、质量目标、纠正措施和持续改进等，而不是仅依靠成品检验控制质量。",
+        "对于 OEM/ODM 制造商而言，它也是国际供应商审核中最常见的基础质量管理体系之一。"
+      ],
+      "en": [
+        "ISO 9001 helps buyers assess whether a manufacturer has established a systematic quality management framework, including process control, performance monitoring, quality objectives, corrective actions and continual improvement, rather than relying solely on finished-product inspection.",
+        "For OEM/ODM manufacturers, it is also one of the most common foundational quality management systems considered in international supplier audits."
+      ]
+    },
+    "references": [
+      "[1] International Organization for Standardization (ISO), ISO 9001 — Quality management systems — Requirements."
+    ],
+    "summary": {
+      "zh": "ISO9001质量管理体系 — 要求（Quality management systems — Requirements）是国际通用的质量管理体系（QMS）标准，规定了组织建立、实施、维护和持续改进质量管理体系的要求，以帮助组织持续满足客户要求并提高质量管理绩效。",
+      "en": "ISO 9001 — Quality management systems — Requirements is an internationally used quality management system (QMS) standard. It specifies requirements for establishing, implementing, maintaining and continually improving a quality management system to help organizations consistently meet customer requirements and improve quality management performance."
+    }
+  },
+  {
+    "slug": "lotion-loading",
+    "category": "fundamentals",
+    "title": {
+      "zh": "含液量",
+      "en": "Lotion Loading / Liquid Loading / Wetting Ratio"
+    },
+    "definition": {
+      "zh": [
+        "含液量（Lotion Loading / Liquid Loading / Wetting Ratio），用于表示湿巾基材中加入或承载的配液量。行业中经常使用配液质量与干基材质量之比表示，例如：",
+        "Lotion Loading = 3.0 g/g",
+        "意味着每 1 g 干基材对应约 3 g 配液。相关湿巾技术资料也将 lotion loading 或 saturation loading 定义为施加到干燥基材上的液体量，并通常以 g liquid / g dry substrate 表示。[1]",
+        "含液量并不存在适用于所有湿巾的统一最佳数值。不同无纺布的纤维材质、结构、克重和吸收特性不同，同时不同湿巾产品对湿润程度、液体释放和擦拭覆盖面积的需求也不同，因此基材与含液量需要配套设计。[2]",
+        "含液量过低可能造成湿巾使用过程中液体不足；过高则可能增加包装渗液、生产控制和成本方面的压力。"
+      ],
+      "en": [
+        "Lotion loading expresses the amount of liquid carried by a wet wipe substrate, commonly as grams of liquid per gram of dry substrate. The appropriate loading depends on fiber, structure, basis weight, absorbency, liquid release and the intended use."
+      ]
+    },
+    "summary": {
+      "zh": "含液量（Lotion Loading / Liquid Loading / Wetting Ratio），用于表示湿巾基材中加入或承载的配液量。行业中经常使用配液质量与干基材质量之比表示，例如：",
+      "en": "Lotion loading expresses the amount of liquid carried by a wet wipe substrate, commonly as grams of liquid per gram of dry substrate. The appropriate loading depends on fiber, structure, basis weight, absorbency, liquid release and the intended use."
+    },
+    "references": [
+      "[1] Wet Wipes Comprising a Fibrous Structure and a Liquid Composition — 关于 saturation loading / lotion loading 的定义。 (Justia Patents)",
+      "[2] Scientific study, Balancing the decomposable behavior and wet tensile mechanical property of cellulose-based wet wipe substrates — 关于 wet-wipe substrate 的 liquid content。 (PubMed Central (PMC))"
+    ],
+    "showImportance": false
+  },
+  {
+    "slug": "nonwoven-fabric",
+    "category": "fundamentals",
+    "title": {
+      "zh": "无纺布",
+      "en": "Nonwoven Fabric / Nonwoven"
+    },
+    "definition": {
+      "zh": [
+        "无纺布（Nonwoven Fabric / Nonwoven），是主要由纤维构成，并通过物理和/或化学方式形成一定结构完整性的片状材料，与传统的机织布和针织布不同。INDA（美国非织造布工业协会，Association of the Nonwoven Fabrics Industry）将 Nonwoven Fabric 定义为一种以纤维为主体、通过物理和/或化学方法获得结构完整性的材料。[1]",
+        "无纺布是一大类材料及制造技术的总称。其性能由多个因素共同决定，包括：",
+        "纤维原料：",
+        "生产工艺：",
+        "克重（GSM）及纤维排列、表面纹理等。[1]",
+        "因此，即使两个湿巾产品都标注“Nonwoven”，它们的柔软度、强度、吸液表现、掉屑情况和适用场景仍可能存在很大差别。",
+        "在湿巾领域，水刺无纺布（Spunlace Nonwoven）是最常见的基材类型之一。",
+        "纤维原料对比：粘胶纤维 Viscose (Rayon)：吸水性高、柔软度高、湿态强度中、亲肤性高、掉屑控制中、可持续性较高；聚酯纤维 Polyester (PET)：吸水性低、柔软度中、湿态强度高、亲肤性中、掉屑控制高、可持续性低；聚丙烯 Polypropylene (PP)：吸水性低、柔软度中、湿态强度高、亲肤性中、掉屑控制较高、可持续性低；聚乙烯 Polyethylene (PE)：吸水性低、柔软度高、湿态强度较高、亲肤性高、掉屑控制较高、可持续性低；棉 Cotton：吸水性高、柔软度高、湿态强度较高、亲肤性高、掉屑控制中、可持续性较高；木浆 Wood Pulp：吸水性高、柔软度中、湿态强度较低、亲肤性较高、掉屑控制较低、可持续性高。",
+        "生产工艺对比：纺粘 Spunbond：连续长丝铺网后热轧点粘合；熔喷 Meltblown：高速热空气牵伸超细纤维后随机铺网并纤维自粘结；水刺 Spunlace：短纤维成网后高压水针缠结；针刺 Needlepunch：短纤维成网后刺针机械缠结。"
+      ],
+      "en": [
+        "Nonwoven fabric is a sheet material made mainly from fibers that gain structural integrity through physical and/or chemical processes rather than weaving or knitting. Fiber, process, basis weight and surface structure all affect softness, strength, absorbency and lint control."
+      ]
+    },
+    "summary": {
+      "zh": "无纺布（Nonwoven Fabric / Nonwoven），是主要由纤维构成，并通过物理和/或化学方式形成一定结构完整性的片状材料，与传统的机织布和针织布不同。INDA（美国非织造布工业协会，Association of the Nonwoven Fabrics Industry）将 Nonwoven Fabric 定义为一种以纤维为主体、通过物理和/或",
+      "en": "Nonwoven fabric is a sheet material made mainly from fibers that gain structural integrity through physical and/or chemical processes rather than weaving or knitting. Fiber, process, basis weight and surface structure all affect softness, strength, absorbency and lint control."
+    },
+    "references": [
+      "[1] INDA — Association of the Nonwoven Fabrics Industry, Nonwovens Glossary of Terms. (非织造材料协会)",
+      "[2] EDANA, Nonwovens in Personal Care Wipes. (EDANA)"
+    ],
+    "showImportance": false
+  },
+  {
+    "slug": "resealable-label",
+    "category": "fundamentals",
+    "title": {
+      "zh": "拉贴",
+      "en": "Resealable Label"
+    },
+    "definition": {
+      "zh": [
+        "拉贴（Resealable Label），指覆盖在湿巾软包装取用开口上的可重复揭开和重新粘合的标签式封口结构。",
+        "典型拉贴由柔性或半刚性的标签材料以及可重复开启的压敏胶层组成。用户揭开拉贴后可以通过包装开口抽取湿巾，使用后再将标签重新粘回开口区域。[1]",
+        "其主要作用包括：",
+        "提供湿巾取用开口；",
+        "使用后重新封闭包装；",
+        "减少包装内部水分和挥发性成分的损失；",
+        "降低外界污染物进入包装的机会。",
+        "可重复密封的标签能够在包装开口周围形成密封，从而降有效低湿巾储存过程中的干燥风险。[1][2]"
+      ],
+      "en": [
+        "A resealable label is a peel-and-reseal closure covering the dispensing opening of a flexible wet wipe pack. It provides access, reseals the opening after use, limits moisture loss and reduces the chance of outside contamination."
+      ]
+    },
+    "summary": {
+      "zh": "拉贴（Resealable Label），指覆盖在湿巾软包装取用开口上的可重复揭开和重新粘合的标签式封口结构。",
+      "en": "A resealable label is a peel-and-reseal closure covering the dispensing opening of a flexible wet wipe pack. It provides access, reseals the opening after use, limits moisture loss and reduces the chance of outside contamination."
+    },
+    "references": [
+      "[1] Stick-on, Flexible, Peel and Seal Package Dispenser — resealable label flap 在湿巾软包装中的结构和作用。 (Google 专利)",
+      "[2] A Resealable Label Flap — 关于 wet wipes resealable label 及密封、防干燥作用。 (Google 专利)"
+    ],
+    "illustration": {
+      "src": "/assets/glossary/wet-wipes-packaging-structure.png",
+      "alt": {
+        "zh": "湿巾包装结构示意图，标注翻盖、拉贴和卷膜包装",
+        "en": "Wet wipe packaging structure showing the lid, resealable label and rollstock flexible packaging"
+      },
+      "caption": {
+        "zh": "湿巾包装结构示意图",
+        "en": "Wet wipe packaging structure"
+      }
+    },
+    "showImportance": false
+  },
+  {
+    "slug": "rollstock-flexible-packaging",
+    "category": "fundamentals",
+    "title": {
+      "zh": "卷膜包装",
+      "en": "Rollstock Flexible Packaging"
+    },
+    "definition": {
+      "zh": [
+        "卷膜包装（Rollstock Flexible Packaging），指以卷状柔性包装膜作为包装材料，在自动包装设备上经过放卷、成型、封合和切断等步骤形成湿巾软包的一类包装方式。",
+        "柔性包装（Flexible Packaging）可以由塑料薄膜、纸、铝箔或这些材料的组合构成 [1] 湿巾软包装通常需要同时具备液体和水汽阻隔能力，以及与产品配方相匹配的密封性能，以减少储存过程中的液体损失。",
+        "对于 OEM/ODM 定制产品，卷膜通常需要进行品牌图案和包装信息印刷。凹版印刷需要为不同颜色制作对应的印刷滚筒，柔版印刷则需要制作印版，因此会产生前期制版成本；这也是定制印刷卷膜通常具有一定经济起订量的重要原因之一。[3]"
+      ],
+      "en": [
+        "Rollstock flexible packaging uses a roll of flexible film that is unwound, formed, sealed and cut on an automatic packaging line to make wet wipe packs. The package must provide liquid and water-vapor barriers and a seal compatible with the formulation."
+      ]
+    },
+    "summary": {
+      "zh": "卷膜包装（Rollstock Flexible Packaging），指以卷状柔性包装膜作为包装材料，在自动包装设备上经过放卷、成型、封合和切断等步骤形成湿巾软包的一类包装方式。",
+      "en": "Rollstock flexible packaging uses a roll of flexible film that is unwound, formed, sealed and cut on an automatic packaging line to make wet wipe packs. The package must provide liquid and water-vapor barriers and a seal compatible with the formulation."
+    },
+    "references": [
+      "[1] Flexible Packaging Association (FPA), About Flexible Packaging. (灵活包装协会)",
+      "[2] Wet-wipes flexible packaging examples and barrier structures. (Tansox)",
+      "[3] Flexible-packaging gravure printing — printing cylinders and economics of production runs. (Tansox)"
+    ],
+    "illustration": {
+      "src": "/assets/glossary/wet-wipes-packaging-structure.png",
+      "alt": {
+        "zh": "湿巾包装结构示意图，标注翻盖、拉贴和卷膜包装",
+        "en": "Wet wipe packaging structure showing the lid, resealable label and rollstock flexible packaging"
+      },
+      "caption": {
+        "zh": "湿巾包装结构示意图",
+        "en": "Wet wipe packaging structure"
+      }
+    },
+    "showImportance": false
+  },
+  {
+    "slug": "smeta-4-pillar-audit",
+    "category": "factory",
+    "title": {
+      "zh": "SMETA 四支柱审核",
+      "en": "SMETA 4-Pillar Audit"
+    },
+    "definition": {
+      "zh": [
+        "Sedex 会员道德贸易审核 — 四支柱审核（Sedex Members’ Ethical Trade Audit (SMETA) — 4-Pillar Audit）",
+        "SMETA 是 Sedex 建立的现场社会责任审核方法，用于通过标准化的方法评估供应链工作场所的劳动条件和负责任商业实践。[1]",
+        "完整的 SMETA 4-Pillar Audit 覆盖四个主要领域：[1]",
+        "Labour Standards — 劳工标准",
+        "Health & Safety — 健康与安全",
+        "Environment — 环境",
+        "Business Ethics — 商业道德",
+        "Sedex 官方明确指出，SMETA 不是 Certification，并且 SMETA 方法本身不存在由 Sedex 或审核员签发的官方 “Pass” 或 “Fail” 结果。[1]"
+      ],
+      "en": [
+        "Sedex Members’ Ethical Trade Audit (SMETA) — 4-Pillar Audit",
+        "SMETA is an on-site social audit methodology developed by Sedex. It uses a standardized approach to assess working conditions and responsible business practices at supply chain workplaces.[1]",
+        "A full SMETA 4-Pillar Audit covers four main areas:[1]",
+        "Labour Standards",
+        "Health & Safety",
+        "Environment",
+        "Business Ethics",
+        "Sedex explicitly states that SMETA is not a certification and that the methodology does not provide an official ‘Pass’ or ‘Fail’ result issued by Sedex or the auditor.[1]"
+      ]
+    },
+    "importance": {
+      "zh": [
+        "SMETA 为品牌和采购商提供了一套标准化、可共享的供应链社会责任审核方法，可以帮助客户评估制造商在劳工权益、职业健康安全、环境管理和商业道德等方面的实际表现。它的审核数据还可以在供应链成员之间共享，从而降低重复审核并支持供应商持续改善。[1]"
+      ],
+      "en": [
+        "SMETA provides brands and buyers with a standardized, shareable methodology for social audits in the supply chain. It helps customers assess manufacturers' actual performance in labor rights, occupational health and safety, environmental management and business ethics. Audit data can also be shared among supply chain members to reduce duplicate audits and support continual supplier improvement.[1]"
+      ]
+    },
+    "references": [
+      "[1] Sedex, What We Do at Sedex — SMETA Audit.",
+      "[2] Sedex, Introduction to SMETA."
+    ],
+    "summary": {
+      "zh": "SMETA 是 Sedex 建立的现场社会责任审核方法，用于通过标准化的方法评估供应链工作场所的劳动条件和负责任商业实践。",
+      "en": "SMETA is an on-site social audit methodology developed by Sedex. It uses a standardized approach to assess working conditions and responsible business practices at supply chain workplaces."
+    }
+  },
+  {
+    "slug": "spunlace-nonwoven",
+    "category": "fundamentals",
+    "title": {
+      "zh": "水刺无纺布",
+      "en": "Spunlace Nonwoven / Hydroentangled Nonwoven"
+    },
+    "definition": {
+      "zh": [
+        "水刺无纺布（Spunlace Nonwoven / Hydroentangled Nonwoven），是通过水刺或水力缠结技术制造的一类无纺布。Spunlace 与 Hydroentanglement 在无纺布行业中通常指同一类纤维加固技术。[1]",
+        "其基本原理是利用高速、高压细水流作用于预先形成的纤维网，使纤维之间发生相互缠结，从而形成具有结构完整性的无纺布，而不需要像传统纺织品一样通过经纬纱交织形成织物。[1]",
+        "用于水刺的纤维网可以由不同材料和不同成网方式形成，因此“Spunlace”描述的是制造/加固工艺，而不是具体纤维成分。例如水刺无纺布可以由 viscose、polyester、cotton、wood pulp 或不同纤维组合制成。",
+        "不同纤维组成、纤维排列、水刺工艺以及克重（GSM）会进一步影响成品的柔软度、强度、表面触感和湿巾使用性能。"
+      ],
+      "en": [
+        "Spunlace, or hydroentanglement, uses high-pressure water jets to entangle fibers into a coherent nonwoven sheet. Spunlace describes the bonding process rather than a specific fiber composition; viscose, polyester, cotton, wood pulp or blends may be used."
+      ]
+    },
+    "summary": {
+      "zh": "水刺无纺布（Spunlace Nonwoven / Hydroentangled Nonwoven），是通过水刺或水力缠结技术制造的一类无纺布。Spunlace 与 Hydroentanglement 在无纺布行业中通常指同一类纤维加固技术。[1]",
+      "en": "Spunlace, or hydroentanglement, uses high-pressure water jets to entangle fibers into a coherent nonwoven sheet. Spunlace describes the bonding process rather than a specific fiber composition; viscose, polyester, cotton, wood pulp or blends may be used."
+    },
+    "references": [
+      "[1] INDA, Nonwovens Glossary of Terms — Spunlace bonding / Spunlace nonwoven / Hydroentangling. (非织造材料协会)",
+      "[2] INDA, Hydroentangled Technology Primer. (Inda)"
+    ],
+    "showImportance": false
+  },
+  {
+    "slug": "fda-cosmetic-gmp",
+    "category": "factory",
+    "title": {
+      "zh": "美国 FDA 化妆品 GMP",
+      "en": "U.S. FDA Cosmetic GMP"
+    },
+    "definition": {
+      "zh": [
+        "FDA化妆品良好生产规范（GMP）指南 / 检查清单（FDA Good Manufacturing Practice (GMP) Guidelines/Inspection Checklist for Cosmetics）",
+        "美国 FDA 发布 Cosmetic GMP Guidelines/Inspection Checklist，用于指导和检查化妆品企业在厂房、人员、设备、原料、生产、实验室控制和记录等方面的生产和质量管理实践。FDA 指出，严格遵循 GMP 有助于降低化妆品发生掺假或错误标签等问题的风险。[1] FDA 本身并没有建立一个“FDA Cosmetic GMP Certificate”官方认证项目，也不会因为企业符合这些指南就由 FDA 直接颁发一张 GMP 认证证书。",
+        "但是，第三方审核和认证机构可以根据 FDA 发布的 Cosmetic GMP Guidelines，对工厂进行审核，并在确认其管理体系和生产实践符合相关要求后，由第三方机构签发相应的 GMP Certificate。例如，维尼健康已经由 Intertek 按照美国 FDA 发布的 Cosmetic Good Manufacturing Practice Guidelines (2022) 进行审核，并取得其颁发的资质证书。"
+      ],
+      "en": [
+        "FDA Good Manufacturing Practice (GMP) Guidelines/Inspection Checklist for Cosmetics",
+        "The U.S. FDA publishes Cosmetic GMP Guidelines/Inspection Checklist to guide and inspect cosmetic manufacturers' production and quality management practices concerning premises, personnel, equipment, raw materials, production, laboratory controls and records. FDA states that strict adherence to GMP helps reduce the risk of adulteration or misbranding of cosmetics.[1] FDA itself does not operate an official ‘FDA Cosmetic GMP Certificate’ certification program and does not directly issue a GMP certificate simply because a company follows these guidelines.",
+        "However, third-party auditing and certification bodies may audit factories against FDA's Cosmetic GMP Guidelines and issue their own GMP certificates after confirming that management systems and manufacturing practices meet the relevant requirements. For example, VINNER Health has been audited by Intertek against the Cosmetic Good Manufacturing Practice Guidelines (2022) published by the U.S. FDA and has obtained a certificate issued by Intertek."
+      ]
+    },
+    "importance": {
+      "zh": [
+        "对于面向美国市场的化妆品及个人护理产品，即使某一采购项目没有要求制造商必须持有某一指定的第三方 GMP Certificate，按照 FDA Cosmetic GMP 指南接受独立第三方审核仍然可以帮助客户评价工厂在卫生、生产控制、质量控制和记录管理等方面的成熟度。"
+      ],
+      "en": [
+        "For cosmetics and personal care products intended for the U.S. market, an independent third-party audit against FDA Cosmetic GMP guidance can help customers assess a factory's maturity in hygiene, production control, quality control and record management, even when a procurement project does not require a particular third-party GMP certificate."
+      ]
+    },
+    "references": [
+      "[1] U.S. Food and Drug Administration (FDA), Good Manufacturing Practice (GMP) Guidelines/Inspection Checklist for Cosmetics.",
+      "[2] VINNER Health Huanggang Branch, Cosmetic GMP Certificate issued by Intertek — assessed against Cosmetic Good Manufacturing Practice Guidelines (2022) published by U.S. FDA."
+    ],
+    "summary": {
+      "zh": "美国 FDA 发布 Cosmetic GMP Guidelines/Inspection Checklist，用于指导和检查化妆品企业在厂房、人员、设备、原料、生产、实验室控制和记录等方面的生产和质量管理实践。",
+      "en": "The U.S. FDA publishes Cosmetic GMP Guidelines/Inspection Checklist to guide and inspect cosmetic manufacturers' production and quality management practices concerning premises, personnel, equipment, raw materials, production, laboratory controls and records. FDA states that strict adherence to GMP helps reduce the risk of adulteration or misbranding of cosmetics."
+    }
+  },
+  {
+    "slug": "wipe-folding",
+    "category": "fundamentals",
+    "title": {
+      "zh": "折叠方式",
+      "en": "Wipe Folding / Folding Pattern"
+    },
+    "definition": {
+      "zh": [
+        "折叠方式（Wipe Folding / Folding Pattern），指湿巾在完成基材切割或分切后，以特定结构进行折叠和堆叠的方式。折叠方式会影响湿巾在包装内部占用的空间、单片展开方式以及抽取体验。",
+        "湿巾行业常见的折叠结构包括 Z-fold、C-fold、V-fold 以及 Interfold（交错折叠）等；具体名称在不同设备制造商和生产体系中可能存在差异。",
+        "其中，Interfold的核心特点是相邻湿巾之间形成一定的交错关系。当第一片湿巾被抽出时，可以带动下一片部分露出包装开口，从而形成常见的 Pop-up Dispensing（连续抽取/弹出式抽取）效果。"
+      ],
+      "en": [
+        "Wipe folding is the structure used to fold and stack wipes after cutting. Z-fold, C-fold, V-fold and interfold arrangements affect pack volume, single-wipe unfolding and dispensing. Interfold can create a pop-up dispensing effect."
+      ]
+    },
+    "summary": {
+      "zh": "折叠方式（Wipe Folding / Folding Pattern），指湿巾在完成基材切割或分切后，以特定结构进行折叠和堆叠的方式。折叠方式会影响湿巾在包装内部占用的空间、单片展开方式以及抽取体验。",
+      "en": "Wipe folding is the structure used to fold and stack wipes after cutting. Z-fold, C-fold, V-fold and interfold arrangements affect pack volume, single-wipe unfolding and dispensing. Interfold can create a pop-up dispensing effect."
+    },
+    "references": [
+      "[1] Kimberly-Clark related patent, Wet Wipe Container with Flexible Orifice — 关于 interfolded wipes 与 pop-up dispensing。 (Google 专利)",
+      "[2] Folding and stacking configuration for wet wipes having improved dispensation and single wet wipe separation from the stack — Z-fold 及 interleaved wet-wipe structures. (Google 专利)"
+    ],
+    "showImportance": false
+  },
+  {
+    "slug": "impregnation-liquid",
+    "category": "fundamentals",
+    "title": {
+      "zh": "配液",
+      "en": "Wipe Solution / Impregnation Liquid"
+    },
+    "definition": {
+      "zh": [
+        "配液（Impregnation Liquid / Wipe Solution / Liquid Composition），指在湿巾制造过程中施加或浸渍到基材中的液体体系，是湿巾实现清洁、护理、卸妆、消毒等具体用途的重要组成部分。",
+        "不同产品领域对这一液体的叫法有所不同。个人护理湿巾行业中经常使用Lotion / Wipe Lotion，而技术文件、专利和消毒类产品中则更常使用 Liquid Composition、Wipe Solution 或 Impregnation Liquid。",
+        "配液通常以水或其他适用液体为主体，并根据产品用途加入表面活性剂、保湿剂、皮肤调理剂、香精、防腐体系或抗微生物活性成分等。具体组成取决于产品的预期用途和适用法规。EDANA（European Disposables and Nonwovens Association，欧洲一次性用品和非织造布协会，现为国际非织造布及相关行业协会）也指出，湿巾制造过程中会根据产品用途向基材加入相应的活性或功能性成分。[1]",
+        "因此，湿巾的最终性能不是单独由“布”或者“液”决定，而是基材与配液共同作用的结果。[2]"
+      ],
+      "en": [
+        "The impregnation liquid is the liquid system applied to or absorbed by the substrate during wet wipe manufacturing. Its water base and functional ingredients support cleansing, care, makeup removal or disinfection according to the intended use."
+      ]
+    },
+    "summary": {
+      "zh": "配液（Impregnation Liquid / Wipe Solution / Liquid Composition），指在湿巾制造过程中施加或浸渍到基材中的液体体系，是湿巾实现清洁、护理、卸妆、消毒等具体用途的重要组成部分。",
+      "en": "The impregnation liquid is the liquid system applied to or absorbed by the substrate during wet wipe manufacturing. Its water base and functional ingredients support cleansing, care, makeup removal or disinfection according to the intended use."
+    },
+    "references": [
+      "[1] EDANA, Wet Wipes Fact Sheet — How are wet wipes made?",
+      "[2] EDANA, Nonwovens in Personal Care Wipes"
+    ],
+    "showImportance": false
+  },
+  {
+    "slug": "substrate",
+    "category": "fundamentals",
+    "title": {
+      "zh": "基材",
+      "en": "Wipe Substrate / Substrate"
+    },
+    "definition": {
+      "zh": [
+        "基材（Wipe Substrate / Substrate），指构成湿巾主体并用于承载配液的片状材料。湿巾通常由基材与浸渍其中的液体体系共同构成；通过改变基材和配液的种类，可以使湿巾获得不同的柔软度、强度、吸液特性和使用性能。[1]",
+        "湿巾最常见的基材是无纺布（Nonwoven Fabric），但从广义技术定义上，湿巾基材并不必然只能是无纺布，也可以采用其他能够满足特定用途要求的片材结构。EDANA（European Disposables and Nonwovens Association，欧洲一次性用品和非织造布协会，现为国际非织造布及相关行业协会）在湿巾制造说明中将纤维基材的制造、功能成分的加入以及后续切割、折叠和包装视为湿巾生产的基本环节。[2]",
+        "因此，基材是上位概念，无纺布是目前湿巾最主要的一类基材。"
+      ],
+      "en": [
+        "A wipe substrate is the sheet material that forms the body of a wet wipe and carries the liquid composition. Substrate and liquid work together to determine softness, strength, absorbency and use performance."
+      ]
+    },
+    "summary": {
+      "zh": "基材（Wipe Substrate / Substrate），指构成湿巾主体并用于承载配液的片状材料。湿巾通常由基材与浸渍其中的液体体系共同构成；通过改变基材和配液的种类，可以使湿巾获得不同的柔软度、强度、吸液特性和使用性能。[1]",
+      "en": "A wipe substrate is the sheet material that forms the body of a wet wipe and carries the liquid composition. Substrate and liquid work together to determine softness, strength, absorbency and use performance."
+    },
+    "references": [
+      "[1] EDANA, Nonwovens in Personal Care Wipes",
+      "[2] EDANA, Wet Wipes Fact Sheet — How are wet wipes made?"
+    ],
+    "showImportance": false
+  },
+  {
+    "slug": "eu-mdr",
+    "category": "regulations",
+    "title": {
+      "zh": "EU MDR（欧盟医疗器械法规）",
+      "en": "EU MDR"
+    },
+    "definition": {
+      "zh": [
+        "EU MDR — Regulation (EU) 2017/745 of the European Parliament and of the Council of 5 April 2017 on medical devices，即欧盟《医疗器械法规》。该法规建立了欧盟医疗器械上市和监管的主要法律框架，涵盖医疗器械的分类、符合性评价、技术文件、临床评价、上市后监督、UDI、经济运营商责任和 CE 标志等要求。[1]",
+        "MDR 适用于其定义范围内的医疗器械，并取代此前的 Council Directives 90/385/EEC 和 93/42/EEC。法规的核心目标是确保欧盟医疗器械市场正常运行，同时实现对患者和使用者健康与安全的高水平保护。[1]",
+        "对于湿巾类产品，是否适用 MDR 取决于产品的预期用途、作用机制和宣称，而非仅取决于产品形态。例如，用于医疗用途，如擦拭医疗器械的消毒等，的某些湿巾、干巾、护理产品或器械配套产品，通常可能进入 MDR 路径。"
+      ],
+      "en": [
+        "EU MDR — Regulation (EU) 2017/745 of the European Parliament and of the Council of 5 April 2017 on medical devices, the European Union's Medical Devices Regulation. It establishes the main framework for placing medical devices on the EU market and regulating them, covering classification, conformity assessment, technical documentation, clinical evaluation, post-market surveillance, UDI, economic operator responsibilities and CE marking.[1]",
+        "MDR applies to devices within its scope and replaces Council Directives 90/385/EEC and 93/42/EEC. Its core aim is to keep the EU medical-device market functioning while ensuring a high level of protection for patients' and users' health and safety.[1]",
+        "For wet wipe products, whether MDR applies depends on intended purpose, mode of action and claims, rather than product form alone. Some wipes, dry wipes, care products or device accessories used for medical purposes, such as disinfecting medical devices, may enter an MDR pathway."
+      ]
+    },
+    "summary": {
+      "zh": "EU MDR — Regulation (EU) 2017/745 of the European Parliament and of the Council of 5 April 2017 on medical devices，即欧盟《医疗器械法规》。该法规建立了欧盟医疗器械上市和监管的主要法律框架，涵盖医疗器械的分类、符合性评价、技术文件、临床评价、上市后监督、UDI、经济运营商责任和 CE 标志等要求。[1]",
+      "en": "EU MDR — Regulation (EU) 2017/745 of the European Parliament and of the Council of 5 April 2017 on medical devices, the European Union's Medical Devices Regulation. It establishes the main framework for placing medical devices on the EU market and regulating them, covering classification, conformity assessment, technical documentation, clinical evaluation, post-market surveillance, UDI, economic operator responsibilities and CE marking.[1]"
+    },
+    "references": [
+      "[1] European Parliament and Council of the European Union. Regulation (EU) 2017/745 of the European Parliament and of the Council of 5 April 2017 on medical devices, amending Directive 2001/83/EC, Regulation (EC) No 178/2002 and Regulation (EC) No 1223/2009 and repealing Council Directives 90/385/EEC and 93/42/EEC."
+    ],
+    "showImportance": false
+  },
+  {
+    "slug": "eu-bpr",
+    "category": "regulations",
+    "title": {
+      "zh": "EU BPR（欧盟生物杀灭产品法规）",
+      "en": "EU BPR"
+    },
+    "definition": {
+      "zh": [
+        "EU BPR — Regulation (EU) No 528/2012 of the European Parliament and of the Council of 22 May 2012 concerning the making available on the market and use of biocidal products，即欧盟《生物杀灭产品法规》（Biocidal Products Regulation）。[1]",
+        "BPR 对欧盟市场上生物杀灭产品的活性物质批准、产品授权、市场供应和使用建立统一规则，其目的之一是在保障人类健康、动物健康和环境高水平保护的同时，统一欧盟内部市场规则。[1]",
+        "BPR 将生物杀灭产品划分为不同 Product Types（PT）。对湿巾行业而言，具有消毒、杀菌、杀病毒等生物杀灭宣称的产品可能属于 BPR 管理范围，例如用于表面、医疗环境或其他特定用途的消毒湿巾。产品是否属于 BPR，以及属于哪个 PT，需要根据其预期用途和宣称判断。",
+        "* PT1：人体卫生；典型产品：皮肤消毒湿巾、卫生手部消毒剂。",
+        "* PT2：非直接用于人体或动物的消毒剂和灭藻剂；典型产品：医院表面消毒湿巾、桌面或设备外表面消毒剂。",
+        "* PT3：兽医卫生；典型产品：畜牧场动物卫生消毒剂、兽医用途消毒产品。"
+      ],
+      "en": [
+        "EU BPR — Regulation (EU) No 528/2012 of the European Parliament and of the Council of 22 May 2012 concerning the making available on the market and use of biocidal products, the EU Biocidal Products Regulation.[1]",
+        "BPR establishes common rules for approval of active substances, product authorisation, making biocidal products available on the market and their use in the EU. It aims to harmonize the internal market while protecting human health, animal health and the environment at a high level.[1]",
+        "BPR divides biocidal products into Product Types (PT). For wet wipes, products making disinfectant, bactericidal or virucidal claims may fall within BPR, including wipes for surfaces, healthcare environments or other defined uses. Applicability and PT must be assessed from intended use and claims.",
+        "* PT1 — Human hygiene: skin disinfectant wipes and hygienic hand disinfectants.",
+        "* PT2 — Disinfectants and algaecides not intended for direct application to humans or animals: hospital surface wipes and wipes for desks or equipment exteriors.",
+        "* PT3 — Veterinary hygiene: animal-hygiene disinfectants and veterinary products."
+      ]
+    },
+    "summary": {
+      "zh": "EU BPR — Regulation (EU) No 528/2012 of the European Parliament and of the Council of 22 May 2012 concerning the making available on the market and use of biocidal products，即欧盟《生物杀灭产品法规》（Biocidal Products Regulation）。[1]",
+      "en": "EU BPR — Regulation (EU) No 528/2012 of the European Parliament and of the Council of 22 May 2012 concerning the making available on the market and use of biocidal products, the EU Biocidal Products Regulation.[1]"
+    },
+    "references": [
+      "[1] European Parliament and Council of the European Union. Regulation (EU) No 528/2012 of the European Parliament and of the Council of 22 May 2012 concerning the making available on the market and use of biocidal products."
+    ],
+    "showImportance": false
+  },
+  {
+    "slug": "eu-cosmetics-regulation",
+    "category": "regulations",
+    "title": {
+      "zh": "欧盟化妆品法规（EU Cosmetics Regulation）",
+      "en": "EU Cosmetics Regulation"
+    },
+    "definition": {
+      "zh": [
+        "EU Cosmetics Regulation — Regulation (EC) No 1223/2009 of the European Parliament and of the Council of 30 November 2009 on cosmetic products，即欧盟《化妆品法规》。该法规规定了在欧盟市场投放化妆品需要遵守的统一规则，以确保欧盟内部市场运行和对人体健康的高水平保护。[1]",
+        "法规将化妆品定义为主要或专门用于接触人体外部部位，例如皮肤、毛发、指甲、嘴唇和外生殖器，或牙齿和口腔黏膜，并以清洁、芳香、改变外观、保护、保持良好状态或改善体味为主要目的的物质或混合物。[1]",
+        "对于个人护理湿巾、卸妆湿巾、身体清洁湿巾等产品，如果其主要预期用途符合上述化妆品定义，通常需要按照 EU Cosmetics Regulation 评估其法规路径。"
+      ],
+      "en": [
+        "EU Cosmetics Regulation — Regulation (EC) No 1223/2009 of the European Parliament and of the Council of 30 November 2009 on cosmetic products. It establishes the common rules for placing cosmetics on the EU market, supporting the functioning of the internal market and a high level of protection for human health.[1]",
+        "The Regulation defines a cosmetic product as a substance or mixture intended mainly or exclusively to contact external parts of the human body, such as the skin, hair, nails, lips and external genital organs, or the teeth and oral mucous membranes, primarily to clean, perfume, change appearance, protect, keep in good condition or correct body odours.[1]",
+        "Personal-care wipes, makeup-removal wipes and body-cleansing wipes whose primary intended use fits this definition generally need their regulatory pathway assessed under the EU Cosmetics Regulation."
+      ]
+    },
+    "summary": {
+      "zh": "EU Cosmetics Regulation — Regulation (EC) No 1223/2009 of the European Parliament and of the Council of 30 November 2009 on cosmetic products，即欧盟《化妆品法规》。该法规规定了在欧盟市场投放化妆品需要遵守的统一规则，以确保欧盟内部市场运行和对人体健康的高水平保护。[1]",
+      "en": "EU Cosmetics Regulation — Regulation (EC) No 1223/2009 of the European Parliament and of the Council of 30 November 2009 on cosmetic products. It establishes the common rules for placing cosmetics on the EU market, supporting the functioning of the internal market and a high level of protection for human health.[1]"
+    },
+    "references": [
+      "[1] European Parliament and Council of the European Union. Regulation (EC) No 1223/2009 of the European Parliament and of the Council of 30 November 2009 on cosmetic products."
+    ],
+    "showImportance": false
+  },
+  {
+    "slug": "reach",
+    "category": "regulations",
+    "title": {
+      "zh": "REACH",
+      "en": "REACH"
+    },
+    "definition": {
+      "zh": [
+        "REACH — Regulation (EC) No 1907/2006 concerning the Registration, Evaluation, Authorisation and Restriction of Chemicals，全称中的 REACH 来自 Registration, Evaluation, Authorisation and Restriction of Chemicals，即“化学品注册、评估、许可和限制”。[1]",
+        "REACH 建立了欧盟对化学物质进行信息收集、风险评估和风险管理的核心制度。企业在符合适用条件时需要对制造或进口的物质进行注册，并提供物质性质、用途、危害和风险管理等信息；对于具有较高风险的物质，欧盟还可以采取授权或限制措施。[1][2]",
+        "对于湿巾制造商，REACH 可能涉及原料、配液中的化学物质、包装材料及其他物质或混合物。客户常说的“REACH 合规”通常并不是指一张统一的“REACH Certificate”，而是指相关原材料、物质、混合物或产品满足其适用的 REACH 义务和限制要求。"
+      ],
+      "en": [
+        "REACH — Regulation (EC) No 1907/2006 concerning the Registration, Evaluation, Authorisation and Restriction of Chemicals. The name REACH comes from Registration, Evaluation, Authorisation and Restriction of Chemicals.[1]",
+        "REACH establishes the EU's core system for collecting information about chemicals, assessing their risks and managing those risks. Where applicable, companies must register substances they manufacture or import and provide information on properties, uses, hazards and risk-management measures; higher-risk substances may also be subject to authorisation or restriction.[1][2]",
+        "For wet wipe manufacturers, REACH may involve raw materials, chemicals in wipe solutions, packaging materials and other substances or mixtures. “REACH compliance” usually does not mean one universal REACH certificate; it means that the relevant materials, substances, mixtures or products meet their applicable REACH duties and restrictions."
+      ]
+    },
+    "summary": {
+      "zh": "REACH — Regulation (EC) No 1907/2006 concerning the Registration, Evaluation, Authorisation and Restriction of Chemicals，全称中的 REACH 来自 Registration, Evaluation, Authorisation and Restriction of Chemicals，即“化学品注册、评估、许可和限制”。[1]",
+      "en": "REACH — Regulation (EC) No 1907/2006 concerning the Registration, Evaluation, Authorisation and Restriction of Chemicals. The name REACH comes from Registration, Evaluation, Authorisation and Restriction of Chemicals.[1]"
+    },
+    "references": [
+      "[1] European Parliament and Council of the European Union. Regulation (EC) No 1907/2006 concerning the Registration, Evaluation, Authorisation and Restriction of Chemicals (REACH).",
+      "[2] European Chemicals Agency (ECHA). Understanding REACH."
+    ],
+    "showImportance": false
+  },
+  {
+    "slug": "clp-regulation",
+    "category": "regulations",
+    "title": {
+      "zh": "CLP Regulation（分类、标签和包装法规）",
+      "en": "CLP Regulation"
+    },
+    "definition": {
+      "zh": [
+        "CLP Regulation — Regulation (EC) No 1272/2008 on classification, labelling and packaging of substances and mixtures，即欧盟《物质和混合物分类、标签和包装法规》。CLP 建立在联合国 Globally Harmonized System of Classification and Labelling of Chemicals (GHS) 的基础上。[1][2]",
+        "CLP 的核心作用是识别化学物质和混合物的物理、健康和环境危害，并通过危险类别、危险象形图、Signal Word、Hazard Statements 和 Precautionary Statements 等方式将这些危害传递给供应链和最终使用者。[2]",
+        "对于湿巾行业，尤其是消毒剂和含有具有危险分类成分的配液，CLP 会影响产品或配液的危险分类、标签和包装要求。需要注意的是，是否需要 CLP 危险标签取决于最终物质或混合物的实际分类结果，并不是“含有危险原料就一定贴危险标签”。[2][3]"
+      ],
+      "en": [
+        "CLP Regulation — Regulation (EC) No 1272/2008 on classification, labelling and packaging of substances and mixtures, the EU Classification, Labelling and Packaging Regulation. CLP is based on the United Nations Globally Harmonized System of Classification and Labelling of Chemicals (GHS).[1][2]",
+        "CLP identifies the physical, health and environmental hazards of substances and mixtures and communicates them to the supply chain and end users through hazard classes, pictograms, signal words, hazard statements and precautionary statements.[2]",
+        "For the wet wipe industry, especially disinfectants and wipe solutions containing hazardous-classified ingredients, CLP affects hazard classification, labelling and packaging. Whether a CLP hazard label is required depends on the final classification of the substance or mixture; containing a hazardous raw material does not automatically mean that the finished mixture must carry a hazard label.[2][3]"
+      ]
+    },
+    "summary": {
+      "zh": "CLP Regulation — Regulation (EC) No 1272/2008 on classification, labelling and packaging of substances and mixtures，即欧盟《物质和混合物分类、标签和包装法规》。CLP 建立在联合国 Globally Harmonized System of Classification and Labelling of Chemicals (GHS) 的基础上。[1][2]",
+      "en": "CLP Regulation — Regulation (EC) No 1272/2008 on classification, labelling and packaging of substances and mixtures, the EU Classification, Labelling and Packaging Regulation. CLP is based on the United Nations Globally Harmonized System of Classification and Labelling of Chemicals (GHS).[1][2]"
+    },
+    "references": [
+      "[1] European Parliament and Council of the European Union. Regulation (EC) No 1272/2008 of the European Parliament and of the Council of 16 December 2008 on classification, labelling and packaging of substances and mixtures.",
+      "[2] European Chemicals Agency (ECHA). Understanding CLP.",
+      "[3] European Chemicals Agency (ECHA). Labelling and packaging."
+    ],
+    "showImportance": false
+  },
+  {
+    "slug": "ppwr",
+    "category": "regulations",
+    "title": {
+      "zh": "PPWR（欧盟包装和包装废弃物法规）",
+      "en": "PPWR"
+    },
+    "definition": {
+      "zh": [
+        "PPWR — Regulation (EU) 2025/40 of the European Parliament and of the Council of 19 December 2024 on packaging and packaging waste，即欧盟《包装和包装废弃物法规》（Packaging and Packaging Waste Regulation）。[1]",
+        "PPWR 对欧盟市场上的包装及包装废弃物建立统一要求，适用于各种材料和各种用途的包装。法规涵盖包装减量、可回收性、再生材料、标签、包装设计、生产者责任以及包装废弃物管理等内容，并旨在推动欧盟向循环经济转型。[1]",
+        "PPWR 于 2025 年 2 月 11 日生效，并自 2026 年 8 月 12 日起总体开始适用。[2] 对湿巾制造商而言，软包装膜、塑料盖、拉贴、纸箱等包装材料都可能受到 PPWR 相关要求影响。"
+      ],
+      "en": [
+        "PPWR — Regulation (EU) 2025/40 of the European Parliament and of the Council of 19 December 2024 on packaging and packaging waste, the EU Packaging and Packaging Waste Regulation.[1]",
+        "PPWR establishes common requirements for packaging and packaging waste placed on the EU market, covering packaging reduction, recyclability, recycled content, labelling, packaging design, producer responsibility and packaging-waste management as part of the transition to a circular economy.[1]",
+        "PPWR entered into force on 11 February 2025 and generally starts to apply from 12 August 2026.[2] For wet wipe manufacturers, flexible films, plastic lids, resealable labels and cartons may all be affected by relevant PPWR requirements."
+      ]
+    },
+    "summary": {
+      "zh": "PPWR — Regulation (EU) 2025/40 of the European Parliament and of the Council of 19 December 2024 on packaging and packaging waste，即欧盟《包装和包装废弃物法规》（Packaging and Packaging Waste Regulation）。[1]",
+      "en": "PPWR — Regulation (EU) 2025/40 of the European Parliament and of the Council of 19 December 2024 on packaging and packaging waste, the EU Packaging and Packaging Waste Regulation.[1]"
+    },
+    "references": [
+      "[1] European Parliament and Council of the European Union. Regulation (EU) 2025/40 of the European Parliament and of the Council of 19 December 2024 on packaging and packaging waste, amending Regulation (EU) 2019/1020 and Directive (EU) 2019/904, and repealing Directive 94/62/EC.",
+      "[2] European Commission. Guidance document for Regulation (EU) 2025/40 on packaging and packaging waste."
+    ],
+    "showImportance": false
+  },
+  {
+    "slug": "fd-c-act",
+    "category": "regulations",
+    "title": {
+      "zh": "FD&C Act（美国联邦食品、药品和化妆品法）",
+      "en": "FD&C Act"
+    },
+    "definition": {
+      "zh": [
+        "FD&C Act — Federal Food, Drug, and Cosmetic Act，即美国《联邦食品、药品和化妆品法》，是美国 FDA 监管食品、药品、医疗器械、化妆品等产品的基础联邦法律之一。其现行法条主要编入 Title 21, Chapter 9 of the United States Code。[1]",
+        "FD&C Act 包含关于禁止行为、药品和医疗器械、化妆品、进口与出口以及 FDA 一般执法权限等内容。美国后续的许多重要法规改革也都是在 FD&C Act 基础上进行修订，例如 MoCRA 对化妆品监管权力的扩展。[1][2]",
+        "对湿巾行业而言，产品如果被归为化妆品、药品或医疗器械，其美国法规要求通常都需要回到 FD&C Act 及其实施法规中判断。"
+      ],
+      "en": [
+        "FD&C Act — the Federal Food, Drug, and Cosmetic Act — is one of the foundational U.S. federal laws used by the FDA to regulate foods, drugs, medical devices and cosmetics. Its current statutory provisions are primarily codified in Title 21, Chapter 9 of the United States Code.[1]",
+        "The FD&C Act covers prohibited acts, drugs and medical devices, cosmetics, imports and exports, and the FDA's general enforcement powers. Many later regulatory reforms, including MoCRA's expansion of cosmetics oversight, amend or build on the FD&C Act.[1][2]",
+        "For wet wipes, if a product is classified as a cosmetic, drug or medical device, its U.S. regulatory requirements generally need to be assessed by reference to the FD&C Act and its implementing regulations."
+      ]
+    },
+    "summary": {
+      "zh": "FD&C Act — Federal Food, Drug, and Cosmetic Act，即美国《联邦食品、药品和化妆品法》，是美国 FDA 监管食品、药品、医疗器械、化妆品等产品的基础联邦法律之一。其现行法条主要编入 Title 21, Chapter 9 of the United States Code。[1]",
+      "en": "FD&C Act — the Federal Food, Drug, and Cosmetic Act — is one of the foundational U.S. federal laws used by the FDA to regulate foods, drugs, medical devices and cosmetics. Its current statutory provisions are primarily codified in Title 21, Chapter 9 of the United States Code.[1]"
+    },
+    "references": [
+      "[1] U.S. Food and Drug Administration (FDA). Federal Food, Drug, and Cosmetic Act (FD&C Act).",
+      "[2] U.S. Food and Drug Administration (FDA). Modernization of Cosmetics Regulation Act of 2022."
+    ],
+    "showImportance": false
+  },
+  {
+    "slug": "mocra",
+    "category": "regulations",
+    "title": {
+      "zh": "MoCRA（美国化妆品法规现代化法案）",
+      "en": "MoCRA"
+    },
+    "definition": {
+      "zh": [
+        "MoCRA — Modernization of Cosmetics Regulation Act of 2022，即美国《2022 年化妆品法规现代化法案》。MoCRA 是自 1938 年 FD&C Act 颁布以来，美国 FDA 化妆品监管权限最重要的扩展之一。[1]",
+        "MoCRA 对美国化妆品企业新增或强化了多项义务，包括化妆品生产和加工设施注册、产品清单、严重不良事件报告、安全性证明记录以及 GMP 等监管要求。生产或加工化妆品的设施原则上需要向 FDA 注册并每两年续期；Responsibile Person 需要对上市化妆品进行 Product Listing，并至少每年更新相关信息。[1][2]",
+        "需要注意，Facility Registration 和 Product Listing 并不等同于 FDA Approval 或 FDA Certification。FDA 明确表示，其不会为化妆品设施注册或产品清单签发用于证明合规的认证证书。[2]"
+      ],
+      "en": [
+        "MoCRA — the Modernization of Cosmetics Regulation Act of 2022 — is a major expansion of the U.S. FDA's cosmetics authority and the most significant change to U.S. cosmetics oversight since the FD&C Act was enacted in 1938.[1]",
+        "MoCRA adds or strengthens duties for U.S. cosmetics businesses, including facility registration, cosmetic product listing, serious adverse-event reporting, safety-substantiation records and GMP-related requirements. Facilities that manufacture or process cosmetics generally register with the FDA and renew every two years; the Responsible Person submits the Cosmetic Product Listing and updates it at least annually.[1][2]",
+        "Facility Registration and Product Listing are not the same as FDA Approval or FDA Certification. The FDA states that it does not issue a compliance certificate for a cosmetics facility registration or product listing.[2]"
+      ]
+    },
+    "summary": {
+      "zh": "MoCRA — Modernization of Cosmetics Regulation Act of 2022，即美国《2022 年化妆品法规现代化法案》。MoCRA 是自 1938 年 FD&C Act 颁布以来，美国 FDA 化妆品监管权限最重要的扩展之一。[1]",
+      "en": "MoCRA — the Modernization of Cosmetics Regulation Act of 2022 — is a major expansion of the U.S. FDA's cosmetics authority and the most significant change to U.S. cosmetics oversight since the FD&C Act was enacted in 1938.[1]"
+    },
+    "references": [
+      "[1] U.S. Food and Drug Administration (FDA). Modernization of Cosmetics Regulation Act of 2022 (MoCRA).",
+      "[2] U.S. Food and Drug Administration (FDA). Registration & Listing of Cosmetic Product Facilities and Products."
+    ],
+    "showImportance": false
+  },
+  {
+    "slug": "fifra",
+    "category": "regulations",
+    "title": {
+      "zh": "FIFRA（美国联邦杀虫剂、杀菌剂和灭鼠剂法）",
+      "en": "FIFRA"
+    },
+    "definition": {
+      "zh": [
+        "FIFRA — Federal Insecticide, Fungicide, and Rodenticide Act，即美国《联邦杀虫剂、杀菌剂和灭鼠剂法》，是美国监管农药（pesticides）生产、注册、分销、销售和使用的核心联邦法律之一。FIFRA 赋予 U.S. Environmental Protection Agency (EPA) 对美国 pesticide 产品实施监管的法律权限。[1]",
+        "虽然 FIFRA 的名称中写有 Insecticide、Fungicide 和 Rodenticide，但其监管范围并不限于传统意义上的杀虫剂、杀真菌剂和灭鼠剂。FIFRA 对 pesticide 的法律定义覆盖用于预防、消灭、驱赶或减轻 pest 的物质或混合物，因此也包括大量 antimicrobial pesticides（抗微生物农药），例如 disinfectants、sanitizers、sterilants 和部分 germicides。[2][3]",
+        "因此，在美国，如果某款表面湿巾宣称：",
+        "* Disinfects",
+        "* Sanitizes",
+        "* Kills bacteria",
+        "* Kills viruses",
+        "* Sporicidal activity",
+        "并因此符合 FIFRA 下 pesticide 的定义，除适用特定豁免外，原则上需要在美国销售或分销前由 EPA 完成产品注册。[1][3]",
+        "EPA 在进行 FIFRA 产品注册时，会评价相关科学数据、产品风险与用途，并要求申请人证明产品按照批准的使用方式不会造成“不合理的不利影响（unreasonable adverse effects）”。对于具有公共卫生用途的 antimicrobial pesticides，EPA 还会要求相应的功效数据，以支持产品标签上的杀菌宣称。[1][4]",
+        "因此：",
+        "FIFRA 决定“为什么需要监管以及法律要求是什么”，EPA 负责“按照 FIFRA 实际实施监管”。"
+      ],
+      "en": [
+        "FIFRA — the Federal Insecticide, Fungicide, and Rodenticide Act — is a core U.S. federal law regulating the production, registration, distribution, sale and use of pesticides. FIFRA gives the U.S. Environmental Protection Agency (EPA) legal authority over pesticide products.[1]",
+        "Although the name refers to insecticides, fungicides and rodenticides, FIFRA is not limited to those traditional product groups. Its legal definition of pesticide covers substances or mixtures intended to prevent, destroy, repel or mitigate pests and therefore includes many antimicrobial pesticides, such as disinfectants, sanitizers, sterilants and some germicides.[2][3]",
+        "* Disinfects",
+        "* Sanitizes",
+        "* Kills bacteria",
+        "* Kills viruses",
+        "* Sporicidal activity",
+        "If a surface wipe makes claims such as these and therefore meets the FIFRA definition of a pesticide, it generally needs EPA registration before sale or distribution in the United States unless a specific exemption applies.[1][3]",
+        "When registering a FIFRA product, the EPA evaluates scientific data, product risks and uses and requires evidence that the product will not cause unreasonable adverse effects when used according to its approved directions. Public-health antimicrobial pesticides also require efficacy data to support antimicrobial claims on the label.[1][4]",
+        "FIFRA determines why a product is regulated and what the legal requirements are; the EPA administers that regulation under FIFRA."
+      ]
+    },
+    "summary": {
+      "zh": "FIFRA — Federal Insecticide, Fungicide, and Rodenticide Act，即美国《联邦杀虫剂、杀菌剂和灭鼠剂法》，是美国监管农药（pesticides）生产、注册、分销、销售和使用的核心联邦法律之一。FIFRA 赋予 U.S. Environmental Protection Agency (EPA) 对美国 pesticide 产品实施监管的法律权限。[1]",
+      "en": "FIFRA — the Federal Insecticide, Fungicide, and Rodenticide Act — is a core U.S. federal law regulating the production, registration, distribution, sale and use of pesticides. FIFRA gives the U.S. Environmental Protection Agency (EPA) legal authority over pesticide products.[1]"
+    },
+    "references": [
+      "[1] U.S. Environmental Protection Agency (EPA). Summary of the Federal Insecticide, Fungicide, and Rodenticide Act.",
+      "[2] U.S. Environmental Protection Agency (EPA). Federal Insecticide, Fungicide, and Rodenticide Act (FIFRA) and Federal Facilities.",
+      "[3] U.S. Environmental Protection Agency (EPA). Antimicrobial Pesticides.",
+      "[4] U.S. Environmental Protection Agency (EPA). Regulation of Pesticides with Public Health Uses."
+    ],
+    "showImportance": false
+  },
+  {
+    "slug": "epa",
+    "category": "regulations",
+    "title": {
+      "zh": "EPA（美国环境保护署）",
+      "en": "EPA"
+    },
+    "definition": {
+      "zh": [
+        "EPA — United States Environmental Protection Agency (U.S. EPA)，即美国环境保护署，是美国联邦政府负责保护人类健康和环境的监管机构。EPA 的职责包括执行和管理由美国国会制定的多项环境与公共健康相关联邦法律。[1]",
+        "在杀虫剂领域，EPA 根据 FIFRA 等联邦法律获得监管权限，负责美国杀虫剂产品的注册、风险评价、标签监管、生产设施管理、注册后复审、合规监督和执法。EPA 内部具体负责杀虫剂项目的主要机构是Office of Pesticide Programs (OPP)。[2][3]",
+        "而对于 disinfectants、sanitizers、sterilants 等 antimicrobial pesticides，EPA 会根据 FIFRA 审查产品注册申请。对于具有公共卫生宣称的产品，例如声称能够杀灭特定细菌或病毒的消毒剂，EPA 还会评价相应的 efficacy data，以判断标签上的功效宣称是否得到充分数据支持。[4]",
+        "因此，市场上常见的EPA-registered disinfectant，指的是该 pesticide 产品已经按照 FIFRA 等适用法律，由 EPA 完成注册。",
+        "同时还需要区分下面两个概念：",
+        "* EPA Registration Number",
+        "* EPA Establishment Number",
+        "前者主要识别经过 EPA 注册的 pesticide 产品；后者用于识别生产 pesticide、active ingredient 或相关受监管产品的生产场所。生产场所取得 EPA Establishment Number 并不等于该场所生产的每一款产品都已经获得 EPA 产品注册。EPA 也明确要求相关 pesticide-producing establishments 注册并提交生产报告。[5]",
+        "综上，因此：",
+        "EPA = 监管机构",
+        "FIFRA = EPA 实施 pesticide 监管的重要法律依据",
+        "EPA Registration = EPA 根据 FIFRA 等法律实施的具体产品监管行为"
+      ],
+      "en": [
+        "EPA — the United States Environmental Protection Agency — is the U.S. federal agency responsible for protecting human health and the environment. Its responsibilities include administering and enforcing multiple federal laws related to environmental and public-health protection.[1]",
+        "In the pesticide field, the EPA receives regulatory authority under FIFRA and other federal laws. It manages pesticide registration, risk assessment, labelling, production-facility oversight, post-registration review, compliance monitoring and enforcement. The Office of Pesticide Programs (OPP) is the EPA unit primarily responsible for pesticide programs.[2][3]",
+        "For disinfectants, sanitizers, sterilants and other antimicrobial pesticides, the EPA reviews registration applications under FIFRA. For public-health claims, such as killing specified bacteria or viruses, it also evaluates efficacy data to determine whether the label claims are adequately supported.[4]",
+        "An EPA-registered disinfectant is a pesticide product that has been registered by the EPA under FIFRA and other applicable laws.",
+        "* EPA Registration Number",
+        "* EPA Establishment Number",
+        "The first identifies an EPA-registered pesticide product. The second identifies a facility that produces pesticides, active ingredients or other regulated products; an EPA Establishment Number does not mean that every product made at that facility has obtained EPA product registration. EPA also requires relevant pesticide-producing establishments to register and submit production reports.[5]",
+        "EPA = the regulatory agency; FIFRA = an important legal basis for EPA pesticide regulation; EPA Registration = a specific regulatory action carried out by the EPA under FIFRA and other applicable laws."
+      ]
+    },
+    "summary": {
+      "zh": "EPA — United States Environmental Protection Agency (U.S. EPA)，即美国环境保护署，是美国联邦政府负责保护人类健康和环境的监管机构。EPA 的职责包括执行和管理由美国国会制定的多项环境与公共健康相关联邦法律。[1]",
+      "en": "EPA — the United States Environmental Protection Agency — is the U.S. federal agency responsible for protecting human health and the environment. Its responsibilities include administering and enforcing multiple federal laws related to environmental and public-health protection.[1]"
+    },
+    "references": [
+      "[1] U.S. Environmental Protection Agency (EPA). Our Mission and What We Do.",
+      "[2] U.S. Environmental Protection Agency (EPA). Summary of the Federal Insecticide, Fungicide, and Rodenticide Act.",
+      "[3] U.S. Environmental Protection Agency (EPA). About Pesticide Registration.",
+      "[4] U.S. Environmental Protection Agency (EPA). Antimicrobial Pesticides.",
+      "[5] U.S. Environmental Protection Agency (EPA). Regulatory and Guidance Information by Topic: Pesticides."
+    ],
+    "showImportance": false
+  },
+  {
+    "slug": "sds-msds",
+    "category": "regulations",
+    "title": {
+      "zh": "SDS / MSDS（安全数据表）",
+      "en": "SDS / MSDS"
+    },
+    "definition": {
+      "zh": [
+        "SDS — Safety Data Sheet（安全数据表），是一种用于系统传递化学品危害、安全使用、储存、应急处理和防护信息的标准化文件。MSDS — Material Safety Data Sheet 是历史上广泛使用的旧称；随着 GHS 体系和各国法规逐步统一，现行标准术语通常使用 SDS。美国 OSHA 在 HazCom 2012 中也将 “Material Safety Data Sheet” 更名为 “Safety Data Sheet”。[1]",
+        "标准 SDS 通常采用 16-section format，包括 Identification、Hazard(s) Identification、Composition/Information on Ingredients、First-aid Measures、Fire-fighting Measures、Accidental Release Measures、Handling and Storage、Exposure Controls/Personal Protection、Physical and Chemical Properties、Stability and Reactivity、Toxicological Information 等内容。[2]",
+        "在美国，OSHA Hazard Communication Standard 要求化学品制造商和进口商针对适用的 hazardous chemicals 编制或取得 SDS，并规定 16 个标准章节。[2][3] 在欧盟，SDS 主要与 REACH Annex II 及 CLP 危害分类体系衔接，ECHA 也发布专门指南说明哪些物质或混合物需要提供 SDS，以及各章节应包含的信息。[4]",
+        "因此，SDS 不是产品认证，也不是一份“检测报告”。它是一种供应链危险信息沟通文件。对于湿巾或消毒剂，是否需要 SDS、如何分类以及 SDS 应包含哪些内容，需要根据产品/配液的法规身份和危险分类具体判断。"
+      ],
+      "en": [
+        "SDS — Safety Data Sheet — is a standardized document used to communicate chemical hazards, safe use, storage, emergency response and protective measures. MSDS — Material Safety Data Sheet — is the historical name; as GHS systems and national regulations have become more aligned, SDS is the current standard term. OSHA's HazCom 2012 also changed the name from “Material Safety Data Sheet” to “Safety Data Sheet”.[1]",
+        "A standard SDS normally follows a 16-section format, including Identification, Hazard(s) Identification, Composition/Information on Ingredients, First-aid Measures, Fire-fighting Measures, Accidental Release Measures, Handling and Storage, Exposure Controls/Personal Protection, Physical and Chemical Properties, Stability and Reactivity and Toxicological Information.[2]",
+        "In the United States, OSHA's Hazard Communication Standard requires manufacturers and importers to prepare or obtain SDSs for applicable hazardous chemicals and specifies 16 standard sections.[2][3] In the EU, SDS requirements connect mainly with REACH Annex II and the CLP hazard-classification system; ECHA also publishes guidance on which substances or mixtures require an SDS and what each section should contain.[4]",
+        "An SDS is not a product certification or a test report. It is a supply-chain hazard-communication document. For wet wipes or disinfectants, whether an SDS is needed, how the product is classified and what the SDS must contain depend on the product or wipe solution's regulatory identity and hazard classification."
+      ]
+    },
+    "summary": {
+      "zh": "SDS — Safety Data Sheet（安全数据表），是一种用于系统传递化学品危害、安全使用、储存、应急处理和防护信息的标准化文件。MSDS — Material Safety Data Sheet 是历史上广泛使用的旧称；随着 GHS 体系和各国法规逐步统一，现行标准术语通常使用 SDS。美国 OSHA 在 HazCom 2012 中也将 “Material Safety Data Sheet” 更名为 “Safety Data Sheet”。[1]",
+      "en": "SDS — Safety Data Sheet — is a standardized document used to communicate chemical hazards, safe use, storage, emergency response and protective measures. MSDS — Material Safety Data Sheet — is the historical name; as GHS systems and national regulations have become more aligned, SDS is the current standard term. OSHA's HazCom 2012 also changed the name from “Material Safety Data Sheet” to “Safety Data Sheet”.[1]"
+    },
+    "references": [
+      "[1] Occupational Safety and Health Administration (OSHA). Hazard Communication - Side-by-Side Comparison.",
+      "[2] Occupational Safety and Health Administration (OSHA). Safety Data Sheets (SDSs).",
+      "[3] Occupational Safety and Health Administration (OSHA). Appendix D to § 1910.1200 — Safety Data Sheets (Mandatory).",
+      "[4] European Chemicals Agency (ECHA). Guidance on the compilation of safety data sheets."
+    ],
+    "showImportance": false
+  }
+]

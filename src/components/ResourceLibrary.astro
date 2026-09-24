@@ -1,0 +1,477 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import resources from "../data/site/resources.json" with { type: "json" };
+import settings from "../data/site/siteSettings.json";
+import { attrs, text } from "../utils/i18n";
+import { localizedPath } from "../utils/i18n";
+import { absoluteUrl, buildAuthorNode, resourceDate, schemaIds } from "../utils/schema";
+import { searchConfig } from "../utils/search-config.mjs";
+import { isDirectDownloadResource, sortResourcesByAccessAndName, sortResourcesByDate } from "../utils/resources.js";
+
+const { view = "all" } = Astro.props;
+const language = Astro.locals.language || "zh";
+
+const files = sortResourcesByAccessAndName(resources.downloads)
+  .filter(isDirectDownloadResource)
+  .map((item) => ({ kind: "file", item }));
+const blogs = sortResourcesByDate(resources.blogs)
+  .map((item) => ({ kind: "blog", item }));
+const news = sortResourcesByDate(resources.news)
+  .map((item) => ({ kind: "news", item }));
+const editorial = sortResourcesByDate([
+  ...resources.blogs.map((item) => ({ ...item, resourceKind: "blog" })),
+  ...resources.news.map((item) => ({ ...item, resourceKind: "news" }))
+]).map((item) => ({ kind: item.resourceKind, item }));
+
+const entriesByView = {
+  all: [...editorial, ...files],
+  blogs,
+  news,
+  files
+};
+
+const views = {
+  all: {
+    path: "/resources/all/",
+    eyebrow: { zh: "资源中心", en: "Resource Library" },
+    title: { zh: "所有资源", en: "All Resources" },
+    description: {
+      zh: "集中浏览维尼的博客、新闻与可直接下载的产品资料，按内容类型快速找到需要的信息。",
+      en: "Browse VINNER blogs, news, and product materials available for direct download."
+    },
+    listTitle: { zh: "所有资源", en: "All Resources" }
+  },
+  blogs: {
+    path: "/resources/blogs/",
+    eyebrow: { zh: "博客", en: "Blogs" },
+    title: { zh: "所有博客", en: "All Blogs" },
+    description: {
+      zh: "了解湿巾、感染控制、清洁护理与制造合规领域的见解，为采购、产品和护理团队提供实用参考。",
+      en: "Read insights on wet wipes, infection control, cleansing care, and manufacturing compliance."
+    },
+    listTitle: { zh: "所有博客", en: "All Blogs" }
+  },
+  news: {
+    path: "/resources/news/",
+    eyebrow: { zh: "新闻", en: "News" },
+    title: { zh: "所有新闻", en: "All News" },
+    description: {
+      zh: "浏览维尼的产品动态、行业活动和合作信息，及时了解企业与行业的最新进展。",
+      en: "Explore VINNER product updates, industry activities, and partnership news."
+    },
+    listTitle: { zh: "所有新闻", en: "All News" }
+  },
+  files: {
+    path: "/resources/files/",
+    eyebrow: { zh: "数字资源", en: "Digital Resources" },
+    title: { zh: "所有文件", en: "All Files" },
+    description: {
+      zh: "下载维尼现有的五款产品手册，支持产品选型、培训、项目评估和客户沟通。",
+      en: "Download VINNER product manuals for product selection, training, and project evaluation."
+    },
+    listTitle: { zh: "可下载文件", en: "All Files" }
+  }
+};
+
+const activeView = Object.hasOwn(views, view) ? view : "all";
+const current = views[activeView];
+const entries = entriesByView[activeView];
+const firstEditorial = entries.find((entry) => entry.kind !== "file");
+const libraryImage = firstEditorial?.item.image || "/assets/resource-manuals.jpg";
+const sidebarLinks = [
+  { key: "all", href: views.all.path, label: { zh: "全部", en: "All" } },
+  { key: "blogs", href: views.blogs.path, label: { zh: "博客", en: "Blogs" } },
+  { key: "news", href: views.news.path, label: { zh: "新闻", en: "News" } },
+  { key: "files", href: views.files.path, label: { zh: "数字资源", en: "Digital Resources" } }
+];
+
+const entryLabels = {
+  blog: { zh: "博客", en: "Blog" },
+  news: { zh: "新闻", en: "News" },
+  file: { zh: "产品手册", en: "Product Manual" }
+};
+const siteUrl = searchConfig.siteUrl;
+const listPageUrl = absoluteUrl(localizedPath(current.path, language), siteUrl);
+const resourceListId = `${listPageUrl}#itemlist`;
+const resourceListSchema = {
+  "@type": "ItemList",
+  "@id": resourceListId,
+  name: text(current.listTitle, language),
+  numberOfItems: entries.length,
+  itemListElement: entries.map(({ kind, item }, index) => {
+    const href = kind === "file" ? item.href : `/resources/${item.slug}/`;
+    const url = kind === "file"
+      ? absoluteUrl(href, siteUrl)
+      : absoluteUrl(localizedPath(href, language), siteUrl);
+    const itemType = kind === "file" ? "DigitalDocument" : kind === "blog" ? "BlogPosting" : "NewsArticle";
+    const itemId = `${url}#${kind === "file" ? "document" : "article"}`;
+    return {
+      "@type": "ListItem",
+      position: index + 1,
+      item: {
+        "@type": itemType,
+        "@id": itemId,
+        name: text(item.title, language),
+        description: text(item.body, language),
+        ...(kind !== "file" ? {
+          headline: text(item.title, language),
+          datePublished: resourceDate(item.date),
+          ...(item.updatedAt ? { dateModified: resourceDate(item.updatedAt) } : {}),
+          author: item.authorId ? buildAuthorNode(item.authorId, siteUrl, language) : { "@id": schemaIds(siteUrl).organization },
+          publisher: { "@id": schemaIds(siteUrl).organization },
+          image: absoluteUrl(item.image, siteUrl)
+        } : { encodingFormat: "application/pdf" }),
+        url,
+        inLanguage: language === "en" ? "en" : "zh-CN"
+      }
+    };
+  })
+};
+---
+
+<BaseLayout
+  title={{ zh: `${current.title.zh} | VINNER`, en: `${current.title.en} | VINNER` }}
+  description={current.description}
+  image={libraryImage}
+  pageType="CollectionPage"
+  mainEntityId={resourceListId}
+  schema={[resourceListSchema]}
+  breadcrumbs={[
+    { name: { zh: "首页", en: "Home" }, path: "/" },
+    { name: { zh: "资源", en: "Resources" }, path: "/resources/" },
+    { name: current.title, path: current.path }
+  ]}
+>
+  <section class="resource-library-hero" aria-labelledby="library-title">
+    <p class="section-kicker" {...attrs(current.eyebrow)}>{text(current.eyebrow, language)}</p>
+    <h1 id="library-title" {...attrs(current.title)}>{text(current.title, language)}</h1>
+    <p {...attrs(current.description)}>{text(current.description, language)}</p>
+  </section>
+
+  <section class="resource-library-shell" aria-labelledby="library-list-title">
+    <aside class="resource-library-sidebar" aria-label="Resource library navigation">
+      <nav class="resource-library-nav">
+        {sidebarLinks.map((item) => (
+          <a
+            href={item.href}
+            aria-current={item.key === activeView ? "page" : undefined}
+            {...attrs(item.label)}
+          >{text(item.label, language)}</a>
+        ))}
+      </nav>
+      <div class="resource-library-socials">
+        <p data-zh="关注我们" data-en="Follow us">关注我们</p>
+        <div aria-label="Social media links">
+          {settings.footer.socials.map((item) => (
+            <a href={item.href} aria-label={item.name} title={item.name} target="_blank" rel="noopener noreferrer">
+              <img src={item.icon} alt="" loading="lazy" />
+            </a>
+          ))}
+        </div>
+      </div>
+    </aside>
+
+    <div class="resource-library-main">
+      <header class="resource-library-list-heading">
+        <p class="section-kicker" {...attrs(current.eyebrow)}>{text(current.eyebrow, language)}</p>
+        <h2 id="library-list-title" {...attrs(current.listTitle)}>{text(current.listTitle, language)}</h2>
+        <span>{entries.length} <span data-zh="项" data-en={entries.length === 1 ? "item" : "items"}>项</span></span>
+      </header>
+
+      <div class="resource-library-grid">
+        {entries.map(({ kind, item }) => {
+          const isFile = kind === "file";
+          const entryLabel = isFile
+            ? { zh: item.label || entryLabels.file.zh, en: item.label || entryLabels.file.en }
+            : entryLabels[kind];
+          const href = isFile ? item.href : `/resources/${item.slug}/`;
+          const action = isFile
+            ? { zh: "下载文件", en: "Download file" }
+            : kind === "blog"
+              ? { zh: "阅读文章", en: "Read article" }
+              : { zh: "阅读新闻", en: "Read update" };
+          return (
+            <a
+              class:list={["resource-library-card", { "is-file": isFile }]}
+              href={href}
+              download={isFile || undefined}
+            >
+              <span class="resource-card-type">{isFile ? item.type || "PDF" : text(entryLabel, language)}</span>
+              <span class="resource-card-label" {...attrs(entryLabel)}>{text(entryLabel, language)}</span>
+              <h3 {...attrs(item.title)}>{text(item.title, language)}</h3>
+              <p {...attrs(item.body)}>{text(item.body, language)}</p>
+              <span class="resource-card-link" {...attrs(action)}>{text(action, language)} <span aria-hidden="true">↗</span></span>
+            </a>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .resource-library-hero {
+    padding: clamp(136px, 17vh, 216px) clamp(22px, 16vw, 260px) clamp(72px, 10vh, 132px);
+    background:
+      radial-gradient(circle at 78% 18%, rgba(10, 186, 181, 0.24), transparent 40%),
+      radial-gradient(circle at 28% 86%, rgba(10, 186, 181, 0.08), transparent 34%),
+      var(--color-obsidian);
+    color: var(--color-canvas-white);
+  }
+
+  .resource-library-hero .section-kicker,
+  .resource-library-list-heading .section-kicker,
+  .resource-card-type {
+    color: var(--color-tiffany-blue);
+  }
+
+  .resource-library-hero h1 {
+    max-width: 1100px;
+    margin: 14px 0 18px;
+    font-size: clamp(62px, 9vw, 148px);
+    line-height: 1;
+    letter-spacing: 0;
+  }
+
+  .resource-library-hero > p:last-child {
+    max-width: 720px;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.72);
+    font-size: clamp(18px, 1.5vw, 24px);
+    line-height: 1.35;
+  }
+
+  .resource-library-shell {
+    display: grid;
+    grid-template-columns: minmax(180px, 0.2fr) minmax(0, 1fr);
+    gap: clamp(30px, 4vw, 72px);
+    padding: clamp(56px, 9vw, 132px) clamp(88px, 11vw, 190px);
+    background: var(--color-canvas-white);
+  }
+
+  .resource-library-sidebar {
+    align-self: start;
+    position: sticky;
+    top: 112px;
+  }
+
+  .resource-library-nav {
+    display: grid;
+    gap: 4px;
+    border-top: 1px solid var(--color-obsidian);
+    padding-top: 14px;
+  }
+
+  .resource-library-nav a {
+    width: fit-content;
+    padding: 8px 0;
+    color: var(--color-slate-mist);
+    font-size: clamp(16px, 1.15vw, 19px);
+    text-decoration: none;
+    transition: color 160ms ease;
+  }
+
+  .resource-library-nav a:hover,
+  .resource-library-nav a:focus-visible,
+  .resource-library-nav a[aria-current="page"] {
+    color: var(--color-obsidian);
+  }
+
+  .resource-library-nav a[aria-current="page"] {
+    border-bottom: 1px solid currentColor;
+    font-weight: 700;
+  }
+
+  .resource-library-socials {
+    margin-top: 42px;
+    border-top: 1px solid rgba(0, 13, 16, 0.2);
+    padding-top: 16px;
+  }
+
+  .resource-library-socials > p {
+    margin: 0 0 12px;
+    color: var(--color-slate-mist);
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  .resource-library-socials > div {
+    display: flex;
+    gap: 8px;
+  }
+
+  .resource-library-socials a {
+    display: grid;
+    width: 34px;
+    height: 34px;
+    place-items: center;
+    border: 1px solid rgba(0, 13, 16, 0.24);
+    border-radius: 50%;
+  }
+
+  .resource-library-socials a:hover,
+  .resource-library-socials a:focus-visible {
+    border-color: var(--color-tiffany-blue);
+    background: var(--color-tiffany-blue);
+  }
+
+  .resource-library-socials img {
+    width: 15px;
+    height: 15px;
+  }
+
+  .resource-library-main {
+    min-width: 0;
+  }
+
+  .resource-library-list-heading {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 8px 20px;
+    align-items: end;
+    margin-bottom: clamp(30px, 4vw, 56px);
+    padding-bottom: 18px;
+    border-bottom: 1px solid rgba(0, 13, 16, 0.2);
+  }
+
+  .resource-library-list-heading .section-kicker {
+    grid-column: 1 / -1;
+  }
+
+  .resource-library-list-heading h2 {
+    margin: 0;
+    font-size: clamp(38px, 4.8vw, 72px);
+    line-height: 1;
+    letter-spacing: 0;
+  }
+
+  .resource-library-list-heading > span {
+    color: var(--color-slate-mist);
+    font-size: 15px;
+  }
+
+  .resource-library-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-auto-rows: 1fr;
+    gap: clamp(18px, 2vw, 30px);
+  }
+
+  .resource-library-card {
+    display: flex;
+    min-width: 0;
+    min-height: 300px;
+    flex-direction: column;
+    padding: clamp(22px, 2.6vw, 34px);
+    border: 1px solid rgba(0, 13, 16, 0.2);
+    background:
+      radial-gradient(circle at 84% 16%, rgba(10, 186, 181, 0.2), transparent 36%),
+      #f2f7f6;
+    color: var(--color-obsidian);
+    text-decoration: none;
+    transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+  }
+
+  .resource-library-card:hover,
+  .resource-library-card:focus-visible {
+    border-color: var(--color-tiffany-blue);
+    box-shadow: 0 12px 28px rgba(0, 31, 34, 0.1);
+    transform: translateY(-3px);
+  }
+
+  .resource-card-type {
+    font-size: clamp(28px, 2.5vw, 42px);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.04em;
+  }
+
+  .resource-card-label {
+    margin-top: 16px;
+    color: var(--color-slate-mist);
+    font-size: 13px;
+    font-weight: 700;
+  }
+
+  .resource-library-card h3 {
+    display: -webkit-box;
+    height: 3.3em;
+    margin: 12px 0;
+    overflow: hidden;
+    font-size: clamp(20px, 1.45vw, 27px);
+    line-height: 1.1;
+    letter-spacing: 0;
+    overflow-wrap: anywhere;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+
+  .resource-library-card > p {
+    display: -webkit-box;
+    margin: 0;
+    overflow: hidden;
+    color: var(--color-slate-mist);
+    font-size: 15px;
+    line-height: 1.45;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+
+  .resource-card-link {
+    align-self: flex-start;
+    margin-top: auto;
+    padding-top: 20px;
+    border-bottom: 1px solid currentColor;
+    color: var(--color-obsidian);
+    font-weight: 700;
+  }
+
+  .resource-library-card:hover .resource-card-link,
+  .resource-library-card:focus-visible .resource-card-link {
+    color: #007c7a;
+  }
+
+  @media (max-width: 1120px) {
+    .resource-library-hero,
+    .resource-library-shell {
+      padding-right: clamp(22px, 7vw, 84px);
+      padding-left: clamp(22px, 7vw, 84px);
+    }
+
+    .resource-library-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 760px) {
+    .resource-library-hero {
+      padding-top: 126px;
+    }
+
+    .resource-library-shell {
+      grid-template-columns: 1fr;
+      gap: 34px;
+    }
+
+    .resource-library-sidebar {
+      position: static;
+    }
+
+    .resource-library-nav {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .resource-library-socials {
+      margin-top: 28px;
+    }
+
+    .resource-library-grid {
+      grid-template-columns: 1fr;
+      grid-auto-rows: auto;
+    }
+
+    .resource-library-card {
+      min-height: 270px;
+    }
+  }
+</style>

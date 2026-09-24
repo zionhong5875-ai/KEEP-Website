@@ -1,15 +1,175 @@
 ---
+import { glossaryCategories, glossaryTerms, glossaryPath } from "../utils/glossary.mjs";
+import { searchConfig } from "../utils/search-config.mjs";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import PageHero from "../components/PageHero.astro";
-import resources from "../data/site/resources.json";
-import { text, attrs } from "../utils/i18n";
+import GlossaryLinkedText from "../components/GlossaryLinkedText.astro";
+import resources from "../data/site/resources.json" with { type: "json" };
+import { text, attrs, imageAttrs, localizedPath } from "../utils/i18n";
+import { isDirectDownloadResource, sortResourcesByAccessAndName, sortResourcesByDate } from "../utils/resources.js";
+import { absoluteUrl, resourceDate, schemaIds, buildAuthorNode } from "../utils/schema";
 
-const hasDownloadHref = (href) => typeof href === "string" && href.trim() && href !== "#";
+const newsItems = sortResourcesByDate(resources.news);
+const blogItems = sortResourcesByDate(resources.blogs);
+const downloadItems = sortResourcesByAccessAndName(resources.downloads);
+const digitalItems = downloadItems.filter((item) => [
+  "Product Brochure",
+  "Product Manual",
+  "Safety Data Sheet"
+].includes(item.label));
+const glossaryClouds = glossaryCategories.map((category) => ({
+  category,
+  terms: glossaryTerms
+    .filter((term) => term.category === category.id)
+    .sort((a, b) => a.title.en.localeCompare(b.title.en, "en"))
+}));
+const compactChineseCloudLabels = {
+  "fsc-chain-of-custody": "FSC CoC",
+  gsv: "GSV",
+  gmp: "GMP",
+  "smeta-4-pillar-audit": "SMETA",
+  "fda-cosmetic-gmp": "FDA Cosmetic GMP",
+  "en-european-standard": "EN Standard",
+  "gb-national-standard": "GB Standard",
+  "clp-regulation": "CLP Regulation",
+  "eu-mdr": "EU MDR",
+  "eu-bpr": "EU BPR",
+  "eu-cosmetics-regulation": "欧盟化妆品法规",
+  "fd-c-act": "FD&C Act",
+  mocra: "MoCRA",
+  fifra: "FIFRA",
+  epa: "EPA",
+  ppwr: "PPWR",
+  reach: "REACH",
+  "sds-msds": "SDS / MSDS"
+};
+const compactEnglishCloudLabels = {
+  "fsc-chain-of-custody": "FSC CoC",
+  "smeta-4-pillar-audit": "SMETA",
+  "fda-cosmetic-gmp": "FDA Cosmetic GMP",
+  "eu-cosmetics-regulation": "EU Cosmetics",
+  "flip-top-lid": "Flip-top",
+  "basis-weight": "Grammage",
+  "lotion-loading": "Lotion",
+  "nonwoven-fabric": "Nonwoven",
+  "resealable-label": "Reseal",
+  "rollstock-flexible-packaging": "Rollstock",
+  "spunlace-nonwoven": "Spunlace",
+  "wipe-folding": "Wipe Fold",
+  "impregnation-liquid": "Impregnation",
+  substrate: "Substrate"
+};
+const compactEnglishCloudLabel = (term) => {
+  const source = compactEnglishCloudLabels[term.slug] || term.title.en;
+  const firstAlias = source.split("/")[0].trim();
+  const parenthetical = firstAlias.match(/\(([^()]+)\)/)?.[1]?.trim();
+  if (parenthetical && /^[A-Z0-9][A-Z0-9&./ -]{0,14}$/.test(parenthetical)) return parenthetical;
+  const leadingAbbreviation = firstAlias.match(/^([A-Z][A-Z0-9&./-]{1,12})\s*\(/)?.[1];
+  if (leadingAbbreviation) return leadingAbbreviation;
+  return firstAlias;
+};
+const cloudSize = (term, index) => {
+  const length = Math.max(
+    compactChineseCloudLabels[term.slug]?.length || term.title.zh.length,
+    compactEnglishCloudLabel(term).length
+  );
+  const base = [0.78, 0.9, 1.02, 0.84, 0.96][(term.slug.length + index * 3) % 5];
+  return `${Math.max(0.62, Math.min(base, 1.1 - length * 0.026)).toFixed(2)}rem`;
+};
+const cloudPosition = (index, total, categoryId) => {
+  const spots = categoryId === "fundamentals"
+    ? [
+        [18, 17], [53, 15], [84, 18],
+        [18, 43], [53, 40], [84, 44],
+        [18, 69], [53, 67], [84, 70],
+        [36, 89], [69, 89]
+      ]
+    : [
+        [22, 17], [53, 15], [80, 18],
+        [22, 43], [53, 40], [80, 44],
+        [22, 69], [53, 67], [80, 70],
+        [36, 89], [69, 89]
+      ];
+  const [x, y] = spots[index % Math.min(total, spots.length)];
+  return { x: `${x.toFixed(2)}%`, y: `${y.toFixed(2)}%` };
+};
+const cloudStyle = (term, index, total, categoryId) => {
+  const position = cloudPosition(index, total, categoryId);
+  return `--cloud-size:${cloudSize(term, index)};--cloud-x:${position.x};--cloud-y:${position.y}`;
+};
+const cloudLabel = (term, language) => {
+  if (language === "en") return compactEnglishCloudLabel(term);
+  if (language !== "en" && compactChineseCloudLabels[term.slug]) return compactChineseCloudLabels[term.slug];
+  if (language !== "en" && term.category === "regulations") return term.title.en;
+  return text(term.title, language);
+};
+const siteUrl = searchConfig.siteUrl;
+const language = Astro.locals.language || "zh";
+const ids = schemaIds(siteUrl);
+const pageUrl = absoluteUrl(localizedPath("/resources/", language), siteUrl);
+const resourceListId = `${pageUrl}#resources`;
+const resourceNodes = [
+  ...newsItems.map((item) => ({ item, schemaType: "NewsArticle" })),
+  ...blogItems.map((item) => ({ item, schemaType: "BlogPosting" }))
+].map(({ item, schemaType }) => {
+  const url = absoluteUrl(localizedPath(`/resources/${item.slug}/`, language), siteUrl);
+  return {
+    "@type": schemaType,
+    "@id": `${url}#article`,
+    headline: text(item.title, language),
+    description: text(item.body, language),
+    datePublished: resourceDate(item.date),
+    ...(item.updatedAt ? { dateModified: resourceDate(item.updatedAt) } : {}),
+    author: item.authorId ? buildAuthorNode(item.authorId, siteUrl, language) : { "@id": ids.organization },
+    image: absoluteUrl(item.image, siteUrl),
+    url,
+    inLanguage: language === "en" ? "en" : "zh-CN",
+    publisher: { "@id": ids.organization }
+  };
+});
+const downloadNodes = downloadItems
+  .filter(isDirectDownloadResource)
+  .map((item) => ({
+    "@type": "DigitalDocument",
+    "@id": `${absoluteUrl(item.href, siteUrl)}#document`,
+    name: item.title,
+    description: text(item.body, language),
+    url: absoluteUrl(item.href, siteUrl),
+    encodingFormat: "application/pdf",
+    inLanguage: language === "en" ? "en" : "zh-CN",
+    publisher: { "@id": ids.organization }
+  }));
+const resourceSchema = [
+  {
+    "@type": "ItemList",
+    "@id": resourceListId,
+    name: language === "en" ? "Vinner news, articles, and downloads" : "维尼新闻、文章与下载资料",
+    numberOfItems: resourceNodes.length + downloadNodes.length,
+    itemListElement: [...resourceNodes, ...downloadNodes].map((node, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      item: { "@id": node["@id"] }
+    }))
+  },
+  ...resourceNodes,
+  ...downloadNodes
+];
 ---
 
-<BaseLayout title={resources.meta.title} description={resources.meta.description} image={resources.hero.image}>
+<BaseLayout
+  title={resources.meta.title}
+  description={resources.meta.description}
+  image={resources.hero.image}
+  pageType="CollectionPage"
+  breadcrumbs={[
+    { name: { zh: "首页", en: "Home" }, path: "/" },
+    { name: { zh: "资源", en: "Resources" }, path: "/resources/" }
+  ]}
+  mainEntityId={resourceListId}
+  schema={resourceSchema}
+>
   <PageHero
-    eyebrow="Resources"
+    eyebrow={{ zh: "资源", en: "Resources" }}
     title={resources.hero.title}
     body={resources.hero.body}
     image={resources.hero.image}
@@ -17,7 +177,7 @@ const hasDownloadHref = (href) => typeof href === "string" && href.trim() && hre
     light={false}
   />
 
-  <section class="resource-section" aria-labelledby="news-title">
+  <section class="resource-section" id="news" aria-labelledby="news-title">
     <div class="resource-heading">
       <p class="section-kicker">News</p>
       <div>
@@ -27,24 +187,27 @@ const hasDownloadHref = (href) => typeof href === "string" && href.trim() && hre
     </div>
     <div class="resource-scroll" data-scroll-region="x" tabindex="0" aria-label="新闻横向滚动列表">
       <div class="article-grid">
-        {resources.news.map((item) => (
-          <article class="article-card">
+        {newsItems.map((item) => (
+          <article class="article-card compact-resource-card">
             <a class="article-card-media-link" href={`/resources/${item.slug}/`} aria-label={`Read ${text(item.title)}`}>
-              <figure><img src={item.image} alt={item.alt} /></figure>
+              <figure>
+                <img src={item.image} {...imageAttrs(item.alt)} />
+              </figure>
             </a>
             <div class="article-card-copy">
               <span>{item.date}</span>
               <h3><a href={`/resources/${item.slug}/`} {...attrs(item.title)}>{text(item.title)}</a></h3>
-              <p {...attrs(item.body)}>{text(item.body)}</p>
+              <p><GlossaryLinkedText value={item.body} context="body" /></p>
               <a href={`/resources/${item.slug}/`} data-zh="阅读更新" data-en="Read update">阅读更新</a>
             </div>
           </article>
         ))}
       </div>
     </div>
+    <div class="resource-section-actions"><a class="button button-accent" href="/resources/news/" data-zh="所有新闻" data-en="All news">所有新闻</a></div>
   </section>
 
-  <section class="resource-section resource-section-dark" aria-labelledby="blog-title">
+  <section class="resource-section resource-section-dark" id="blog" aria-labelledby="blog-title">
     <div class="resource-heading">
       <p class="section-kicker">Blog</p>
       <div>
@@ -54,21 +217,70 @@ const hasDownloadHref = (href) => typeof href === "string" && href.trim() && hre
     </div>
     <div class="resource-scroll resource-scroll-dark" data-scroll-region="x" tabindex="0" aria-label="博客横向滚动列表">
       <div class="article-grid">
-        {resources.blogs.map((item) => (
-          <article class="article-card">
+        {blogItems.map((item) => (
+          <article class="article-card compact-resource-card">
             <a class="article-card-media-link" href={`/resources/${item.slug}/`} aria-label={`Read ${text(item.title)}`}>
-              <figure><img src={item.image} alt={item.alt} /></figure>
+              <figure>
+                <img src={item.image} {...imageAttrs(item.alt)} />
+              </figure>
             </a>
             <div class="article-card-copy">
-              <span>{item.category}</span>
+              <span>{item.date || item.category}</span>
               <h3><a href={`/resources/${item.slug}/`} {...attrs(item.title)}>{text(item.title)}</a></h3>
-              <p {...attrs(item.body)}>{text(item.body)}</p>
+              <p><GlossaryLinkedText value={item.body} context="body" /></p>
               <a href={`/resources/${item.slug}/`} data-zh="阅读文章" data-en="Read article">阅读文章</a>
             </div>
           </article>
         ))}
       </div>
     </div>
+    <div class="resource-section-actions"><a class="button button-accent" href="/resources/blogs/" data-zh="所有博客" data-en="All blogs">所有博客</a></div>
+  </section>
+
+  <section class="resource-section knowledge-section" id="knowledge" aria-labelledby="knowledge-title">
+    <div class="resource-heading">
+      <p class="section-kicker" data-zh="知识与术语" data-en="Glossary">知识与术语</p>
+      <div>
+        <h2 id="knowledge-title" data-zh="知识与术语" data-en="Glossary">知识与术语</h2>
+        <p data-zh="探索与湿巾及感染预防相关的测试标准、法规、成分与术语。" data-en="Explore testing standards, regulations, ingredients and terminology related to wet wipes and infection prevention.">探索与湿巾及感染预防相关的测试标准、法规、成分与术语。</p>
+      </div>
+    </div>
+    <div class="knowledge-cloud-grid">
+      {glossaryClouds.map(({ category, terms }, index) => (
+        <article class="knowledge-cloud-card">
+          <div class="knowledge-cloud-meta">
+            <span>{String(index + 1).padStart(2, "0")}</span>
+            <span>{terms.length} <span data-zh="个术语" data-en={terms.length === 1 ? "term" : "terms"}>个术语</span></span>
+          </div>
+          <h3><a href={`/resources/glossary/?category=${category.id}`} {...attrs(category)}>{text(category)} <span aria-hidden="true">↗</span></a></h3>
+          <div class="knowledge-cloud-viewport">
+            <div class="knowledge-cloud-canvas" data-cloud-canvas role="list">
+            {terms.map((term, termIndex) => (
+              <a
+                class="knowledge-cloud-term"
+                href={glossaryPath(term.slug)}
+                style={cloudStyle(term, termIndex, terms.length, category.id)}
+                data-term-slug={term.slug}
+                data-term-title-zh={term.title.zh}
+                data-term-title-en={term.title.en}
+                data-term-summary-zh={term.summary.zh}
+                data-term-summary-en={term.summary.en}
+                {...attrs({ zh: cloudLabel(term, "zh"), en: cloudLabel(term, "en") })}
+              >
+                {cloudLabel(term, language)}
+              </a>
+            ))}
+            </div>
+            <div class="knowledge-cloud-popover" data-cloud-popover aria-live="polite" aria-hidden="true">
+              <strong data-cloud-popover-title></strong>
+              <p data-cloud-popover-summary></p>
+            </div>
+          </div>
+          <a class="knowledge-cloud-link" href={`/resources/glossary/?category=${category.id}`} data-zh="浏览此分类" data-en="Browse category">浏览此分类 <span aria-hidden="true">↗</span></a>
+        </article>
+      ))}
+    </div>
+    <div class="resource-section-actions"><a class="button button-accent" href="/resources/glossary/" data-zh="进入页面" data-en="Explore glossary">进入页面</a></div>
   </section>
 
   <section class="resource-section" id="downloads" aria-labelledby="digital-title">
@@ -76,22 +288,30 @@ const hasDownloadHref = (href) => typeof href === "string" && href.trim() && hre
       <p class="section-kicker">Digital Resources</p>
       <div>
         <h2 id="digital-title" data-zh="数字资源" data-en="Digital Resources">数字资源</h2>
-        <p data-zh="产品说明书、SDS、安全使用指南和选型表。上传文件后，客户可直接打开或下载资料。" data-en="Product manuals, SDS files, safe-use guides, and selection sheets. Once files are uploaded, customers can open or download them directly.">产品说明书、SDS、安全使用指南和选型表。上传文件后，客户可直接打开或下载资料。</p>
+        <p data-zh="产品手册可直接下载；SDS 请联系我们获取。" data-en="Download product manuals; contact us for SDS files.">产品手册可直接下载；SDS 请联系我们获取。</p>
       </div>
     </div>
     <div class="download-grid">
-      <figure class="download-feature"><img src="/assets/resource-manuals.jpg" alt="产品说明书和数字资料文件" /></figure>
+      <figure class="download-feature">
+        <img src="/assets/resource-manuals.jpg" alt="产品说明书和数字资料文件" />
+      </figure>
       <div class="download-scroll" data-scroll-region="y" tabindex="0" aria-label="数字资源纵向滚动列表">
         <div class="download-list">
-          {resources.downloads.map((item) => (
+          {digitalItems.map((item) => (
             <article class="resource-download">
               <div class="resource-file">{item.type}</div>
               <div>
                 <span>{item.label}</span>
                 <h3>{item.title}</h3>
-                <p {...attrs(item.body)}>{text(item.body)}</p>
-                {hasDownloadHref(item.href) && (
-                  <a href={item.href} target="_blank" rel="noopener noreferrer" data-zh="查看资料" data-en="Open resource">查看资料</a>
+                {isDirectDownloadResource(item) ? (
+                  <a
+                    href={item.href}
+                    download
+                    data-zh={item.label === "Product Manual" ? "下载手册" : "下载 Brochure"}
+                    data-en={item.label === "Product Manual" ? "Download manual" : "Download brochure"}
+                  >{item.label === "Product Manual" ? "下载手册" : "下载 Brochure"}</a>
+                ) : (
+                  <a href="/contact/" data-zh="联系我们获取" data-en="Contact us to request">联系我们获取</a>
                 )}
               </div>
             </article>
@@ -99,5 +319,573 @@ const hasDownloadHref = (href) => typeof href === "string" && href.trim() && hre
         </div>
       </div>
     </div>
+    <div class="resource-section-actions"><a class="button button-accent" href="/resources/files/" data-zh="所有文件" data-en="All files">所有文件</a></div>
   </section>
 </BaseLayout>
+
+<style>
+  .knowledge-section {
+    background: #f2f7f6;
+  }
+
+  .knowledge-cloud-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .knowledge-cloud-card {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    min-height: 286px;
+    flex-direction: column;
+    padding: clamp(20px, 2.2vw, 30px);
+    border: 1px solid rgba(0, 13, 16, 0.18);
+    background:
+      radial-gradient(circle at 78% 28%, rgba(10, 186, 181, 0.16), transparent 52%),
+      var(--color-canvas-white);
+  }
+
+  .knowledge-cloud-card:nth-child(2),
+  .knowledge-cloud-card:nth-child(3) {
+    background:
+      radial-gradient(circle at 76% 28%, rgba(10, 186, 181, 0.26), transparent 54%),
+      var(--color-obsidian);
+    color: var(--color-canvas-white);
+  }
+
+  .knowledge-cloud-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    color: var(--color-tiffany-blue);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .knowledge-cloud-meta > span:last-child {
+    color: var(--color-slate-mist);
+    font-weight: 400;
+    letter-spacing: 0;
+    text-transform: none;
+  }
+
+  .knowledge-cloud-card:nth-child(2) .knowledge-cloud-meta > span:last-child,
+  .knowledge-cloud-card:nth-child(3) .knowledge-cloud-meta > span:last-child {
+    color: rgba(255, 255, 255, 0.62);
+  }
+
+  .knowledge-cloud-card h3 {
+    margin: 16px 0 8px;
+    font-size: clamp(22px, 2.2vw, 32px);
+    line-height: 1;
+  }
+
+  .knowledge-cloud-card h3 a {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .knowledge-cloud-card h3 a span,
+  .knowledge-cloud-link span {
+    color: var(--color-tiffany-blue);
+    font-size: 0.7em;
+  }
+
+  .knowledge-cloud-viewport {
+    position: relative;
+    flex: 1;
+    min-height: 178px;
+    overflow: hidden;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  .knowledge-cloud-canvas {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: inherit;
+  }
+
+  .knowledge-cloud-term {
+    position: absolute;
+    top: var(--cloud-y);
+    left: var(--cloud-x);
+    display: block;
+    max-width: none;
+    color: var(--color-obsidian);
+    font-size: calc(var(--cloud-size) * var(--cloud-fit, 1));
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    line-height: 1.12;
+    white-space: nowrap;
+    text-align: center;
+    text-decoration: none;
+    opacity: var(--cloud-opacity, 0.86);
+    transform: translate(-50%, -50%) scale(var(--cloud-scale, 1));
+    transform-origin: center;
+    transition: color 180ms ease, opacity 220ms ease, transform 220ms cubic-bezier(0.22, 1, 0.36, 1);
+    z-index: 1;
+  }
+
+  .knowledge-cloud-term.is-near {
+    z-index: 3;
+  }
+
+  .knowledge-cloud-card:nth-child(2) .knowledge-cloud-term,
+  .knowledge-cloud-card:nth-child(3) .knowledge-cloud-term {
+    color: var(--color-canvas-white);
+  }
+
+  .knowledge-cloud-term.is-near,
+  .knowledge-cloud-term:hover,
+  .knowledge-cloud-term:focus-visible {
+    color: #007c7a;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+  }
+
+  .knowledge-cloud-card:nth-child(2) .knowledge-cloud-term.is-near,
+  .knowledge-cloud-card:nth-child(3) .knowledge-cloud-term.is-near,
+  .knowledge-cloud-card:nth-child(2) .knowledge-cloud-term:hover,
+  .knowledge-cloud-card:nth-child(3) .knowledge-cloud-term:hover,
+  .knowledge-cloud-card:nth-child(2) .knowledge-cloud-term:focus-visible,
+  .knowledge-cloud-card:nth-child(3) .knowledge-cloud-term:focus-visible {
+    color: var(--color-tiffany-blue);
+  }
+
+  .knowledge-cloud-popover {
+    position: absolute;
+    z-index: 4;
+    top: 16px;
+    left: 16px;
+    width: min(270px, calc(100% - 32px));
+    max-height: calc(100% - 32px);
+    padding: 14px 16px;
+    border: 1px solid rgba(0, 13, 16, 0.14);
+    background: rgba(255, 255, 255, 0.96);
+    color: var(--color-obsidian);
+    box-shadow: 0 12px 28px rgba(0, 13, 16, 0.12);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(8px);
+    transition: opacity 180ms ease, transform 180ms ease;
+  }
+
+  .knowledge-cloud-card:nth-child(2) .knowledge-cloud-popover,
+  .knowledge-cloud-card:nth-child(3) .knowledge-cloud-popover {
+    border-color: rgba(255, 255, 255, 0.2);
+    background: rgba(0, 13, 16, 0.94);
+    color: var(--color-canvas-white);
+  }
+
+  .knowledge-cloud-popover[data-visible="true"] {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .knowledge-cloud-popover strong {
+    display: block;
+    font-size: 15px;
+    line-height: 1.25;
+  }
+
+  .knowledge-cloud-popover p {
+    display: -webkit-box;
+    margin: 6px 0 0;
+    overflow: hidden;
+    color: var(--color-slate-mist);
+    font-size: 12px;
+    line-height: 1.45;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+
+  .knowledge-cloud-card:nth-child(2) .knowledge-cloud-popover p,
+  .knowledge-cloud-card:nth-child(3) .knowledge-cloud-popover p {
+    color: rgba(255, 255, 255, 0.72);
+  }
+
+  .knowledge-cloud-link {
+    align-self: flex-start;
+    border-bottom: 1px solid currentColor;
+    font-size: 14px;
+    text-decoration: none;
+    text-underline-offset: 4px;
+  }
+
+  .knowledge-cloud-link:hover,
+  .knowledge-cloud-link:focus-visible {
+    color: var(--color-tiffany-blue);
+  }
+
+  .knowledge-cloud-term:focus-visible {
+    outline: 2px solid var(--color-tiffany-blue);
+    outline-offset: 4px;
+  }
+
+  .resource-section {
+    height: auto;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-sizing: border-box;
+  }
+
+  .resource-section > * {
+    flex-shrink: 0;
+  }
+
+  .resource-section .compact-resource-card h3 {
+    height: 5.4em;
+    min-height: 5.4em;
+    font-size: clamp(21px, 1.4vw, 26px);
+    -webkit-line-clamp: 5;
+    line-clamp: 5;
+  }
+
+  @media (min-width: 761px) {
+    .resource-heading {
+      min-height: var(--resource-heading-height, 0px);
+      align-items: start;
+      align-content: start;
+    }
+
+    .knowledge-cloud-grid {
+      width: calc(75% + 4px);
+      align-self: center;
+      height: var(--resource-content-height, 580px);
+      grid-template-rows: repeat(2, minmax(0, 1fr));
+    }
+
+    .knowledge-cloud-card {
+      min-height: 0;
+      padding: 12px 20px;
+    }
+
+    .knowledge-cloud-card h3 {
+      margin: 6px 0 4px;
+      font-size: clamp(20px, 1.6vw, 28px);
+      line-height: 1.1;
+    }
+
+    .knowledge-cloud-viewport { min-height: 0; }
+
+    .resource-section {
+      height: auto;
+      overflow: visible;
+      padding-top: clamp(36px, 5vh, 76px);
+      padding-bottom: clamp(36px, 5vh, 76px);
+    }
+
+    .resource-heading {
+      gap: clamp(28px, 4vw, 56px);
+      margin-bottom: clamp(24px, 4vh, 48px);
+    }
+
+    .resource-heading h2 {
+      font-size: clamp(52px, 7vw, 112px);
+    }
+
+    .resource-section .compact-resource-card .article-card-copy {
+      height: clamp(260px, 30vh, 320px);
+      min-height: clamp(260px, 30vh, 320px);
+    }
+
+    .resource-section .download-grid {
+      /* Match the News/Blog card area: 16:9 media + copy + list spacing. */
+      --download-panel-height: calc(
+        clamp(340px, 27vw, 560px) * 0.5625
+        + clamp(260px, 30vh, 320px)
+        + 43px
+      );
+      align-items: stretch;
+    }
+
+    .resource-section .download-feature,
+    .resource-section .download-scroll {
+      height: var(--resource-content-height, var(--download-panel-height));
+      min-height: 0;
+    }
+
+    .resource-section .download-scroll {
+      max-height: none;
+    }
+  }
+
+  @media (max-width: 760px) {
+    .knowledge-cloud-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .knowledge-cloud-card {
+      min-height: 260px;
+    }
+
+    .knowledge-cloud-viewport {
+      min-height: 170px;
+    }
+
+  }
+
+  @media (min-width: 761px) and (max-width: 1799px) {
+    .resource-section {
+      height: auto;
+      overflow: visible;
+    }
+
+    .knowledge-cloud-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (min-width: 761px) and (max-height: 849px) {
+    .resource-section {
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+
+    .resource-heading {
+      margin-bottom: 18px;
+    }
+
+    .resource-section-actions {
+      margin-top: 20px;
+    }
+
+    .resource-section .compact-resource-card h3 {
+      height: 5.4em;
+      min-height: 5.4em;
+      -webkit-line-clamp: 5;
+      line-clamp: 5;
+    }
+
+    .resource-section .compact-resource-card .article-card-copy {
+      height: 260px;
+      min-height: 260px;
+    }
+  }
+</style>
+
+<script>
+  // Share the measured heading and content tracks across resource modules.
+  // Natural article heights remain the source of truth, so long titles cannot
+  // be clipped by a fixed viewport budget.
+  const resourceSections = [...document.querySelectorAll<HTMLElement>(".resource-section")];
+  const resourceMedia = window.matchMedia("(min-width: 761px)");
+  const syncResourceTracks = () => {
+    const headingHeight = Math.max(...resourceSections.map(section => {
+      const heading = section.querySelector(".resource-heading");
+      if (!heading) return 0;
+      const heights = [...heading.children].map(child => child.getBoundingClientRect().height);
+      const style = getComputedStyle(heading);
+      return style.gridTemplateColumns.split(" ").length === 1
+        ? heights.reduce((sum, height) => sum + height, 0) + parseFloat(style.rowGap)
+        : Math.max(...heights);
+    }));
+    const contentHeight = document.querySelector("#news .resource-scroll")?.getBoundingClientRect().height;
+    for (const section of resourceSections) {
+      section.style.setProperty("--resource-heading-height", resourceMedia.matches ? `${headingHeight}px` : "0px");
+      if (contentHeight) section.style.setProperty("--resource-content-height", `${contentHeight}px`);
+    }
+  };
+  const resourceObserver = new ResizeObserver(syncResourceTracks);
+  document.querySelectorAll(".resource-heading > *, #news .resource-scroll").forEach(element => resourceObserver.observe(element));
+  resourceMedia.addEventListener("change", syncResourceTracks);
+  document.fonts.ready.then(syncResourceTracks);
+  syncResourceTracks();
+
+  for (const viewport of document.querySelectorAll(".knowledge-cloud-viewport")) {
+    const tags = [...viewport.querySelectorAll(".knowledge-cloud-term")];
+    const popover = viewport.querySelector("[data-cloud-popover]");
+    const popoverTitle = viewport.querySelector("[data-cloud-popover-title]");
+    const popoverSummary = viewport.querySelector("[data-cloud-popover-summary]");
+    if (!popover || !popoverTitle || !popoverSummary) continue;
+
+    let hideTimer;
+    let activeTag = null;
+    // Fit measured glyph widths, including the maximum hover enlargement.
+    // Percentage positions alone cannot prevent collisions on narrow cards.
+    const fitCloud = () => {
+      viewport.style.setProperty("--cloud-fit", "1");
+      const states = getSphereState();
+      const boxes = states.map(({ tag, depth, x, y }) => ({
+        x: (x + 1) * viewport.clientWidth / 2,
+        y: (y + 1) * viewport.clientHeight / 2,
+        w: tag.offsetWidth * sphereScale(depth, .2),
+        h: tag.offsetHeight * sphereScale(depth, .2)
+      }));
+      let fit = 1;
+      for (let i = 0; i < boxes.length; i++) {
+        const a = boxes[i];
+        fit = Math.min(fit, (Math.min(a.x, viewport.clientWidth - a.x) * 2 - 12) / a.w);
+        for (let j = 0; j < i; j++) {
+          const b = boxes[j];
+          fit = Math.min(fit, Math.max(
+            (Math.abs(a.x - b.x) - 10) * 2 / (a.w + b.w),
+            (Math.abs(a.y - b.y) - 10) * 2 / (a.h + b.h)
+          ));
+        }
+      }
+      viewport.style.setProperty("--cloud-fit", String(Math.max(.1, Math.min(1, fit))));
+      resetSphereDepth();
+    };
+    const sphereScale = (depth, focusBoost = 0) => (
+      0.6 + Math.pow(depth, 1.55) * 0.8 + focusBoost
+    );
+    const sphereOpacity = (depth, focusBoost = 0) => (
+      0.58 + depth * 0.42 + focusBoost
+    );
+
+    const getSphereState = () => {
+      const viewportRect = viewport.getBoundingClientRect();
+      const centerX = viewportRect.left + viewportRect.width / 2;
+      const centerY = viewportRect.top + viewportRect.height / 2;
+      const radiusX = Math.max(viewportRect.width / 2, 1);
+      const radiusY = Math.max(viewportRect.height / 2, 1);
+      return tags.map((tag) => {
+        const rect = tag.getBoundingClientRect();
+        const x = ((rect.left + rect.width / 2) - centerX) / radiusX;
+        const y = ((rect.top + rect.height / 2) - centerY) / radiusY;
+        const radialDistance = Math.min(1, Math.hypot(x, y));
+        const depth = Math.sqrt(Math.max(0, 1 - radialDistance * radialDistance));
+        return { tag, depth, x, y };
+      });
+    };
+
+    const applySphereDepth = (clientX, clientY) => {
+      const viewportRect = viewport.getBoundingClientRect();
+      const pointerX = ((clientX - viewportRect.left) / Math.max(viewportRect.width, 1)) * 2 - 1;
+      const pointerY = ((clientY - viewportRect.top) / Math.max(viewportRect.height, 1)) * 2 - 1;
+      const states = getSphereState();
+      let nearestTag = null;
+      let nearestDistance = Number.POSITIVE_INFINITY;
+
+      states.forEach(({ tag, x, y }) => {
+        const distance = Math.hypot(pointerX - x, pointerY - y);
+        if (distance < nearestDistance) {
+          nearestTag = tag;
+          nearestDistance = distance;
+        }
+      });
+
+      const hasFocus = nearestTag && nearestDistance < 0.34;
+      states.forEach(({ tag, depth }) => {
+        const isNear = hasFocus && tag === nearestTag;
+        const focusBoost = isNear ? (1 - nearestDistance / 0.34) * 0.2 : 0;
+        tag.style.setProperty("--cloud-scale", sphereScale(depth, focusBoost).toFixed(3));
+        tag.style.setProperty("--cloud-opacity", sphereOpacity(depth, isNear ? 0.08 : 0).toFixed(3));
+        tag.classList.toggle("is-near", isNear);
+      });
+
+      if (hasFocus) {
+        showPopover(nearestTag);
+      } else if (activeTag) {
+        hidePopover();
+      }
+    };
+
+    const resetSphereDepth = () => {
+      const states = getSphereState();
+      states.forEach(({ tag, depth }) => {
+        tag.style.setProperty("--cloud-scale", sphereScale(depth).toFixed(3));
+        tag.style.setProperty("--cloud-opacity", sphereOpacity(depth).toFixed(3));
+        tag.classList.remove("is-near");
+      });
+    };
+
+    const positionPopover = (tag) => {
+      const viewportRect = viewport.getBoundingClientRect();
+      const tagRect = tag.getBoundingClientRect();
+      const popoverRect = popover.getBoundingClientRect();
+      const gap = 12;
+      const padding = 12;
+      const tagBox = {
+        left: tagRect.left - viewportRect.left,
+        right: tagRect.right - viewportRect.left,
+        top: tagRect.top - viewportRect.top,
+        bottom: tagRect.bottom - viewportRect.top
+      };
+      const width = popoverRect.width;
+      const height = popoverRect.height;
+      const bounds = {
+        left: padding,
+        right: Math.max(padding, viewportRect.width - width - padding),
+        top: padding,
+        bottom: Math.max(padding, viewportRect.height - height - padding)
+      };
+      const centerX = (tagBox.left + tagBox.right) / 2;
+      const centerY = (tagBox.top + tagBox.bottom) / 2;
+      const candidates = [
+        { left: centerX - width / 2, top: tagBox.bottom + gap },
+        { left: centerX - width / 2, top: tagBox.top - height - gap },
+        { left: tagBox.right + gap, top: centerY - height / 2 },
+        { left: tagBox.left - width - gap, top: centerY - height / 2 }
+      ];
+      const overlapsTag = ({ left, top }) => (
+        left < tagBox.right + gap && left + width > tagBox.left - gap
+        && top < tagBox.bottom + gap && top + height > tagBox.top - gap
+      );
+      const fits = ({ left, top }) => (
+        left >= bounds.left && left <= bounds.right
+        && top >= bounds.top && top <= bounds.bottom
+        && !overlapsTag({ left, top })
+      );
+      const candidate = candidates.find(fits) || candidates[0];
+      const left = Math.min(bounds.right, Math.max(bounds.left, candidate.left));
+      const top = Math.min(bounds.bottom, Math.max(bounds.top, candidate.top));
+      popover.style.left = `${left}px`;
+      popover.style.top = `${top}px`;
+    };
+
+    const showPopover = (tag) => {
+      window.clearTimeout(hideTimer);
+      activeTag = tag;
+      const english = document.documentElement.lang.startsWith("en");
+      popoverTitle.textContent = english ? tag.dataset.termTitleEn : tag.dataset.termTitleZh;
+      popoverSummary.textContent = english ? tag.dataset.termSummaryEn : tag.dataset.termSummaryZh;
+      positionPopover(tag);
+      popover.dataset.visible = "true";
+      popover.setAttribute("aria-hidden", "false");
+    };
+
+    const hidePopover = () => {
+      hideTimer = window.setTimeout(() => {
+        popover.dataset.visible = "false";
+        popover.setAttribute("aria-hidden", "true");
+        activeTag = null;
+      }, 140);
+    };
+
+    tags.forEach((tag) => {
+      tag.addEventListener("pointerenter", () => showPopover(tag));
+      tag.addEventListener("focus", () => showPopover(tag));
+      tag.addEventListener("pointerleave", hidePopover);
+      tag.addEventListener("blur", hidePopover);
+    });
+
+    viewport.addEventListener("pointermove", (event) => {
+      applySphereDepth(event.clientX, event.clientY);
+    });
+
+    viewport.addEventListener("pointerleave", () => {
+      resetSphereDepth();
+      hidePopover();
+    });
+
+    document.fonts.ready.then(fitCloud);
+    new ResizeObserver(fitCloud).observe(viewport);
+
+    window.addEventListener("resize", () => {
+      if (activeTag) positionPopover(activeTag);
+    });
+  }
+</script>

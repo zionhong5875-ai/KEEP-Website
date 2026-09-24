@@ -1,37 +1,89 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import policies from "../data/legal/policies.json";
+import policies from "../data/legal/policies.json" with { type: "json" };
+import settings from "../data/site/siteSettings.json";
 import { text, attrs } from "../utils/i18n";
-
-export const prerender = true;
-
-export function getStaticPaths() {
-  return Object.keys(policies).map((policy) => ({ params: { policy } }));
-}
+import GlossaryLinkedText from "../components/GlossaryLinkedText.astro";
 
 const policy = policies[Astro.params.policy];
+if (!policy) {
+  return new Response("Policy not found", { status: 404 });
+}
+const policyLinks = settings.footer.legal;
+const language = Astro.locals.language || "zh";
+const pageTitle = {
+  zh: `${policy.title.zh} | VINNER`,
+  en: `${policy.title.en} | VINNER`
+};
 ---
 
-<BaseLayout title={policy.title} description={policy.title}>
+<BaseLayout
+  title={pageTitle}
+  description={policy.summary}
+  breadcrumbs={[
+    { name: { zh: "首页", en: "Home" }, path: "/" },
+    { name: policy.title, path: `/${Astro.params.policy}/` }
+  ]}
+  pageProperties={{
+    datePublished: policy.effectiveAt.replaceAll(".", "-"),
+    dateModified: policy.updatedAt.replaceAll(".", "-")
+  }}
+>
   <section class="policy-hero">
-    <p class="section-kicker">Legal</p>
-    <h1 {...attrs(policy.title)}>{text(policy.title)}</h1>
-    <p data-zh="以下文本为官网 prototype 版本，用于建立上线前的合规框架。" data-en="The following text is drafted for the prototype website to establish a practical compliance framework before launch.">
-      以下文本为官网 prototype 版本，用于建立上线前的合规框架。
-    </p>
+    <div class="policy-hero-inner">
+      <div class="policy-hero-topline">
+        <p class="section-kicker" {...attrs(policy.eyebrow)}>{text(policy.eyebrow)}</p>
+        <span data-zh={`生效日期 ${policy.effectiveAt}`} data-en={`Effective ${policy.effectiveAt}`}>生效日期 {policy.effectiveAt}</span>
+      </div>
+      <h1 {...attrs(policy.title)}>{text(policy.title)}</h1>
+      <p class="policy-hero-summary" {...attrs(policy.summary)}>{text(policy.summary)}</p>
+    </div>
   </section>
   <section class="policy-layout">
     <aside class="policy-side">
-      <p data-zh="最近更新" data-en="Last updated">最近更新</p>
-      <strong>2026-05-06</strong>
+      <div class="policy-side-meta">
+        <p data-zh="最近更新" data-en="Last updated">最近更新</p>
+        <strong>{policy.updatedAt}</strong>
+      </div>
+      <nav class="policy-nav" aria-label="Policy navigation">
+        <p data-zh="政策导航" data-en="Policy navigation">政策导航</p>
+        {policyLinks.map((item) => (
+          <a
+            href={item.href}
+            class:list={Astro.url.pathname === item.href ? ["is-active"] : []}
+            aria-current={Astro.url.pathname === item.href ? "page" : undefined}
+            {...attrs(item)}
+          >
+            {text(item)}
+          </a>
+        ))}
+      </nav>
     </aside>
     <div class="policy-content">
+      <div class="policy-intro">
+        <span data-zh="重要提示" data-en="Important notice">重要提示</span>
+        <p><GlossaryLinkedText value={policy.summary} context="intro" /></p>
+      </div>
       {policy.body.map((block) => (
         <article class="policy-block">
           <h2 {...attrs(block.heading)}>{text(block.heading)}</h2>
-          <p {...attrs(block.text)}>{text(block.text)}</p>
+          {block.paragraphs?.map((paragraph) => <p><GlossaryLinkedText value={paragraph} context="paragraph" /></p>)}
+          {block.items?.length > 0 && (
+            <ul class="policy-list">
+              {block.items.map((item) => <li><GlossaryLinkedText value={item} context="bullet" /></li>)}
+            </ul>
+          )}
         </article>
       ))}
+      <section class="policy-contact-callout" aria-labelledby="policy-contact-title">
+        <span data-zh="需要进一步帮助？" data-en="Need further help?">需要进一步帮助？</span>
+        <h2 id="policy-contact-title" data-zh="欢迎联系我们。" data-en="Contact VINNER.">欢迎联系我们。</h2>
+        <h3 class="sr-only" data-zh="业务联系邮箱" data-en="Business contact email">业务联系邮箱</h3>
+        <div>
+          <a class="button button-dark" href="/contact/" data-zh="联系我们" data-en="Contact us">联系我们</a>
+          <a class="policy-email-link" href="mailto:hongzihao@vinnercare.cn">hongzihao@vinnercare.cn</a>
+        </div>
+      </section>
     </div>
   </section>
 </BaseLayout>

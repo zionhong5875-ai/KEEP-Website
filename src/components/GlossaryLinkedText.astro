@@ -1,0 +1,28 @@
+---
+import { linkGlossaryText } from "../utils/glossary-links.mjs";
+import { localizedPath } from "../utils/i18n";
+
+const { value, context = "body", class: className } = Astro.props;
+const language = Astro.locals.language === "en" ? "en" : "zh";
+const source = typeof value === "string" ? value : value?.[language] || "";
+const segments = linkGlossaryText(source, language, context);
+const hasLinks = segments.some((segment) => segment.slug);
+const languageAttrs = !hasLinks && value && typeof value !== "string"
+  ? { "data-zh": value.zh, "data-en": value.en }
+  : {};
+---
+<span class={className} {...languageAttrs}>
+  {segments.map((segment) => segment.slug
+    ? <a class="glossary-inline-link" data-glossary-link={segment.slug} href={localizedPath(`/resources/glossary/${segment.slug}/`, language)}>{segment.text}</a>
+    : segment.text)}
+</span>
+<style>
+  .glossary-inline-link {
+    color: #007c7a;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
+  .glossary-inline-link:hover,
+  .glossary-inline-link:focus-visible { color: var(--color-obsidian); }
+</style>

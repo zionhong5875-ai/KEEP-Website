@@ -1,0 +1,158 @@
+[
+  {
+    "slug": null,
+    "category": "fundamentals",
+    "title": {
+      "zh": "吸收性",
+      "en": "Absorbency"
+    },
+    "summary": {
+      "zh": "材料吸收液体的能力。",
+      "en": "A material's ability to take up liquid."
+    },
+    "sample": true
+  },
+  {
+    "slug": null,
+    "category": "fundamentals",
+    "title": {
+      "zh": "克重",
+      "en": "Basis Weight"
+    },
+    "summary": {
+      "zh": "单位面积材料的质量。",
+      "en": "The mass of a material per unit area."
+    },
+    "sample": true
+  },
+  {
+    "slug": null,
+    "category": "regulations",
+    "title": {
+      "zh": "生物杀灭产品法规",
+      "en": "Biocidal Products Regulation"
+    },
+    "summary": {
+      "zh": "关于生物杀灭产品监管框架的主题。",
+      "en": "A topic covering the regulatory framework for biocidal products."
+    },
+    "sample": true
+  },
+  {
+    "slug": null,
+    "category": "testing",
+    "title": {
+      "zh": "接触时间",
+      "en": "Contact Time"
+    },
+    "summary": {
+      "zh": "测试或使用程序中规定的接触持续时间。",
+      "en": "The duration of contact specified in a test or use procedure."
+    },
+    "sample": true
+  },
+  {
+    "slug": null,
+    "category": "regulations",
+    "title": {
+      "zh": "化妆品法规",
+      "en": "Cosmetics Regulation"
+    },
+    "summary": {
+      "zh": "关于化妆品产品监管框架的主题。",
+      "en": "A topic covering the regulatory framework for cosmetic products."
+    },
+    "sample": true
+  },
+  {
+    "slug": null,
+    "category": "testing",
+    "title": {
+      "zh": "耐用性",
+      "en": "Durability"
+    },
+    "summary": {
+      "zh": "材料承受指定使用条件的能力。",
+      "en": "The ability of a material to withstand specified conditions of use."
+    },
+    "sample": true
+  },
+  {
+    "slug": null,
+    "category": "fundamentals",
+    "title": {
+      "zh": "成分",
+      "en": "Ingredients"
+    },
+    "summary": {
+      "zh": "产品配方中使用的物质。",
+      "en": "The substances used in a product formulation."
+    },
+    "sample": true
+  },
+  {
+    "slug": null,
+    "category": "regulations",
+    "title": {
+      "zh": "医疗器械法规",
+      "en": "Medical Device Regulation"
+    },
+    "summary": {
+      "zh": "关于医疗器械监管框架的主题。",
+      "en": "A topic covering the regulatory framework for medical devices."
+    },
+    "sample": true
+  },
+  {
+    "slug": null,
+    "category": "fundamentals",
+    "title": {
+      "zh": "非织造布",
+      "en": "Nonwoven"
+    },
+    "summary": {
+      "zh": "不通过织造或针织方式制成的纤维材料。",
+      "en": "A fibrous material made without weaving or knitting."
+    },
+    "sample": true
+  },
+  {
+    "slug": null,
+    "category": "testing",
+    "title": {
+      "zh": "酸碱度",
+      "en": "pH"
+    },
+    "summary": {
+      "zh": "用于描述溶液酸性或碱性的指标。",
+      "en": "A measure used to describe how acidic or alkaline a solution is."
+    },
+    "sample": true
+  },
+  {
+    "slug": null,
+    "category": "fundamentals",
+    "title": {
+      "zh": "基材",
+      "en": "Substrate"
+    },
+    "summary": {
+      "zh": "承载湿巾配方液体的基础材料。",
+      "en": "The base material that carries a wipe formulation."
+    },
+    "sample": true
+  },
+  {
+    "slug": null,
+    "category": "testing",
+    "title": {
+      "zh": "拉伸强度",
+      "en": "Tensile Strength"
+    },
+    "summary": {
+      "zh": "通过施加拉力评估的一项材料性能。",
+      "en": "A material property assessed by applying a pulling force."
+    },
+    "sample": true
+  }
+]

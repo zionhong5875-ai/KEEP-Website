@@ -1,29 +1,422 @@
 {
   "meta": {
     "title": {
-      "zh": "博客与资源 | VINNER",
-      "en": "Blog & Resources | VINNER"
+      "zh": "资源：新闻、观点、知识与数字资源 | VINNER",
+      "en": "Resources: News, Insights, Knowledge & Downloads | VINNER"
     },
     "description": {
-      "zh": "VINNER 博客与资源中心，包含公司新闻、专业博客、产品说明书、SDS 与数字资料。",
-      "en": "VINNER's blog and resource hub for news, articles, product manuals, SDS files, and digital documentation."
+      "zh": "浏览 VINNER 湿巾行业博客、公司新闻、感染控制知识，以及产品说明书、SDS 和数字资料。",
+      "en": "Read VINNER wet wipes industry articles, company news, infection-control insights, product manuals, SDS files, and digital resources."
     }
   },
   "hero": {
     "title": {
-      "zh": "新闻、观点与<br />数字资料。",
-      "en": "News,<br />thinking &<br />documents."
+      "zh": "新闻、观点、知识与数字资源",
+      "en": "News, insights, knowledge & digital resources"
     },
     "body": {
-      "zh": "这里汇集 VINNER 的最新动态、擦拭系统知识、产品说明书、SDS 和应用资料，帮助客户更快完成选型、培训和内部审批。",
-      "en": "A hub for company updates, wiping-system knowledge, manuals, SDS files, and support documents to speed selection, training, and internal review."
+      "zh": "汇集维尼的最新动态、我们的见解、相关知识与术语表<br />以及供您下载的数字资源。",
+      "en": "Explore Vinner's latest updates, our insights, relevant knowledge and terminology,<br />along with digital resources for download."
     },
     "image": "/assets/resource-documents.jpg",
     "alt": "VINNER 数字资料、产品文档和擦拭系统资源"
   },
   "news": [
     {
-      "date": "2026.02 / Exhibition",
+      "date": "2026.08.24 / News",
+      "title": {
+        "zh": "维尼健康推出自主品牌清洁护理产品线：从床旁清洁到日常肌肤护理",
+        "en": "VINNER Health Launches Its Own-Brand Personal Cleansing and Care Line: From Bedside Cleansing to Everyday Skin Care"
+      },
+      "body": {
+        "zh": "对于住院患者、行动不便的老年人、长期照护人群以及新生儿而言，“清洁”是日常卫生的一部分，更直接关系到舒适度、肌肤状态以及护理人员的工作效率。基于二十余年的湿巾研发与制造经验，维尼健康（VINNER）推出个人清洁与护理产品线（Personal Care & Rinse-Free Cleansing Collection），针对传统洗浴、洗发或皮肤清洁不便的场景，提供更加便捷、温和的日常护理解决方案。",
+        "en": "For hospitalized patients, older adults with limited mobility, people receiving long-term care, and newborns, “cleansing” is part of everyday hygiene—but it also directly affects comfort, skin condition, and caregiver efficiency. Drawing on more than two decades of wet-wipe R&D and manufacturing experience, VINNER Health has launched its Personal Care & Rinse-Free Cleansing Collection. Designed for situations where conventional bathing, hair washing, or skin cleansing is inconvenient, the collection provides a more convenient and gentle solution for everyday care."
+      },
+      "image": "/assets/news/news3-cover.png",
+      "alt": "VINNERLOVE 与 HOMEKEEP 清洁护理产品线",
+      "slug": "vinner-personal-cleansing-care-line",
+      "sections": [
+        {
+          "level": 1,
+          "heading": {
+            "zh": "两大品牌，覆盖不同清洁护理需求",
+            "en": "Two Brands, Covering Diverse Cleansing and Care Needs"
+          },
+          "body": {
+            "zh": "目前，该产品线主要包括 VINNERLOVE 和 HOMEKEEP 两个品牌，覆盖不同年龄、不同护理环境和不同清洁需求。",
+            "en": "Today, the line mainly comprises VINNERLOVE and HOMEKEEP, covering different ages, care settings, and cleansing needs."
+          },
+          "bullets": [
+            {
+              "zh": "免冲洗身体清洁",
+              "en": "Rinse-free body cleansing"
+            },
+            {
+              "zh": "免冲洗头发清洁",
+              "en": "Rinse-free hair cleansing"
+            },
+            {
+              "zh": "失禁及潮湿暴露皮肤护理",
+              "en": "Care for incontinent and moisture-exposed skin"
+            },
+            {
+              "zh": "婴幼儿与敏感肌清洁",
+              "en": "Cleansing for infants and sensitive skin"
+            }
+          ],
+          "paragraphsAfter": [
+            {
+              "zh": "相关产品在欧盟、中东、美国等主要市场通常按照化妆品或个人护理产品路径进行市场准入。",
+              "en": "In major markets such as the European Union, the Middle East, and the United States, these products typically enter the market through the cosmetics or personal-care product pathway."
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "heading": {
+            "zh": "VINNERLOVE：面向成人及专业护理场景的清洁护理系列",
+            "en": "VINNERLOVE: A Cleansing and Care Range for Adults and Professional Care Settings"
+          },
+          "body": {
+            "zh": "VINNERLOVE 主要针对医院病房、养老院、长期护理机构以及居家护理中的成人清洁护理需求。",
+            "en": "VINNERLOVE primarily addresses adult cleansing and care needs in hospital wards, nursing homes, long-term care facilities, and home-care settings."
+          },
+          "paragraphs": [
+            {
+              "zh": "对于卧床、术后、行动不便或需要他人协助完成个人卫生护理的人群，传统洗澡和洗头往往意味着需要准备清水、脸盆、毛巾，并频繁调整被护理者体位。",
+              "en": "For people who are bedridden, recovering from surgery, have limited mobility, or need assistance with personal hygiene, a conventional bath or hair wash often requires clean water, a basin, towels, and frequent repositioning of the person receiving care."
+            },
+            {
+              "zh": "VINNERLOVE 因此围绕“免冲洗护理（Rinse-Free Care）”开发产品，让身体清洁、头发清洁以及失禁相关皮肤护理能够在床旁或其他护理环境中更加方便地完成。",
+              "en": "VINNERLOVE therefore develops products around “Rinse-Free Care,” making body cleansing, hair cleansing, and continence-related skin care easier to complete at the bedside or in other care settings."
+            },
+            {
+              "zh": "目前主要包括以下产品：",
+              "en": "Its current range mainly includes the following products:"
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "heading": {
+            "zh": "1. VINNERLOVE Bed Bath Wipes｜免冲洗沐浴湿巾",
+            "en": "1. VINNERLOVE Bed Bath Wipes — Rinse-Free Bathing Wipes"
+          },
+          "productSlug": "vinnerlove-rinse-free-bathing-wipes",
+          "body": {
+            "zh": "采用免冲洗清洁护理液的大尺寸湿巾，用于全身床旁清洁护理。每包 8 片，可按照不同身体部位进行分区清洁，无需另外准备清水、脸盆或毛巾。",
+            "en": "Large-format wipes infused with a rinse-free cleansing and care solution for full-body bedside cleansing. Each pack contains 8 wipes, allowing different body areas to be cleansed separately without preparing additional water, a basin, or towels."
+          },
+          "paragraphs": [
+            {
+              "zh": "产品可在使用前适当加热，在进行床旁沐浴时提供更加温暖、舒适的护理体验。",
+              "en": "The wipes may be warmed before use to provide a warmer, more comfortable bedside bathing experience."
+            },
+            {
+              "zh": "特别适合：",
+              "en": "Particularly suitable for:"
+            }
+          ],
+          "bullets": [
+            {
+              "zh": "住院卧床患者",
+              "en": "Hospitalized bedridden patients"
+            },
+            {
+              "zh": "ICU 及术后患者",
+              "en": "ICU and postoperative patients"
+            },
+            {
+              "zh": "行动不便的老年人",
+              "en": "Older adults with limited mobility"
+            },
+            {
+              "zh": "长期卧床或需要辅助沐浴的人群",
+              "en": "People who are bedridden long-term or require assisted bathing"
+            },
+            {
+              "zh": "居家康复及家庭护理",
+              "en": "Home rehabilitation and family caregiving"
+            }
+          ],
+          "paragraphsAfter": [
+            {
+              "zh": "手册将其典型使用场景概括为床旁沐浴、老人护理、长期照护、家庭护理以及旅行或应急清洁。",
+              "en": "The manual summarizes typical use cases as bedside bathing, elder care, long-term care, home care, and travel or emergency cleansing."
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "heading": {
+            "zh": "2. VINNERLOVE Bed Bath Gloves｜免冲洗沐浴手套",
+            "en": "2. VINNERLOVE Bed Bath Gloves — Rinse-Free Bathing Gloves"
+          },
+          "productSlug": "vinnerlove-rinse-free-bathing-gloves",
+          "body": {
+            "zh": "将免冲洗清洁护理液与手套式无纺布结合，使护理人员可以直接佩戴进行身体擦拭。",
+            "en": "Combining a rinse-free cleansing and care solution with glove-shaped nonwoven fabric, the product allows caregivers to put on the gloves and wipe the body directly."
+          },
+          "paragraphs": [
+            {
+              "zh": "与普通湿巾相比，手套结构在协助他人进行背部、四肢、腋下等身体区域清洁时更加容易控制，也更适合床旁护理操作。",
+              "en": "Compared with ordinary wipes, the glove format is easier to control when assisting with cleansing the back, limbs, underarms, and other body areas, and is better suited to bedside care."
+            },
+            {
+              "zh": "产品同样采用 8 片式全身护理设计，可用于完整的身体分区清洁，并可在使用前适当加热。",
+              "en": "It uses the same eight-piece full-body care design, supporting complete area-by-area body cleansing and allowing the gloves to be warmed before use."
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "heading": {
+            "zh": "3. VINNERLOVE Rinse-Free Shampoo Cap｜免冲洗洗发浴帽",
+            "en": "3. VINNERLOVE Rinse-Free Shampoo Cap"
+          },
+          "productSlug": "vinnerlove-rinse-free-shampoo-cap",
+          "body": {
+            "zh": "传统床旁洗头往往需要准备水、脸盆和毛巾，同时还需要调整患者体位并进行后续清理。",
+            "en": "Traditional bedside hair washing often requires water, a basin, and towels, as well as repositioning the patient and cleaning up afterward."
+          },
+          "paragraphs": [
+            {
+              "zh": "免冲洗洗发浴帽将清洁护理液预先加入浴帽中。使用时将浴帽佩戴于头部，通过轻柔按摩使护理液充分接触头发和头皮，完成清洁后无需再用清水冲洗。",
+              "en": "The Rinse-Free Shampoo Cap comes preloaded with cleansing and care solution. To use it, place the cap on the head and massage gently so the solution fully contacts the hair and scalp; after cleansing, no rinsing with clean water is required."
+            },
+            {
+              "zh": "它特别适合传统洗头不方便的人群，有助于简化床旁洗发流程，减少取水、使用脸盆和毛巾以及后续清理等步骤。",
+              "en": "It is especially suitable for people for whom conventional hair washing is inconvenient, helping simplify the bedside hair-washing process by reducing steps such as fetching water, using a basin and towels, and cleaning up afterward."
+            },
+            {
+              "zh": "因此，在医院病房、养老院及居家护理中，它可以帮助护理人员更轻松地完成头发卫生护理，同时帮助被护理者保持清爽、舒适和体面。",
+              "en": "In hospital wards, nursing homes, and home-care settings, it helps caregivers complete hair hygiene more easily while helping the person receiving care stay fresh, comfortable, and dignified."
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "heading": {
+            "zh": "4. VINNERLOVE Continence Care Wipes｜4 合 1 乳霜护理湿巾",
+            "en": "4. VINNERLOVE Continence Care Wipes — 4-in-1 Continence Care Wipes"
+          },
+          "productSlug": "vinnerlove-cream-care-wipes",
+          "body": {
+            "zh": "对于长期卧床、失禁或行动不便的人群，皮肤可能长期接触尿液、粪便、汗液，并经历反复擦拭和清洁。",
+            "en": "For people who are bedridden long-term, experience incontinence, or have limited mobility, skin may remain exposed to urine, feces, and sweat for extended periods and undergo repeated wiping and cleansing."
+          },
+          "paragraphs": [
+            {
+              "zh": "VINNERLOVE 失禁护理乳霜湿巾采用含乳霜的 4 合 1 护理设计，通过一次擦拭同时完成清洁、保湿、舒缓以及提供屏障防护。",
+              "en": "VINNERLOVE Continence Care Wipes feature a cream-based 4-in-1 care design, completing cleansing, moisturizing, soothing, and barrier protection in a single wipe."
+            },
+            {
+              "zh": "相比需要分别使用清洁产品、保湿产品、舒缓护理产品以及皮肤屏障产品的传统多步骤护理方式，一片湿巾即可完成多项日常皮肤护理步骤。",
+              "en": "Compared with conventional multi-step care, which requires separate cleansing, moisturizing, soothing, and skin-barrier products, a single wipe can complete multiple daily skin-care steps."
+            },
+            {
+              "zh": "适用于医院、养老院、长期护理机构和居家护理环境，特别适合失禁人群、老年脆弱肌肤以及长期卧床或久坐人群的日常皮肤护理。",
+              "en": "Suitable for hospitals, nursing homes, long-term care facilities, and home-care settings, they are especially suited to everyday skin care for people with incontinence, older adults with fragile skin, and those who are bedridden or seated for long periods."
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "heading": {
+            "zh": "HOMEKEEP：面向婴幼儿与敏感肌的温和日常清洁",
+            "en": "HOMEKEEP: Gentle Everyday Cleansing for Infants and Sensitive Skin"
+          },
+          "body": {
+            "zh": "与 VINNERLOVE 更偏向成人及专业照护场景不同，HOMEKEEP 更关注婴幼儿及敏感肌肤的日常温和清洁。",
+            "en": "Unlike VINNERLOVE, which focuses more on adult and professional care settings, HOMEKEEP focuses on gentle daily cleansing for infants and sensitive skin."
+          }
+        },
+        {
+          "level": 3,
+          "heading": {
+            "zh": "HOMEKEEP 纯水婴儿湿巾",
+            "en": "HOMEKEEP Pure Water Wipes"
+          },
+          "productSlug": "homekeep-pure-water-baby-wipes",
+          "body": {
+            "zh": "HOMEKEEP 纯水婴儿湿巾专为新生儿及敏感肌设计，采用 100% 植物基纤维无纺布和纯水配方，不添加酒精、香精及对羟基苯甲酸酯（Parabens）。",
+              "en": "HOMEKEEP Pure Water Wipes are designed for newborns and sensitive skin. They use 100% plant-based nonwoven fiber and a pure-water formula, with no alcohol, fragrance, or parabens added."
+          },
+          "paragraphs": [
+            {
+              "zh": "柔软且具有一定厚度的湿巾材料使其适用于：",
+              "en": "The soft, suitably thick wipe material makes them suitable for:"
+            }
+          ],
+          "bullets": [
+            {
+              "zh": "新生儿日常清洁",
+              "en": "Everyday cleansing for newborns"
+            },
+            {
+              "zh": "换尿布时的皮肤清洁",
+              "en": "Skin cleansing during diaper changes"
+            },
+            {
+              "zh": "手部、面部及身体日常擦拭",
+              "en": "Everyday wiping of hands, face, and body"
+            },
+            {
+              "zh": "敏感肌人群的温和清洁",
+              "en": "Gentle cleansing for people with sensitive skin"
+            },
+            {
+              "zh": "居家及外出护理",
+              "en": "Care at home and on the go"
+            }
+          ],
+          "paragraphsAfter": [
+            {
+              "zh": "通过 HOMEKEEP，维尼健康将清洁护理产品线从专业成人护理进一步延伸至婴幼儿和家庭日常护理。",
+              "en": "Through HOMEKEEP, VINNER Health extends its cleansing and care line beyond professional adult care to infants and everyday family care."
+            }
+          ]
+        },
+        {
+          "level": 1,
+          "heading": {
+            "zh": "从医院病房到家庭：一套产品覆盖多种护理场景",
+            "en": "From Hospital Wards to the Home: One Product Line for Multiple Care Settings"
+          },
+          "body": {
+            "zh": "维尼健康清洁护理产品线并不是围绕单一使用环境设计，而是针对不同护理阶段中的实际清洁需求进行组合。",
+            "en": "VINNER Health’s cleansing and care line is not designed around a single use environment; instead, it brings together products that address practical cleansing needs at different stages of care."
+          }
+        },
+        {
+          "level": 2,
+          "heading": {
+            "zh": "1. 医院及住院病房",
+            "en": "1. Hospitals and Inpatient Wards"
+          },
+          "body": {
+            "zh": "对于卧床、术后、ICU 或行动受限患者，传统淋浴和洗头可能难以实施。",
+            "en": "For bedridden, postoperative, ICU, or mobility-limited patients, conventional bathing and hair washing may be difficult to carry out."
+          },
+          "paragraphs": [
+            {
+              "zh": "在这种环境下，产品可以分别支持以下护理任务：",
+              "en": "In this setting, the products can support the following care tasks:"
+            }
+          ],
+          "bullets": [
+            {
+              "zh": "免冲洗沐浴湿巾 / 沐浴手套 → 用于床旁全身清洁",
+              "en": "Rinse-free bathing wipes / bathing gloves → For full-body bedside cleansing"
+            },
+            {
+              "zh": "免冲洗洗发浴帽 → 用于无法正常洗头患者的头发及头皮清洁",
+              "en": "Rinse-free shampoo cap → For hair and scalp cleansing when a patient cannot wash their hair normally"
+            },
+            {
+              "zh": "失禁护理乳霜湿巾 → 用于失禁及潮湿暴露皮肤的日常清洁与护理",
+              "en": "Continence care cream wipes → For everyday cleansing and care of skin exposed to incontinence and moisture"
+            },
+            {
+              "zh": "纯水婴儿湿巾 → 用于日常局部皮肤清洁",
+              "en": "Pure Water Wipes → For everyday cleansing of specific areas of the skin"
+            }
+          ],
+          "paragraphsAfter": [
+            {
+              "zh": "这些产品共同组成一个更加完整的床旁个人卫生护理方案。",
+              "en": "Together, these products form a more complete bedside personal hygiene care solution."
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "heading": {
+            "zh": "2. 养老院及长期护理机构",
+            "en": "2. Nursing Homes and Long-Term Care Facilities"
+          },
+          "body": {
+            "zh": "养老院中的很多住民可能存在行动不便、长期卧床、失禁或需要护理人员协助完成日常个人卫生的问题。",
+            "en": "Many nursing-home residents may have limited mobility, be bedridden long-term, experience incontinence, or need caregivers to assist with everyday personal hygiene."
+          },
+          "paragraphs": [
+            {
+              "zh": "与传统洗浴相比，免冲洗产品可以让护理人员直接在床边或房间内完成部分日常清洁护理。",
+              "en": "Compared with conventional bathing, rinse-free products allow caregivers to complete some routine cleansing and care directly at the bedside or in the resident’s room."
+            },
+            {
+              "zh": "例如，一次完整的护理流程可以包括：身体清洁 → 头发清洁 → 失禁及脆弱皮肤护理，从而覆盖老年人日常个人卫生护理中的主要需求。",
+              "en": "For example, a complete care routine could include body cleansing → hair cleansing → care for incontinent and fragile skin, covering the main personal hygiene needs of older adults."
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "heading": {
+            "zh": "3. 居家护理",
+            "en": "3. Home Care"
+          },
+          "body": {
+            "zh": "随着居家康复和家庭照护需求增加，类似的问题也越来越多地出现在家庭环境中。",
+            "en": "As demand for home rehabilitation and family caregiving grows, similar challenges are increasingly appearing in home environments."
+          },
+          "paragraphs": [
+            {
+              "zh": "对于术后康复、行动不便、长期卧床或由家人协助护理的人群，免冲洗产品能够减少对浴室、热水、脸盆和大量护理用品的依赖。",
+              "en": "For people recovering after surgery, with limited mobility, bedridden long-term, or cared for by family members, rinse-free products can reduce reliance on bathrooms, hot water, basins, and a large number of care supplies."
+            },
+            {
+              "zh": "护理人员可以根据需求分别使用沐浴湿巾、沐浴手套、洗发浴帽或失禁护理湿巾，更方便地完成日常身体和皮肤护理。",
+              "en": "Caregivers can use bathing wipes, bathing gloves, shampoo caps, or continence care wipes as needed, making everyday body and skin care easier to complete."
+            }
+          ]
+        },
+        {
+          "level": 3,
+          "heading": {
+            "zh": "4. 婴幼儿与家庭日常清洁",
+            "en": "4. Infant and Everyday Family Cleansing"
+          },
+          "body": {
+            "zh": "HOMEKEEP 纯水婴儿湿巾则覆盖另一类高频家庭护理需求。",
+            "en": "HOMEKEEP Pure Water Wipes address another frequent home-care need."
+          },
+          "paragraphs": [
+            {
+              "zh": "从新生儿换尿布、手口及身体日常清洁，到敏感肌肤的温和擦拭，产品提供更简单的家庭日常清洁选择。",
+              "en": "From diaper changes for newborns and everyday cleansing of hands, mouth, and body to gentle wiping of sensitive skin, the product offers a simpler option for everyday household cleansing."
+            }
+          ]
+        },
+        {
+          "level": 1,
+          "heading": {
+            "zh": "维尼健康——令每日护理更加简单",
+            "en": "VINNER Health — Making Everyday Care Simpler"
+          },
+          "body": {
+            "zh": "如前文所说，维尼健康推出的是一整套清洁护理解决方案。医院病房关注床旁护理的效率、舒适与尊严；养老院关注长期照护的简化以及老年人的个人卫生和体面；家庭环境关注护理人员和家庭成员能否更容易完成日常清洁；婴幼儿护理则更加关注温和、简单和敏感肌适用性。",
+            "en": "As noted above, VINNER Health offers a complete cleansing and care solution. In hospital wards, we focus on making bedside care more efficient, comfortable, and dignified; in nursing homes, we focus on making long-term care simpler while maintaining older adults’ personal hygiene and dignity; in the home, we focus on making everyday cleansing easier for caregivers and family members; and in infant care, we place greater emphasis on gentleness, simplicity, and suitability for sensitive skin."
+          },
+          "paragraphs": [
+            {
+              "zh": "因此，从 VINNERLOVE 的身体清洁、头发清洁和失禁皮肤护理，到 HOMEKEEP 的婴幼儿与敏感肌日常清洁，维尼健康正在逐步构建一套覆盖不同年龄、不同护理环境和不同清洁需求的个人护理产品组合。",
+              "en": "From VINNERLOVE’s body cleansing, hair cleansing, and continence skin care to HOMEKEEP’s everyday cleansing for infants and sensitive skin, VINNER Health is gradually building a personal-care portfolio that serves different ages, care settings, and cleansing needs."
+            },
+            {
+              "zh": "未来，我们也将继续围绕医院护理、老年护理、长期照护及家庭健康场景开发更多清洁与皮肤护理解决方案。",
+              "en": "In the future, we will continue to develop more cleansing and skin-care solutions for hospitals, elder care, long-term care, and family health settings."
+            }
+          ]
+        }
+      ],
+      "quote": {
+        "zh": "维尼健康——令每日护理更加简单。",
+        "en": "VINNER — Making Everyday Care Simpler."
+      }
+    },
+    {
+      "date": "2026.02.09 / Exhibition",
       "title": {
         "zh": "VINNER 团队亮相 WHX Dubai 2026",
         "en": "VINNER team joins WHX Dubai 2026"
@@ -42,8 +435,8 @@
             "en": "Day 0 | Arriving at WHX Dubai"
           },
           "body": {
-            "zh": "展前一天，VINNER 团队抵达 WHX Dubai 2026 展会现场，完成展馆动线确认、展位搭建、主视觉检查、样品陈列和接待物料整理。对我们来说，展前准备不是单纯把产品摆出来，而是把个人护理、感染控制、OEM/ODM 定制能力、SDS 与 Brochure 资料入口放进一条清晰的客户参观路径里，让不同市场的客户能够快速理解 VINNER 的产品线和项目响应方式。",
-            "en": "Before the show opened, the VINNER team arrived at the WHX Dubai 2026 venue to confirm visitor flow, prepare the booth, check the key visual, arrange samples, and organize reception materials. For us, preparation was not just about displaying products; it was about turning personal care, infection control, OEM/ODM capabilities, SDS files, and brochures into a clear visit path so customers from different markets could quickly understand VINNER product lines and project response."
+            "zh": "展前一天，VINNER 团队抵达 WHX Dubai 2026 展会现场，完成展馆动线确认、展位搭建、主视觉检查、样品陈列和接待物料整理。对我们来说，展前准备不是单纯把产品摆出来，而是把清洁护理、感染控制、OEM/ODM 定制能力、SDS 与 Brochure 资料入口放进一条清晰的客户参观路径里，让不同市场的客户能够快速理解 VINNER 的产品线和项目响应方式。",
+            "en": "Before the show opened, the VINNER team arrived at the WHX Dubai 2026 venue to confirm visitor flow, prepare the booth, check the key visual, arrange samples, and organize reception materials. For us, preparation was not just about displaying products; it was about turning Cleansing & Care, Infection Control, OEM/ODM capabilities, SDS files, and brochures into a clear visit path so customers from different markets could quickly understand VINNER product lines and project response."
           },
           "media": [
             {
@@ -203,10 +596,10 @@
       }
     },
     {
-      "date": "2026.06 / Partnership",
+      "date": "2022.01.11 / Partnership",
       "title": {
-        "zh": "维尼健康董事长刘春静先生受邀访问 GAMA Healthcare",
-        "en": "Vinner chairman Mr. Liu Chunjing invited to visit GAMA Healthcare"
+        "zh": "维尼健康董事长刘春静女士受邀访问 GAMA Healthcare",
+        "en": "Vinner chairwoman Ms. Liu Chunjing invited to visit GAMA Healthcare"
       },
       "body": {
         "zh": "双方围绕长期合作与未来发展机会展开战略交流。",
@@ -222,8 +615,8 @@
             "en": "Invited visit"
           },
           "body": {
-            "zh": "维尼健康（深圳）股份有限公司董事长刘春静先生受邀访问 GAMA Healthcare Ltd.，就双方长期合作与未来发展机会进行战略交流。",
-            "en": "Mr. Liu Chunjing, Chairman of Vinner (Shenzhen) Health Product Co., Ltd., was invited to visit GAMA Healthcare Ltd. for strategic discussions on long-term cooperation and future development opportunities between the two companies."
+            "zh": "维尼健康（深圳）股份有限公司董事长刘春静女士受邀访问 GAMA Healthcare Ltd.，就双方长期合作与未来发展机会进行战略交流。",
+            "en": "Ms. Liu Chunjing, Chairwoman of Vinner (Shenzhen) Health Products Limited, was invited to visit GAMA Healthcare Ltd. for strategic discussions on long-term cooperation and future development opportunities between the two companies."
           }
         },
         {
@@ -251,378 +644,1829 @@
         "zh": "长期合作来自稳定交付，也来自持续面对面沟通。",
         "en": "Long-term cooperation is built through stable delivery and continued face-to-face communication."
       }
-    },
-    {
-      "date": "2026.04 / Product Line",
-      "title": {
-        "zh": "MEDIKEEP 感染控制系列完成新一轮材料兼容测试",
-        "en": "MEDIKEEP completes a new material compatibility testing round"
-      },
-      "body": {
-        "zh": "围绕常见医疗设备外壳、诊疗台面与公共接触面，更新低残留擦拭建议。",
-        "en": "New low-residue wiping guidance across common device shells, treatment benches, and public contact surfaces."
-      },
-      "image": "/assets/resource-news-lab.jpg",
-      "alt": "实验室研发与洁净测试场景",
-      "slug": "medikeep-material-compatibility-testing",
-      "sections": [
-        {
-          "heading": {
-            "zh": "为什么材料兼容测试重要",
-            "en": "Why material compatibility matters"
-          },
-          "body": {
-            "zh": "医疗空间里的擦拭对象并不单一：床旁设备、监护仪外壳、诊疗台面、门把手和推车扶手都有不同的塑料、涂层和金属结构。MEDIKEEP 的新一轮测试围绕这些高频接触面展开，重点观察擦拭后的表面残留、视觉变化和触感变化。",
-            "en": "Clinical wiping does not happen on one surface type. Bedside equipment, monitor shells, treatment benches, handles, and cart rails involve different plastics, coatings, and metals. MEDIKEEP's new testing round focuses on these high-touch surfaces, observing residue, visual change, and tactile change after wiping."
-          }
-        },
-        {
-          "heading": {
-            "zh": "测试如何进入产品建议",
-            "en": "How testing becomes product guidance"
-          },
-          "body": {
-            "zh": "测试结果会被整理为选型建议、接触面提醒和包装使用说明。对于客户而言，这意味着采购不只是看配方名称，而是能看到产品在真实表面上的使用边界。",
-            "en": "The results are translated into selection guidance, surface notes, and pack-use instructions. For customers, procurement can move beyond formula names and understand how a wipe behaves on real surfaces."
-          }
-        },
-        {
-          "heading": {
-            "zh": "下一步",
-            "en": "Next step"
-          },
-          "body": {
-            "zh": "VINNER 将继续把材料兼容、批次追溯和数字资源整合到 MEDIKEEP 的资料包中，方便医院、经销商和 OEM 客户完成内部审核。",
-            "en": "VINNER will continue integrating material compatibility, batch traceability, and digital resources into MEDIKEEP documentation packs for hospitals, distributors, and OEM customers."
-          }
-        }
-      ],
-      "quote": {
-        "zh": "感染控制产品的价值，不只在杀菌性能，也在对接触面的长期尊重。",
-        "en": "The value of infection-control products is not only antimicrobial performance, but long-term respect for contact surfaces."
-      }
-    },
-    {
-      "date": "2026.03 / Supply",
-      "title": {
-        "zh": "VINNER 启动跨区域 OEM 快速打样流程",
-        "en": "VINNER launches cross-region OEM rapid sampling workflow"
-      },
-      "body": {
-        "zh": "标准化基材、配方、包装和标签信息，让客户从概念到样品更顺畅。",
-        "en": "Standardized substrate, formula, packaging, and labeling data streamline the path from concept to sample."
-      },
-      "image": "/assets/resource-news-meeting.jpg",
-      "alt": "产品团队讨论供应和质量计划",
-      "slug": "oem-rapid-sampling-workflow",
-      "sections": [
-        {
-          "heading": {
-            "zh": "从需求到样品的路径",
-            "en": "From brief to sample"
-          },
-          "body": {
-            "zh": "新的 OEM 快速打样流程将基材、液体、包装、标签和合规资料拆分为标准模块。客户可以先确认使用场景和目标市场，再快速组合适合的湿巾结构。",
-            "en": "The new OEM rapid sampling workflow separates substrate, liquid, packaging, labeling, and compliance documents into standard modules. Customers can define use case and target market first, then assemble a suitable wipe structure faster."
-          }
-        },
-        {
-          "heading": {
-            "zh": "减少反复沟通",
-            "en": "Reducing repeated communication"
-          },
-          "body": {
-            "zh": "业务、研发和供应链共用同一份项目简报，避免版本混乱。包装尺寸、开合结构、装量和视觉方向可以在早期就进入确认流程。",
-            "en": "Sales, R&D, and supply chain teams work from the same project brief to avoid version confusion. Pack size, closure structure, fill count, and visual direction can be confirmed earlier."
-          }
-        },
-        {
-          "heading": {
-            "zh": "适合哪些客户",
-            "en": "Who it helps"
-          },
-          "body": {
-            "zh": "该流程适合跨境品牌、渠道客户、护理机构和工业客户，尤其适合需要在短时间内完成样品评估与内部立项的团队。",
-            "en": "The workflow supports cross-border brands, channel customers, care organizations, and industrial buyers, especially teams that need quick sample evaluation and internal approval."
-          }
-        }
-      ],
-      "quote": {
-        "zh": "打样速度来自流程清晰，而不是仓促省略。",
-        "en": "Sampling speed comes from process clarity, not rushed shortcuts."
-      }
-    },
-    {
-      "date": "2026.02 / Quality",
-      "title": {
-        "zh": "批次追溯系统新增数字资料包",
-        "en": "Batch traceability system adds a new digital document pack"
-      },
-      "body": {
-        "zh": "为产品说明书、COA、SDS 和包装版本建立统一资源索引。",
-        "en": "A unified index for manuals, COA files, SDS documents, and packaging revisions."
-      },
-      "image": "/assets/resource-library.jpg",
-      "alt": "整洁办公室中的资源资料库",
-      "slug": "batch-traceability-digital-pack",
-      "sections": [
-        {
-          "heading": {
-            "zh": "资料不应散落在邮件里",
-            "en": "Documents should not live only in email threads"
-          },
-          "body": {
-            "zh": "新的数字资料包把产品说明书、COA、SDS、包装版本和批次信息统一索引。业务员可以更快回应客户索取资料的需求，客户内部审核也能减少遗漏。",
-            "en": "The new digital document pack indexes manuals, COA files, SDS documents, packaging revisions, and batch information in one place. Sales teams can respond faster, and customer review teams can reduce missing information."
-          }
-        },
-        {
-          "heading": {
-            "zh": "与批次追溯的关系",
-            "en": "How it connects to traceability"
-          },
-          "body": {
-            "zh": "每个资料包都围绕产品线和 SKU 建立，不只展示文件，也帮助客户理解文件与产品批次、包装版本之间的关系。",
-            "en": "Each pack is structured around product line and SKU. It does not simply display files; it helps customers understand how documents connect to batches and packaging revisions."
-          }
-        },
-        {
-          "heading": {
-            "zh": "持续更新",
-            "en": "Continuous updates"
-          },
-          "body": {
-            "zh": "后续 VINNER 将把更多下载资源接入 CMS，方便业务团队维护最新版本。",
-            "en": "VINNER will connect more downloadable resources to the CMS so business teams can maintain the latest versions."
-          }
-        }
-      ],
-      "quote": {
-        "zh": "资料管理也是产品体验的一部分。",
-        "en": "Document management is part of the product experience."
-      }
     }
   ],
   "blogs": [
     {
-      "category": "Personal Care",
+      "category": "Regulations & Compliance",
+      "date": "2026.09.22 / Blog005",
+      "updatedAt": "2026.09.22",
       "title": {
-        "zh": "免冲洗护理产品如何平衡肤感、清洁力和包装密封",
-        "en": "How no-rinse care products balance skin feel, cleaning power, and pack sealing"
+        "zh": "欧盟PPWR法规要求汇总",
+        "en": "EU PPWR Requirements: Packaging Compliance Timeline and Importer Duties"
       },
       "body": {
-        "zh": "从液体负载、基材柔软度和开合结构三个维度拆解 CAREKEEP 选型。",
-        "en": "A CAREKEEP selection framework across fluid load, substrate softness, and opening structure."
+        "zh": "《包装和包装废弃物法规》（Packaging and Packaging Waste Regulation，PPWR）已经开始影响所有进入欧盟市场的包装产品。从 2026 年开始，欧盟对包装的监管将逐步覆盖受限物质、可回收设计、再生塑料比例、包装减量、统一标签及规模化回收等要求。部分关键要求将在2030、2035、2038 和 2040 年分阶段实施。",
+        "en": "The Packaging and Packaging Waste Regulation (PPWR) is beginning to affect every packaged product placed on the EU market. From 2026, EU packaging rules will progressively cover restricted substances, recyclable design, recycled-plastic content, packaging reduction, harmonised labelling and recycling at scale. Key requirements will take effect in stages in 2030, 2035, 2038 and 2040."
       },
-      "image": "/assets/resource-blog-care.jpg",
-      "alt": "个人护理与日常清洁护理场景",
-      "slug": "no-rinse-care-product-selection",
+      "image": "/assets/blog/blog5/ppwr-discarded-packaging.jpeg",
+      "imageCaption": {
+        "zh": "废弃包装",
+        "en": "Discarded packaging"
+      },
+      "alt": {
+        "zh": "打包中的废弃包装材料",
+        "en": "Baled discarded packaging materials"
+      },
+      "slug": "eu-ppwr-packaging-compliance-requirements",
+      "authorId": "zion-hong",
+      "meta": {
+        "title": {
+          "zh": "欧盟 PPWR 包装法规要求与合规时间表 | VINNER",
+          "en": "EU PPWR Packaging Requirements and Compliance Timeline | VINNER"
+        },
+        "description": {
+          "zh": "汇总欧盟 PPWR 对包装材料、可回收设计、再生塑料、包装减量和标签的分阶段要求，并说明欧盟进口商需要准备的合规文件。",
+          "en": "A practical overview of EU PPWR requirements for packaging materials, recyclable design, recycled plastic, packaging reduction and labelling, with importer documentation duties."
+        }
+      },
       "sections": [
         {
+          "level": 1,
           "heading": {
-            "zh": "免冲洗不是简单地少一步",
-            "en": "No-rinse is not just one less step"
+            "zh": "一、PPWR 是什么？",
+            "en": "1. What Is the PPWR?"
           },
-          "body": {
-            "zh": "免冲洗护理产品需要同时考虑清洁力、肤感、液体残留和使用后的舒适度。液体太少会影响覆盖，液体太多则可能带来黏腻和包装渗漏风险。",
-            "en": "No-rinse care products must balance cleansing power, skin feel, residue, and comfort after use. Too little liquid hurts coverage; too much can create stickiness and leakage risk."
+          "paragraphs": [
+            {
+              "zh": "定义：《包装和包装废弃物法规》（Packaging and Packaging Waste Regulation, PPWR），即 Regulation (EU) 2025/40。PPWR 覆盖包装的整个生命周期，包括包装材料中的受限物质、可回收设计、再生塑料含量、包装减量、标签、重复使用以及包装废弃物管理等。[1]",
+              "en": "Definition: The Packaging and Packaging Waste Regulation (PPWR), Regulation (EU) 2025/40, covers the full life cycle of packaging, including restricted substances in packaging materials, design for recycling, recycled-plastic content, packaging reduction, labelling, reuse and packaging-waste management.[1]"
+            },
+            {
+              "zh": "目标：Eurostat 最新统计显示，2023 年欧盟共产生约 7,970 万吨包装废弃物，相当于人均 177.8 kg。其中纸和纸板占 40.4%，塑料占 19.8%，玻璃占 18.8%，木材占 15.8%。[2]。PPWR的主要目标包括减少包装废弃物、降低原生材料消耗、提高再生材料使用比例，并推动欧盟包装体系向循环经济转型。[3]",
+              "en": "Objective: The latest Eurostat statistics show that the EU generated about 79.7 million tonnes of packaging waste in 2023, equal to 177.8 kg per person. Paper and cardboard accounted for 40.4%, plastic 19.8%, glass 18.8% and wood 15.8%.[2] The PPWR aims to reduce packaging waste, lower virgin-material consumption, increase recycled-material use and move the EU packaging system towards a circular economy.[3]"
+            },
+            {
+              "zh": "时间：PPWR于2025 年 2 月 11 日生效，并自 2026 年 8 月 12 日起适用。该法规取代原有 Directive 94/62/EC，并以欧盟 Regulation 的形式直接适用于成员国。[1]",
+              "en": "Timeline: The PPWR entered into force on February 11, 2025 and applies from August 12, 2026. It replaces Directive 94/62/EC and applies directly in Member States as an EU Regulation.[1]"
+            }
+          ],
+          "media": [
+            {
+              "image": "/assets/blog/blog5/eu-packaging-waste-2023.png",
+              "alt": {
+                "zh": "2023年欧盟包装废弃物种类与占比图表",
+                "en": "Chart showing types and shares of EU packaging waste in 2023"
+              },
+              "caption": {
+                "zh": "图1 2023年欧盟包装废弃物种类与占比",
+                "en": "Figure 1. Types and shares of EU packaging waste in 2023"
+              },
+              "source": {
+                "url": "https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Packaging_waste_statistics",
+                "label": {
+                  "zh": "Eurostat，Packaging waste statistics",
+                  "en": "Eurostat, Packaging waste statistics"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "level": 1,
+          "heading": {
+            "zh": "二、PPWR不同阶段的对包装合规的要求",
+            "en": "2. Packaging Compliance Requirements by PPWR Phase"
+          },
+          "paragraphs": [
+            {
+              "zh": "PPWR 的要求分阶段实施，不同行业和包装类型适用的具体要求存在差异。根据时间顺序，我们整理了PPWR不同阶段以及对不同行业的法规监管要求的简短总结。",
+              "en": "The PPWR is implemented in phases, and the detailed requirements vary by industry and packaging type. The timeline below summarises the main regulatory requirements by date and application."
+            }
+          ],
+          "table": {
+            "caption": {
+              "zh": "表1 PPWR不同阶段的主要要求",
+              "en": "Table 1. Main PPWR requirements by phase"
+            },
+            "headers": [
+              { "zh": "时间", "en": "Date" },
+              { "zh": "适用范围", "en": "Scope" },
+              { "zh": "主要要求", "en": "Key requirement" }
+            ],
+            "rows": [
+              [
+                { "zh": "2026 年 8 月 12 日", "en": "August 12, 2026" },
+                { "zh": "所有包装", "en": "All packaging" },
+                { "zh": "PPWR 开始适用。包装及包装组件中的铅、镉、汞和六价铬浓度总和不得超过100 mg/kg。[1]", "en": "The PPWR applies. The combined concentration of lead, cadmium, mercury and hexavalent chromium in packaging and packaging components must not exceed 100 mg/kg.[1]" }
+              ],
+              [
+                { "zh": "2026 年 8 月 12 日", "en": "August 12, 2026" },
+                { "zh": "食品接触包装", "en": "Food-contact packaging" },
+                { "zh": "PFAS（Per- and Polyfluoroalkyl Substances，全氟和多氟烷基物质）开始受到 Article 5 规定的浓度限制。[1]", "en": "PFAS (per- and polyfluoroalkyl substances) become subject to the concentration limits in Article 5.[1]" }
+              ],
+              [
+                { "zh": "2026 年 8 月 12 日起", "en": "From August 12, 2026" },
+                { "zh": "所有包装", "en": "All packaging" },
+                { "zh": "Article 6(1) 要求投放欧盟市场的包装具有可回收性；具体 Design for Recycling 评价标准按照后续授权法案逐步落实。[1][4]", "en": "Article 6(1) requires packaging placed on the EU market to be recyclable; detailed Design for Recycling criteria will be implemented through later delegated acts.[1][4]" }
+              ],
+              [
+                { "zh": "2028 年 2 月 12 日", "en": "February 12, 2028" },
+                { "zh": "销售包装", "en": "Sales packaging" },
+                { "zh": "包装内部空余空间应减少至保证包装功能所必需的最低程度。[1]", "en": "Empty space inside packaging must be reduced to the minimum needed for the packaging to function.[1]" }
+              ],
+              [
+                { "zh": "2028 年 8 月 12 日起", "en": "From August 12, 2028" },
+                { "zh": "大部分包装", "en": "Most packaging" },
+                { "zh": "包装逐步采用欧盟统一标签标明材料组成，以支持消费者正确分类投放。[1]", "en": "Packaging will progressively use harmonised EU labels to identify material composition and support correct sorting by consumers.[1]" }
+              ],
+              [
+                { "zh": "2029 年 2 月 12 日起", "en": "From February 12, 2029" },
+                { "zh": "可重复使用包装", "en": "Reusable packaging" },
+                { "zh": "包装应标明其可重复使用属性，并通过 QR Code 或其他数字载体提供重复使用体系等信息。[1]", "en": "Packaging must indicate that it is reusable and provide information about the reuse system through a QR code or another digital carrier.[1]" }
+              ],
+              [
+                { "zh": "2030 年 1 月 1 日起", "en": "From January 1, 2030" },
+                { "zh": "大部分包装", "en": "Most packaging" },
+                { "zh": "按 Design for Recycling 评价包装可回收性能：Grade A ≥95%，Grade B ≥80%，Grade C ≥70%；低于 70% 属于技术上不可回收。[1]", "en": "Recyclability is assessed under Design for Recycling: Grade A ≥95%, Grade B ≥80% and Grade C ≥70%; below 70% is technically non-recyclable.[1]" }
+              ],
+              [
+                { "zh": "2030 年起", "en": "From 2030" },
+                { "zh": "塑料包装", "en": "Plastic packaging" },
+                { "zh": "最低再生塑料含量开始实施：接触敏感型 PET 包装30%；其他接触敏感型塑料包装10%；一次性塑料饮料瓶 30%；其他塑料包装35%。[1]", "en": "Minimum recycled-plastic content begins: 30% for contact-sensitive PET packaging; 10% for other contact-sensitive plastic packaging; 30% for single-use plastic beverage bottles; and 35% for other plastic packaging.[1]" }
+              ],
+              [
+                { "zh": "2030 年 1 月 1 日起", "en": "From January 1, 2030" },
+                { "zh": "一般包装", "en": "General packaging" },
+                { "zh": "包装重量和体积应减少至实现包装功能所需的最低程度，并限制双层壁、假底和不必要包装层等仅用于增加视觉体积的设计。[1]", "en": "Packaging weight and volume must be reduced to the minimum needed for its function, limiting double walls, false bottoms and unnecessary layers used only to increase perceived volume.[1]" }
+              ],
+              [
+                { "zh": "2030 年起", "en": "From 2030" },
+                { "zh": "分组包装、运输包装、电商包装", "en": "Grouped, transport and e-commerce packaging" },
+                { "zh": "最大空余空间比例原则上不得超过50%。[1]", "en": "The maximum empty-space ratio should in principle not exceed 50%.[1]" }
+              ],
+              [
+                { "zh": "2030 年起", "en": "From 2030" },
+                { "zh": "特定行业和场景", "en": "Specific sectors and uses" },
+                { "zh": "Annex V 所列部分一次性塑料包装开始受到限制，包括部分酒店和 HORECA 场景的一次性包装。[1]", "en": "Certain single-use plastic packaging listed in Annex V becomes restricted, including some single-use packaging in hotel and HORECA settings.[1]" }
+              ],
+              [
+                { "zh": "2035 年起", "en": "From 2035" },
+                { "zh": "大部分包装", "en": "Most packaging" },
+                { "zh": "在 Design for Recycling 基础上进一步加入 Recycled at Scale（规模化回收）要求，需要考虑包装是否能够在实际回收体系中被收集、分选和规模化回收。[1][4]", "en": "Recycled at Scale requirements are added to Design for Recycling, considering whether packaging can be collected, sorted and recycled at scale in real systems.[1][4]" }
+              ],
+              [
+                { "zh": "2038 年 1 月 1 日起", "en": "From January 1, 2038" },
+                { "zh": "大部分包装", "en": "Most packaging" },
+                { "zh": "Grade C 包装原则上不得继续投放欧盟市场，包装需达到 Grade A 或 Grade B。[1]", "en": "Grade C packaging may in principle no longer be placed on the EU market; packaging must achieve Grade A or Grade B.[1]" }
+              ],
+              [
+                { "zh": "2040 年 1 月 1 日起", "en": "From January 1, 2040" },
+                { "zh": "塑料包装", "en": "Plastic packaging" },
+                { "zh": "最低再生塑料比例进一步提高：接触敏感型 PET 50%；其他接触敏感型塑料25%；一次性塑料饮料瓶 65%；其他塑料包装65%。[1]", "en": "Minimum recycled-plastic content increases further: 50% for contact-sensitive PET; 25% for other contact-sensitive plastic; 65% for single-use plastic beverage bottles; and 65% for other plastic packaging.[1]" }
+              ]
+            ]
+          },
+          "paragraphsAfter": [
+            {
+              "zh": "此外，PPWR部分要求采用“固定日期或相关授权法案、实施法案生效后一定期限，以较晚者为准”的机制，因此实际强制日期还需结合欧盟后续二级立法确认。[1][4]",
+              "en": "Some PPWR provisions use a later-of mechanism, applying on a fixed date or after a defined period following the entry into force of a relevant delegated or implementing act, whichever is later. The final mandatory dates therefore need to be checked against subsequent EU secondary legislation.[1][4]"
+            },
+            {
+              "zh": "同时，PPWR对不同行业的适用性有所差异。《欧盟化妆品法规》Regulation (EC) No 1223/2009 范围内产品使用的部分包装属于 PPWR 所定义的 contact-sensitive packaging（接触敏感型包装），因此其塑料包装适用相应的再生塑料比例要求。[1]对于 Regulation (EU) 2017/745 范围内的医疗器械，PPWR 对部分接触敏感型包装设置了特定豁免。例如，部分医疗器械包装可豁免 Article 6 的部分可回收性要求及 Article 7 的最低再生塑料含量要求。其他适用要求仍需逐项判断。[1]",
+              "en": "Application also differs by sector. Some packaging used with products within the scope of the EU Cosmetics Regulation, Regulation (EC) No 1223/2009, is contact-sensitive packaging under the PPWR and is therefore subject to the relevant recycled-plastic requirements.[1] For medical devices within the scope of Regulation (EU) 2017/745, the PPWR provides specific exemptions for some contact-sensitive packaging. For example, some medical-device packaging may be exempt from parts of the Article 6 recyclability requirements and the Article 7 minimum recycled-plastic requirements. Other applicable requirements still need to be assessed case by case.[1]"
+            }
+          ]
+        },
+        {
+          "level": 1,
+          "heading": {
+            "zh": "三、对欧盟进口商意味着什么？",
+            "en": "3. What Does the PPWR Mean for EU Importers?"
+          },
+          "paragraphs": [
+            {
+              "zh": "根据 Article 18，进口商只能将符合 PPWR 相关要求的包装投放欧盟市场。在产品上市前，进口商需要确认制造商已经完成适用的包装符合性评估并准备技术文件，同时检查相关标签及符合性文件。[1]",
+              "en": "Under Article 18, importers may place on the EU market only packaging that meets the applicable PPWR requirements. Before a product is placed on the market, importers should confirm that the manufacturer has completed the applicable packaging conformity assessment and prepared the technical documentation, and should check the relevant labels and conformity documents.[1]"
+            },
+            {
+              "zh": "进口商还需要保存 EU Declaration of Conformity。一次性包装相关文件原则上保存 5 年，可重复使用包装保存 10 年。监管机构提出合理要求时，进口商还应提供相关技术资料。[1]",
+              "en": "Importers must also retain the EU Declaration of Conformity. Documents for single-use packaging should in principle be retained for five years, while documents for reusable packaging should be retained for ten years. Importers must provide the relevant technical information when reasonably requested by a market-surveillance authority.[1]"
+            },
+            {
+              "zh": "对于进口化妆品、医疗器械、清洁护理产品及其他消费品的企业，产品合规和包装合规都将成为欧盟市场准入管理的重要组成部分。",
+              "en": "For businesses importing cosmetics, medical devices, cleansing and care products, and other consumer goods, both product compliance and packaging compliance will become important parts of EU market-access management."
+            }
+          ]
+        },
+        {
+          "level": 1,
+          "heading": {
+            "zh": "四、VINNER的PPWR合规准备",
+            "en": "4. VINNER's PPWR Compliance Preparation"
+          },
+          "paragraphs": [
+            {
+              "zh": "截至 2026 年，VINNER旗下品牌产品已完成现阶段适用的 PPWR 包装合规评估和文件准备，并将 2030、2035、2038 及 2040 年逐步实施的要求纳入包装设计和供应链管理体系。同时，针对OEM/ODM与合同制造的产品与客户，我们也能够为其准备好对应的技术文件、DoC以及PPWR相关检测报告。",
+              "en": "As of 2026, VINNER's branded products have completed the packaging-compliance assessment and documentation applicable at this stage. The requirements scheduled for 2030, 2035, 2038 and 2040 have also been incorporated into packaging design and supply-chain management. For OEM/ODM and contract-manufacturing projects, we can prepare the corresponding technical files, DoC and PPWR-related test reports."
+            },
+            {
+              "zh": "由于 2030 年以后部分具体评价方法仍需欧盟委员会通过授权法案和实施法案进一步确定，VINNER 将根据后续欧盟二级法规持续更新包装合规要求。[1][4]",
+              "en": "Because some detailed assessment methods after 2030 still need to be specified by the European Commission through delegated and implementing acts, VINNER will continue updating its packaging-compliance requirements as the EU secondary legislation develops.[1][4]"
+            }
+          ],
+          "pageWindow": {
+            "href": "/products/series/carekeep/",
+            "image": "/assets/gallery-care.jpg",
+            "alt": {
+              "zh": "VINNER 清洁护理湿巾与个人护理使用场景",
+              "en": "VINNER cleansing and care wipes in personal-care settings"
+            },
+            "kicker": {
+              "zh": "相关页面",
+              "en": "Related page"
+            },
+            "title": {
+              "zh": "清洁护理产品线",
+              "en": "Cleansing & Care product line"
+            },
+            "body": {
+              "zh": "了解床旁沐浴、头发清洁、失禁护理和母婴清洁等产品与应用场景。",
+              "en": "Explore products and use cases for bedside bathing, hair cleansing, continence care and baby care."
+            },
+            "link": {
+              "zh": "查看清洁护理产品线",
+              "en": "View the Cleansing & Care line"
+            }
           }
         },
         {
+          "level": 1,
           "heading": {
-            "zh": "三个选型维度",
-            "en": "Three selection dimensions"
+            "zh": "五、参考文献",
+            "en": "5. References"
           },
-          "body": {
-            "zh": "第一看使用对象，是成人护理、家庭清洁还是旅行便携；第二看基材触感和强度；第三看包装开合是否能保持湿润度。CAREKEEP 的 SKU 设计正是围绕这三个维度展开。",
-            "en": "First, identify the user and setting: adult care, home cleansing, or travel. Second, evaluate substrate softness and strength. Third, check whether the opening structure preserves moisture. CAREKEEP SKUs are built around these dimensions."
-          }
-        },
-        {
-          "heading": {
-            "zh": "给采购和产品经理的建议",
-            "en": "Advice for buyers and product managers"
-          },
-          "body": {
-            "zh": "不要只比较单片尺寸和克重。更应该结合目标人群、使用频次、包装打开后的保存周期以及渠道陈列方式来判断。",
-            "en": "Do not compare only sheet size and basis weight. Evaluate target users, usage frequency, open-pack life, and channel display format together."
-          }
+          "bullets": [
+            {
+              "zh": "[1] European Parliament and Council. Regulation (EU) 2025/40 of 19 December 2024 on packaging and packaging waste (PPWR). Official Journal of the European Union, 22 January 2025.",
+              "en": "[1] European Parliament and Council. Regulation (EU) 2025/40 of 19 December 2024 on packaging and packaging waste (PPWR). Official Journal of the European Union, 22 January 2025."
+            },
+            {
+              "zh": "[2] Eurostat. Packaging waste statistics. Statistics Explained, European Commission.",
+              "en": "[2] Eurostat. Packaging waste statistics. Statistics Explained, European Commission."
+            },
+            {
+              "zh": "[3] European Commission. Directorate-General for Environment. Packaging waste – Packaging and Packaging Waste Regulation.",
+              "en": "[3] European Commission. Directorate-General for Environment. Packaging waste – Packaging and Packaging Waste Regulation."
+            },
+            {
+              "zh": "[4] European Commission. Official guidance and secondary legislation concerning the implementation of Regulation (EU) 2025/40.",
+              "en": "[4] European Commission. Official guidance and secondary legislation concerning the implementation of Regulation (EU) 2025/40."
+            }
+          ]
         }
-      ],
-      "quote": {
-        "zh": "好的护理湿巾让使用者少感知产品，多感知舒适。",
-        "en": "A good care wipe makes the user notice comfort more than the product itself."
-      }
+      ]
     },
     {
-      "category": "Industrial Wiping",
+      "category": "Regulations & Compliance",
+      "date": "2026.09.11 / Blog004",
+      "updatedAt": "2026.09.14",
       "title": {
-        "zh": "重油污现场为什么需要高强度低尘擦拭布",
-        "en": "Why heavy oil environments need durable low-lint wipes"
+        "zh": "欧盟强迫劳动条例实施在即：制造商与欧盟进口商应如何提前准备？",
+        "en": "The EU Forced Labour Regulation Is Coming: How Manufacturers and EU Importers Can Prepare Early"
       },
       "body": {
-        "zh": "INDUKEEP 的核心不是更厚，而是在吸油、耐溶剂和抗撕裂之间找到平衡。",
-        "en": "INDUKEEP is not just thicker. It is about balancing oil pickup, solvent resistance, and tear strength."
+        "zh": "2026 年，欧盟正式进入《禁止强迫劳动产品条例》（Forced Labour Regulation, FLR）的实施准备阶段。随后，2026 年 9 月 3 日，欧盟委员会在《欧盟官方公报》正式刊载该条例的指南（Commission Notice C/2026/4637 — Guidelines on the application of Regulation (EU) 2024/3015），系统解释 FLR 的适用范围、强迫劳动判断标准、调查程序、风险导向执法原则及企业尽职调查方法。",
+        "en": "In 2026, the European Union formally entered the implementation-preparation phase for the Forced Labour Regulation (FLR). On September 3, 2026, the European Commission published its guidance in the Official Journal of the European Union, explaining the FLR's scope, forced-labour indicators, investigation procedures, risk-based enforcement and business due-diligence methods."
       },
-      "image": "/assets/resource-blog-industrial.jpg",
-      "alt": "工业现场维护和擦拭应用场景",
-      "slug": "heavy-oil-low-lint-industrial-wipes",
+      "image": "/assets/blog/blog4/blog4-cover.jpeg",
+      "imageCaption": {
+        "zh": "欧盟 FLR 法案禁令将于 2027 年 12 月 4 日生效",
+        "en": "The EU FLR ban on forced-labour products takes effect on December 4, 2027"
+      },
+      "alt": {
+        "zh": "欧盟旗帜与港口集装箱",
+        "en": "European Union flag overlooking shipping containers at a port"
+      },
+      "slug": "eu-forced-labour-regulation-preparation",
+      "authorId": "zion-hong",
       "sections": [
         {
+          "level": 1,
           "heading": {
-            "zh": "厚不等于强",
-            "en": "Thicker is not always stronger"
+            "zh": "一、欧盟FLR的主要内容",
+            "en": "1. What the EU FLR Covers"
           },
           "body": {
-            "zh": "工业擦拭要面对油污、溶剂、金属边缘和高频摩擦。单纯加厚可能提升吸附量，却不一定带来湿态强度和低尘表现。",
-            "en": "Industrial wiping faces oil, solvent, metal edges, and repeated friction. Simply making a wipe thicker may increase pickup, but it does not guarantee wet strength or low-lint performance."
+            "zh": "FLR正式名称为：Regulation (EU) 2024/3015 on prohibiting products made with forced labour on the Union market，即《禁止强迫劳动产品条例》，已于 2024 年通过并生效，核心市场禁令将自 2027 年 12 月 14 日起正式适用和执行。届时，使用强迫劳动制造的产品不得投放或提供于欧盟市场，也不得从欧盟出口。",
+            "en": "The formal name of the FLR is Regulation (EU) 2024/3015 on prohibiting products made with forced labour on the Union market. The regulation was adopted and entered into force in 2024, while its core market ban will apply and be enforced from December 14, 2027. Products made with forced labour may then neither be placed or made available on the EU market nor exported from the EU."
+          },
+          "table": {
+            "caption": {
+              "zh": "表 1  FLR 主要内容",
+              "en": "Table 1  Key FLR requirements"
+            },
+            "headers": [
+              { "zh": "项目", "en": "Item" },
+              { "zh": "FLR 主要要求", "en": "Key FLR requirement" },
+              { "zh": "信息源", "en": "Source" }
+            ],
+            "rows": [
+              [
+                { "zh": "法规名称", "en": "Regulation" },
+                { "zh": "Regulation (EU) 2024/3015 on prohibiting products made with forced labour on the Union market", "en": "Regulation (EU) 2024/3015 on prohibiting products made with forced labour on the Union market" },
+                { "zh": "EU Regulation 2024/3015", "en": "EU Regulation 2024/3015" }
+              ],
+              [
+                { "zh": "正式适用时间", "en": "Application date" },
+                { "zh": "2027 年 12 月 14 日起全面适用并开始执法", "en": "Fully applies and enforcement begins on December 14, 2027" },
+                { "zh": "European Commission Single Portal；Regulation Article 39", "en": "European Commission Single Portal; Regulation Article 39" }
+              ],
+              [
+                { "zh": "适用产品", "en": "Products covered" },
+                { "zh": "原则上覆盖所有产品，不论来源、产品类型或行业", "en": "In principle, all products, regardless of origin, product type or industry" },
+                { "zh": "Commission Guidelines §3.1", "en": "Commission Guidelines §3.1" }
+              ],
+              [
+                { "zh": "适用企业", "en": "Businesses covered" },
+                { "zh": "将产品投放、提供于欧盟市场或从欧盟出口的经济运营商；不设一般性的企业规模豁免", "en": "Economic operators placing products on, making them available on, or exporting them from the EU; no general company-size exemption" },
+                { "zh": "Commission Guidelines §3.1", "en": "Commission Guidelines §3.1" }
+              ],
+              [
+                { "zh": "供应链范围", "en": "Supply-chain scope" },
+                { "zh": "强迫劳动发生在原料开采、采收、生产、制造、加工等任何供应链阶段，都可能导致最终产品受到 FLR 监管", "en": "Forced labour at any relevant stage, including extraction, harvesting, production, manufacturing or processing, may bring the finished product within the FLR" },
+                { "zh": "Regulation Article 2(7)；Guidelines §3.1", "en": "Regulation Article 2(7); Guidelines §3.1" }
+              ],
+              [
+                { "zh": "是否存在最低占比豁免", "en": "Minimum-share exemption" },
+                { "zh": "没有一般性的最低比例豁免；即使强迫劳动部分仅占最终产品较小比例，产品仍可能属于 FLR 范围", "en": "There is no general minimum-share exemption; a product may remain in scope even when the forced-labour component is a small part of the finished product" },
+                { "zh": "Guidelines §3.1", "en": "Guidelines §3.1" }
+              ],
+              [
+                { "zh": "强迫劳动定义", "en": "Definition of forced labour" },
+                { "zh": "采用 ILO Convention No. 29 的基本定义，核心包括劳动是否自愿，以及是否存在惩罚或强制威胁", "en": "Uses the core definition in ILO Convention No. 29, focusing on whether work is voluntary and whether a penalty or coercive threat exists" },
+                { "zh": "Regulation Article 2；Commission Guidelines §3.2", "en": "Regulation Article 2; Commission Guidelines §3.2" }
+              ],
+              [
+                { "zh": "监管方式", "en": "Regulatory approach" },
+                { "zh": "欧盟主管机关采用 Risk-based Approach，根据风险信息开展初步评估、调查及执法", "en": "EU competent authorities use a risk-based approach for preliminary assessment, investigation and enforcement" },
+                { "zh": "Regulation Article 14", "en": "Regulation Article 14" }
+              ],
+              [
+                { "zh": "境外风险调查", "en": "Investigations outside the EU" },
+                { "zh": "如果涉嫌强迫劳动发生在欧盟以外，由欧盟委员会原则上作为 Lead Competent Authority", "en": "When suspected forced labour occurs outside the EU, the European Commission is in principle the Lead Competent Authority" },
+                { "zh": "Regulation Article 15", "en": "Regulation Article 15" }
+              ],
+              [
+                { "zh": "企业信息提供义务", "en": "Duty to provide information" },
+                { "zh": "初步调查阶段，主管机关可要求企业提供识别、预防、降低、终止和补救强迫劳动风险所采取的措施；企业原则上应在 30 个工作日内回应", "en": "During a preliminary investigation, authorities may request measures taken to identify, prevent, mitigate, end and remedy forced-labour risks; businesses generally respond within 30 working days" },
+                { "zh": "Regulation Article 17", "en": "Regulation Article 17" }
+              ],
+              [
+                { "zh": "调查确认后的措施", "en": "Measures after confirmation" },
+                { "zh": "可禁止产品继续投放、提供于欧盟市场或出口，并要求已进入市场的产品撤回及处置；拒不执行决定还可能受到成员国规定的处罚", "en": "Authorities may prohibit continued placing, making available or exporting, and require products already on the market to be withdrawn and disposed of; member-state penalties may apply for non-compliance" },
+                { "zh": "Regulation Articles 20、23–25、37", "en": "Regulation Articles 20, 23–25 and 37" }
+              ],
+              [
+                { "zh": "2027 年前生产的库存产品", "en": "Inventory produced before 2027" },
+                { "zh": "不当然豁免；只要产品在 2027 年 12 月 14 日以后仍被投放或继续提供于欧盟市场，即使产品或零部件此前生产或进口，也仍可能属于 FLR 适用范围", "en": "Not automatically exempt; if products remain placed or made available on the EU market after December 14, 2027, they may still be in scope even if made or imported earlier" },
+                { "zh": "Commission Guidelines §3.1", "en": "Commission Guidelines §3.1" }
+              ],
+              [
+                { "zh": "FLR 是否具有认证", "en": "Whether FLR certification exists" },
+                { "zh": "FLR 没有建立统一的“FLR 认证”，也没有对所有企业设置普遍性的强制审计或定期报告义务", "en": "The FLR does not establish a universal “FLR certification” or a general mandatory audit or periodic-reporting duty for all businesses" },
+                { "zh": "European Commission FLR Portal", "en": "European Commission FLR Portal" }
+              ]
+            ]
           }
         },
         {
+          "level": 1,
           "heading": {
-            "zh": "INDUKEEP 的平衡点",
-            "en": "The INDUKEEP balance"
+            "zh": "二、FLR 如何判断“强迫劳动”？",
+            "en": "2. How Does the FLR Identify Forced Labour?"
+          },
+          "paragraphs": [
+            {
+              "zh": "FLR 使用国际劳工组织 ILO Forced Labour Convention, 1930 (No.29) 所建立的强迫劳动概念。",
+              "en": "The FLR uses the concept of forced labour established by the International Labour Organization's Forced Labour Convention, 1930 (No. 29)."
+            },
+            {
+              "zh": "其核心判断可概括为两个方面：",
+              "en": "The core assessment can be summarized in two questions:"
+            },
+            {
+              "zh": "第一，劳动是否真正自愿（voluntary）：员工是否在获得充分信息的情况下自由进入劳动关系，并能够自由终止劳动关系。",
+              "en": "First, is the work genuinely voluntary? Did the employee enter the employment relationship freely and with sufficient information, and can they end it freely?"
+            },
+            {
+              "zh": "第二，是否存在惩罚或强制威胁（menace of penalty / coercion）：例如暴力或威胁、限制人员行动、债务束缚、扣押工资或身份证件、威胁解雇或遣返、利用劳动者弱势地位等。欧委会 2026 年指南同时指出，滥用加班要求也可能构成劳动非自愿性的风险表现。",
+              "en": "Second, is there a menace of penalty or coercion, such as violence or threats, restricted movement, debt bondage, withheld wages or identity documents, threats of dismissal or deportation, or abuse of a worker's vulnerability? The Commission's 2026 guidance also notes that abusive overtime demands may indicate involuntary work."
+            }
+          ],
+          "media": [
+            {
+              "image": "/assets/blog/blog4/ilo-forced-labour.jpeg",
+              "alt": {
+                "zh": "国际劳工组织强迫劳动指标资料",
+                "en": "International Labour Organization forced-labour indicators publication"
+              },
+              "caption": {
+                "zh": "国际劳工组织（ILO）",
+                "en": "International Labour Organization (ILO)"
+              }
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "heading": {
+            "zh": "加班是否等于强迫劳动？",
+            "en": "Does Overtime Equal Forced Labour?"
+          },
+          "paragraphs": [
+            {
+              "zh": "不等于。ILO 对这一问题有较明确的解释：加班本身并不自动构成强迫劳动，首先应当判断该加班是否符合所在国家或地区法律以及适用集体协议（collective agreements）规定的工时和加班限制。在此基础上，还需要进一步判断劳动者是否能够真正自主选择，以及是否存在处罚威胁。",
+              "en": "No. The ILO gives a clear explanation: overtime does not automatically constitute forced labour. The first question is whether it complies with working-time and overtime limits under the applicable local law and collective agreements. The next questions are whether workers can make a genuine choice and whether a threat of penalty exists."
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "heading": {
+            "zh": "对于企业而言，妥善的劳动管理应满足什么？",
+            "en": "What Should Responsible Labour Management Include?"
+          },
+          "bullets": [
+            {
+              "zh": "加班工时符合当地法律及适用集体协议要求；",
+              "en": "Overtime hours comply with local law and applicable collective agreements;"
+            },
+            {
+              "zh": "员工能够在法律允许范围内作出真实选择；",
+              "en": "Employees can make a genuine choice within the limits allowed by law;"
+            },
+            {
+              "zh": "加班工资和待遇依法支付；",
+              "en": "Overtime pay and benefits are provided as required by law;"
+            },
+            {
+              "zh": "不得通过罚款、扣薪、解雇威胁或其他惩罚方式强迫员工从事超出合法限度的加班。",
+              "en": "Employees are not forced into overtime beyond legal limits through fines, withheld pay, threats of dismissal or other penalties."
+            }
+          ],
+          "paragraphsAfter": [
+            {
+              "zh": "此外，ILO 特别指出，如果加班超过法律允许的周/月工时限额，同时又通过处罚威胁强制劳动者工作，就可能构成强迫劳动；即使员工理论上可以拒绝，但如果因为害怕失去工作或无法获得最低工资而事实上没有选择，也可能产生强迫劳动问题。",
+              "en": "The ILO also emphasizes that overtime may constitute forced labour when it exceeds legal weekly or monthly limits and workers are compelled to continue through threats of penalty. Even when employees can theoretically refuse, forced-labour concerns may arise if fear of losing their jobs or minimum wages leaves them with no real choice."
+            }
+          ]
+        },
+        {
+          "level": 1,
+          "heading": {
+            "zh": "三、欧盟进口商应该如何提前准备？",
+            "en": "3. How Should EU Importers Prepare Early?"
+          },
+          "paragraphs": [
+            {
+              "zh": "欧盟委员会已经明确将 2026 年至 2027 年 12 月 14 日之间定义为 FLR 的实施准备阶段。",
+              "en": "The European Commission has defined the period from 2026 through December 14, 2027 as the FLR implementation-preparation phase."
+            },
+            {
+              "zh": "对进口商而言，重点在于逐步建立一套能够支持产品供应链调查的证据体系。",
+              "en": "For importers, the priority is to build an evidence system that can support a product supply-chain investigation."
+            }
+          ],
+          "bullets": [
+            {
+              "zh": "首先，应提高供应链透明度，追溯生产全链条FLR合规情况：Product → Manufacturer → Key Suppliers → Key Raw Materials → Upstream Origin",
+              "en": "First, improve supply-chain transparency and trace FLR compliance across the full chain: Product → Manufacturer → Key Suppliers → Key Raw Materials → Upstream Origin."
+            },
+            {
+              "zh": "其次，可以将强迫劳动要求纳入 Supplier Code of Conduct、采购协议或供应商准入体系，并针对产品、地区、行业和供应商本身的风险采取不同程度的尽职调查。",
+              "en": "Second, incorporate forced-labour requirements into the Supplier Code of Conduct, purchasing agreements or supplier-qualification system, using a level of due diligence proportionate to the risks of the product, region, industry and supplier."
+            },
+            {
+              "zh": "对于风险较低的供应商，可以采取文件审核、自我评估和供应商声明；对于较高风险的供应商，则可以进一步使用第三方社会责任审核、现场评估、员工访谈或更深入的原材料追溯。",
+              "en": "For lower-risk suppliers, document reviews, self-assessments and supplier declarations may be appropriate. Higher-risk suppliers may require third-party social audits, on-site assessments, worker interviews or deeper raw-material tracing."
+            }
+          ]
+        },
+        {
+          "level": 1,
+          "heading": {
+            "zh": "四、维尼健康能为欧洲进口商提供哪些 FLR Supporting Evidence？",
+            "en": "4. What FLR Supporting Evidence Can VINNER Health Provide to European Importers?"
+          },
+          "paragraphs": [
+            {
+            "zh": "对于欧洲进口商而言，供应商价值正在从简单的代工生产商转向更合乎道德、人权与法规的负责任的供应商。",
+              "en": "For European importers, supplier value is shifting from simple contract manufacturing toward responsible suppliers with stronger ethics, human-rights practices and regulatory readiness."
+            }
+          ],
+          "pageWindow": {
+            "href": "/about/factory-qualification/",
+            "image": "/assets/factory/laboratory.jpg",
+            "alt": {
+              "zh": "维尼健康工厂实验室与质量管理环境",
+              "en": "VINNER Health factory laboratory and quality-management environment"
+            },
+            "kicker": {
+              "zh": "相关页面",
+              "en": "Related page"
+            },
+            "title": {
+              "zh": "维尼的工厂资质",
+              "en": "VINNER Factory Qualifications"
+            },
+            "body": {
+              "zh": "了解维尼健康的质量、环境、职业健康安全和社会责任相关资质。",
+              "en": "Explore VINNER Health's quality, environmental, occupational-safety and social-responsibility qualifications."
+            },
+            "link": {
+              "zh": "查看工厂资质",
+              "en": "View factory qualifications"
+            }
+          },
+          "linkedParagraph": {
+            "href": "/about/vinner/#about-values-title",
+            "text": {
+              "zh": "我们始终秉持价值观：为世界提供道德、可负担和高效的护理、清洁与感控产品。",
+              "en": "We uphold a clear value: providing the world with ethical, affordable and effective care, cleansing and infection-control products."
+            }
+          },
+          "bullets": [
+            {
+              "zh": "第三方审核层面：维尼健康已完成 SMETA 4-Pillar Audit（SMETA4柱审计）。该审核覆盖劳工权益、员工健康与安全、工作环境和商业道德，可作为进口商了解制造端劳动和社会责任管理情况的一项第三方审核依据。同时，维尼健康已建立 ISO 9001、ISO 13485、ISO 22716、ISO 14001、ISO 45001等质量、环境和职业健康安全管理体系。",
+              "en": "Third-party audits: VINNER Health has completed a SMETA 4-Pillar Audit covering labour rights, employee health and safety, working conditions and business ethics. It gives importers third-party evidence of labour and social-responsibility management at the manufacturing site. VINNER Health also maintains ISO 9001, ISO 13485, ISO 22716, ISO 14001 and ISO 45001 management systems covering quality, environment and occupational health and safety."
+            },
+            {
+              "zh": "双方合作层面：围绕 FLR 尽职调查需求，维尼可配合欧洲进口商提供和建立我们自身以及供应链的各类型的保障劳工权益与非强迫劳动证明。",
+              "en": "Cooperation: To support FLR due diligence, VINNER can work with European importers to provide and establish evidence of labour-rights protection and the absence of forced labour across our own operations and the supply chain."
+            }
+          ],
+          "paragraphsAfter": [
+            {
+              "zh": "FLR 本身并没有规定企业必须采用上述某一种固定文件组合。欧委会指南强调的是企业能否提供相关、真实且可验证的信息，并证明其针对实际供应链风险采取过合理措施。",
+              "en": "The FLR does not require businesses to use one fixed combination of documents. The Commission's guidance focuses on whether a business can provide relevant, genuine and verifiable information and show that it took reasonable measures against the actual risks in its supply chain."
+            }
+          ]
+        },
+        {
+          "level": 1,
+          "heading": {
+            "zh": "五、结语",
+            "en": "5. Conclusion"
           },
           "body": {
-            "zh": "Heavy Duty Oil Removal Wipes 通过木浆复合增强结构兼顾吸油、耐撕裂和耐溶剂。它更适合车间、设备维护、喷涂前处理和维修站点。",
-            "en": "Heavy Duty Oil Removal Wipes use a reinforced wood-pulp composite to balance oil pickup, tear resistance, and solvent resistance. They fit workshops, equipment maintenance, pre-coating prep, and service bays."
+            "zh": "透明、可追溯并能够提供证据的供应链，将成为未来欧洲市场合作中越来越重要的一项基础能力和关键资产。维尼健康的价值观是：为世界提供道德、可负担与高效的感控、护理与清洁产品。",
+            "en": "A transparent, traceable supply chain that can produce evidence will become an increasingly important capability and strategic asset for cooperation in the European market. VINNER Health's value is to provide the world with ethical, affordable and effective infection-control, care and cleansing products."
           }
         },
         {
+          "level": 1,
           "heading": {
-            "zh": "现场使用提醒",
-            "en": "Field-use note"
+            "zh": "参考文献",
+            "en": "References"
+          },
+          "bullets": [
+            {
+              "zh": "[1] European Parliament and Council. Regulation (EU) 2024/3015 of 27 November 2024 on prohibiting products made with forced labour on the Union market.",
+              "en": "[1] European Parliament and Council. Regulation (EU) 2024/3015 of 27 November 2024 on prohibiting products made with forced labour on the Union market."
+            },
+            {
+              "zh": "[2] European Commission. Commission Notice — Guidelines on the application of Regulation (EU) 2024/3015, C/2026/4637, Official Journal of the European Union, 3 September 2026.",
+              "en": "[2] European Commission. Commission Notice — Guidelines on the application of Regulation (EU) 2024/3015, C/2026/4637, Official Journal of the European Union, 3 September 2026."
+            },
+            {
+              "zh": "[3] European Commission. Forced Labour Single Portal.",
+              "en": "[3] European Commission. Forced Labour Single Portal."
+            },
+            {
+              "zh": "[4] European Commission. What is the Forced Labour Regulation and how does it work?",
+              "en": "[4] European Commission. What is the Forced Labour Regulation and how does it work?"
+            },
+            {
+              "zh": "[5] International Labour Organization. ILO Helpdesk — Questions and Answers on Business and Forced Labour.",
+              "en": "[5] International Labour Organization. ILO Helpdesk — Questions and Answers on Business and Forced Labour."
+            },
+            {
+              "zh": "[6] International Labour Organization. Forced Labour Convention, 1930 (No. 29).",
+              "en": "[6] International Labour Organization. Forced Labour Convention, 1930 (No. 29)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Cleansing & Care",
+      "date": "2026.08.25 / Blog003",
+      "updatedAt": "2026.09.14",
+      "title": {
+        "zh": "破局美国护理蓝海——医疗与养老市场免冲洗沐浴产品潜力深度洞察与合规解析",
+        "en": "Breaking into the U.S. Care Blue Ocean—An In-Depth Insight into the Potential and Compliance of Rinse-Free Bathing Products in Healthcare and Elderly Care"
+      },
+      "body": {
+        "zh": "美国医疗与养老市场正在加速采用免冲洗沐浴产品。本文从院感防控、采购需求、合规要求与照护尊严四个角度，分析免冲洗清洁方案的市场潜力与应用价值。",
+        "en": "The U.S. healthcare and elderly-care market is accelerating its adoption of rinse-free bathing products. This article examines the market potential and practical value of rinse-free care through four lenses: infection control, procurement demand, compliance, and human dignity."
+      },
+      "image": "/assets/blog/blog3-cover.jpg",
+      "alt": {
+        "zh": "护理人员为老年人提供日常照护",
+        "en": "A caregiver providing everyday care for an older adult"
+      },
+      "slug": "rinse-free-bathing-products-us-care-market",
+      "authorId": "lanny-shi",
+      "sections": [
+        {
+          "level": 1,
+          "heading": {
+            "zh": "1. 医疗系统———刚需驱动下的院感防控利器",
+            "en": "1. Healthcare Systems—A Critical Tool for Healthcare-Associated Infection Control Driven by Essential Demand"
+          },
+          "paragraphs": [
+            {
+              "zh": "在人口老龄化加剧与院内感染控制(HAIs)标准日益严格的背景下，美国医疗与养老市场正经历一场基础护理模式的变革。传统的“水盆+毛巾”沐浴方式因其交叉感染风险高、护理耗时长、患者体验不佳，正快速被专业化、标准化的免冲洗沐浴产品(Rinse-Free Bathing Products)所替代。这不仅是一场护理效率的升级，更代表着一个百亿级蓝海市场的崛起。",
+              "en": "Against the backdrop of accelerating population aging and increasingly stringent standards for healthcare-associated infection (HAI) control, the U.S. healthcare and elderly-care market is undergoing a transformation in basic-care practices. The traditional \"basin + towel\" bathing method, with its high risk of cross-contamination, lengthy care time, and poor patient experience, is rapidly being replaced by professional, standardized Rinse-Free Bathing Products. This is not merely an upgrade in care efficiency; it also represents the rise of a blue-ocean market worth tens of billions of dollars."
+            },
+            {
+              "zh": "美国拥有庞大的医院网络和长期护理设施，医疗级湿巾是维持其卫生标准的核心消耗品。最新行业报告显示，全球医疗湿巾市场在2024年估值为180.5亿美元，预计到2030年将以7.7%的复合年增长率(CAGR)达到277亿美元。其中，北美市场占据35.5%的最大份额，美国凭借其成熟的医疗体系成为绝对主力。",
+              "en": "The United States has an extensive network of hospitals and long-term care facilities, and medical-grade wipes are core consumables for maintaining its hygiene standards. The latest industry reports show that the global healthcare wipes market was valued at US$18.05 billion in 2024 and is expected to reach US$27.7 billion by 2030 at a compound annual growth rate (CAGR) of 7.7%. North America holds the largest share at 35.5%, with the United States serving as the clear market leader thanks to its mature healthcare system."
+            },
+            {
+              "zh": "外科手术部位感染(SSI)和导尿管相关尿路感染(CAUTI)等问题促使美国医院大量采用标准化沐浴方案。此外，ICU护士在传统床旁沐浴上耗费大量时间。权威临床研究表明，使用预先润湿、可微波加热的“抛弃型免洗湿巾”方案，在缩短操作时间、降低护理工作量及成本效益方面显著优于传统方法。在这一需求背景下，VINNERLOVE 免洗沐浴湿巾 (VLBBW8)与免洗沐浴手套(VLBBG8)的“8片式全身沐浴护理方案”完美契合了美国医疗系统的操作规范。每包8片对应身体8个不同部位，配合100GSM超厚无纺布与可微波加热设计，不仅杜绝了交叉污染，还能为ICU、术后患者提供安全、温暖的标准化床旁清洁。",
+              "en": "Issues such as surgical-site infections (SSI) and catheter-associated urinary tract infections (CAUTI) have prompted U.S. hospitals to adopt standardized bathing protocols on a large scale. In addition, ICU nurses spend considerable time on traditional bedside bathing. Authoritative clinical research shows that a pre-moistened, microwaveable disposable no-rinse wipe protocol is significantly better than traditional methods in shortening procedure time, reducing nursing workload, and improving cost-effectiveness. Against this backdrop, the \"eight-piece full-body bathing care solution\" consisting of VINNERLOVE Rinse-Free Bathing Wipes (VLBBW8) and Rinse-Free Bathing Gloves (VLBBG8) fits perfectly with the operating protocols of the U.S. healthcare system. The eight pieces in each pack correspond to eight different body areas. Combined with 100 GSM ultra-thick nonwoven fabric and a microwaveable design, the solution not only prevents cross-contamination but also provides safe, warm, standardized bedside cleansing for ICU and postoperative patients."
+            }
+          ],
+          "productLineSlug": "carekeep"
+        },
+        {
+          "level": 1,
+          "heading": {
+            "zh": "2. 从全美院线招标数据看“免洗清洁”的真实爆发力",
+            "en": "2. What Nationwide U.S. Hospital Tender Data Reveal About the True Explosive Power of \"Rinse-Free Cleaning\""
+          },
+          "paragraphs": [
+            {
+              "zh": "要真正理解这片蓝海的深度，我们必须将目光投向美国各州政府、退伍军人事务部(VA)以及各大公立医疗体系的实际招标(RFP/Bid)数据。真实的标书数字，最能直观反映出院线的常态化消耗量。",
+              "en": "To truly understand the depth of this blue ocean, we must turn to actual solicitation (RFP/Bid) data from U.S. state governments, the Department of Veterans Affairs (VA), and major public healthcare systems. The real numbers in tender documents most directly reflect the routine consumption of hospital systems."
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "heading": {
+            "zh": "西弗吉尼亚州退伍军人护理中心 (WV VNF) 标书解析",
+            "en": "West Virginia Veterans Nursing Facility (WV VNF) Tender Analysis"
+          },
+          "paragraphs": [
+            {
+              "zh": "根据2026年4月美国西弗吉尼亚州采购部发布的官方标书(编号:CRFQ 0613 VNF2600000006)，仅针对该州单一一家退伍军人护理机构的年度耗材招标中，明确列出了庞大的基础护理品采购需求：免洗洗发帽(Shampoo Caps)招标需求量达每年46,200盒。同时，大型失禁护理湿巾及周边耗材同期招标采购量达到数万箱级别。",
+              "en": "According to the official solicitation issued by the West Virginia Purchasing Division in April 2026 (Solicitation Number: CRFQ 0613 VNF2600000006), the annual consumables tender for a single veterans nursing facility in the state alone explicitly lists substantial demand for basic-care supplies: the annual demand for Shampoo Caps reaches 46,200 boxes. At the same time, the procurement volume for large incontinence-care wipes and related consumables reached the level of tens of thousands of cases."
+            },
+            {
+              "zh": "试想，仅一个州的单一机构，每年对免洗洗发帽的常态化需求就接近5万盒。如果将这一数据放大到全美150多家VA医疗中心以及超过15,000家注册养老院，整体体量令人咋舌。这完美契合了VINNERLOVE 免冲洗洗发浴帽(VLSHMC1)的产品定位，其85GSM超厚多层无纺布材质、可微波加热的设计，完全能够满足甚至超越此类高标准政府招标的规格要求。",
+              "en": "Just imagine: a single facility in one state has a routine annual demand for nearly 50,000 boxes of shampoo caps. Scaled to more than 150 VA medical centers nationwide and over 15,000 registered nursing homes, the overall volume is staggering. This aligns perfectly with the product positioning of VINNERLOVE Rinse-Free Shampoo and Bath Caps (VLSHMC1). Its 85 GSM ultra-thick multilayer nonwoven material and microwaveable design can fully meet—and even exceed—the specifications of high-standard government tenders of this kind."
+            },
+            {
+              "zh": "此外，在联邦政府公开采购系统(SAM.gov)中，医院在标书中普遍明确规定：必须为免冲洗配方，且含有护肤屏障成分以应对失禁相关性皮炎(MASD)。大型医疗集团采购组织(GPO)如Cardinal Health 和 Premier，更是要求免洗产品中需含有聚二甲基硅氧烷(Dimethicone)。VINNERLOVE 失禁护理乳霜湿巾 (VLCONCW25)配方中正是采用了4%二甲基硅油与6%液体石蜡的组合，一步完成清洁、保湿、舒缓与屏障防护，精准对标了北美顶级医院采购准入标准。",
+              "en": "In addition, in the federal government's public procurement system (SAM.gov), hospital solicitations commonly state that products must use a no-rinse formula and contain skin-barrier ingredients to address moisture-associated skin damage (MASD) related to incontinence. Large healthcare group purchasing organizations (GPOs) such as Cardinal Health and Premier go further by requiring dimethicone in rinse-free products. VINNERLOVE Continence Care Wipes (VLCONCW25) use a formulation combining 4% dimethicone and 6% liquid paraffin, completing cleansing, moisturizing, soothing, and barrier protection in one step and precisely matching the procurement-access standards of top North American hospitals."
+            }
+          ]
+        },
+        {
+          "level": 1,
+          "heading": {
+            "zh": "3. FDA Cosmetic 级合规护城河与免洗护理的极致体验",
+            "en": "3. The FDA Cosmetic-Grade Compliance Moat and the Ultimate Rinse-Free Care Experience"
+          },
+          "paragraphs": [
+            {
+              "zh": "免洗沐浴产品之所以能在美国院线和个人护理市场迅速替代传统水盆沐浴，其核心在于前所未有的“便利性”以及基于美国FDA严格监管体系下的“安全性”承诺。",
+              "en": "The reason rinse-free bathing products can rapidly replace traditional basin bathing in U.S. hospital systems and personal-care markets lies in their unprecedented convenience and their promise of safety under the strict regulatory framework of the U.S. Food and Drug Administration (FDA)."
+            },
+            {
+              "zh": "在美国市场，合规是第一生产力。根据美国《联邦食品、药品和化妆品法案》(FD&C Act)第201(i)条的规定，旨在用于人体“清洁(cleansing)”的物品即属于化妆品(Cosmetic)范畴。因此，免冲洗沐浴湿巾在美国受 FDA Cosmetic 级别严格监管，2022年签署的《化妆品监管现代化法案》(MoCRA)进一步要求企业必须建立标准化的高质量生产规范(GMP)。",
+              "en": "In the U.S. market, compliance is the foundation of productivity. Under Section 201(i) of the U.S. Federal Food, Drug, and Cosmetic Act (FD&C Act), an article intended for use in \"cleansing\" the human body falls within the category of cosmetics. Therefore, rinse-free bathing wipes are subject to strict FDA cosmetic-grade oversight in the United States. The Modernization of Cosmetics Regulation Act of 2022 (MoCRA), signed in 2022, further requires companies to establish standardized Good Manufacturing Practices (GMP)."
+            },
+            {
+              "zh": "面对极高的市场准入门槛，维尼健康(VINNER)已经构筑了全方位的技术文件与认证护城河。工厂不仅拥有 FDA Cosmetic GMP认证和ISO 13485医疗器械质量管理体系认证，更具备完善的理化与微生物测试，确保产品无金黄色葡萄球菌、铜绿假单胞菌等致病菌风险。针对敏感肌安全，VINNERLOVE 产品严格遵循化妆品行业最高安全标准之一的“人体重复斑贴试验(HRIPT)”，让“经皮肤科医生测试”拥有实打实的临床数据支撑。",
+              "en": "Facing extremely high market-entry barriers, Vinner Health (VINNER) has built a comprehensive moat of technical documentation and certifications. The factory not only holds FDA Cosmetic GMP and ISO 13485 medical-device quality management system certifications, but also has complete physicochemical and microbiological testing capabilities, ensuring no risk from pathogens such as Staphylococcus aureus and Pseudomonas aeruginosa. For sensitive-skin safety, VINNERLOVE products strictly follow one of the cosmetics industry's highest safety standards, the Human Repeat Insult Patch Test (HRIPT), giving the claim \"dermatologist tested\" solid clinical data support."
+            }
+          ]
+        },
+        {
+          "level": 1,
+          "heading": {
+            "zh": "4. 在资源紧缺时代，以“免洗”捍卫生命尊严",
+            "en": "4. Defending Human Dignity with \"Rinse-Free Care\" in an Era of Scarce Resources"
+          },
+          "paragraphs": [
+            {
+              "zh": "当我们跳出冰冷的商业数据、合规条款与产能报表，再去审视免洗护理系列在美国市场迎来爆发的底层逻辑时，会发现其背后蕴含着更为深刻的社会价值。美国正全面步入“银发海啸(Silver Tsunami)”时代，医疗系统面临着前所未有的护士短缺与照护压力。免冲洗沐浴产品的引入，能够将单次基础护理的时间缩减高达60%，这种极简、高效的流程，让医护人员得以从繁重的体力劳动中抽身，将宝贵的时间重新投入到核心的临床救治中去。",
+              "en": "When we step beyond cold commercial data, compliance clauses, and production-capacity reports and re-examine the underlying logic behind the explosive growth of rinse-free care products in the U.S. market, we find a deeper social value. The United States is fully entering the \"Silver Tsunami\" era, and its healthcare system faces unprecedented nursing shortages and caregiving pressure. The introduction of rinse-free bathing products can reduce the time required for a single basic-care session by as much as 60%. This minimalist, efficient process allows healthcare workers to step away from burdensome physical labor and reinvest their precious time in core clinical treatment."
+            },
+            {
+              "zh": "医疗的本质不仅是治愈，更是关怀。对于长期卧床的老人或重症ICU患者，传统的擦浴往往伴随着隐私暴露与受凉风险，无形中消耗着患者的尊严。支持微波炉加热的 VINNERLOVE 免洗沐浴湿巾与免洗洗发浴帽，用恰到好处的温度和温和触感替代了冰冷的脸盆，维护了弱者在逆境中最基本、也最珍贵的体面。免洗系列不仅仅是一项便捷的清洁技术，它是在医疗资源日渐紧绷的趋势下，人类为守护生命尊严所做出的温柔抵抗。",
+              "en": "The essence of healthcare is not only healing, but also caring. For older adults confined to bed or critically ill ICU patients, traditional sponge bathing often entails risks of privacy exposure and chilling, invisibly consuming patients' dignity. Microwaveable VINNERLOVE Rinse-Free Bathing Wipes and Rinse-Free Shampoo and Bath Caps replace the cold basin with just the right temperature and a gentle feel, preserving the most basic and precious dignity of vulnerable people in adversity. The rinse-free series is not merely a convenient cleaning technology; amid increasingly strained healthcare resources, it is humanity's gentle resistance in protecting the dignity of life."
+            },
+            {
+              "zh": "商业的最高境界是科技向善。当一款产品能够完美契合医疗控费、院感控制与人文关怀的三重诉求时，它的爆发将是不可逆转的历史趋势。凭借20余年的研发底蕴、超大规模的自动化产能以及全球领先的合规标准(涵盖SMETA 4P审核及GSV全球安全验证)，维尼健康已准备好为全球医疗和养老机构提供安全、专业、充满人性温度的清洁护理方案。",
+              "en": "The highest form of business is technology for good. When a product perfectly meets the threefold needs of healthcare cost control, infection control, and human-centered care, its growth becomes an irreversible historical trend. With more than 20 years of R&D expertise, large-scale automated production capacity, and globally leading compliance standards (including the SMETA 4-Pillar audit and GSV Global Security Verification), Vinner Health is ready to provide healthcare and elderly-care institutions worldwide with safe, professional, and humane cleaning and care solutions."
+            }
+          ]
+        },
+        {
+          "level": 1,
+          "heading": {
+            "zh": "参考文献",
+            "en": "References"
+          },
+          "bullets": [
+            {
+              "zh": "[1] Grand View Research. (2024). Healthcare Wipes Market Size, Share & Trends Analysis Report 2025-2030.",
+              "en": "[1] Grand View Research. (2024). Healthcare Wipes Market Size, Share & Trends Analysis Report 2025-2030."
+            },
+            {
+              "zh": "[2] Eigsti, J. E. (2011). Innovative solutions: beds, baths, and bottoms: a quality improvement initiative to standardize use of beds, bathing techniques, and skin care in a general intensive-care unit. Dimensions of Critical Care Nursing.",
+              "en": "[2] Eigsti, J. E. (2011). Innovative solutions: beds, baths, and bottoms: a quality improvement initiative to standardize use of beds, bathing techniques, and skin care in a general intensive-care unit. Dimensions of Critical Care Nursing."
+            },
+            {
+              "zh": "[3] Vinner (Shenzhen) Health Products Limited (2026). VINNER自主品牌产品手册V3.0 (VINNER LOVE Product Brochure).",
+              "en": "[3] Vinner (Shenzhen) Health Products Limited (2026). VINNER Proprietary Brand Product Manual V3.0 (VINNER LOVE Product Brochure)."
+            },
+            {
+              "zh": "[4] West Virginia Purchasing Division. (April 2026). Solicitation Number: CRFQ 0613 VNF2600000006 - WV VETERANS NURSING FACILITY.",
+              "en": "[4] West Virginia Purchasing Division. (April 2026). Solicitation Number: CRFQ 0613 VNF2600000006 - WV VETERANS NURSING FACILITY."
+            },
+            {
+              "zh": "[5] U.S. System for Award Management (SAM.gov). (2026). Active Solicitations: Bathing system Single use, no rinse wipes.",
+              "en": "[5] U.S. System for Award Management (SAM.gov). (2026). Active Solicitations: Bathing system Single use, no rinse wipes."
+            },
+            {
+              "zh": "[6] Cardinal Health. (2025). Advanced Skin and Wound Management Purchasing Guidelines - Incontinence & Bathing.",
+              "en": "[6] Cardinal Health. (2025). Advanced Skin and Wound Management Purchasing Guidelines - Incontinence & Bathing."
+            },
+            {
+              "zh": "[7] U.S. Food and Drug Administration (FDA). Federal Food, Drug, and Cosmetic Act (FD&C Act), Section 201 (i).",
+              "en": "[7] U.S. Food and Drug Administration (FDA). Federal Food, Drug, and Cosmetic Act (FD&C Act), Section 201 (i)."
+            },
+            {
+              "zh": "[8] U.S. Congress. (2022). Modernization of Cosmetics Regulation Act of 2022 (MOCRA).",
+              "en": "[8] U.S. Congress. (2022). Modernization of Cosmetics Regulation Act of 2022 (MOCRA)."
+            },
+            {
+              "zh": "[9] CPT Labs. (2024). The Importance Of HRIPT In Cosmetics Safety Testing & Dermatological Claims.",
+              "en": "[9] CPT Labs. (2024). The Importance Of HRIPT In Cosmetics Safety Testing & Dermatological Claims."
+            },
+            {
+              "zh": "[10] Care England. (2026). Improving dignity and efficiency in personal care: reflections from a waterless care trial.",
+              "en": "[10] Care England. (2026). Improving dignity and efficiency in personal care: reflections from a waterless care trial."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Infection Control",
+      "date": "2026.08.24 / Blog002",
+      "updatedAt": "2026.09.14",
+      "title": {
+        "zh": "近期细菌暴发调查再敲警钟：环境卫生仍是感染控制的关键防线",
+        "en": "Recent Bacterial Outbreak Investigations Sound Another Alarm: Environmental Hygiene Remains a Critical Line of Defense in Infection Control"
+      },
+      "body": {
+        "zh": "耐药菌正在持续给医疗机构和公共卫生系统带来挑战。近期发表的三项细菌暴发调查分别发生在医院 ICU、社区服务场所和大型综合医院，涉及多重耐药鲍曼不动杆菌（MRAB）、耐甲氧西林金黄色葡萄球菌（MRSA）以及耐碳青霉烯肺炎克雷伯菌。更值得关注的是，这些调查一次又一次将感染传播与患者周边环境、医疗设备、高频接触表面以及感染控制措施联系在一起。",
+        "en": "Drug-resistant organisms continue to challenge healthcare institutions and public health systems. Three recently published bacterial outbreak investigations took place in a hospital ICU, a community service setting, and a large general hospital, involving multidrug-resistant Acinetobacter baumannii (MRAB), methicillin-resistant Staphylococcus aureus (MRSA), and carbapenem-resistant Klebsiella pneumoniae. More importantly, these investigations repeatedly linked transmission to patients' surrounding environments, medical equipment, high-touch surfaces, and infection-control measures."
+      },
+      "image": "/assets/blog/blog2-cover.jpg",
+      "alt": {
+        "zh": "医疗环境中的感染控制与环境清洁",
+        "en": "Infection control and environmental cleaning in a healthcare setting"
+      },
+      "slug": "bacterial-outbreaks-environmental-infection-control",
+      "authorId": "zion-hong",
+      "sections": [
+        {
+          "level": 1,
+          "heading": {
+            "zh": "1. 韩国首尔：ICU 暴发多重耐药鲍曼不动杆菌，医疗设备检出暴发菌株",
+            "en": "1. Seoul, South Korea: ICU Outbreak of Multidrug-Resistant Acinetobacter baumannii; Outbreak Strains Detected on Medical Equipment"
+          },
+          "paragraphs": [
+            {
+              "zh": "时间： 暴发于2023年12月出现明显上升，相关调查结果于2026年8月22日发表。",
+              "en": "Time: The outbreak rose sharply in December 2023, and the investigation was published on August 22, 2026."
+            },
+            {
+              "zh": "地点： 韩国首尔特别市龙山区，顺天乡大学首尔医院（Soonchunhyang University Seoul Hospital）一间28床综合内外科 ICU。[1]",
+              "en": "Location: A 28-bed combined medical-surgical ICU at Soonchunhyang University Seoul Hospital in Yongsan-gu, Seoul, South Korea.[1]"
+            },
+            {
+              "zh": "病原体： 多重耐药鲍曼不动杆菌（MRAB, Multidrug-resistant Acinetobacter baumannii）。",
+              "en": "Pathogen: Multidrug-resistant Acinetobacter baumannii (MRAB)."
+            },
+            {
+              "zh": "2023年12月，该院 ICU 的多重耐药鲍曼不动杆菌病例突然增加。研究人员随后对 MRAB 定植患者周围的27个高频接触表面进行环境采样，并结合全基因组测序追踪传播链。[1]",
+              "en": "In December 2023, cases of multidrug-resistant Acinetobacter baumannii (MRAB) at the hospital rose suddenly. Researchers then collected environmental samples from patients colonized with MRAB across 27 high-touch surfaces and used whole-genome sequencing to trace the transmission chain.[1]"
+            },
+            {
+              "zh": "结果在3个呼吸机管路和1个血压袖带上检出了 MRAB。其中，血压袖带上的环境分离株与之后一名患者的临床分离株之间没有检测到 SNP 差异，提示环境污染与患者传播之间存在直接的流行病学联系。[1]",
+              "en": "MRAB was detected on three ventilator circuits and one blood-pressure cuff. Notably, no SNP differences were detected between the environmental isolate from the blood-pressure cuff and the clinical isolate from a subsequent patient, suggesting a direct epidemiological link between environmental contamination and patient transmission.[1]"
+            },
+            {
+              "zh": "医院随后实施入院筛查、每周监测、接触隔离、提高清洁频率以及终末消毒等综合措施。MRAB 获得率由2023年12月的 18.56/1,000患者日下降至2025年2月的0。[1]",
+              "en": "The hospital subsequently implemented a comprehensive set of measures, including admission screening, weekly surveillance, contact precautions, more frequent cleaning, and terminal disinfection. The MRAB acquisition rate fell from 18.56 per 1,000 patient-days in December 2023 to 0 in February 2025.[1]"
+            },
+            {
+              "zh": "这项研究最值得感染控制行业关注的一点很直接：患者周围的医疗设备和高频接触表面可以成为耐药菌传播链的一部分。",
+              "en": "The most direct lesson for infection-control professionals is this: medical equipment and high-touch surfaces around patients can form part of a drug-resistant organism's transmission chain."
+            }
+          ],
+          "media": [
+            {
+              "image": "/assets/blog/blog2/acinetobacter-baumannii.jpg",
+              "alt": {
+                "zh": "鲍曼不动杆菌显微图像",
+                "en": "Microscopic image of Acinetobacter baumannii"
+              },
+              "caption": {
+                "zh": "鲍曼不动杆菌（Acinetobacter baumannii）",
+                "en": "Acinetobacter baumannii"
+              },
+              "source": {
+                "label": {
+                  "zh": "Public Health Image Library（PHIL）",
+                  "en": "Public Health Image Library (PHIL)"
+                },
+                "url": "https://wwwn.cdc.gov/phil/default.aspx"
+              }
+            }
+          ]
+        },
+        {
+          "level": 1,
+          "heading": {
+            "zh": "2. 荷兰乌得勒支地区：按摩中心发生 MRSA 社区暴发，31人受影响",
+            "en": "2. Utrecht Region, the Netherlands: Community MRSA Outbreak at a Massage Center Affected 31 People"
+          },
+          "paragraphs": [
+            {
+              "zh": "时间：暴发持续于2023年11月至2024年6月，调查结果于2026年4月发表在美国 CDC 的Emerging Infectious Diseases。",
+              "en": "Time: The outbreak continued from November 2023 to June 2024; the findings were published in April 2026 in the U.S. CDC's Emerging Infectious Diseases."
+            },
+            {
+              "zh": "地点：荷兰乌得勒支地区（Public Health Service Region Utrecht）一家按摩中心。出于隐私原因，论文没有公开该按摩中心名称及具体所在城市。[2]",
+              "en": "Location: A massage center in the Utrecht region (Public Health Service Region Utrecht), the Netherlands. For privacy reasons, the paper did not disclose the massage center's name or the specific city where it was located.[2]"
+            },
+            {
+              "zh": "病原体：PVL阳性耐甲氧西林金黄色葡萄球菌（MRSA, Methicillin-resistant Staphylococcus aureus）。",
+              "en": "Pathogen: PVL-positive methicillin-resistant Staphylococcus aureus (MRSA, Methicillin-resistant Staphylococcus aureus)."
+            },
+            {
+              "zh": "2023年11月，当地医院微生物实验室首先发现异常：短短3周内，5名患者因 MRSA 阳性脓肿就医并需要手术引流。流行病学调查很快将病例指向同一家按摩中心。[2]",
+              "en": "In November 2023, the local hospital microbiology laboratory first detected an anomaly: within just three weeks, five patients developed MRSA-positive abscesses requiring surgical drainage. Epidemiological investigation quickly linked the cases to the same massage center.[2]"
+            },
+            {
+              "zh": "最终，此次暴发共确认31例 MRSA 病例：",
+              "en": "Ultimately, 31 MRSA cases were confirmed in the outbreak:"
+            },
+            {
+              "zh": "更关键的是，调查人员进行了三轮环境采样，多处环境样本检出 MRSA；研究最终确认在暴发源场所的物体表面检测到了具有活性的 MRSA。暴发期间，该场所接受了专业公司的全面消毒，无法充分消毒的织物覆盖物等物品则被移除。[2]",
+              "en": "More importantly, investigators conducted three rounds of environmental sampling, and MRSA was detected in multiple environmental samples; the study ultimately confirmed viable MRSA on object surfaces at the outbreak source. During the outbreak, the site received comprehensive disinfection by a professional company, while items such as fabric coverings that could not be adequately disinfected were removed.[2]"
+            },
+            {
+              "zh": "这起事件说明，MRSA 并不局限于医院。按摩中心、美容护理机构、康复机构等存在密切人体接触和共用设备的场所，同样可能面临交叉污染和传播风险。",
+              "en": "This incident shows that MRSA is not confined to hospitals. Settings such as massage centers, beauty and personal-care facilities, and rehabilitation centers - where people have close physical contact and share equipment - may also face risks of cross-contamination and transmission."
+            }
+          ],
+          "bullets": [
+            {
+              "zh": "27例出现症状；",
+              "en": "27 developed symptoms;"
+            },
+            {
+              "zh": "10例住院；",
+              "en": "10 were hospitalized;"
+            },
+            {
+              "zh": "8例因脓肿接受手术；",
+              "en": "8 underwent surgery for abscesses;"
+            },
+            {
+              "zh": "1例出现菌血症。[2]",
+              "en": "1 developed bacteremia.[2]"
+            }
+          ],
+          "media": [
+            {
+              "image": "/assets/blog/blog2/mrsa.jpg",
+              "alt": {
+                "zh": "耐甲氧西林金黄色葡萄球菌显微图像",
+                "en": "Microscopic image of methicillin-resistant Staphylococcus aureus"
+              },
+              "caption": {
+                "zh": "耐甲氧西林金黄色葡萄球菌（MRSA，Methicillin-resistant Staphylococcus aureus）",
+                "en": "Methicillin-resistant Staphylococcus aureus (MRSA)"
+              },
+              "source": {
+                "label": {
+                  "zh": "Public Health Image Library（PHIL）",
+                  "en": "Public Health Image Library (PHIL)"
+                },
+                "url": "https://wwwn.cdc.gov/phil/default.aspx"
+              }
+            }
+          ]
+        },
+        {
+          "level": 1,
+          "heading": {
+            "zh": "3. 韩国首尔：耐药肺炎克雷伯菌扩散至12个病区，38例医院相关病例",
+            "en": "3. Seoul, South Korea: Drug-Resistant Klebsiella pneumoniae Spread to 12 Wards, Causing 38 Hospital-Associated Cases"
+          },
+          "paragraphs": [
+            {
+              "zh": "时间：暴发发生于2025年1月至5月；研究于2026年6月5日在线发表，并刊载于 Journal of Hospital Infection 2026年8月刊。[3]",
+              "en": "Time: The outbreak occurred from January to May 2025; the study was published online on June 5, 2026, and appeared in the Journal of Hospital Infection August 2026 issue.[3]"
+            },
+            {
+              "zh": "地点：韩国首尔特别市恩平区，韩国天主教大学恩平圣母医院（Eunpyeong St. Mary’s Hospital）。该院是一所拥有808张床位的大学附属医院。[3]",
+              "en": "Location: Eunpyeong St. Mary's Hospital in Eunpyeong-gu, Seoul, South Korea. The university-affiliated hospital has 808 beds.[3]"
+            },
+            {
+              "zh": "病原体：以 OXA-181 产酶肺炎克雷伯菌 ST16（OXA-181-producing Klebsiella pneumoniae ST16）为主。",
+              "en": "Pathogen: Predominantly OXA-181-producing Klebsiella pneumoniae ST16 (OXA-181-producing Klebsiella pneumoniae ST16)."
+            },
+            {
+              "zh": "2025年2月，该院血液科连续发现两例 OXA-48-like 碳青霉烯酶产生肠杆菌目细菌病例，随后病例迅速扩散至多个病区。[3]",
+              "en": "In February 2025, the hospital's hematology department identified two consecutive cases of OXA-48-like carbapenemase-producing Enterobacterales, after which cases rapidly spread to multiple wards.[3]"
+            },
+            {
+              "zh": "整个调查期间共发现 38例医院相关病例，涉及12个病区。其中：",
+              "en": "During the investigation, 38 hospital-associated cases were identified across 12 wards. Of these:"
+            },
+            {
+              "zh": "全基因组测序进一步证实了 OXA-181-producing K. pneumoniae ST16 的克隆传播。研究发现，患者在不同病区之间转移进一步放大了传播范围。加强高风险患者监测及其他感染预防与控制措施后，此次暴发在约4个月内得到控制。[3]",
+              "en": "Whole-genome sequencing further confirmed clonal transmission of OXA-181-producing K. pneumoniae ST16. The study found that transfers of patients between wards further amplified the spread. After intensified surveillance of high-risk patients and other infection-prevention and control measures, the outbreak was brought under control in approximately four months.[3]"
+            },
+            {
+              "zh": "这起事件再次展示了耐药菌在大型医院内的传播能力：当高风险病原体进入医疗机构后，患者、医护人员、设备和环境共同构成的复杂接触网络，都需要纳入感染控制体系。",
+              "en": "This incident once again demonstrates the ability of drug-resistant organisms to spread through large hospitals: once a high-risk pathogen enters a healthcare facility, the complex contact network formed by patients, healthcare workers, equipment, and the environment must all be incorporated into the infection-control system."
+            }
+          ],
+          "bullets": [
+            {
+              "zh": "36例涉及肺炎克雷伯菌（Klebsiella pneumoniae）；",
+              "en": "36 involved Klebsiella pneumoniae (Klebsiella pneumoniae);"
+            },
+            {
+              "zh": "1例同时检出肺炎克雷伯菌和大肠杆菌；",
+              "en": "1 involved both Klebsiella pneumoniae and Escherichia coli;"
+            },
+            {
+              "zh": "1例为大肠杆菌；",
+              "en": "1 involved Escherichia coli;"
+            },
+            {
+              "zh": "10名医院相关病例发生菌血症。[3]",
+              "en": "10 hospital-associated cases developed bacteremia.[3]"
+            }
+          ],
+          "media": [
+            {
+              "image": "/assets/blog/blog2/klebsiella-pneumoniae.jpg",
+              "alt": {
+                "zh": "肺炎克雷伯菌显微图像",
+                "en": "Microscopic image of Klebsiella pneumoniae"
+              },
+              "caption": {
+                "zh": "肺炎克雷伯菌（Klebsiella pneumoniae）",
+                "en": "Klebsiella pneumoniae"
+              },
+              "source": {
+                "label": {
+                  "zh": "Public Health Image Library（PHIL）",
+                  "en": "Public Health Image Library (PHIL)"
+                },
+                "url": "https://wwwn.cdc.gov/phil/default.aspx"
+              }
+            }
+          ]
+        },
+        {
+          "level": 1,
+          "heading": {
+            "zh": "4. VINNER 的观察：感染控制必须关注“环境”",
+            "en": "4. VINNER's Perspective: Infection Control Must Address the \"Environment\""
+          },
+          "paragraphs": [
+            {
+              "zh": "三起暴发发生在不同时间、不同国家和不同场所，其传播机制也并不完全相同。但它们共同说明了一件事：",
+              "en": "The three outbreaks occurred at different times, in different countries and settings, and their transmission mechanisms were not identical. Yet together they make one point clear:"
+            },
+            {
+              "zh": "感染控制从来不是单一措施能够完成的。",
+              "en": "Infection control can never be achieved by a single measure alone."
+            },
+            {
+              "zh": "患者筛查、隔离、手卫生、个人防护、医疗设备管理、环境清洁和表面消毒需要共同组成完整的 Infection Prevention and Control（IPC）体系。特别是在 ICU、病房、门诊以及其他人员频繁接触的场所，床栏、血压袖带、医疗设备外表面、操作台、门把手等高频接触表面会不断经历“手—表面—设备—患者”的接触过程。",
+              "en": "Patient screening, isolation, hand hygiene, personal protective equipment, medical-equipment management, environmental cleaning, and surface disinfection must together form a complete Infection Prevention and Control (IPC) system. Especially in ICUs, wards, outpatient clinics, and other settings with frequent human contact, high-touch surfaces such as bed rails, blood-pressure cuffs, the exterior surfaces of medical equipment, worktops, and door handles repeatedly experience a \"hand-surface-equipment-patient\" chain of contact."
+            },
+            {
+              "zh": "韩国 MRAB 暴发中从血压袖带检出的环境菌株与患者临床菌株高度一致；荷兰 MRSA 暴发中则直接从暴发源场所的环境表面检出了具有活性的 MRSA。[1][2]这些证据提醒我们：环境表面消毒不是感染控制的全部，但它是其中不可缺失的一环。",
+              "en": "In the Korean MRAB outbreak, the environmental isolate from a blood-pressure cuff was highly consistent with the patient's clinical isolate; in the Dutch MRSA outbreak, viable MRSA was directly detected on environmental surfaces at the outbreak source.[1][2] This evidence reminds us: environmental surface disinfection is not all of infection control, but it is an indispensable part of it."
+            },
+            {
+              "zh": "而对于专业消毒产品而言，最重要的是：产品是否经过标准化测试、能够覆盖哪些微生物，以及其接触时间和实际擦拭条件下的性能是否得到验证。",
+              "en": "For professional disinfectant products, the most important point is: whether the product has undergone standardized testing, which microorganisms it covers, and whether its performance under its stated contact time and actual wiping conditions has been validated."
+            }
+          ]
+        },
+        {
+          "level": 1,
+          "heading": {
+            "zh": "5. VINNER 两款感染控制新品，即将面世",
+            "en": "5. Two New VINNER Infection-Control Products Coming Soon"
+          },
+          "paragraphs": [
+            {
+              "zh": "围绕医疗机构和专业感染控制场景，VINNER 正在内部开发两款专业湿巾产品。目前产品仍处于内部开发阶段，即将正式面世。",
+              "en": "With a focus on healthcare facilities and professional infection-control settings, VINNER is developing two professional wipe products internally. The products are still in internal development and will be officially launched soon."
+            },
+            {
+              "zh": "本文新闻中提到的鲍曼不动杆菌（Acinetobacter baumannii）、MRSA（Methicillin-resistant Staphylococcus aureus）和肺炎克雷伯菌（Klebsiella pneumoniae），均已在 VINNER 对应产品上通过欧盟 EN 标准杀菌效力检测。[4]",
+              "en": "The Acinetobacter baumannii (Acinetobacter baumannii), MRSA (Methicillin-resistant Staphylococcus aureus), and Klebsiella pneumoniae (Klebsiella pneumoniae) mentioned in this article's news reports have all passed EU EN standard bactericidal efficacy testing on the corresponding VINNER products.[4]"
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "heading": {
+            "zh": "1. VINNERLOVE Surface Disinfectant Wipes (VLSDW) 维尼无醇医用级物表表面消毒湿巾",
+            "en": "1. VINNERLOVE Surface Disinfectant Wipes (VLSDW) - VINNER Alcohol-Free Medical-Grade Surface Disinfectant Wipes"
+          },
+          "paragraphs": [
+            {
+              "zh": "VINNERLOVE 表面消毒湿巾是一款正在开发中的无醇表面消毒湿巾，面向医疗机构及其他专业感染控制场景开发。",
+              "en": "VINNERLOVE Surface Disinfectant Wipes is an alcohol-free surface disinfectant wipe currently under development, designed for healthcare facilities and other professional infection-control settings."
+            },
+            {
+              "zh": "产品已由第三方实验室按照BS EN 13727:2012+A2:2015开展杀菌活性测试。EN 13727是用于评价医疗领域化学消毒剂和防腐剂杀菌活性的定量悬液试验（Phase 2, Step 1）的欧盟标准。测试采用产品湿巾挤出液原液，在 20°C 条件下进行，判定要求为细菌数量降低 ≥5 log（99.999%）。[4]本次报告共涉及 12个测试菌株/耐药株项目，包括鲍曼不动杆菌、大肠杆菌、肺炎克雷伯菌、铜绿假单胞菌、海氏肠球菌、金黄色葡萄球菌、屎肠球菌，以及 MRSA、VRE 等耐药菌株。[4]",
+              "en": "The product has been tested for bactericidal activity by a third-party laboratory in accordance with BS EN 13727:2012+A2:2015. EN 13727 is the European standard for the quantitative suspension test (Phase 2, Step 1) used to evaluate the bactericidal activity of chemical disinfectants and antiseptics in the medical field. Testing was conducted using the undiluted liquid expressed from the product wipes at 20°C, with a criterion of a ≥5 log (99.999%) reduction in bacterial count.[4] The report covered 12 test strains/resistant-strain items, including Acinetobacter baumannii, Escherichia coli, Klebsiella pneumoniae, Pseudomonas aeruginosa, Enterococcus hirae, Staphylococcus aureus, Enterococcus faecium, and resistant strains such as MRSA and VRE.[4]"
+            }
+          ],
+          "subsections": [
+            {
+              "heading": {
+                "zh": "清洁条件（Clean Condition）｜30秒",
+                "en": "Clean Condition | 30 seconds"
+              },
+              "paragraphs": [
+                {
+                  "zh": "以下菌株均达到 EN 13727 要求并判定通过：",
+                  "en": "The following strains all met EN 13727 requirements and passed:"
+                }
+              ],
+              "bullets": [
+                {
+                  "zh": "大肠杆菌（Escherichia coli ATCC 10536）",
+                  "en": "Escherichia coli (ATCC 10536)"
+                },
+                {
+                  "zh": "金黄色葡萄球菌（Staphylococcus aureus ATCC 6538）",
+                  "en": "Staphylococcus aureus (ATCC 6538)"
+                },
+                {
+                  "zh": "铜绿假单胞菌（Pseudomonas aeruginosa ATCC 15442）",
+                  "en": "Pseudomonas aeruginosa (ATCC 15442)"
+                },
+                {
+                  "zh": "肺炎克雷伯菌（Klebsiella pneumoniae ATCC 4352）",
+                  "en": "Klebsiella pneumoniae (ATCC 4352)"
+                },
+                {
+                  "zh": "海氏肠球菌（Enterococcus hirae ATCC 10541）",
+                  "en": "Enterococcus hirae (ATCC 10541)"
+                },
+                {
+                  "zh": "鲍曼不动杆菌（Acinetobacter baumannii CICC 10254）",
+                  "en": "Acinetobacter baumannii (CICC 10254)"
+                },
+                {
+                  "zh": "屎肠球菌（Enterococcus faecium CICC 21605）",
+                  "en": "Enterococcus faecium (CICC 21605)"
+                }
+              ]
+            },
+            {
+              "heading": {
+                "zh": "清洁条件（Clean Condition）｜1分钟",
+                "en": "Clean Condition | 1 minute"
+              },
+              "paragraphs": [
+                {
+                  "zh": "以下耐药菌株均达到要求并判定为通过：",
+                  "en": "The following resistant strains all met the requirements and were rated as passing:"
+                }
+              ],
+              "bullets": [
+                {
+                  "zh": "耐甲氧西林金黄色葡萄球菌（MRSA, Methicillin-resistant Staphylococcus aureus ATCC 33591）",
+                  "en": "Methicillin-resistant Staphylococcus aureus (MRSA, ATCC 33591)"
+                },
+                {
+                  "zh": "万古霉素耐药粪肠球菌（VRE, vancomycin-resistant Enterococcus faecalis ATCC 51299）",
+                  "en": "Vancomycin-resistant Enterococcus faecalis (VRE, ATCC 51299)"
+                }
+              ]
+            },
+            {
+              "heading": {
+                "zh": "清洁条件（Clean Condition）｜2分钟",
+                "en": "Clean Condition | 2 minutes"
+              },
+              "paragraphs": [
+                {
+                  "zh": "针对另外三株具有重要临床意义的菌株，产品同样达到要求并判定PASS：",
+                  "en": "For three additional strains of major clinical significance, the product likewise met the requirements and was rated PASS:"
+                }
+              ],
+              "bullets": [
+                {
+                  "zh": "耐甲氧西林金黄色葡萄球菌（MRSA, Staphylococcus aureus ATCC 43300）",
+                  "en": "Methicillin-resistant Staphylococcus aureus (MRSA, Staphylococcus aureus ATCC 43300)"
+                },
+                {
+                  "zh": "铜绿假单胞菌（Pseudomonas aeruginosa ATCC BAA-2108）",
+                  "en": "Pseudomonas aeruginosa (ATCC BAA-2108)"
+                },
+                {
+                  "zh": "肺炎克雷伯菌（Klebsiella pneumoniae ATCC BAA-1902）",
+                  "en": "Klebsiella pneumoniae (ATCC BAA-1902)"
+                }
+              ]
+            },
+            {
+              "heading": {
+                "zh": "污染条件（Dirty Condition）｜1分钟",
+                "en": "Dirty Condition | 1 minute"
+              },
+              "paragraphs": [
+                {
+                  "zh": "在更加严格的污染条件下——测试加入 3.0 g/L 牛白蛋白及 3.0 mL/L 羊红细胞作为干扰物——以下6种菌株仍全部达到 EN 13727 的 ≥5 log 杀菌要求并判定 PASS：",
+                  "en": "Under the more stringent dirty conditions - with 3.0 g/L bovine albumin + 3.0 mL/L sheep erythrocytes added as interfering substances - the following six strains all met EN 13727's ≥5 log bactericidal requirement and were rated PASS:"
+                },
+                {
+                  "zh": "*对于医疗和专业环境而言，污染条件测试尤其具有参考价值，因为实际使用中的表面可能存在蛋白质、体液残留或其他有机物，这些干扰物可能影响消毒剂的实际杀菌性能。[4]",
+                  "en": "*For healthcare and professional environments, the dirty-condition test is particularly informative because surfaces in actual use may contain proteins, residual body fluids, or other organic matter, and these interfering substances may affect the disinfectant's real-world bactericidal performance.[4]"
+                },
+                {
+                  "zh": "从上述VLSDW进行杀菌测试的菌种来看，我们覆盖了韩国首尔爆发的鲍曼不动杆菌（Acinetobacter baumannii）、肺炎克雷伯菌（Klebsiella pneumoniae）以及荷兰爆发的耐甲氧西林金黄色葡萄球菌（MRSA）。同时，针对肺炎克雷伯菌，我们分别在Clean条件和Dirty条件下分别测试了两种不同的菌株（ATCC 4352、ATCC BAA-1902）；针对MRSA，我们也分别在Clean条件下测试了两种不同的菌株（ATCC 33591、ATCC 43300）。",
+                  "en": "Based on the strains tested for bactericidal efficacy with VLSDW as described above, the coverage included the Seoul outbreak-associated Acinetobacter baumannii and Klebsiella pneumoniae as well as the Dutch outbreak-associated methicillin-resistant Staphylococcus aureus (MRSA). At the same time, for Klebsiella pneumoniae, two different strains (ATCC 4352 and ATCC BAA-1902) were tested separately under Clean and Dirty Conditions; for MRSA, two different strains (ATCC 33591 and ATCC 43300) were likewise tested separately under Clean Conditions."
+                }
+              ],
+              "bullets": [
+                {
+                  "zh": "大肠杆菌（Escherichia coli ATCC 10536）",
+                  "en": "Escherichia coli (ATCC 10536)"
+                },
+                {
+                  "zh": "金黄色葡萄球菌（Staphylococcus aureus ATCC 6538）",
+                  "en": "Staphylococcus aureus (ATCC 6538)"
+                },
+                {
+                  "zh": "铜绿假单胞菌（Pseudomonas aeruginosa ATCC 15442）",
+                  "en": "Pseudomonas aeruginosa (ATCC 15442)"
+                },
+                {
+                  "zh": "肺炎克雷伯菌（Klebsiella pneumoniae ATCC 4352）",
+                  "en": "Klebsiella pneumoniae (ATCC 4352)"
+                },
+                {
+                  "zh": "海氏肠球菌（Enterococcus hirae ATCC 10541）",
+                  "en": "Enterococcus hirae (ATCC 10541)"
+                },
+                {
+                  "zh": "鲍曼不动杆菌（Acinetobacter baumannii CICC 10254）",
+                  "en": "Acinetobacter baumannii (CICC 10254)"
+                }
+              ]
+            }
+          ],
+          "productSlug": "vinner-surface-disinfectant-wipes"
+        },
+        {
+          "level": 2,
+          "heading": {
+            "zh": "2. VINNERLOVE Alcohol Disinfectant Wipes (VLADW) 维尼医用级异丙醇物表消毒湿巾",
+            "en": "2. VINNERLOVE Alcohol Disinfectant Wipes (VLADW) - VINNER Medical-Grade Isopropyl Alcohol Surface Disinfectant Wipes"
+          },
+          "paragraphs": [
+            {
+              "zh": "VINNERLOVE 酒精消毒湿巾是一款正在开发中的酒精型表面消毒湿巾，面向医疗机构及专业环境中的快速、即用型表面消毒需求。",
+              "en": "VINNERLOVE Alcohol Disinfectant Wipes is an alcohol-based surface disinfectant wipe under development, intended for rapid, ready-to-use surface disinfection in healthcare facilities and professional environments."
+            },
+            {
+              "zh": "该产品同样由第三方实验室参照 BS EN 13727:2012+A2:2015 开展医疗领域杀菌活性测试（Phase 2, Step 1）。VLADW的EN 13727测试全部在污染条件（Dirty Condition）下开展，干扰物为 3.0 g/L 牛白蛋白 + 3.0 mL/L 羊红细胞，测试温度为 20°C，使用产品湿巾挤出液原液，接触时间为1分钟和2分钟。[5]",
+              "en": "The product was likewise tested for bactericidal activity in the medical field by a third-party laboratory with reference to BS EN 13727:2012+A2:2015 (Phase 2, Step 1). All EN 13727 testing for VLADW was conducted under **Dirty Condition**, with 3.0 g/L bovine albumin + 3.0 mL/L sheep erythrocytes as interfering substances, at 20°C, using the undiluted expressed liquid from the product wipes, with contact times of 1 and 2 minutes.[5]"
+            }
+          ],
+          "subsections": [
+            {
+              "heading": {
+                "zh": "污染条件（Dirty Condition）｜1分钟",
+                "en": "Dirty Condition | 1 minute"
+              },
+              "paragraphs": [
+                {
+                  "zh": "以下7个菌株/耐药株项目均达到 EN 13727 要求的细菌数量减少率 ≥5 log（99.999%），并判定通过：",
+                  "en": "The following seven strains/resistant-strain items all met EN 13727's required bacterial reduction of ≥5 log (99.999%) and passed:"
+                }
+              ],
+              "bullets": [
+                {
+                  "zh": "金黄色葡萄球菌（Staphylococcus aureus ATCC 6538）",
+                  "en": "Staphylococcus aureus (ATCC 6538)"
+                },
+                {
+                  "zh": "铜绿假单胞菌（Pseudomonas aeruginosa ATCC 15442）",
+                  "en": "Pseudomonas aeruginosa (ATCC 15442)"
+                },
+                {
+                  "zh": "海氏肠球菌（Enterococcus hirae ATCC 10541）",
+                  "en": "Enterococcus hirae (ATCC 10541)"
+                },
+                {
+                  "zh": "耐甲氧西林金黄色葡萄球菌（MRSA, Methicillin-resistant Staphylococcus aureus ATCC 33591）",
+                  "en": "Methicillin-resistant Staphylococcus aureus (MRSA, ATCC 33591)"
+                },
+                {
+                  "zh": "鲍曼不动杆菌（Acinetobacter baumannii CICC 10254）",
+                  "en": "Acinetobacter baumannii (CICC 10254)"
+                }
+              ]
+            },
+            {
+              "heading": {
+                "zh": "污染条件（Dirty Condition）｜2分钟",
+                "en": "Dirty Condition | 2 minutes"
+              },
+              "paragraphs": [
+                {
+                  "zh": "鼠伤寒沙门菌（Salmonella Typhimurium ATCC 14028）",
+                  "en": "Salmonella Typhimurium (ATCC 14028)"
+                },
+                {
+                  "zh": "从上述VLADW进行杀菌测试的菌种来看，我们覆盖了韩国首尔爆发的鲍曼不动杆菌（Acinetobacter baumannii）以及荷兰爆发的耐甲氧西林金黄色葡萄球菌（MRSA）。",
+                  "en": "Based on the strains tested for bactericidal efficacy with VLADW as described above, the coverage included the Seoul outbreak-associated Acinetobacter baumannii and the Dutch outbreak-associated methicillin-resistant Staphylococcus aureus (MRSA)."
+                }
+              ],
+              "bullets": [
+                {
+                  "zh": "大肠杆菌 K12（Escherichia coli K12 NCTC 10538）",
+                  "en": "Escherichia coli K12 (NCTC 10538)"
+                }
+              ]
+            }
+          ],
+          "productSlug": "vinner-alcohol-disinfectant-wipes"
+        },
+        {
+          "level": 1,
+          "heading": {
+            "zh": "6. 从测试数据看两款维尼健康的产品",
+            "en": "6. What the Test Data Show About VINNER Health's Two Products"
+          },
+          "paragraphs": [
+            {
+              "zh": "两款产品在本次 EN 13727 测试中均覆盖了多个与医疗相关感染和环境污染有关的重要病原体。特别是本文前述暴发新闻涉及的：",
+              "en": "Both products covered multiple important pathogens associated with healthcare-related infections and environmental contamination in this EN 13727 testing. In particular, the pathogens involved in the outbreaks discussed above include:"
+            },
+            {
+              "zh": "均已包含在 VINNER 对应产品的 EN 13727 测试范围内并取得通过的结果。其中 VLSDW 同时覆盖三者；VLADW 已覆盖鲍曼不动杆菌和 MRSA。[4][5]",
+              "en": "All of these were included in the EN 13727 testing scope for the relevant VINNER products and achieved passing results. VLSDW covers all three; VLADW covers Acinetobacter baumannii and MRSA.[4][5]"
+            }
+          ],
+          "bullets": [
+            {
+              "zh": "鲍曼不动杆菌（Acinetobacter baumannii）",
+              "en": "Acinetobacter baumannii (Acinetobacter baumannii)"
+            },
+            {
+              "zh": "耐甲氧西林金黄色葡萄球菌（MRSA）",
+              "en": "Methicillin-resistant Staphylococcus aureus (MRSA)"
+            },
+            {
+              "zh": "肺炎克雷伯菌（Klebsiella pneumoniae）",
+              "en": "Klebsiella pneumoniae (Klebsiella pneumoniae)"
+            }
+          ],
+          "paragraphsAfter": [
+            {
+              "zh": "产品开发说明",
+              "en": "Product Development Note"
+            },
+            {
+              "zh": "VINNERLOVE Surface Disinfectant Wipes（VLSDW）和 VINNERLOVE Alcohol Disinfectant Wipes（VLADW）目前均处于 VINNER 内部开发阶段，即将面世。",
+              "en": "VINNERLOVE Surface Disinfectant Wipes (VLSDW) and VINNERLOVE Alcohol Disinfectant Wipes (VLADW) are both currently in VINNER's internal development phase and will be launched soon."
+            }
+          ],
+          "subsections": [
+            {
+              "heading": {
+                "zh": "本文新闻涉及的病原体",
+                "en": "News Items Covered in This Article"
+              },
+              "bullets": [
+                {
+                  "zh": "鲍曼不动杆菌（Acinetobacter baumannii）",
+                  "en": "Acinetobacter baumannii"
+                },
+                {
+                  "zh": "耐甲氧西林金黄色葡萄球菌（MRSA, Methicillin-resistant Staphylococcus aureus）",
+                  "en": "Methicillin-resistant Staphylococcus aureus"
+                },
+                {
+                  "zh": "肺炎克雷伯菌（Klebsiella pneumoniae）",
+                  "en": "Klebsiella pneumoniae"
+                }
+              ],
+              "paragraphsAfter": [
+                {
+                  "zh": "均已纳入 VINNER 对应产品的欧洲 EN 标准效力测试范围，并取得通过结果。",
+                  "en": "All have been included in the European EN standard efficacy testing scope for the corresponding VINNER products and achieved passing results."
+                },
+                {
+                  "zh": "需要特别说明的是，新闻事件涉及的 MRAB、PVL-positive MRSA、OXA-181-producing Klebsiella pneumoniaeST16 等属于特定耐药表型、菌株或暴发克隆。VINNER 的产品效力数据仅对应实际检测报告中的测试微生物、测试条件和接触时间，不代表产品已经针对新闻事件中的具体暴发菌株进行测试。",
+                  "en": "It is important to note that the MRAB, PVL-positive MRSA, OXA-181-producing Klebsiella pneumoniae ST16, and similar terms in the news events refer to specific resistance phenotypes, strains, or outbreak clones. VINNER's product efficacy data correspond only to the test microorganisms, test conditions, and contact times in the actual test reports; they do not mean that the products have been tested against the specific outbreak strains involved in the news events."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "level": 1,
+          "heading": {
+            "zh": "参考文献与数据源",
+            "en": "References and Data Sources"
+          },
+          "bullets": [
+            {
+              "zh": "[1] Jung J, Kim J, Park H, et al. Genomic epidemiological investigation and effectiveness of multidisciplinary interventions in a multidrug-resistant Acinetobacter baumannii outbreak in a university hospital intensive care unit: A retrospective study. Antimicrobial Resistance & Infection Control. Published August 22, 2026. DOI: 10.1186/s13756-026-01805-9.",
+              "en": "[1] Jung J, Kim J, Park H, et al. Genomic epidemiological investigation and effectiveness of multidisciplinary interventions in a multidrug-resistant Acinetobacter baumannii outbreak in a university hospital intensive care unit: A retrospective study. Antimicrobial Resistance & Infection Control. Published August 22, 2026. DOI: 10.1186/s13756-026-01805-9."
+            },
+            {
+              "zh": "[2] van Schelven P, Nijhuis R, Jamin C, et al. Panton-Valentine Leukocidin–Encoding Methicillin-Resistant Staphylococcus aureus, the Netherlands, 2023–2024. Emerging Infectious Diseases. 2026;32(4):640–643. DOI: 10.3201/eid3204.251646. U.S. Centers for Disease Control and Prevention (CDC).",
+              "en": "[2] van Schelven P, Nijhuis R, Jamin C, et al. Panton-Valentine Leukocidin–Encoding Methicillin-Resistant Staphylococcus aureus, the Netherlands, 2023–2024. Emerging Infectious Diseases. 2026;32(4):640–643. DOI: 10.3201/eid3204.251646. U.S. Centers for Disease Control and Prevention (CDC)."
+            },
+            {
+              "zh": "[3] Jo S, Park SH, Kim JO, et al. Hospital-wide outbreak of OXA-181-producing Klebsiella pneumoniae ST16 in Korea: an epidemiological and genomic investigation. Journal of Hospital Infection. 2026;174:312–323. DOI: 10.1016/j.jhin.2026.05.046.",
+              "en": "[3] Jo S, Park SH, Kim JO, et al. Hospital-wide outbreak of OXA-181-producing Klebsiella pneumoniae ST16 in Korea: an epidemiological and genomic investigation. Journal of Hospital Infection. 2026;174:312–323. DOI: 10.1016/j.jhin.2026.05.046."
+            },
+            {
+              "zh": "[4] Vinner (Shenzhen) Health Products Limited. EN Testing for VINNER Products. Internal efficacy testing, 2026.",
+              "en": "[4] Vinner (Shenzhen) Health Products Limited. EN Testing for VINNER Products. Internal efficacy testing, 2026."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "OEM/ODM Compliance",
+      "date": "2026.08.21 / Blog001",
+      "updatedAt": "2026.09.14",
+      "title": {
+        "zh": "面向美国市场的化妆品品牌代工厂合规检查清单",
+        "en": "Checklist for Cosmetic OEM/ODM Manufacturers Serving the U.S. Market"
+      },
+      "body": {
+        "zh": "对于计划进入美国市场的化妆品品牌而言，选择 OEM/ODM 制造商时，除了配方、价格和产能，更需要关注供应商是否具备满足美国法规要求的合规基础。随着美国《2022 年化妆品法规现代化法案》（MoCRA）实施，化妆品制造设施、加工设施以及责任人的法规责任已经更加明确。",
+        "en": "For cosmetic brands planning to enter the U.S. market, selecting an OEM/ODM manufacturer involves much more than formulation, pricing, and production capacity. Brands should also evaluate whether the supplier has the regulatory and compliance foundation required for the U.S. market. Following the implementation of the Modernization of Cosmetics Regulation Act of 2022 (MoCRA), the responsibilities of cosmetic manufacturing facilities, processing facilities, and Responsible Persons have become much clearer."
+      },
+      "image": "/assets/factory/production-workshop.jpg",
+      "alt": "VINNER 化妆品与湿巾生产车间",
+      "slug": "how-to-choose-compliant-us-cosmetics-oem-supplier",
+      "authorId": "zion-hong",
+      "sections": [
+        {
+          "level": 1,
+          "heading": {
+            "zh": "前言",
+            "en": "Introduction"
           },
           "body": {
-            "zh": "重油污作业建议先进行粗擦，再对关键接触面进行二次精擦。含油废弃物应按工厂 EHS 规范分类处理。",
-            "en": "For heavy oil tasks, perform a first bulk wipe and then a second fine wipe on critical contact surfaces. Oil-contaminated waste should follow plant EHS disposal rules."
+            "zh": "对于寻找化妆湿巾、清洁湿巾、卸妆湿巾、身体护理产品及其他化妆品 OEM/ODM 制造商的品牌方而言，供应商评估建议同时关注两方面：第一是美国法规规定的基础合规要求，第二是供应商额外具备的质量管理和供应链管理能力。",
+            "en": "For brands sourcing cosmetic wipes, cleansing wipes, makeup remover wipes, body care products, and other cosmetic OEM/ODM products, supplier qualification should focus on two areas: the basic compliance requirements established by U.S. regulations, and the supplier's additional capabilities in quality management and supply chain management."
           }
+        },
+        {
+          "level": 1,
+          "heading": {
+            "zh": "1. 美国法规要求的基础合规条件",
+            "en": "1. Basic Compliance Requirements Under U.S. Regulations"
+          },
+          "body": {
+            "zh": "达到法规规定的基础要求，是品牌筛选海外化妆品 OEM/ODM 供应商的起点。",
+            "en": "Meeting the basic regulatory requirements is the starting point for qualifying an overseas cosmetic OEM/ODM supplier."
+          }
+        },
+        {
+          "level": 2,
+          "heading": {
+            "zh": "1.1 FDA 设施注册与 FEI",
+            "en": "1.1 FDA Facility Registration and FEI"
+          },
+          "body": {
+            "zh": "根据 21 U.S.C. § 364c，在美国销售化妆品的制造或加工设施，原则上需要向美国食品药品监督管理局（FDA）完成设施注册，并按规定更新注册信息。FDA 使用 FDA Establishment Identifier（FEI，FDA 机构识别码）作为化妆品设施注册中的设施识别号码。",
+            "en": "Under 21 U.S.C. § 364c, facilities that manufacture or process cosmetic products for distribution in the United States are generally required to register with the U.S. Food and Drug Administration (FDA) and renew their registration as required. FDA uses the FDA Establishment Identifier (FEI) as the facility identifier for cosmetic facility registration."
+          },
+          "paragraphs": [
+            {
+              "zh": "因此，在选择海外化妆品制造商时，品牌方应确认：",
+              "en": "When selecting an overseas cosmetic manufacturer, brands should confirm whether:"
+            }
+          ],
+          "bullets": [
+            {
+              "zh": "制造工厂是否拥有有效的 FEI；",
+              "en": "The manufacturing facility has a valid FEI;"
+            },
+            {
+              "zh": "制造工厂是否有指定的美国代理（U.S. Agent）；",
+              "en": "The manufacturing facility has designated a U.S. Agent;"
+            },
+            {
+              "zh": "相关生产设施是否已经完成 FDA Cosmetic Facility Registration。",
+              "en": "The relevant manufacturing facility has completed FDA Cosmetic Facility Registration."
+            }
+          ],
+          "paragraphsAfter": [
+            {
+              "zh": "需要特别注意：FDA 化妆品设施注册并不等同于 FDA 对工厂或产品的批准或认证。FDA 已明确说明，Facility Registration 和 Product Listing 并不是 FDA 的产品批准程序。因此，在供应商审核过程中，对于所谓“FDA Approved Factory”等表述，应保持谨慎。",
+              "en": "It is important to note that FDA cosmetic facility registration does not mean FDA has approved or certified the facility or its products. FDA has stated that facility registration and product listing are not product approval programs. Brands should therefore be cautious of descriptions such as “FDA Approved Factory.”"
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "heading": {
+            "zh": "1.2 产品列名：通常由品牌方负责",
+            "en": "1.2 Cosmetic Product Listing: Usually the Brand's Responsibility"
+          },
+          "body": {
+            "zh": "MoCRA 同时要求在美国市场销售的化妆品完成 Cosmetic Product Listing（化妆品产品列名）。这一责任通常由产品的 Responsible Person（责任人）承担。根据美国法规，Responsible Person 指产品标签上所列明的制造商、包装商或经销商。",
+            "en": "MoCRA also requires cosmetic products marketed in the United States to complete Cosmetic Product Listing. This responsibility generally belongs to the Responsible Person, meaning the manufacturer, packer, or distributor whose name appears on the product label."
+          },
+          "paragraphs": [
+            {
+              "zh": "对于 OEM 或 Private Label 项目，Responsible Person 通常是美国品牌方或经销商。不过，在进行 Product Listing 时，需要申报该产品实际生产设施的相关信息，因此制造商的 FDA 境外设施注册和 FEI 码会直接关系到客户后续的产品列名工作。",
+              "en": "For OEM or Private Label projects, the Responsible Person is commonly the U.S. brand owner or distributor. However, Product Listing must include information about the facility where the product is manufactured, so the manufacturer's FDA facility registration and FEI are directly relevant to the customer's later product-listing work."
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "heading": {
+            "zh": "1.3 注册并不等于产品已经合规",
+            "en": "1.3 Registration Does Not Mean the Product Is Automatically Compliant"
+          },
+          "body": {
+            "zh": "完成设施注册只是进入美国市场的基础条件之一，并不意味着具体产品已经自动符合美国法规。根据 MoCRA，Responsible Person 必须确保产品具备充分的 Safety Substantiation（安全性证明），并通过科学合理的测试、研究、分析或其他证据支持产品的安全性。",
+            "en": "Completing facility registration is only one of the basic requirements for entering the U.S. market. It does not mean that a specific cosmetic product automatically complies with all applicable U.S. regulations. Under MoCRA, the Responsible Person must ensure that the product has adequate Safety Substantiation supported by scientifically appropriate tests, studies, analyses, or other evidence."
+          },
+          "paragraphs": [
+            {
+              "zh": "同时，还需要正确判断产品在美国的法规分类属性。以清洁、美化或保持皮肤良好状态为主要用途的湿巾，可能属于 Cosmetic（化妆品）。但如果产品涉及抗菌、消毒、治疗、预防疾病、改变人体结构或功能等宣称，则可能进入不同的 FDA 法规路径，不能简单按照普通化妆品管理。",
+              "en": "The product's regulatory classification must also be evaluated carefully. Wipes intended primarily for cleansing, beautifying, or maintaining the skin in good condition may qualify as cosmetics. However, claims relating to antimicrobial activity, disinfection, treatment, disease prevention, or affecting the structure or function of the body may place a product on a different FDA regulatory pathway."
+            }
+          ]
+        },
+        {
+          "level": 1,
+          "heading": {
+            "zh": "2. 除上述基础条件外，还应该看制造商哪些能力？",
+            "en": "2. Beyond the Basic Requirements, What Else Should You Evaluate in a Manufacturer?"
+          },
+          "body": {
+            "zh": "达到法规最低要求，只是筛选供应商的第一步。对于国际品牌，特别是拥有多个 SKU、长期 OEM/ODM 项目或需要进行供应商审核的企业而言，一个成熟制造商还应具备系统化的质量管理、化妆品 GMP、环境管理、职业健康安全、劳工权益、商业道德以及供应链安全管理能力。",
+            "en": "Meeting the minimum regulatory requirements is only the first step in supplier qualification. For international brands, particularly those managing multiple SKUs, long-term OEM/ODM programs, or formal supplier audits, a mature manufacturer should also demonstrate systematic capabilities in quality management, cosmetic GMP, environmental management, occupational health and safety, labor rights, responsible business practices, business ethics, and supply chain security."
+          },
+          "paragraphs": [
+            {
+              "zh": "这也是 ISO 管理体系以及第三方供应链安全审核的重要价值所在：它们帮助品牌在产品质量和法规准备之外，进一步了解供应商的过程管理、现场控制和长期交付能力。",
+              "en": "This is where ISO management systems and independent third-party supply chain security audits provide additional value: they give brands visibility into process management, site controls, and long-term delivery capability beyond product quality and regulatory preparation."
+            }
+          ]
+        },
+        {
+          "level": 1,
+          "heading": {
+            "zh": "3. 维尼健康：为美国市场 OEM/ODM 项目建立完善的合规基础",
+            "en": "3. VINNER: A Comprehensive Compliance Foundation for U.S.-Market OEM/ODM Projects"
+          },
+          "body": {
+            "zh": "维尼健康长期为国际化妆品及湿巾品牌提供 OEM/ODM 制造服务，并建立了覆盖 FDA 注册、质量管理、化妆品 GMP、环境管理、职业健康安全、劳工权益、商业道德以及供应链安全管理的综合能力框架。",
+            "en": "VINNER has long provided OEM/ODM manufacturing services for international cosmetic and wet wipe brands and has established a comprehensive framework covering FDA registration, quality management, cosmetic GMP, environmental management, occupational health and safety, labor rights, responsible business practices, business ethics, and supply chain security."
+          },
+          "pageWindow": {
+            "href": "/about/factory-qualification/",
+            "image": "/assets/factory/laboratory.jpg",
+            "alt": "VINNER 工厂实验室与质量管理环境",
+            "kicker": {
+              "zh": "工厂资质",
+              "en": "Factory qualifications"
+            },
+            "title": {
+              "zh": "VINNER 工厂资质与认证",
+              "en": "VINNER Factory Qualifications & Certifications"
+            },
+            "body": {
+              "zh": "了解 VINNER 的质量管理体系、工厂认证与合规能力，为 OEM/ODM 合作评估提供依据。",
+              "en": "Explore VINNER's quality systems, factory certifications, and compliance capabilities for OEM/ODM supplier evaluation."
+            },
+            "link": {
+              "zh": "查看工厂资质",
+              "en": "View factory qualifications"
+            }
+          }
+        },
+        {
+          "level": 2,
+          "heading": {
+            "zh": "3.1 FDA 注册制造设施",
+            "en": "3.1 FDA-Registered Manufacturing Facility"
+          },
+          "body": {
+            "zh": "VINNER 已建立包括以下内容在内的美国化妆品制造设施合规基础：",
+            "en": "VINNER has established the following compliance foundation for cosmetic manufacturing facilities serving the U.S. market:"
+          },
+          "bullets": [
+            {
+              "zh": "FDA Establishment Identifier（FEI）；",
+              "en": "FDA Establishment Identifier (FEI);"
+            },
+            {
+              "zh": "FDA Cosmetic Facility Registration；",
+              "en": "FDA Cosmetic Facility Registration;"
+            },
+            {
+              "zh": "Designated U.S. Agent（指定美国代理）。",
+              "en": "Designated U.S. Agent."
+            }
+          ],
+          "paragraphs": [
+            {
+              "zh": "这意味着，在客户进行 MoCRA Product Listing 时，可以使用已经完成 FDA 注册的制造设施及其 FEI 信息，从而减少供应商准入及法规准备过程中的不确定性。",
+              "en": "When customers complete their MoCRA Product Listing, they can reference a manufacturing facility that has already completed FDA registration and has an established FEI, reducing uncertainty during supplier qualification and regulatory preparation."
+            }
+          ]
+        },
+        {
+          "level": 2,
+          "heading": {
+            "zh": "3.2 完善的质量管理与化妆品 GMP 体系",
+            "en": "3.2 Comprehensive Quality Management and Cosmetic GMP Systems"
+          },
+          "body": {
+            "zh": "维尼健康的管理体系与 GMP 体系包括：",
+            "en": "VINNER's quality management and GMP systems include:"
+          },
+          "bullets": [
+            {
+              "zh": "ISO 9001 —— 质量管理体系：为过程控制、客户要求管理、纠正措施、风险管理以及持续改进提供系统化框架。",
+              "en": "ISO 9001 — Quality Management System: a framework for process control, customer requirement management, corrective actions, risk management, and continual improvement."
+            },
+            {
+              "zh": "ISO 22716 —— 化妆品良好生产规范：针对化妆品生产、控制、储存和运输环节提出 GMP 管理要求，是国际市场广泛认可的化妆品 GMP 体系之一。",
+              "en": "ISO 22716 — Cosmetics Good Manufacturing Practices: guidance covering the production, control, storage, and shipment of cosmetic products, and one of the widely recognized cosmetic GMP frameworks in international markets."
+            },
+            {
+              "zh": "FDA Cosmetic GMP Guidelines：VINNER 的化妆品生产管理参考 FDA 化妆品 GMP 指南及相关检查要求建立控制体系，并取得由 Intertek 认证的 GMP 证书。",
+              "en": "FDA Cosmetic GMP Guidelines: VINNER's cosmetic manufacturing controls reference FDA cosmetic GMP guidance and relevant inspection expectations, supported by a GMP certificate issued by Intertek."
+            },
+            {
+              "zh": "ISO 14001 & ISO 45001 —— 环境管理体系与职业健康安全管理体系：补充环境管理、工作场所安全、风险控制以及持续改进机制。",
+              "en": "ISO 14001 & ISO 45001 — Environmental Management and Occupational Health and Safety Management Systems: additional evidence of environmental management, workplace safety, risk control, and continual improvement."
+            },
+            {
+              "zh": "SMETA —— 社会责任与道德贸易审核：通过独立第三方审核机构评估劳动标准、职业健康与安全，并根据审核范围覆盖环境管理和商业道德。",
+              "en": "SMETA — Social Responsibility and Ethical Trade Audit: an independent third-party assessment of labor standards and occupational health and safety, with environmental management and business ethics covered depending on scope."
+            },
+            {
+              "zh": "Intertek Global Security Verification（GSV）—— 全球供应链安全验证：覆盖工厂物理安全、人员安全、集装箱安全、封条管理、业务合作伙伴安全、网络安全、国际货运及供应链安全。",
+              "en": "Intertek Global Security Verification (GSV): a supply chain security assessment covering physical facility security, personnel security, container security, seal management, business partner security, cybersecurity, international transportation, and supply chain security."
+            }
+          ],
+          "paragraphs": [
+            {
+              "zh": "对于国际品牌而言，SMETA 审核可以在传统的产品质量和法规审核之外，进一步提供供应商在负责任生产、劳工管理及可持续供应链管理方面的信息，从而支持品牌开展供应商尽职调查和长期合作伙伴评估。",
+              "en": "For international brands, a SMETA audit provides visibility beyond traditional product quality and regulatory audits by assessing responsible manufacturing, labor management, and sustainable supply chain capabilities, supporting supplier due diligence and long-term partner evaluation."
+            },
+            {
+              "zh": "对于美国品牌及进口商而言，GSV 则为海外制造及国际物流环节提供额外的供应链安全视角。合规应该帮助客户降低风险，而不是增加工作量。",
+              "en": "For U.S. brands and importers, GSV adds visibility into overseas manufacturing and international logistics. Compliance should help customers reduce risk—not create more work."
+            }
+          ]
+        },
+        {
+          "level": 1,
+          "heading": {
+            "zh": "结语",
+            "en": "Conclusion"
+          },
+          "body": {
+            "zh": "通过以上体系，VINNER 可以为计划进入美国市场的化妆品及湿巾品牌提供更加成熟的制造和合规基础，帮助客户降低供应商审核、法规准备和供应链管理过程中的风险。对于正在开发化妆湿巾、个人护理湿巾以及 Private Label 化妆品的美国品牌而言，合规不应该等产品生产完成后才开始，而应该从选择制造商的第一步开始。",
+            "en": "Through these systems and compliance capabilities, VINNER provides brands planning to enter the U.S. cosmetics and wet wipes market with a more mature manufacturing and compliance foundation. For U.S. brands developing cosmetic wipes, personal care wipes, and Private Label cosmetic products, compliance should not begin after the product has been manufactured. It should begin with the very first step: choosing the right manufacturer."
+          }
+        },
+        {
+          "level": 1,
+          "heading": {
+            "zh": "参考文献",
+            "en": "References"
+          },
+          "bullets": [
+            {
+              "zh": "[1] Office of the Law Revision Counsel, U.S. House of Representatives. 21 U.S.C. § 364c — Registration and product listing.",
+              "en": "[1] Office of the Law Revision Counsel, U.S. House of Representatives. 21 U.S.C. § 364c — Registration and product listing."
+            },
+            {
+              "zh": "[2] U.S. Food and Drug Administration. Modernization of Cosmetics Regulation Act of 2022 (MoCRA).",
+              "en": "[2] U.S. Food and Drug Administration. Modernization of Cosmetics Regulation Act of 2022 (MoCRA)."
+            },
+            {
+              "zh": "[3] U.S. Food and Drug Administration. Form FDA 5066 — Registration of Cosmetic Product Facility.",
+              "en": "[3] U.S. Food and Drug Administration. Form FDA 5066 — Registration of Cosmetic Product Facility."
+            },
+            {
+              "zh": "[4] U.S. Food and Drug Administration. Registration & Listing of Cosmetic Product Facilities and Products.",
+              "en": "[4] U.S. Food and Drug Administration. Registration & Listing of Cosmetic Product Facilities and Products."
+            },
+            {
+              "zh": "[5] Office of the Law Revision Counsel, U.S. House of Representatives. 21 U.S.C. § 364d — Safety substantiation.",
+              "en": "[5] Office of the Law Revision Counsel, U.S. House of Representatives. 21 U.S.C. § 364d — Safety substantiation."
+            },
+            {
+              "zh": "[6] U.S. Food and Drug Administration. Is It a Cosmetic, a Drug, or Both? (Or Is It Soap?)",
+              "en": "[6] U.S. Food and Drug Administration. Is It a Cosmetic, a Drug, or Both? (Or Is It Soap?)"
+            },
+            {
+              "zh": "[7] International Organization for Standardization. ISO 9001 — Quality management systems.",
+              "en": "[7] International Organization for Standardization. ISO 9001 — Quality management systems."
+            },
+            {
+              "zh": "[8] International Organization for Standardization. ISO 22716 — Cosmetics — Good Manufacturing Practices.",
+              "en": "[8] International Organization for Standardization. ISO 22716 — Cosmetics — Good Manufacturing Practices."
+            },
+            {
+              "zh": "[9] U.S. Food and Drug Administration. Good Manufacturing Practice (GMP) Guidelines/Inspection Checklist for Cosmetics.",
+              "en": "[9] U.S. Food and Drug Administration. Good Manufacturing Practice (GMP) Guidelines/Inspection Checklist for Cosmetics."
+            },
+            {
+              "zh": "[10] International Organization for Standardization. ISO 14001 — Environmental management systems.",
+              "en": "[10] International Organization for Standardization. ISO 14001 — Environmental management systems."
+            },
+            {
+              "zh": "[11] International Organization for Standardization. ISO 45001 — Occupational health and safety management systems.",
+              "en": "[11] International Organization for Standardization. ISO 45001 — Occupational health and safety management systems."
+            },
+            {
+              "zh": "[12] Sedex. SMETA Audit: The Global Standard for Social Audits.",
+              "en": "[12] Sedex. SMETA Audit: The Global Standard for Social Audits."
+            },
+            {
+              "zh": "[13] Intertek. Global Security Verification (GSV).",
+              "en": "[13] Intertek. Global Security Verification (GSV)."
+            }
+          ]
         }
       ],
       "quote": {
-        "zh": "工业擦拭的核心，是在粗重现场里保持可控。",
-        "en": "The core of industrial wiping is keeping control in harsh environments."
+        "zh": "合规不应该等产品生产完成后才开始，而应该从选择制造商的第一步开始。",
+        "en": "Compliance should not begin after the product has been manufactured. It should begin with the very first step: choosing the right manufacturer."
       }
     }
   ],
   "downloads": [
     {
+      "type": "PDF",
+      "label": "Product Manual",
+      "title": "VINNERLOVE Rinse-free Bathing Wipes Product Manual",
+      "body": {
+        "zh": "VLBBW8 免冲洗沐浴湿巾产品手册，包含产品参数、关键亮点、使用场景与 8 片式床旁沐浴使用说明。",
+        "en": "Product manual for VLBBW8 Rinse-free Bathing Wipes, including specifications, key features, use scenarios, and the 8-wipe bedside bathing protocol."
+      },
+      "href": "/assets/uploads/vinnerlove-rinse-free-bathing-wipes-brochure.pdf"
+    },
+    {
+      "type": "PDF",
+      "label": "Product Manual",
+      "title": "VINNERLOVE Rinse-free Bathing Gloves Product Manual",
+      "body": {
+        "zh": "VLBBG8 免冲洗沐浴手套产品手册，包含产品参数、关键亮点、使用场景与手套式床旁沐浴使用说明。",
+        "en": "Product manual for VLBBG8 Rinse-free Bathing Gloves, including specifications, key features, use scenarios, and glove-format bedside bathing instructions."
+      },
+      "href": "/assets/uploads/vinnerlove-rinse-free-bathing-gloves-brochure.pdf"
+    },
+    {
+      "type": "PDF",
+      "label": "Product Manual",
+      "title": "VINNERLOVE Rinse-free Shampoo Cap Product Manual",
+      "body": {
+        "zh": "VLSHMC1 免冲洗洗发浴帽产品手册，包含产品参数、床旁洗发优势、使用场景与使用说明。",
+        "en": "Product manual for VLSHMC1 Rinse-free Shampoo Cap, including specifications, bedside shampooing advantages, use scenarios, and instructions."
+      },
+      "href": "/assets/uploads/vinnerlove-shampoo-cap-brochure.pdf"
+    },
+    {
+      "type": "PDF",
+      "label": "Product Manual",
+      "title": "VINNERLOVE Continence Care Wipes Product Manual",
+      "body": {
+        "zh": "VLCONCW25 失禁护理湿巾产品手册，包含 4 合 1 护理逻辑、适用场景、MASD/压疮风险护理说明与使用方式。",
+        "en": "Product manual for VLCONCW25 Continence Care Wipes, including the 4-in-1 care logic, use scenarios, MASD/pressure-injury risk care notes, and instructions."
+      },
+      "href": "/assets/uploads/vinnerlove-cream-care-wipes-brochure.pdf"
+    },
+    {
+      "type": "PDF",
+      "label": "Product Manual",
+      "title": "HOMEKEEP Pure Water Wipes Product Manual",
+      "body": {
+        "zh": "HKPWW60 纯水湿巾产品手册，包含产品参数、极简配方、使用场景与使用说明。",
+        "en": "Product manual for HKPWW60 Pure Water Wipes, including specifications, minimal formula, use scenarios, and instructions."
+      },
+      "href": "/assets/uploads/homekeep-pure-water-baby-wipes-brochure.pdf"
+    },
+    {
       "type": "SDS",
       "label": "Safety Data Sheet",
       "title": "VINNERLOVE Rinse-free Bathing Wipes SDS",
       "body": {
-        "zh": "VLBBW8 免冲洗沐浴湿巾的安全数据表，适用于内部审核、客户备案和合规资料提交。",
-        "en": "Safety Data Sheet for VLBBW8 Rinse-free Bathing Wipes, prepared for internal review, customer records, and compliance documentation."
+        "zh": "VLBBW8 免冲洗沐浴湿巾的安全数据表，请联系我们获取。",
+        "en": "Safety Data Sheet for VLBBW8 Rinse-free Bathing Wipes. Contact us to request a copy."
       },
-      "href": "/assets/uploads/vinnerlove-rinse-free-bathing-wipes-sds.pdf"
-    },
-    {
-      "type": "PDF",
-      "label": "Product Brochure",
-      "title": "VINNERLOVE Rinse-free Bathing Wipes Brochure",
-      "body": {
-        "zh": "包含 VLBBW8 产品参数、关键亮点、使用场景与 8 片式床旁沐浴使用说明。",
-        "en": "Includes VLBBW8 specifications, key features, use scenarios, and the 8-wipe bedside bathing protocol."
-      },
-      "href": "/assets/uploads/vinnerlove-rinse-free-bathing-wipes-brochure.pdf"
+      "href": ""
     },
     {
       "type": "SDS",
       "label": "Safety Data Sheet",
       "title": "VINNERLOVE Rinse-free Bathing Gloves SDS",
       "body": {
-        "zh": "VLBBG8 免冲洗沐浴手套的安全数据表，适用于客户备案和合规资料提交。",
-        "en": "Safety Data Sheet for VLBBG8 Rinse-free Bathing Gloves for customer records and compliance documentation."
+        "zh": "VLBBG8 免冲洗沐浴手套的安全数据表，请联系我们获取。",
+        "en": "Safety Data Sheet for VLBBG8 Rinse-free Bathing Gloves. Contact us to request a copy."
       },
-      "href": "/assets/uploads/vinnerlove-rinse-free-bathing-gloves-sds.pdf"
-    },
-    {
-      "type": "PDF",
-      "label": "Product Brochure",
-      "title": "VINNERLOVE Rinse-free Bathing Gloves Brochure",
-      "body": {
-        "zh": "包含 VLBBG8 产品参数、关键亮点、使用场景与手套式床旁沐浴使用说明。",
-        "en": "Includes VLBBG8 specifications, key features, use scenarios, and glove-format bedside bathing instructions."
-      },
-      "href": "/assets/uploads/vinnerlove-rinse-free-bathing-gloves-brochure.pdf"
+      "href": ""
     },
     {
       "type": "SDS",
       "label": "Safety Data Sheet",
       "title": "VINNERLOVE Rinse-free Shampoo Cap SDS",
       "body": {
-        "zh": "VLSHMC1 免冲洗洗发浴帽的安全数据表，适用于内部审核、客户备案和合规资料提交。",
-        "en": "Safety Data Sheet for VLSHMC1 Rinse-free Shampoo Cap for internal review, customer records, and compliance documentation."
-      },
-      "href": "/assets/uploads/vinnerlove-shampoo-cap-sds.pdf"
-    },
-    {
-      "type": "PDF",
-      "label": "Product Brochure",
-      "title": "VINNERLOVE Rinse-free Shampoo Cap Brochure",
-      "body": {
-        "zh": "包含 VLSHMC1 产品参数、床旁洗发优势、使用场景与使用说明。",
-        "en": "Includes VLSHMC1 specifications, bedside shampooing advantages, use scenarios, and instructions."
-      },
-      "href": "/assets/uploads/vinnerlove-shampoo-cap-brochure.pdf"
-    },
-    {
-      "type": "SDS",
-      "label": "Safety Data Sheet",
-      "title": "VINNERLOVE Cream Care Wipes SDS",
-      "body": {
-        "zh": "VLCONCW25 失禁护理乳霜湿巾的安全数据表，适用于客户备案和合规资料提交。",
-        "en": "Safety Data Sheet for VLCONCW25 Cream Care Wipes for customer records and compliance documentation."
-      },
-      "href": "/assets/uploads/vinnerlove-cream-care-wipes-sds.pdf"
-    },
-    {
-      "type": "PDF",
-      "label": "Product Brochure",
-      "title": "VINNERLOVE Cream Care Wipes Brochure",
-      "body": {
-        "zh": "包含 VLCONCW25 4合1乳霜护理湿巾的产品详情、适用场景、MASD/压疮风险护理说明与使用方式。",
-        "en": "Includes VLCONCW25 4-in-1 cream care wipe details, use scenarios, MASD/pressure-injury risk care notes, and instructions."
-      },
-      "href": "/assets/uploads/vinnerlove-cream-care-wipes-brochure.pdf"
-    },
-    {
-      "type": "PDF",
-      "label": "Product Brochure",
-      "title": "HOMEKEEP Pure Water Baby Wipes Brochure",
-      "body": {
-        "zh": "包含 HKPWW60 纯水婴儿湿巾的产品参数、极简配方、使用场景与使用说明。",
-        "en": "Includes HKPWW60 Pure Water Baby Wipes specifications, minimal formula, use scenarios, and instructions."
-      },
-      "href": "/assets/uploads/homekeep-pure-water-baby-wipes-brochure.pdf"
-    },
-    {
-      "type": "PDF",
-      "label": "Product Manual",
-      "title": "MEDIKEEP Infection Control Wipes Product Guide",
-      "body": {
-        "zh": "包含三款 MEDIKEEP SKU 的尺寸、包装、应用场景和储存建议。",
-        "en": "Includes size, pack format, use case, and storage guidance across the three MEDIKEEP SKUs."
+        "zh": "VLSHMC1 免冲洗洗发浴帽的安全数据表，请联系我们获取。",
+        "en": "Safety Data Sheet for VLSHMC1 Rinse-free Shampoo Cap. Contact us to request a copy."
       },
       "href": ""
     },
     {
       "type": "SDS",
       "label": "Safety Data Sheet",
-      "title": "Alcohol Disinfectant Wipes SDS",
+      "title": "VINNERLOVE Continence Care Wipes SDS",
       "body": {
-        "zh": "酒精型消毒湿巾的安全信息、储存条件、运输和应急处理摘要。",
-        "en": "Safety, storage, transport, and emergency handling summary for alcohol disinfectant wipes."
+        "zh": "VLCONCW25 失禁护理湿巾的安全数据表，请联系我们获取。",
+        "en": "Safety Data Sheet for VLCONCW25 Continence Care Wipes. Contact us to request a copy."
       },
       "href": ""
     },
     {
-      "type": "PDF",
-      "label": "Selection Matrix",
-      "title": "CAREKEEP Personal Care Selection Sheet",
+      "type": "SDS",
+      "label": "Safety Data Sheet",
+      "title": "HOMEKEEP Pure Water Wipes SDS",
       "body": {
-        "zh": "按使用对象、护理频次和包装场景选择 Bath Wipes、Bath Gloves 和 Continence Care Wipes。",
-        "en": "Choose Bath Wipes, Bath Gloves, and Continence Care Wipes by user type, care frequency, and packaging context."
+        "zh": "HKPWW60 纯水湿巾的安全数据表，请联系我们获取。",
+        "en": "Safety Data Sheet for HKPWW60 HOMEKEEP Pure Water Wipes. Contact us to request a copy."
+      },
+      "href": ""
+    },
+    {
+      "type": "SDS",
+      "label": "Safety Data Sheet",
+      "title": "VINNER Surface Disinfectant Wipes SDS",
+      "body": {
+        "zh": "VINNER Surface Disinfectant Wipes 的安全数据表，请联系我们获取。",
+        "en": "Safety Data Sheet for VINNER Surface Disinfectant Wipes. Contact us to request a copy."
+      },
+      "href": ""
+    },
+    {
+      "type": "SDS",
+      "label": "Safety Data Sheet",
+      "title": "VINNER Alcohol Disinfectant Wipes SDS",
+      "body": {
+        "zh": "VINNER Alcohol Disinfectant Wipes 的安全数据表，请联系我们获取。",
+        "en": "Safety Data Sheet for VINNER Alcohol Disinfectant Wipes. Contact us to request a copy."
+      },
+      "href": ""
+    },
+    {
+      "type": "SDS",
+      "label": "Safety Data Sheet",
+      "title": "VINNER CHG Wash Cloths SDS",
+      "body": {
+        "zh": "VINNER CHG Wash Cloths 的安全数据表，请联系我们获取。",
+        "en": "Safety Data Sheet for VINNER CHG Wash Cloths. Contact us to request a copy."
       },
       "href": ""
     }

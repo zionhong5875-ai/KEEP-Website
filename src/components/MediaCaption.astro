@@ -1,0 +1,17 @@
+---
+import { attrs, text } from "../utils/i18n";
+
+const { caption, source = null, className = "" } = Astro.props;
+---
+
+<figcaption class:list={["site-image-caption", className]}>
+  <span class="site-image-caption-text">
+    <span aria-hidden="true">* </span><span {...attrs(caption)}>{text(caption)}</span>
+  </span>
+  {source && (
+    <a class="site-image-caption-source" href={source.url} target="_blank" rel="noreferrer">
+      <span data-zh="图片来源：" data-en="Source:">图片来源：</span>
+      <span {...attrs(source.label)}>{text(source.label)}</span>
+    </a>
+  )}
+</figcaption>

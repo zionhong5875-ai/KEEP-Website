@@ -1,81 +1,101 @@
 ---
+import { searchConfig } from "../../utils/search-config.mjs";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import products from "../../data/site/products.json";
-import { text, attrs } from "../../utils/i18n";
+import GlossaryLinkedText from "../../components/GlossaryLinkedText.astro";
+import products from "../../data/site/products.json" with { type: "json" };
+import { text, attrs, localizedPath } from "../../utils/i18n";
+import { getProductLineMeta } from "../../utils/productLines";
+import { isDirectDownloadResource, sortResourcesByAccessAndName } from "../../utils/resources.js";
+import { absoluteUrl, productBrandName, schemaIds } from "../../utils/schema";
 
-export const prerender = true;
+const entry = products.lines.flatMap((line) =>
+  line.skus.filter((sku) => !sku.comingSoon).map((sku) => ({
+    line,
+    sku,
+    related: line.skus.filter((item) => item.slug !== sku.slug && !item.comingSoon)
+  }))
+).find(({ sku }) => sku.slug === Astro.params.slug);
 
-export function getStaticPaths() {
-  const entries = products.lines.flatMap((line) =>
-    line.skus.map((sku) => ({
-      line,
-      sku,
-      related: line.skus.filter((item) => item.slug !== sku.slug)
-    }))
-  );
-
-  return entries.map((entry) => ({
-    params: { slug: entry.sku.slug },
-    props: entry
-  }));
+if (!entry) {
+  return new Response("Product not found", { status: 404 });
 }
 
-const { line, sku, related } = Astro.props;
+const { line, sku, related } = entry;
+const lineMeta = getProductLineMeta(line);
 const pageTitle = {
   zh: `${sku.title} | VINNER`,
   en: `${sku.title} | VINNER`
 };
-const pageDescription = sku.intro || sku.body;
+const pageDescription = {
+  zh: sku.intro?.zh || sku.body.zh,
+  en: sku.body?.en || sku.intro.en
+};
 const specLabel = (spec) => text(Array.isArray(spec) ? spec[0] : spec.label);
 const specValue = (spec) => text(Array.isArray(spec) ? spec[1] : spec.value);
 const gallery = sku.gallery?.length ? sku.gallery : [{ image: sku.image, alt: sku.alt }];
 const galleryTotal = gallery.length;
-const hasDownloadHref = (href) =>
-  typeof href === "string" && href.trim() && href !== "#" && href !== "/resources/#downloads";
-const availableDownloads = (sku.downloads || []).filter((download) => hasDownloadHref(download.href));
+const availableResources = sortResourcesByAccessAndName(sku.downloads || []);
 const relatedProducts = related.slice(0, 3);
-const lineDisplayName = line.name.en || text(line.name);
 const relatedLineTitle = {
-  zh: `${line.brand} / ${lineDisplayName}`,
-  en: `${line.brand} / ${lineDisplayName}`
+  zh: lineMeta.name.zh,
+  en: lineMeta.name.en
 };
-const siteUrl = import.meta.env.PUBLIC_SITE_URL || "https://keep-website-ochre.vercel.app";
-const absoluteUrl = (value) => new URL(value, siteUrl).toString();
+const siteUrl = searchConfig.siteUrl;
+const language = Astro.locals.language || "zh";
+const ids = schemaIds(siteUrl);
+const pageUrl = absoluteUrl(localizedPath(`/products/${sku.slug}/`, language), siteUrl);
+const productId = `${pageUrl}#product`;
 const productSchema = {
-  "@context": "https://schema.org",
   "@type": "Product",
+  "@id": productId,
   name: sku.title,
   sku: sku.itemNo || sku.code,
   brand: {
     "@type": "Brand",
-    name: line.brand
+    name: productBrandName(sku.code, sku.title)
   },
-  category: `${line.brand} ${text(line.title)}`,
-  description: text(pageDescription),
-  image: gallery.map((image) => absoluteUrl(image.image)),
-  url: absoluteUrl(`/products/${sku.slug}/`),
+  manufacturer: { "@id": ids.organization },
+  category: text(lineMeta.name, language),
+  description: text(pageDescription, language),
+  image: gallery.map((image) => absoluteUrl(image.image, siteUrl)),
+  url: pageUrl,
+  mainEntityOfPage: { "@id": `${pageUrl}#webpage` },
   additionalProperty: sku.specs.map((spec) => ({
     "@type": "PropertyValue",
-    name: specLabel(spec),
-    value: specValue(spec)
+    name: text(Array.isArray(spec) ? spec[0] : spec.label, language),
+    value: text(Array.isArray(spec) ? spec[1] : spec.value, language)
   }))
 };
 ---
 
-<BaseLayout title={pageTitle} description={pageDescription} image={gallery[0]?.image || sku.image} ogType="product" schema={productSchema}>
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  image={gallery[0]?.image || sku.image}
+  ogType="product"
+  pageType="ItemPage"
+  breadcrumbs={[
+    { name: { zh: "首页", en: "Home" }, path: "/" },
+    { name: { zh: "产品", en: "Products" }, path: "/products/" },
+    { name: lineMeta.name, path: `/products/series/${lineMeta.slug}/` },
+    { name: { zh: sku.title, en: sku.title }, path: `/products/${sku.slug}/` }
+  ]}
+  mainEntityId={productId}
+  schema={productSchema}
+>
   <section class="product-detail-hero" aria-labelledby="product-title">
     <div class="product-detail-copy">
       <a class="back-link" href="/products/" data-zh="返回产品页" data-en="Back to products">返回产品页</a>
-      <p class="section-kicker">{line.index}</p>
+      <p class="section-kicker" {...attrs(lineMeta.indexLabel)}>{text(lineMeta.indexLabel)}</p>
       <h1 id="product-title">{sku.title}</h1>
       <p class="product-code">
         <span>{sku.code}</span>
         <span>{sku.itemNo}</span>
       </p>
-      <p class="product-intro" {...attrs(sku.intro)}>{text(sku.intro)}</p>
+      <p class="product-intro"><GlossaryLinkedText value={sku.intro} context="hero" /></p>
       <div class="button-row">
-        {availableDownloads.length > 0 && (
-          <a class="button button-accent" href="#downloads" data-zh="下载资料" data-en="Download resources">下载资料</a>
+        {availableResources.length > 0 && (
+          <a class="button button-accent" href="/contact/" data-zh="联系我们获取资料" data-en="Contact us to request resources">联系我们获取资料</a>
         )}
         <a class="button button-dark" href="/contact/" data-zh="咨询方案" data-en="Request a brief">咨询方案</a>
       </div>
@@ -116,8 +136,8 @@ const productSchema = {
     <div class="detail-highlight-grid">
       {sku.highlights.map((highlight) => (
         <article>
-          <span aria-hidden="true">+</span>
-          <p {...attrs(highlight)}>{text(highlight)}</p>
+          <span class="highlight-icon" aria-hidden="true">+</span>
+          <p><GlossaryLinkedText value={highlight} context="feature" /></p>
         </article>
       ))}
     </div>
@@ -130,8 +150,8 @@ const productSchema = {
     <dl class="detail-spec-list">
       {sku.specs.map((spec) => (
         <div>
-          <dt {...attrs(Array.isArray(spec) ? spec[0] : spec.label)}>{specLabel(spec)}</dt>
-          <dd {...attrs(Array.isArray(spec) ? spec[1] : spec.value)}>{specValue(spec)}</dd>
+        <dt><GlossaryLinkedText value={Array.isArray(spec) ? spec[0] : spec.label} context="label" /></dt>
+        <dd><GlossaryLinkedText value={Array.isArray(spec) ? spec[1] : spec.value} context="spec" /></dd>
         </div>
       ))}
     </dl>
@@ -145,22 +165,29 @@ const productSchema = {
       {sku.usage.map((step, index) => (
         <li>
           <span>{String(index + 1).padStart(2, "0")}</span>
-          <p {...attrs(step)}>{text(step)}</p>
+          <h3 class="sr-only" data-zh={`步骤 ${index + 1}`} data-en={`Step ${index + 1}`}>步骤 {index + 1}</h3>
+          <p><GlossaryLinkedText value={step} context="paragraph" /></p>
         </li>
       ))}
     </ol>
   </section>
 
-  {availableDownloads.length > 0 && (
-    <section class="product-detail-section download-panel" id="downloads" aria-labelledby="downloads-title">
+  {availableResources.length > 0 && (
+    <section class="product-detail-section download-panel" id="resources" aria-labelledby="downloads-title">
       <div class="detail-section-heading">
-        <h2 id="downloads-title" class="detail-section-label" data-zh="数字资源" data-en="Digital resources">数字资源</h2>
+        <h2 id="downloads-title" class="detail-section-label" data-zh="资料获取" data-en="Resource access">资料获取</h2>
       </div>
       <div class="download-card-grid">
-        {availableDownloads.map((download) => (
-          <a class="download-card" href={download.href} target="_blank" rel="noopener noreferrer">
+        {availableResources.map((download) => (
+          <a class="download-card" href={isDirectDownloadResource(download) ? download.href : "/contact/"} {...(isDirectDownloadResource(download) ? { download: true } : {})}>
             <span>{download.type}</span>
             <strong {...attrs(download.title)}>{text(download.title)}</strong>
+            <small
+              data-zh={isDirectDownloadResource(download) ? "下载 Brochure" : "联系我们获取"}
+              data-en={isDirectDownloadResource(download) ? "Download brochure" : "Contact us to request"}
+            >
+              {isDirectDownloadResource(download) ? "下载 Brochure" : "联系我们获取"}
+            </small>
           </a>
         ))}
       </div>
@@ -176,9 +203,11 @@ const productSchema = {
       <div class="related-grid">
         {relatedProducts.map((item) => (
           <a class="related-card" href={`/products/${item.slug}/`}>
-            <figure><img src={item.image} alt={item.alt} /></figure>
+            <figure>
+              <img src={item.image} alt={item.alt} />
+            </figure>
             <span>{item.code}</span>
-            <strong>{item.title}</strong>
+            <h3>{item.title}</h3>
             <p {...attrs(item.body)}>{text(item.body)}</p>
           </a>
         ))}

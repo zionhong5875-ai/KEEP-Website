@@ -1,11 +1,51 @@
 ---
+import { searchConfig } from "../utils/search-config.mjs";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import products from "../data/site/products.json";
-import { text, attrs } from "../utils/i18n";
+import products from "../data/site/products.json" with { type: "json" };
+import { text, attrs, localizedPath } from "../utils/i18n";
 import { getProductLineHref, getProductLineMeta } from "../utils/productLines";
+import { absoluteUrl } from "../utils/schema";
+
+const siteUrl = searchConfig.siteUrl;
+const language = Astro.locals.language || "zh";
+const pageUrl = absoluteUrl(localizedPath("/products/", language), siteUrl);
+const productLinesId = `${pageUrl}#product-lines`;
+const productLinesSchema = {
+  "@type": "ItemList",
+  "@id": productLinesId,
+  name: language === "en" ? "Vinner product lines" : "维尼产品线",
+  numberOfItems: products.lines.length,
+  itemListElement: products.lines.map((line, index) => {
+    const meta = getProductLineMeta(line);
+    const url = absoluteUrl(localizedPath(`/products/series/${meta.slug}/`, language), siteUrl);
+    return {
+      "@type": "ListItem",
+      position: index + 1,
+      item: {
+        "@type": "CollectionPage",
+        "@id": `${url}#webpage`,
+        name: text(meta.name, language),
+        description: text(meta.summary, language),
+        url,
+        image: absoluteUrl(meta.image, siteUrl)
+      }
+    };
+  })
+};
 ---
 
-<BaseLayout title={products.meta.title} description={products.meta.description} image={products.hero.image}>
+<BaseLayout
+  title={products.meta.title}
+  description={products.meta.description}
+  image={products.hero.image}
+  pageType="CollectionPage"
+  breadcrumbs={[
+    { name: { zh: "首页", en: "Home" }, path: "/" },
+    { name: { zh: "产品", en: "Products" }, path: "/products/" }
+  ]}
+  mainEntityId={productLinesId}
+  schema={productLinesSchema}
+>
   <section class="product-line-showcase" aria-labelledby="page-title">
     <div class="product-line-showcase-heading">
       <p class="eyebrow" {...attrs(products.hero.eyebrow)}>{text(products.hero.eyebrow)}</p>
@@ -17,14 +57,19 @@ import { getProductLineHref, getProductLineMeta } from "../utils/productLines";
       {products.lines.map((line) => {
         const meta = getProductLineMeta(line);
         return (
-          <a class="product-line-tile" href={getProductLineHref(line)} aria-label={`View ${meta.brand}`}>
+          <a
+            class="product-line-tile"
+            data-line-slug={meta.slug}
+            href={getProductLineHref(line)}
+            aria-label={`View ${meta.name.en}`}
+          >
             <span class="product-line-tile-media" aria-hidden="true">
               <img src={meta.image} alt={meta.alt} />
             </span>
             <span class="product-line-tile-copy">
-              <span>{line.index}</span>
-              <strong>{meta.brand}</strong>
-              <em {...attrs(meta.title)}>{text(meta.title)}</em>
+              <span {...attrs(meta.indexLabel)}>{text(meta.indexLabel)}</span>
+              <h2 {...attrs(meta.name)}>{text(meta.name)}</h2>
+              <h3 {...attrs(meta.title)}>{text(meta.title)}</h3>
               <small data-zh="进入系列" data-en="View series">进入系列</small>
             </span>
           </a>

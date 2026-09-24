@@ -1,71 +1,180 @@
 ---
+import { searchConfig } from "../../utils/search-config.mjs";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import resources from "../../data/site/resources.json";
-import { text, attrs } from "../../utils/i18n";
+import MediaCaption from "../../components/MediaCaption.astro";
+import GlossaryLinkedText from "../../components/GlossaryLinkedText.astro";
+import resources from "../../data/site/resources.json" with { type: "json" };
+import authors from "../../data/site/authors.json";
+import products from "../../data/site/products.json" with { type: "json" };
+import { text, attrs, imageAttrs, localizedPath } from "../../utils/i18n";
+import { sortResourcesByDate } from "../../utils/resources.js";
+import { absoluteUrl, resourceDate, schemaIds, buildAuthorNode } from "../../utils/schema";
 
-export const prerender = true;
+const entries = [
+  ...sortResourcesByDate(resources.news).map((item) => ({ item, type: { zh: "新闻", en: "News" }, meta: item.date })),
+  ...sortResourcesByDate(resources.blogs).map((item) => ({ item, type: { zh: "博客", en: "Blog" }, meta: item.date || item.category }))
+];
+const entry = entries.find(({ item }) => item.slug === Astro.params.slug);
 
-export function getStaticPaths() {
-  const entries = [
-    ...resources.news.map((item) => ({ item, type: { zh: "新闻", en: "News" }, meta: item.date })),
-    ...resources.blogs.map((item) => ({ item, type: { zh: "博客", en: "Blog" }, meta: item.category }))
-  ];
-
-  return entries.map((entry) => ({
-    params: { slug: entry.item.slug },
-    props: {
-      ...entry,
-      related: entries.filter((candidate) => candidate.item.slug !== entry.item.slug).slice(0, 3)
-    }
-  }));
+if (!entry) {
+  return new Response("Resource not found", { status: 404 });
 }
 
-const { item, type, meta, related } = Astro.props;
-const title = {
-  zh: `${text(item.title)} | VINNER`,
-  en: `${text(item.title)} | VINNER`
+const { item, type, meta } = entry;
+const related = entries.filter((candidate) => candidate.item.slug !== item.slug).slice(0, 3);
+const resourceSeo = {
+  "vinner-personal-cleansing-care-line": {
+    title: { zh: "维尼个人清洁护理产品线发布 | VINNER", en: "VINNER Personal Cleansing & Care Line Launch" },
+    description: {
+      zh: "了解 VINNER 面向住院、老年照护、新生儿与日常肌肤护理推出的免冲洗沐浴、洗发、失禁护理和婴儿湿巾产品。",
+      en: "Discover VINNER's rinse-free bathing, shampoo, incontinence-care, and baby wipes for hospitals, elderly care, newborns, and everyday skin cleansing."
+    }
+  },
+  "vinner-team-whx-dubai-2026": {
+    title: { zh: "VINNER 团队亮相 WHX Dubai 2026", en: "VINNER at WHX Dubai 2026" },
+    description: {
+      zh: "回顾 VINNER 团队在 WHX Dubai 2026 展会与全球医疗健康客户围绕产品、项目和供应合作开展的交流。",
+      en: "See how VINNER met global healthcare customers at WHX Dubai 2026 to discuss products, projects, and supply partnerships."
+    }
+  },
+  "vinner-gama-healthcare-strategic-discussion": {
+    title: { zh: "维尼健康访问 GAMA Healthcare | VINNER", en: "VINNER Visits GAMA Healthcare" },
+    description: {
+      zh: "维尼健康董事长刘春静女士访问 GAMA Healthcare，双方围绕长期合作与未来业务发展机会开展战略交流。",
+      en: "VINNER chairwoman Liu Chunjing visited GAMA Healthcare for strategic discussions on long-term cooperation and future opportunities."
+    }
+  },
+  "rinse-free-bathing-products-us-care-market": {
+    title: { zh: "美国医疗养老免冲洗沐浴产品与合规 | VINNER", en: "Rinse-Free Bathing Products in U.S. Care | VINNER" },
+    description: {
+      zh: "分析美国医疗与养老市场免冲洗沐浴产品的需求，涵盖院感防控、采购、法规合规与照护体验。",
+      en: "Explore demand for rinse-free bathing products in U.S. healthcare and elderly care, including infection control, procurement, compliance, and dignity."
+    }
+  },
+  "bacterial-outbreaks-environmental-infection-control": {
+    title: { zh: "细菌暴发与医疗环境感染控制 | VINNER", en: "Bacterial Outbreaks & Environmental Infection Control" },
+    description: {
+      zh: "结合 MRAB、MRSA 与耐碳青霉烯肺炎克雷伯菌暴发调查，说明环境表面清洁消毒在感染控制中的作用。",
+      en: "Review MRAB, MRSA, and carbapenem-resistant Klebsiella outbreaks and the role of environmental surface disinfection in infection control."
+    }
+  },
+  "how-to-choose-compliant-us-cosmetics-oem-supplier": {
+    title: { zh: "美国化妆品 OEM/ODM 合规检查清单 | VINNER", en: "U.S. Cosmetics OEM/ODM Compliance Checklist | VINNER" },
+    description: {
+      zh: "面向计划进入美国市场的化妆品品牌，梳理选择 OEM/ODM 制造商时应核查的 MoCRA、工厂注册、质量与供应能力。",
+      en: "A practical checklist for evaluating MoCRA readiness, facility registration, quality systems, and supply capability in a U.S. cosmetics OEM/ODM partner."
+    }
+  },
+  "eu-forced-labour-regulation-preparation": {
+    title: { zh: "欧盟强迫劳动条例实施准备 | VINNER", en: "Preparing for the EU Forced Labour Regulation | VINNER" },
+    description: {
+      zh: "解读欧盟《禁止强迫劳动产品条例》的适用范围、判断标准、进口商准备事项及供应商证据体系。",
+      en: "An overview of the EU Forced Labour Regulation, its scope, forced-labour indicators, importer preparation and supplier evidence."
+    }
+  },
 };
-const description = item.body;
-const articleParagraphs = [item.body, ...item.sections.map((section) => section.body)];
+const seo = item.meta || resourceSeo[item.slug] || {
+  title: { zh: `${text(item.title, "zh")} | VINNER`, en: `${text(item.title, "en")} | VINNER` },
+  description: item.body
+};
+const title = seo.title;
+const description = seo.description;
+const articleParagraphs = [
+  item.body,
+  ...item.sections.flatMap((section) => [section.body, ...(section.paragraphs || []), ...(section.paragraphsAfter || [])])
+].filter(Boolean);
 const gallery = Array.isArray(item.gallery) ? item.gallery : [];
-const hasRichSections = item.sections.some((section) => Array.isArray(section.media) && section.media.length > 0);
+const hasRichSections = Array.isArray(item.sections) && item.sections.length > 0;
+const isReferenceSection = (section) => {
+  const headingZh = text(section.heading, "zh");
+  const headingEn = text(section.heading, "en");
+  return /^(references?|references and data sources|参考文献|参考资料)/i.test(`${headingZh} ${headingEn}`.trim());
+};
+const productBySlug = new Map(
+  products.lines.flatMap((line) => line.skus || []).map((product) => [product.slug, product])
+);
+const productLineBySlug = new Map(
+  products.lines.flatMap((line) => (line.skus || []).map((product) => [product.slug, line]))
+);
+const lineBySlug = new Map(products.lines.map((line) => [line.slug, line]));
+const productSlugsForSection = (section) => [
+  ...(Array.isArray(section.productSlugs) ? section.productSlugs : []),
+  ...(section.productSlug && !section.productSlugs?.includes(section.productSlug) ? [section.productSlug] : [])
+];
+const resourceMediaLayoutClass = (count) => `resource-media-count-${Math.min(count, 4)}`;
 const relatedTitle = type.zh === "博客"
   ? { zh: "更多博客。", en: "More blog posts." }
   : { zh: "更多新闻。", en: "More news." };
-const siteUrl = import.meta.env.PUBLIC_SITE_URL || "https://keep-website-ochre.vercel.app";
-const absoluteUrl = (value) => new URL(value, siteUrl).toString();
+const siteUrl = searchConfig.siteUrl;
+const language = Astro.locals.language || "zh";
+const ids = schemaIds(siteUrl);
+const pageUrl = absoluteUrl(localizedPath(`/resources/${item.slug}/`, language), siteUrl);
+const articleId = `${pageUrl}#article`;
+const author = item.authorId ? authors[item.authorId] : undefined;
+if (type.zh === "博客" && !author) throw new Error(`Missing author for ${item.slug}`);
+const publishedAt = resourceDate(item.date);
+const modifiedAt = resourceDate(item.updatedAt);
+const mentionedProducts = [...new Set(item.sections.flatMap((section) => productSlugsForSection(section)))]
+  .map((slug) => productBySlug.get(slug))
+  .filter((product) => product && !product.comingSoon)
+  .map((product) => ({
+    "@id": `${absoluteUrl(localizedPath(`/products/${product.slug}/`, language), siteUrl)}#product`
+  }));
 const articleSchema = {
-  "@context": "https://schema.org",
-  "@type": type.zh === "新闻" ? "NewsArticle" : "Article",
-  headline: text(item.title),
-  description: text(description),
-  image: absoluteUrl(item.image),
-  url: absoluteUrl(`/resources/${item.slug}/`),
-  author: {
-    "@type": "Organization",
-    name: "VINNER Health"
-  },
-  publisher: {
-    "@type": "Organization",
-    name: "VINNER Health"
-  },
-  articleSection: text(type),
-  inLanguage: ["zh-CN", "en"]
+  "@type": type.zh === "新闻" ? "NewsArticle" : "BlogPosting",
+  "@id": articleId,
+  headline: text(item.title, language),
+  description: text(description, language),
+  image: absoluteUrl(item.image, siteUrl),
+  url: pageUrl,
+  mainEntityOfPage: { "@id": `${pageUrl}#webpage` },
+  datePublished: publishedAt,
+  ...(modifiedAt ? { dateModified: modifiedAt } : {}),
+  author: author ? buildAuthorNode(item.authorId, siteUrl, language) : { "@id": ids.organization },
+  publisher: { "@id": ids.organization },
+  articleSection: item.category || text(type, language),
+  inLanguage: language === "en" ? "en" : "zh-CN",
+  isAccessibleForFree: true,
+  ...(mentionedProducts.length ? { mentions: mentionedProducts } : {})
 };
 ---
 
-<BaseLayout title={title} description={description} image={item.image} ogType="article" schema={articleSchema}>
+<BaseLayout
+  title={title}
+  description={description}
+  image={item.image}
+  ogType="article"
+  pageType="ItemPage"
+  breadcrumbs={[
+    { name: { zh: "首页", en: "Home" }, path: "/" },
+    { name: { zh: "资源", en: "Resources" }, path: "/resources/" },
+    { name: item.title, path: `/resources/${item.slug}/` }
+  ]}
+  mainEntityId={articleId}
+  schema={articleSchema}
+  articleMeta={{ author: author ? text(author.name, language) : undefined, publishedAt, modifiedAt }}
+>
   <article class="resource-detail">
     <header class="resource-detail-hero">
       <div class="resource-detail-copy">
-        <a class="back-link" href="/resources/" data-zh="返回博客与资源" data-en="Back to resources">返回博客与资源</a>
+        <a class="back-link" href="/resources/" data-zh="返回资源" data-en="Back to resources">返回资源</a>
         <p class="section-kicker" {...attrs(type)}>{text(type)}</p>
-        <h1 {...attrs(item.title)}>{text(item.title)}</h1>
-        <p class="resource-detail-meta">{meta}</p>
-        <p class="resource-detail-summary" {...attrs(item.body)}>{text(item.body)}</p>
+        <h1 {...attrs(item.title)}>
+          <span>{text(item.title)}</span>
+          {item.subtitle && <span class="resource-detail-title-line" {...attrs(item.subtitle)}>{text(item.subtitle)}</span>}
+        </h1>
+        <p class="resource-detail-meta"><time datetime={publishedAt}>{meta}</time>{modifiedAt && <><br /><span data-zh="更新于 " data-en="Updated ">更新于 </span><time datetime={modifiedAt}>{modifiedAt}</time></>}</p>
+        {author && (
+          <div class="resource-detail-author">
+            <strong><a href={`/contact/#${item.authorId}`} rel="author" {...attrs(author.name)}>{text(author.name)}</a></strong>
+            <span {...attrs(author.role)}>{text(author.role)}</span>
+          </div>
+        )}
+        <p class="resource-detail-summary"><GlossaryLinkedText value={item.body} context="hero" /></p>
       </div>
       <figure class="resource-detail-image">
-        <img src={item.image} alt={item.alt} />
+        <img src={item.image} {...imageAttrs(item.alt)} />
+        <MediaCaption caption={item.imageCaption || item.title} />
       </figure>
     </header>
 
@@ -73,19 +182,150 @@ const articleSchema = {
       <div class="resource-article-content">
         {hasRichSections ? (
           <>
-            <p class="resource-article-lead" {...attrs(item.body)}>{text(item.body)}</p>
+            <p class="resource-article-lead"><GlossaryLinkedText value={item.body} context="paragraph" /></p>
             {item.sections.map((section) => (
-              <section class="resource-day-entry">
+              <section class:list={["resource-day-entry", section.level === 2 && "resource-day-entry-subsection"]}>
                 <div class="resource-day-copy">
-                  <h2 {...attrs(section.heading)}>{text(section.heading)}</h2>
-                  <p {...attrs(section.body)}>{text(section.body)}</p>
+                  {section.level === 1 ? (
+                    <h2 {...attrs(section.heading)}>{text(section.heading)}</h2>
+                  ) : section.level === 2 ? (
+                    <h3 {...attrs(section.heading)}>{text(section.heading)}</h3>
+                  ) : (
+                    <h4 {...attrs(section.heading)}>{text(section.heading)}</h4>
+                  )}
+                  {section.body && <p><GlossaryLinkedText value={section.body} context="body" /></p>}
+                  {Array.isArray(section.paragraphs) && section.paragraphs.map((paragraph) => (
+                    <p><GlossaryLinkedText value={paragraph} context="paragraph" /></p>
+                  ))}
+                  {section.pageWindow && (
+                    <div class="resource-page-window" aria-label="Related page">
+                      <a class="article-product-window article-page-window" href={section.pageWindow.href}>
+                        <figure class="article-product-window-media">
+                          <img src={section.pageWindow.image} {...imageAttrs(section.pageWindow.alt)} loading="lazy" />
+                        </figure>
+                        <span class="article-product-window-copy">
+                          <span class="article-product-window-kicker" {...attrs(section.pageWindow.kicker)}>{text(section.pageWindow.kicker)}</span>
+                          <strong {...attrs(section.pageWindow.title)}>{text(section.pageWindow.title)}</strong>
+                          <span class="article-product-window-description" {...attrs(section.pageWindow.body)}>{text(section.pageWindow.body)}</span>
+                          <span
+                            class="article-product-window-link"
+                            {...attrs(section.pageWindow.link)}
+                          >
+                            {text(section.pageWindow.link)}
+                          </span>
+                        </span>
+                      </a>
+                    </div>
+                  )}
+                  {section.linkedParagraph && (
+                    <p class="resource-linked-paragraph">
+                      <a href={section.linkedParagraph.href} {...attrs(section.linkedParagraph.text)}>
+                        {text(section.linkedParagraph.text)}
+                      </a>
+                    </p>
+                  )}
+                  {Array.isArray(section.bullets) && (
+                    <ul class="resource-article-list">
+                      {section.bullets.map((bullet) => (
+                        <li>{isReferenceSection(section) ? text(bullet) : <GlossaryLinkedText value={bullet} context="bullet" />}</li>
+                      ))}
+                    </ul>
+                  )}
+                  {Array.isArray(section.paragraphsAfter) && section.paragraphsAfter.map((paragraph) => (
+                    <p><GlossaryLinkedText value={paragraph} context="paragraph" /></p>
+                  ))}
+                  {Array.isArray(section.subsections) && section.subsections.map((subsection) => (
+                    <div class="resource-article-subsection">
+                      <h4 {...attrs(subsection.heading)}>{text(subsection.heading)}</h4>
+                      {subsection.body && <p><GlossaryLinkedText value={subsection.body} context="body" /></p>}
+                      {Array.isArray(subsection.paragraphs) && subsection.paragraphs.map((paragraph) => (
+                        <p><GlossaryLinkedText value={paragraph} context="paragraph" /></p>
+                      ))}
+                      {Array.isArray(subsection.bullets) && (
+                        <ul class="resource-article-list">
+                          {subsection.bullets.map((bullet) => (
+                            <li><GlossaryLinkedText value={bullet} context="bullet" /></li>
+                          ))}
+                        </ul>
+                      )}
+                      {Array.isArray(subsection.paragraphsAfter) && subsection.paragraphsAfter.map((paragraph) => (
+                        <p><GlossaryLinkedText value={paragraph} context="paragraph" /></p>
+                      ))}
+                    </div>
+                  ))}
+                  {section.table && (
+                    <div class="resource-data-table-wrap">
+                      <table class="resource-data-table">
+                        <thead>
+                          <tr>{section.table.headers.map((header) => <th><GlossaryLinkedText value={header} context="table" /></th>)}</tr>
+                        </thead>
+                        <tbody>
+                          {section.table.rows.map((row) => (
+                            <tr>{row.map((cell) => <td><GlossaryLinkedText value={cell} context="table" /></td>)}</tr>
+                          ))}
+                        </tbody>
+                      </table>
+                      {section.table.caption && <MediaCaption caption={section.table.caption} />}
+                    </div>
+                  )}
+                  {productSlugsForSection(section).map((productSlug) => productBySlug.has(productSlug) && (() => {
+                    const product = productBySlug.get(productSlug);
+                    const productLine = productLineBySlug.get(product.slug);
+                    const productHref = product.comingSoon
+                      ? `/products/series/${productLine?.slug || "medikeep"}/#products`
+                      : `/products/${product.slug}/`;
+                    const productImage = product.comingSoon && productLine?.slug !== "oem-odm"
+                      ? "/assets/coming-soon.png"
+                      : product.image;
+                    return (
+                      <a class="article-product-window" href={productHref}>
+                        <figure class="article-product-window-media">
+                          <img src={productImage} alt={product.comingSoon ? "敬请期待 / Coming Soon" : product.alt} loading="lazy" />
+                        </figure>
+                        <span class="article-product-window-copy">
+                          <span class="article-product-window-kicker" data-zh="关联产品" data-en="Related product">关联产品</span>
+                          <strong>{product.title}</strong>
+                          <span class="article-product-window-description" {...attrs(product.body)}>{text(product.body)}</span>
+                          <span
+                            class="article-product-window-link"
+                            data-zh={product.comingSoon ? "查看产品线" : "查看产品"}
+                            data-en={product.comingSoon ? "View product line" : "View product"}
+                          >
+                            {product.comingSoon ? "查看产品线" : "查看产品"}
+                          </span>
+                        </span>
+                      </a>
+                    );
+                  })())}
+                  {section.productLineSlug && lineBySlug.has(section.productLineSlug) && (() => {
+                    const productLine = lineBySlug.get(section.productLineSlug);
+                    return (
+                      <a class="article-product-window article-product-line-window" href={`/products/series/${productLine.slug}/`}>
+                        <figure class="article-product-window-media">
+                          <img src={productLine.image} alt={productLine.alt} loading="lazy" />
+                        </figure>
+                        <span class="article-product-window-copy">
+                          <span class="article-product-window-kicker" data-zh="关联产品线" data-en="Related product line">关联产品线</span>
+                          <strong {...attrs(productLine.name)}>{text(productLine.name)}</strong>
+                          <span class="article-product-window-description" {...attrs(productLine.summary)}>{text(productLine.summary)}</span>
+                          <span
+                            class="article-product-window-link"
+                            data-zh="查看产品线"
+                            data-en="View product line"
+                          >
+                            查看产品线
+                          </span>
+                        </span>
+                      </a>
+                    );
+                  })()}
                 </div>
                 {Array.isArray(section.media) && section.media.length > 0 && (
-                  <div class="resource-day-media">
+                  <div class:list={["resource-day-media", resourceMediaLayoutClass(section.media.length)]}>
                     {section.media.map((media) => (
                       <figure>
-                        <img src={media.image} alt={media.alt} />
-                        <figcaption {...attrs(media.caption)}>{text(media.caption)}</figcaption>
+                        <img src={media.image} {...imageAttrs(media.alt)} />
+                        <MediaCaption caption={media.caption} source={media.source} />
                       </figure>
                     ))}
                   </div>
@@ -95,22 +335,32 @@ const articleSchema = {
           </>
         ) : (
           articleParagraphs.map((paragraph) => (
-            <p {...attrs(paragraph)}>{text(paragraph)}</p>
+            <p><GlossaryLinkedText value={paragraph} context="paragraph" /></p>
           ))
         )}
       </div>
     </section>
 
+    {item.quote && (
+      <aside class="resource-article-quote">
+        <blockquote><GlossaryLinkedText value={item.quote} context="quote" /></blockquote>
+      </aside>
+    )}
+
     {gallery.length > 0 && (
-      <section class="resource-article-gallery" aria-label="Article gallery">
+      <section
+        class:list={["resource-article-gallery", resourceMediaLayoutClass(gallery.length)]}
+        aria-label="Article gallery"
+      >
         {gallery.map((media) => (
           <figure>
-            <img src={media.image} alt={media.alt} />
-            <figcaption {...attrs(media.caption)}>{text(media.caption)}</figcaption>
+            <img src={media.image} {...imageAttrs(media.alt)} />
+            <MediaCaption caption={media.caption} source={media.source} />
           </figure>
         ))}
       </section>
     )}
+
   </article>
 
   <section class="product-detail-section related-products resource-related-section" aria-labelledby="related-resources-title">
@@ -118,14 +368,16 @@ const articleSchema = {
       <p class="section-kicker" data-zh="继续阅读" data-en="Keep reading">继续阅读</p>
       <h2 id="related-resources-title" {...attrs(relatedTitle)}>{text(relatedTitle)}</h2>
     </div>
-    <div class="related-resource-grid">
-      {related.map((entry) => (
-        <a class="related-resource-card" href={`/resources/${entry.item.slug}/`}>
-          <figure><img src={entry.item.image} alt={entry.item.alt} /></figure>
-          <span>{entry.meta}</span>
-          <strong {...attrs(entry.item.title)}>{text(entry.item.title)}</strong>
-        </a>
-      ))}
+      <div class="related-resource-grid">
+        {related.map((entry) => (
+          <a class="related-resource-card" href={`/resources/${entry.item.slug}/`}>
+          <figure>
+            <img src={entry.item.image} {...imageAttrs(entry.item.alt)} />
+          </figure>
+            <span>{entry.meta}</span>
+            <h3 {...attrs(entry.item.title)}>{text(entry.item.title)}</h3>
+          </a>
+        ))}
     </div>
   </section>
 </BaseLayout>

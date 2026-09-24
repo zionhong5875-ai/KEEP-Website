@@ -1,76 +1,230 @@
 ---
+import { searchConfig } from "../../../utils/search-config.mjs";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
-import products from "../../../data/site/products.json";
-import { text, attrs } from "../../../utils/i18n";
+import GlossaryLinkedText from "../../../components/GlossaryLinkedText.astro";
+import products from "../../../data/site/products.json" with { type: "json" };
+import { text, attrs, localizedPath } from "../../../utils/i18n";
 import { getProductLineMeta } from "../../../utils/productLines";
+import { absoluteUrl, productBrandName, schemaIds } from "../../../utils/schema";
 
-export const prerender = true;
+const entry = products.lines
+  .map((line) => ({ line, meta: getProductLineMeta(line) }))
+  .find(({ meta }) => meta.slug === Astro.params.slug);
 
-export function getStaticPaths() {
-  const lineEntries = products.lines.map((line) => ({
-    line,
-    meta: getProductLineMeta(line)
-  }));
-
-  return lineEntries.map((entry) => ({
-    params: { slug: entry.meta.slug },
-    props: entry
-  }));
+if (!entry) {
+  return new Response("Product line not found", { status: 404 });
 }
 
-const { line, meta } = Astro.props;
+const { line, meta } = entry;
 const pageTitle = {
-  zh: `${meta.brand} ${text(meta.title)} | VINNER`,
-  en: `${meta.brand} ${text(meta.title)} | VINNER`
+  zh: `${meta.name.zh}擦拭产品线 | VINNER`,
+  en: `${meta.name.en} Wipes & Solutions | VINNER`
 };
-const pageDescription = meta.summary;
+const englishDescriptions = {
+  medikeep: "Explore VINNER infection-control wipes for healthcare surfaces and skin antisepsis, with material-compatible, low-residue, and traceable options.",
+  indukeep: "Explore VINNER industrial wipes for general maintenance, heavy-duty soil removal, solvents, and cleanroom precision wiping.",
+  "oem-odm": "Develop custom wet wipes with VINNER OEM/ODM services, covering formulas, substrates, packaging, sampling, quality control, and batch delivery."
+};
+const pageDescription = {
+  zh: `${meta.summary.zh}${meta.products.zh}`,
+  en: englishDescriptions[meta.slug] || `${meta.summary.en} ${meta.products.en}`
+};
 const specLabel = (spec) => text(Array.isArray(spec) ? spec[0] : spec.label);
 const specValue = (spec) => text(Array.isArray(spec) ? spec[1] : spec.value);
-const getSkuPrimaryImage = (sku) => sku.gallery?.[0]?.image || sku.image;
-const getSkuPrimaryAlt = (sku) => sku.gallery?.[0]?.alt || sku.alt;
+const isOemLine = meta.slug === "oem-odm";
+const comingSoonImage = "/assets/coming-soon.png";
+const getSkuPrimaryImage = (sku) => {
+  if (sku.comingSoon && !isOemLine) {
+    return comingSoonImage;
+  }
+
+  return isOemLine ? sku.image : sku.gallery?.[0]?.image || sku.image;
+};
+const getSkuPrimaryAlt = (sku) => {
+  if (sku.comingSoon && !isOemLine) {
+    return `${sku.title} coming soon`;
+  }
+
+  const alt = isOemLine ? sku.alt : sku.gallery?.[0]?.alt || sku.alt;
+  return typeof alt === "string" ? alt : alt.en;
+};
+const squareCanvasProductSlugs = new Set([
+  "vinnerlove-rinse-free-bathing-wipes",
+  "vinnerlove-cream-care-wipes",
+  "homekeep-pure-water-baby-wipes"
+]);
+const getSkuImageClasses = (sku) => [
+  squareCanvasProductSlugs.has(sku.slug) && "is-square-canvas",
+  sku.slug === "vinnerlove-rinse-free-shampoo-cap" && "is-portrait-package",
+  sku.slug === "oem-rinse-free-shampoo-cap" && "is-shampoo-cap"
+];
 const hasProducts = line.skus.length > 0;
+const hasPlannedProducts = line.skus.some((sku) => sku.comingSoon);
+const skuName = (sku) => sku.displayName || { zh: sku.title, en: sku.title };
+const disabledSkuLabel = (sku) => sku.cardLabel || { zh: "即将推出", en: "COMING SOON" };
+const plannedFeatureLabel = { zh: "产品特点", en: "Product features" };
+const plannedApplicationLabel = { zh: "适用场景", en: "Applications" };
+const joinLocalizedItems = (items = []) => ({
+  zh: items.map((item) => item.zh).filter(Boolean).join(" · "),
+  en: items.map((item) => item.en).filter(Boolean).join(" · ")
+});
+const getPlannedRows = (sku) => [
+  { label: plannedFeatureLabel, value: joinLocalizedItems(sku.features) },
+  { label: plannedApplicationLabel, value: joinLocalizedItems(sku.applications) }
+].filter(({ value }) => value.zh || value.en);
+const productGroups = line.skus.reduce((groups, sku) => {
+  const key = sku.group?.en || "default";
+  let group = groups.find((item) => item.key === key);
+
+  if (!group) {
+    group = { key, label: sku.group || null, items: [] };
+    groups.push(group);
+  }
+
+  group.items.push(sku);
+  return groups;
+}, []);
+const siteUrl = searchConfig.siteUrl;
+const language = Astro.locals.language || "zh";
+const ids = schemaIds(siteUrl);
+const pageUrl = absoluteUrl(localizedPath(`/products/series/${meta.slug}/`, language), siteUrl);
+const productListId = `${pageUrl}#products`;
+const productNodes = line.skus.map((sku) => {
+  const detailUrl = sku.comingSoon
+    ? undefined
+    : absoluteUrl(localizedPath(`/products/${sku.slug}/`, language), siteUrl);
+  const itemId = detailUrl ? `${detailUrl}#product` : `${pageUrl}#product-${sku.slug}`;
+  const itemNumber = !["PLANNED", "OEM/ODM"].includes(sku.itemNo) ? sku.itemNo : undefined;
+
+  return {
+    "@type": "Product",
+    "@id": itemId,
+    name: text(skuName(sku), language),
+    description: text(sku.body || sku.intro || meta.summary, language),
+    image: absoluteUrl(getSkuPrimaryImage(sku), siteUrl),
+    ...(itemNumber ? { sku: itemNumber } : {}),
+    ...(sku.code ? { mpn: sku.code } : {}),
+    ...(detailUrl ? {
+      url: detailUrl,
+      mainEntityOfPage: { "@id": `${detailUrl}#webpage` }
+    } : {}),
+    brand: {
+      "@type": "Brand",
+      name: productBrandName(sku.code, sku.title)
+    },
+    manufacturer: { "@id": ids.organization },
+    category: text(meta.name, language)
+  };
+});
+const seriesSchema = [
+  {
+    "@type": "ItemList",
+    "@id": productListId,
+    name: language === "en" ? `${meta.name.en} products` : `${meta.name.zh}产品`,
+    numberOfItems: productNodes.length,
+    itemListElement: productNodes.map((node, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      item: { "@id": node["@id"] }
+    }))
+  },
+  ...productNodes
+];
 ---
 
-<BaseLayout title={pageTitle} description={pageDescription} image={meta.image}>
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  image={meta.image}
+  pageType="CollectionPage"
+  breadcrumbs={[
+    { name: { zh: "首页", en: "Home" }, path: "/" },
+    { name: { zh: "产品", en: "Products" }, path: "/products/" },
+    { name: meta.name, path: `/products/series/${meta.slug}/` }
+  ]}
+  mainEntityId={productListId}
+  schema={seriesSchema}
+>
   <section class="page-hero page-hero-image series-page-hero" aria-labelledby="series-title">
     <img src={meta.image} alt={meta.alt} />
     <div class="page-hero-scrim"></div>
     <div>
       <a class="back-link back-link-on-media" href="/products/" data-zh="返回产品页" data-en="Back to products">返回产品页</a>
-      <p class="eyebrow">{line.index}</p>
-      <h1 id="series-title">{meta.brand}</h1>
+      <p class="eyebrow" {...attrs(meta.indexLabel)}>{text(meta.indexLabel)}</p>
+      <h1 id="series-title" {...attrs(meta.name)}>{text(meta.name)}</h1>
       <p {...attrs(meta.title)}>{text(meta.title)}</p>
     </div>
   </section>
 
-  <section class="series-products" aria-labelledby="series-products-title">
-    <div class="series-products-heading">
-      <p class="section-kicker" data-zh="系列产品" data-en="Series Products">系列产品</p>
-      <h2 id="series-products-title" data-zh="看清楚这个系列目前有哪些产品。" data-en="See every product currently in this series.">看清楚这个系列目前有哪些产品。</h2>
-    </div>
-
+  <section id="products" class:list={["series-products", isOemLine && "is-oem-series"]} aria-label={`${meta.name.en} products`}>
+    <h2 class="sr-only" data-zh="产品系列" data-en="Product range">产品系列</h2>
     {hasProducts ? (
-      <div class="series-product-grid">
-        {line.skus.map((sku) => (
-          <article class="series-product-card">
-            <a class="series-product-media" href={`/products/${sku.slug}/`} aria-label={`View ${sku.title}`}>
-              <img src={getSkuPrimaryImage(sku)} alt={getSkuPrimaryAlt(sku)} />
-            </a>
-            <div class="series-product-copy">
-              <span>{sku.code}</span>
-              <h3><a href={`/products/${sku.slug}/`}>{sku.title}</a></h3>
-              <p {...attrs(sku.body)}>{text(sku.body)}</p>
-              <dl>
-                {sku.specs.slice(0, 3).map((spec) => (
-                  <div>
-                    <dt {...attrs(Array.isArray(spec) ? spec[0] : spec.label)}>{specLabel(spec)}</dt>
-                    <dd {...attrs(Array.isArray(spec) ? spec[1] : spec.value)}>{specValue(spec)}</dd>
+      <div class="series-product-groups">
+        {productGroups.map((group) => (
+          <section class="series-product-group" aria-label={group.label ? text(group.label) : undefined}>
+            {group.label && (
+              <header class="series-product-group-heading">
+                <p class="section-kicker" data-zh="产品系列" data-en="Product Range">产品系列</p>
+                <h3 {...attrs(group.label)}>{text(group.label)}</h3>
+              </header>
+            )}
+            <div class:list={["series-product-grid", hasPlannedProducts && "is-planned-grid"]}>
+              {group.items.map((sku) => (
+                <article class:list={["series-product-card", sku.comingSoon && "is-coming-soon"]}>
+                  {sku.comingSoon ? (
+                    <div class="series-product-media">
+                      <img
+                        class:list={getSkuImageClasses(sku)}
+                        src={getSkuPrimaryImage(sku)}
+                        alt={getSkuPrimaryAlt(sku)}
+                      />
+                    </div>
+                  ) : (
+                    <a class="series-product-media" href={`/products/${sku.slug}/`} aria-label={`View ${sku.title}`}>
+                      <img class:list={getSkuImageClasses(sku)} src={getSkuPrimaryImage(sku)} alt={getSkuPrimaryAlt(sku)} />
+                    </a>
+                  )}
+                  <div class="series-product-copy">
+                    <span>{sku.code}</span>
+                    <h3>
+                      {sku.comingSoon ? (
+                        <span {...attrs(skuName(sku))}>{text(skuName(sku))}</span>
+                      ) : (
+                        <a href={`/products/${sku.slug}/`}>{sku.title}</a>
+                      )}
+                    </h3>
+                    <p><GlossaryLinkedText value={sku.body} context="body" /></p>
+                    {sku.comingSoon ? (
+                      <dl>
+                        {getPlannedRows(sku).map((row) => (
+                          <div>
+                            <dt><GlossaryLinkedText value={row.label} context="label" /></dt>
+                            <dd><GlossaryLinkedText value={row.value} context="spec" /></dd>
+                          </div>
+                        ))}
+                      </dl>
+                    ) : (
+                      <dl>
+                        {sku.specs.slice(0, 3).map((spec) => (
+                          <div>
+                            <dt><GlossaryLinkedText value={Array.isArray(spec) ? spec[0] : spec.label} context="label" /></dt>
+                            <dd><GlossaryLinkedText value={Array.isArray(spec) ? spec[1] : spec.value} context="spec" /></dd>
+                          </div>
+                        ))}
+                      </dl>
+                    )}
+                    {sku.comingSoon ? (
+                      <span class="sku-card-link is-disabled" aria-disabled="true" {...attrs(disabledSkuLabel(sku))}>
+                        {text(disabledSkuLabel(sku))}
+                      </span>
+                    ) : (
+                      <a class="sku-card-link" href={`/products/${sku.slug}/`} data-zh="查看详情" data-en="View details">查看详情</a>
+                    )}
                   </div>
-                ))}
-              </dl>
-              <a class="sku-card-link" href={`/products/${sku.slug}/`} data-zh="查看详情" data-en="View details">查看详情</a>
+                </article>
+              ))}
             </div>
-          </article>
+          </section>
         ))}
       </div>
     ) : (
@@ -88,17 +242,17 @@ const hasProducts = line.skus.length > 0;
     )}
   </section>
 
-  <section class="series-intro" aria-labelledby="series-intro-title">
+    <section class="series-intro series-intro--compact" aria-labelledby="series-intro-title">
     <div class="series-intro-copy">
       <p class="section-kicker" data-zh="系列定位" data-en="Series Position">系列定位</p>
       <h2 id="series-intro-title" {...attrs(meta.summary)}>{text(meta.summary)}</h2>
-      <p {...attrs(meta.detail)}>{text(meta.detail)}</p>
+      <p><GlossaryLinkedText value={meta.detail} context="body" /></p>
     </div>
     <div class="series-use-grid">
       {meta.uses.map((item) => (
         <article>
-          <span aria-hidden="true">+</span>
-          <p {...attrs(item)}>{text(item)}</p>
+          <span class="use-icon" aria-hidden="true">+</span>
+          <p><GlossaryLinkedText value={item} context="paragraph" /></p>
         </article>
       ))}
     </div>

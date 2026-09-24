@@ -1,25 +1,32 @@
 export const productLineMeta = {
-  "01 / MEDIKEEP": {
+  medikeep: {
     slug: "medikeep",
-    brand: "MEDIKEEP",
+    indexLabel: {
+      zh: "01 / 感染控制",
+      en: "01 / INFECTION CONTROL"
+    },
+    name: {
+      zh: "感染控制",
+      en: "INFECTION CONTROL"
+    },
     title: {
-      zh: "医疗感染控制擦拭",
-      en: "Medical infection-control wipes"
+      zh: "消毒湿巾，干巾与皮肤除菌",
+      en: "Disinfectant Wipes, Dry Wipes & Antiseptic Skin Wipes"
     },
     summary: {
-      zh: "面向医院、诊所、实验室和公共卫生场景，围绕表面消毒、皮肤准备和感染控制流程建立产品组合。",
-      en: "Built for hospitals, clinics, labs, and public-health settings across surface disinfection, skin preparation, and infection-control workflows."
+      zh: "医疗环境的表面消毒、皮肤除菌与感染控制。",
+      en: "Surface disinfection, skin antisepsis, and infection control for healthcare environments."
     },
     products: {
       zh: "主要包括酒精消毒湿巾、临床表面消毒湿巾和 CHG 清洁巾。",
       en: "Includes alcohol disinfectant wipes, clinical surface disinfectant wipes, and CHG wash cloths."
     },
     detail: {
-      zh: "MEDIKEEP 强调有效成分、材料兼容性、低残留和可追溯批次，帮助医疗和护理团队把高频接触面、设备表面和患者护理流程管理得更稳定。",
-      en: "MEDIKEEP focuses on active ingredients, material compatibility, low residue, and batch traceability so care teams can manage high-touch surfaces, equipment, and patient-care workflows with more control."
+      zh: "感染控制系列强调有效成分、材料兼容性、低残留和可追溯批次，帮助医疗和护理团队把高频接触面、设备表面和患者护理流程管理得更稳定。",
+      en: "INFECTION CONTROL focuses on active ingredients, material compatibility, low residue, and batch traceability so care teams can manage high-touch surfaces, equipment, and patient-care workflows with more control."
     },
     image: "/assets/gallery-infection.jpg",
-    alt: "医疗感染控制擦拭场景",
+    alt: "VINNER 感染控制产品使用场景",
     uses: [
       {
         zh: "医院、诊所和实验室的高频接触面清洁",
@@ -35,27 +42,34 @@ export const productLineMeta = {
       }
     ]
   },
-  "02 / CAREKEEP": {
+  carekeep: {
     slug: "carekeep",
-    brand: "CAREKEEP",
+    indexLabel: {
+      zh: "02 / 清洁护理",
+      en: "02 / CLEANSING & CARE"
+    },
+    name: {
+      zh: "清洁护理",
+      en: "CLEANSING & CARE"
+    },
     title: {
-      zh: "个人护理清洁湿巾",
-      en: "Personal care cleansing wipes"
+      zh: "化妆品，个人护理与清洁",
+      en: "Cosmetic, Personal Care and Cleansing"
     },
-    summary: {
-      zh: "面向床旁护理、老年护理、家庭护理和外出清洁，强调温和肤感、免冲洗效率和使用尊严。",
-      en: "For bedside care, elderly care, home care, and on-the-go cleansing, with a focus on gentle skin feel, no-rinse efficiency, and dignified use."
-    },
+      summary: {
+        zh: "温和清洁与护理，兼顾免冲洗效率和舒适体验。",
+        en: "Gentle cleansing and care with no-rinse efficiency and comfort."
+      },
     products: {
-      zh: "主要包括免冲洗沐浴湿巾、沐浴手套、洗发浴帽、乳霜护理湿巾和纯水婴儿湿巾。",
-      en: "Includes no-rinse bathing wipes, bathing gloves, shampoo caps, cream care wipes, and pure water baby wipes."
+      zh: "主要包括免冲洗沐浴湿巾、沐浴手套、洗发浴帽、失禁护理湿巾和纯水湿巾。",
+      en: "Includes no-rinse bathing wipes, bathing gloves, shampoo caps, continence care wipes, and pure water wipes."
     },
     detail: {
-      zh: "CAREKEEP 更关注皮肤接触体验、含液量、布感和包装便利性。它覆盖床旁沐浴、头发清洁、失禁皮肤护理、母婴清洁和家庭温和清洁等场景。",
-      en: "CAREKEEP centers on skin contact, liquid loading, cloth feel, and pack convenience across bedside bathing, hair cleansing, incontinence skin care, baby care, and gentle family cleansing."
+      zh: "清洁护理系列更关注皮肤接触体验、含液量、布感和包装便利性。它覆盖床旁沐浴、头发清洁、失禁皮肤护理、母婴清洁和家庭温和清洁等场景。",
+      en: "CLEANSING & CARE centers on skin contact, liquid loading, cloth feel, and pack convenience across bedside bathing, hair cleansing, incontinence skin care, baby care, and gentle family cleansing."
     },
     image: "/assets/gallery-care.jpg",
-    alt: "个人护理清洁湿巾使用场景",
+    alt: "VINNER 清洁护理产品使用场景",
     uses: [
       {
         zh: "卧床、术后、老年和长期照护人群",
@@ -71,24 +85,31 @@ export const productLineMeta = {
       }
     ]
   },
-  "03 / INDUKEEP": {
+  indukeep: {
     slug: "indukeep",
-    brand: "INDUKEEP",
+    indexLabel: {
+      zh: "03 / 工业擦拭",
+      en: "03 / INDUSTRIAL WIPING"
+    },
+    name: {
+      zh: "工业擦拭",
+      en: "INDUSTRIAL WIPING"
+    },
     title: {
-      zh: "工业高强度擦拭",
-      en: "Industrial high-strength wiping"
+      zh: "工业擦拭巾，强力去污与洁净室擦拭",
+      en: "Industrial Wipes, Heavy-Duty Cleaning & Cleanroom Wiping"
     },
     summary: {
-      zh: "面向设备维护、油污处理、喷涂前处理和车间清洁，强调吸附、耐撕裂和低尘表现。",
-      en: "For equipment maintenance, oil removal, pre-coating preparation, and workshop cleaning, emphasizing pickup, tear resistance, and low-lint performance."
+      zh: "工业清洁、强力去污与洁净室精密擦拭。",
+      en: "Industrial cleaning, heavy-duty soil removal, and precision cleanroom wiping."
     },
     products: {
       zh: "主要包括重油污擦拭布和高强度工业擦拭解决方案。",
       en: "Includes heavy-duty oil-removal wipes and durable industrial wiping solutions."
     },
     detail: {
-      zh: "INDUKEEP 服务更粗重的作业现场，重点在湿态强度、耐溶剂、吸油能力和低尘控制之间取得平衡，帮助工厂减少返工和材料浪费。",
-      en: "INDUKEEP serves demanding work sites by balancing wet strength, solvent resistance, oil pickup, and low-lint control, helping plants reduce rework and material waste."
+      zh: "工业擦拭系列服务更粗重的作业现场，重点在湿态强度、耐溶剂、吸油能力和低尘控制之间取得平衡，帮助工厂减少返工和材料浪费。",
+      en: "INDUSTRIAL WIPING serves demanding work sites by balancing wet strength, solvent resistance, oil pickup, and low-lint control, helping plants reduce rework and material waste."
     },
     image: "/assets/gallery-industrial.jpg",
     alt: "工业擦拭和设备维护场景",
@@ -107,12 +128,19 @@ export const productLineMeta = {
       }
     ]
   },
-  "04 / OEM/ODM": {
+  "oem-odm": {
     slug: "oem-odm",
-    brand: "OEM/ODM",
+    indexLabel: {
+      zh: "04 / 定制开发",
+      en: "04 / OEM/ODM"
+    },
+    name: {
+      zh: "定制开发",
+      en: "OEM/ODM"
+    },
     title: {
-      zh: "定制开发与品牌代工",
-      en: "Custom development and private-label manufacturing"
+      zh: "定制产品，品牌代工",
+      en: "Custom Products & Private-Label Manufacturing"
     },
     summary: {
       zh: "面向品牌客户、渠道商和区域项目，从需求拆解、样品打样、包装开发到批量交付，提供湿巾产品 OEM/ODM 支持。",
@@ -146,18 +174,19 @@ export const productLineMeta = {
 };
 
 export const getProductLineMeta = (line) => {
-  const fallback = productLineMeta[line.index] || {};
+  const fallback = productLineMeta[line.slug] || {};
 
   return {
     ...fallback,
     slug: line.slug || fallback.slug || "",
-    brand: line.brand || fallback.brand || line.name?.en || line.name?.zh || "",
+    indexLabel: line.indexLabel || fallback.indexLabel || { zh: line.index, en: line.index },
+    name: line.name || fallback.name || { zh: line.brand || "", en: line.brand || "" },
     title: line.title || fallback.title || line.name,
     summary: line.summary || fallback.summary || line.name,
     products: line.products || fallback.products,
     detail: line.detail || fallback.detail || line.summary || fallback.summary,
     image: line.image || fallback.image,
-    alt: line.alt || fallback.alt || line.brand || fallback.brand || "",
+    alt: line.alt || fallback.alt || line.name?.zh || fallback.name?.zh || "",
     uses: line.uses?.length ? line.uses : fallback.uses || []
   };
 };

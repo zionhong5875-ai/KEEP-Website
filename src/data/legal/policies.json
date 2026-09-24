@@ -1,83 +1,243 @@
 {
   "privacy": {
-    "title": {
-      "zh": "隐私政策",
-      "en": "Privacy Policy"
+    "eyebrow": { "zh": "法律信息", "en": "Legal information" },
+    "title": { "zh": "隐私政策", "en": "Privacy Policy" },
+    "summary": {
+      "zh": "本政策说明维尼健康在您访问本网站、提交联系表单或向我们索取资料时，如何收集、使用、保存和保护相关信息。",
+      "en": "This policy explains how VINNER collects, uses, retains, and protects information when you visit this website, submit a contact form, or request materials from us."
     },
+    "updatedAt": "2026.08.24",
+    "effectiveAt": "2026.08.24",
     "body": [
       {
-        "heading": {
-          "zh": "1. 我们收集哪些信息",
-          "en": "1. What information we collect"
-        },
-        "text": {
-          "zh": "当您通过联系表单、邮件或下载资料与 VINNER 互动时，我们可能收集姓名、邮箱、公司名称、需求描述、下载记录以及基础访问日志信息。",
-          "en": "When you contact VINNER through forms, email, or document downloads, we may collect your name, email address, company name, request details, download records, and basic access-log information."
-        }
+        "heading": { "zh": "1. 适用范围", "en": "1. Scope" },
+        "paragraphs": [{
+          "zh": "本隐私政策适用于 VINNER 官方网站及其页面、联系表单、资料索取入口和相关互动功能。它不适用于由第三方运营的网站、平台或服务；当您离开本网站后，请查看相关第三方自己的隐私规则。",
+          "en": "This Privacy Policy applies to the VINNER official website, its pages, contact forms, document-request entry points, and related interactive features. It does not apply to websites, platforms, or services operated by third parties. When you leave this website, please review the applicable third party's privacy notice."
+        }]
       },
       {
-        "heading": {
-          "zh": "2. 我们如何使用这些信息",
-          "en": "2. How we use the information"
-        },
-        "text": {
-          "zh": "这些信息主要用于回复询盘、提供产品资料、安排样品或商务沟通、改进官网内容结构，以及评估哪些资源最有帮助。",
-          "en": "We use this information to respond to inquiries, provide product information, arrange sampling or commercial communication, improve the site structure, and understand which resources are most useful."
-        }
+        "heading": { "zh": "2. 信息处理者与联系方式", "en": "2. Data controller and contact" },
+        "paragraphs": [{
+          "zh": "本网站由维尼健康（深圳）股份有限公司运营。有关本政策、个人信息处理或权利请求的问题，可以通过 hongzihao@vinnercare.cn 联系我们。",
+          "en": "This website is operated by Vinner (Shenzhen) Health Products Limited. For questions about this policy, personal information processing, or privacy requests, contact us at hongzihao@vinnercare.cn."
+        }]
+      },
+      {
+        "heading": { "zh": "3. 我们可能收集的信息", "en": "3. Information we may collect" },
+        "paragraphs": [{
+          "zh": "我们只收集完成具体业务沟通和网站运行所需的信息，可能包括：",
+          "en": "We collect only information reasonably needed for business communication and website operation. This may include:"
+        }],
+        "items": [
+          { "zh": "联系信息：姓名、邮箱、公司名称以及您主动提供的电话或其他联系方式。", "en": "Contact information: name, email address, company name, and any phone number or other contact details you choose to provide." },
+          { "zh": "项目与资料请求：需求类型、项目说明、产品兴趣、目标市场和您在表单或邮件中提供的内容。", "en": "Project and document-request information: request type, project brief, product interests, target market, and information you provide in a form or email." },
+          { "zh": "技术信息：访问时间、页面地址、浏览器类型、设备信息、语言偏好和基础安全日志。", "en": "Technical information: access time, page address, browser type, device information, language preference, and basic security logs." }
+        ]
+      },
+      {
+        "heading": { "zh": "4. 我们如何使用信息", "en": "4. How we use information" },
+        "items": [
+          { "zh": "回复咨询、提供产品和资质资料、安排样品开发及推进商务沟通；", "en": "To respond to inquiries, provide product and qualification materials, arrange sample development, and support commercial communication;" },
+          { "zh": "确认和改进网站、表单、资料索取及语言切换等功能；", "en": "To maintain and improve the website, forms, document-request flow, and language-switching features;" },
+          { "zh": "识别滥用、垃圾提交、欺诈或可能影响网站安全的行为；", "en": "To identify abuse, spam submissions, fraud, or activity that may affect website security;" },
+          { "zh": "履行适用法律、合同或合规要求。", "en": "To comply with applicable legal, contractual, or compliance requirements." }
+        ]
+      },
+      {
+        "heading": { "zh": "5. 服务提供商与信息传输", "en": "5. Service providers and transfers" },
+        "paragraphs": [
+          {
+            "zh": "为运行网站和处理联系请求，我们可能使用网站托管、邮件发送、表单防滥用或内部通知等服务提供商。当前联系表单使用 Resend 发送邮件，并由 Vercel 提供网站托管服务；如后续启用其他通知或客户管理工具，将仅在必要范围内使用。",
+            "en": "To operate the website and handle contact requests, we may use providers for hosting, email delivery, abuse prevention, or internal notifications. The contact form currently uses Resend for email delivery and Vercel for website hosting. If additional notification or customer-management tools are enabled, they will be used only as necessary."
+          },
+          {
+            "zh": "部分服务提供商可能在中国境外处理信息。我们会根据适用法律采取必要的合同、技术和管理措施，并尽量限制服务提供商访问的数据范围。",
+            "en": "Some service providers may process information outside China. We take contractual, technical, and organizational measures required by applicable law and limit provider access to the information needed for the relevant service."
+          }
+        ]
+      },
+      {
+        "heading": { "zh": "6. 保存期限与安全措施", "en": "6. Retention and security" },
+        "paragraphs": [
+          {
+            "zh": "我们会在实现收集目的所需的期限内保存信息，或按照法律、合同和争议处理所需的期限保存。达到保存期限后，我们会删除、匿名化或以其他合适方式停止使用相关信息。",
+            "en": "We retain information for as long as needed for the purposes for which it was collected, or as required for legal, contractual, or dispute-resolution purposes. When retention is no longer needed, we delete, anonymize, or otherwise stop using the information as appropriate."
+          },
+          {
+            "zh": "我们会采用访问控制、传输加密、权限管理和必要的安全监测措施保护信息。但互联网传输和电子存储都不能保证绝对安全。",
+            "en": "We use access controls, encryption in transit, permission management, and appropriate security monitoring to protect information. However, no internet transmission or electronic storage method can be guaranteed to be completely secure."
+          }
+        ]
+      },
+      {
+        "heading": { "zh": "7. 您的权利与请求", "en": "7. Your rights and requests" },
+        "paragraphs": [
+          {
+            "zh": "在适用法律规定的范围内，您可以请求了解、访问、更正、删除或限制使用与您相关的信息，也可以撤回此前作出的同意。我们可能需要核验请求人的身份，并在法律允许或要求的期限内处理请求。",
+            "en": "To the extent provided by applicable law, you may request access to, correction of, deletion of, or restriction of the use of information relating to you, and you may withdraw consent previously given. We may need to verify your identity and will respond within the period permitted or required by law."
+          },
+          {
+            "zh": "如需提出请求，请发送邮件至 hongzihao@vinnercare.cn，并说明您的请求内容、联系方式及必要的身份核验信息。",
+            "en": "To make a request, email hongzihao@vinnercare.cn with the details of your request, your contact information, and any information reasonably needed to verify your identity."
+          }
+        ]
+      },
+      {
+        "heading": { "zh": "8. 政策更新", "en": "8. Policy updates" },
+        "paragraphs": [{
+          "zh": "当网站功能、服务提供商或适用法律发生变化时，我们可能更新本政策。更新后的版本会在本页面发布，并以页面上的更新时间为准。",
+          "en": "We may update this policy when website features, service providers, or applicable laws change. The updated version will be posted on this page, and the date shown on the page will indicate the latest update."
+        }]
       }
     ]
   },
   "cookies": {
-    "title": {
-      "zh": "Cookie 政策",
-      "en": "Cookie Policy"
+    "eyebrow": { "zh": "法律信息", "en": "Legal information" },
+    "title": { "zh": "Cookie 政策", "en": "Cookie Policy" },
+    "summary": {
+      "zh": "本政策说明 VINNER 网站使用 Cookie、本地存储和类似技术的范围、目的以及管理方式。",
+      "en": "This policy explains how the VINNER website uses cookies, local storage, and similar technologies, including their purposes and how you can manage them."
     },
+    "updatedAt": "2026.08.24",
+    "effectiveAt": "2026.08.24",
     "body": [
       {
-        "heading": {
-          "zh": "1. 什么是 Cookie",
-          "en": "1. What cookies are"
-        },
-        "text": {
-          "zh": "Cookie 是网站在您的设备上存储的小型文本文件，用于记录基础偏好、会话状态和分析信息。",
-          "en": "Cookies are small text files stored on your device to remember basic preferences, session state, and analytics-related information."
-        }
+        "heading": { "zh": "1. Cookie 与类似技术是什么", "en": "1. Cookies and similar technologies" },
+        "paragraphs": [{
+          "zh": "Cookie 是网站写入设备的小型文本文件。类似技术还包括浏览器本地存储、像素和基础日志，用于保存偏好、维持功能运行或了解网站是否正常工作。",
+          "en": "Cookies are small text files placed on your device by a website. Similar technologies include browser local storage, pixels, and basic logs used to remember preferences, support functionality, or understand whether the website is working properly."
+        }]
+      },
+      {
+        "heading": { "zh": "2. 本网站当前使用的技术", "en": "2. Technologies currently used" },
+        "items": [
+          { "zh": "语言偏好：网站使用浏览器 localStorage 保存您选择的中文或英文界面偏好，以便下次访问时保持一致。", "en": "Language preference: the website uses browser local storage to remember whether you selected Chinese or English, so the preference can be retained on later visits." },
+          { "zh": "必要运行与安全日志：托管、网络传输和安全服务可能生成维持网站运行所需的基础日志。", "en": "Essential operation and security logs: hosting, network, and security services may generate basic logs needed to operate and protect the website." },
+          { "zh": "当前未启用广告 Cookie、跨站跟踪 Cookie 或基于兴趣的广告画像。", "en": "Advertising cookies, cross-site tracking cookies, and interest-based advertising profiles are not currently enabled." }
+        ]
+      },
+      {
+        "heading": { "zh": "3. 第三方服务", "en": "3. Third-party services" },
+        "paragraphs": [{
+          "zh": "当您点击社交媒体、地图、邮件或其他外部链接时，第三方可能按照自己的规则使用 Cookie 或类似技术。VINNER 无法控制这些第三方技术，建议您在使用前阅读对应服务的隐私和 Cookie 政策。",
+          "en": "When you follow social-media, map, email, or other external links, third parties may use cookies or similar technologies under their own rules. VINNER does not control those technologies, so please review the relevant provider's privacy and cookie policies before using the service."
+        }]
+      },
+      {
+        "heading": { "zh": "4. 如何管理 Cookie 与本地存储", "en": "4. How to manage cookies and local storage" },
+        "paragraphs": [{
+          "zh": "您可以通过浏览器设置删除或限制 Cookie，也可以清除网站的本地存储数据。禁用必要技术可能导致语言偏好无法保存，或使部分网站功能无法正常运行。",
+          "en": "You can delete or restrict cookies through your browser settings, and you can clear the website's local storage data. Disabling essential technologies may prevent language preferences from being saved or cause parts of the website to function incorrectly."
+        }]
+      },
+      {
+        "heading": { "zh": "5. 未来变化", "en": "5. Future changes" },
+        "paragraphs": [{
+          "zh": "如果未来启用分析、营销或其他非必要 Cookie，我们会在适用法律要求的情况下提供相应的提示、选择和管理方式，并更新本政策。",
+          "en": "If analytics, marketing, or other non-essential cookies are enabled in the future, we will provide the notices, choices, and management options required by applicable law and update this policy."
+        }]
       }
     ]
   },
   "disclaimer": {
-    "title": {
-      "zh": "免责声明",
-      "en": "Disclaimer"
+    "eyebrow": { "zh": "法律信息", "en": "Legal information" },
+    "title": { "zh": "免责声明", "en": "Disclaimer" },
+    "summary": {
+      "zh": "在使用本网站的产品信息、应用说明和资料内容前，请阅读以下适用范围与责任边界。",
+      "en": "Please review the following scope and limitations before relying on product information, application notes, or materials on this website."
     },
+    "updatedAt": "2026.08.24",
+    "effectiveAt": "2026.08.24",
     "body": [
       {
-        "heading": {
-          "zh": "1. 信息用途",
-          "en": "1. Informational use"
-        },
-        "text": {
-          "zh": "本网站中的产品介绍、规格、应用说明和资源文件目前主要用于品牌展示、概念说明和初步商务沟通，不构成最终技术承诺或法律承诺。",
-          "en": "The product descriptions, specifications, application notes, and resources on this website are primarily for brand presentation, concept framing, and initial commercial communication."
-        }
+        "heading": { "zh": "1. 信息用途", "en": "1. Informational purpose" },
+        "paragraphs": [{
+          "zh": "本网站用于介绍 VINNER 的产品线、制造能力、质量体系、应用场景和商务服务。页面内容旨在帮助访客进行初步了解和项目沟通，不构成法律、医疗、监管、工程或其他专业意见。",
+          "en": "This website introduces VINNER product lines, manufacturing capabilities, quality systems, use scenarios, and commercial services. The content is intended for initial understanding and project communication and does not constitute legal, medical, regulatory, engineering, or other professional advice."
+        }]
+      },
+      {
+        "heading": { "zh": "2. 产品、规格与合规信息", "en": "2. Product, specification, and compliance information" },
+        "paragraphs": [
+          {
+            "zh": "产品名称、图片、规格、包装、配方、交付周期和应用说明可能因项目、批次、市场法规或客户定制要求而变化。正式采购、生产或上市前，请以双方确认的规格文件、样品、合同、标签、SDS、检测报告和适用法律要求为准。",
+            "en": "Product names, images, specifications, packaging, formulations, lead times, and application notes may vary by project, batch, market requirements, or customer customization. Before purchasing, manufacturing, or placing a product on the market, rely on the specifications, samples, contracts, labels, SDS files, test reports, and applicable legal requirements confirmed by the parties."
+          },
+          {
+            "zh": "网站中的认证、注册、测试和质量体系信息不代表任何政府机构对特定产品、工厂或项目作出批准，也不替代客户在目标市场应完成的审核和合规判断。",
+            "en": "Certification, registration, testing, and quality-system information on this website does not represent approval of a specific product, factory, or project by a government authority, and does not replace the review and compliance assessment required by customers in their target market."
+          }
+        ]
+      },
+      {
+        "heading": { "zh": "3. 安全与使用责任", "en": "3. Safety and use responsibility" },
+        "paragraphs": [{
+          "zh": "使用任何产品前，请阅读产品标签、使用说明、SDS 和客户所在地适用的安全要求。客户应根据具体人群、接触表面、接触时间、环境条件和法规要求完成必要的验证，并负责正确储存、运输、使用和处置。",
+          "en": "Before using any product, read the product label, instructions, SDS, and applicable safety requirements in the customer's location. Customers are responsible for completing the validation required for the intended users, contact surfaces, contact time, environmental conditions, and regulatory requirements, and for proper storage, transport, use, and disposal."
+        }]
+      },
+      {
+        "heading": { "zh": "4. 商务沟通与可用性", "en": "4. Commercial communication and availability" },
+        "paragraphs": [{
+          "zh": "提交表单、索取资料或浏览产品页面不构成报价、订单、供货承诺或合同关系。产品、服务、图片和页面功能可能因维护、供应、地区或项目条件而调整，实际合作内容以 VINNER 书面确认的商务文件为准。",
+          "en": "Submitting a form, requesting materials, or viewing a product page does not create a quotation, order, supply commitment, or contractual relationship. Products, services, images, and page features may change due to maintenance, availability, regional requirements, or project conditions. Actual cooperation is governed by the commercial documents confirmed in writing by VINNER."
+        }]
+      },
+      {
+        "heading": { "zh": "5. 外部链接与责任范围", "en": "5. External links and limitation of responsibility" },
+        "paragraphs": [{
+          "zh": "本网站可能包含指向第三方网站或平台的链接。第三方内容、可用性、隐私规则和安全措施由第三方负责。对于法律允许的范围，VINNER 不对因依赖网站内容、第三方内容或网站暂时不可用而产生的间接损失承担责任；适用法律不得排除的责任不受本条限制。",
+          "en": "This website may contain links to third-party websites or platforms. Third parties are responsible for their own content, availability, privacy rules, and security measures. To the extent permitted by law, VINNER is not responsible for indirect losses arising from reliance on website content, third-party content, or temporary website unavailability. Liability that cannot be excluded under applicable law is not limited by this section."
+        }]
       }
     ]
   },
   "copyright": {
-    "title": {
-      "zh": "版权信息",
-      "en": "Copyright"
+    "eyebrow": { "zh": "法律信息", "en": "Legal information" },
+    "title": { "zh": "版权信息", "en": "Copyright" },
+    "summary": {
+      "zh": "本页面说明 VINNER 网站内容、品牌标识、资料和第三方内容的权利归属与使用边界。",
+      "en": "This page explains ownership and permitted use of VINNER website content, brand assets, materials, and third-party content."
     },
+    "updatedAt": "2026.08.24",
+    "effectiveAt": "2026.08.24",
     "body": [
       {
-        "heading": {
-          "zh": "1. 网站内容归属",
-          "en": "1. Ownership of website content"
-        },
-        "text": {
-          "zh": "除另有说明外，本网站中的品牌名称、页面文案、结构设计、界面排版、图形元素和原创资料均归 VINNER 或其授权方所有。",
-          "en": "Unless otherwise stated, the brand names, page copy, structural layout, interface design, graphic elements, and original materials on this website belong to VINNER or its licensors."
-        }
+        "heading": { "zh": "1. 网站内容归属", "en": "1. Ownership of website content" },
+        "paragraphs": [{
+          "zh": "除另有说明外，本网站中的 VINNER、维尼健康及相关产品名称、商标、标识、页面文案、摄影图片、产品图片、图形、界面设计、文章、工厂信息和原创资料，归维尼健康（深圳）股份有限公司或其授权方所有，并受适用的知识产权法律保护。",
+          "en": "Unless otherwise stated, VINNER and Vinner Health names, product names, trademarks, logos, page copy, photographs, product images, graphics, interface design, articles, factory information, and original materials on this website belong to Vinner (Shenzhen) Health Products Limited or its licensors and are protected by applicable intellectual-property laws."
+        }]
+      },
+      {
+        "heading": { "zh": "2. 允许的使用", "en": "2. Permitted use" },
+        "paragraphs": [{
+          "zh": "在不移除版权、商标或其他权利声明的前提下，访客可以为内部评估、采购沟通或与 VINNER 进行项目讨论而查看本网站内容。此项有限许可不构成任何权利转让，也不允许将网站内容作为独立商业素材使用。",
+          "en": "Visitors may view website content for internal evaluation, purchasing discussions, or project communication with VINNER, provided that copyright, trademark, and other notices are not removed. This limited permission is not a transfer of rights and does not permit website content to be used as standalone commercial material."
+        }]
+      },
+      {
+        "heading": { "zh": "3. 未经许可的使用", "en": "3. Use without permission" },
+        "items": [
+          { "zh": "复制、批量抓取、镜像、重新发布或出售网站内容；", "en": "Copying, bulk scraping, mirroring, republishing, or selling website content;" },
+          { "zh": "在未获书面许可的情况下修改、移除来源、注册相同或近似标识，或暗示 VINNER 对第三方项目提供背书；", "en": "Modifying content, removing attribution, registering identical or confusingly similar marks, or implying VINNER's endorsement of a third-party project without written permission;" },
+          { "zh": "将图片、文章、产品资料或认证预览图用于与 VINNER 无关的宣传、销售或训练数据。", "en": "Using images, articles, product materials, or certification previews for promotion, sales, or training data unrelated to VINNER." }
+        ]
+      },
+      {
+        "heading": { "zh": "4. 第三方内容", "en": "4. Third-party content" },
+        "paragraphs": [{
+          "zh": "网站中由第三方提供或指向第三方的名称、标识、链接、图片和资料，其权利归相应权利人所有。使用这些内容时，访客应遵守相应权利人的许可条件。",
+          "en": "Names, marks, links, images, and materials supplied by or referring to third parties belong to their respective rights holders. Visitors must follow the applicable rights holder's license terms when using such content."
+        }]
+      },
+      {
+        "heading": { "zh": "5. 权利通知", "en": "5. Rights notices" },
+        "paragraphs": [{
+          "zh": "如果您认为网站中的内容侵犯了您的权利，或希望获得超出上述范围的使用许可，请发送材料名称、权利证明和使用场景至 hongzihao@vinnercare.cn。我们会在核实后处理相关请求。",
+          "en": "If you believe content on this website infringes your rights, or if you need permission beyond the uses described above, email the material name, proof of rights, and intended use to hongzihao@vinnercare.cn. We will review and handle the request after verification."
+        }]
       }
     ]
   }

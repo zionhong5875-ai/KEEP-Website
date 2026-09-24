@@ -1,74 +1,109 @@
 ---
+import { searchConfig } from "../utils/search-config.mjs";
 import "../styles/global.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import settings from "../data/site/siteSettings.json";
-import { text, attrs } from "../utils/i18n";
+import SectionIndicator from "../components/SectionIndicator.astro";
+import { text, attrs, localizedPath, stripLanguagePrefix } from "../utils/i18n";
+import {
+  buildBreadcrumbNode,
+  buildOrganizationNodes,
+  schemaIds,
+  stripSchemaContext
+} from "../utils/schema";
 
 const {
   title,
   description,
   image = "/assets/home-carousel/carousel-1.png",
   ogType = "website",
-  schema = []
+  schema = [],
+  pageType = "WebPage",
+  breadcrumbs = [],
+  mainEntityId,
+  pageProperties = {},
+  articleMeta
 } = Astro.props;
 
-const siteUrl = import.meta.env.PUBLIC_SITE_URL || "https://keep-website-ochre.vercel.app";
-const pageUrl = new URL(Astro.url.pathname, siteUrl).toString();
+const siteUrl = searchConfig.siteUrl;
+const language = Astro.locals.language || (Astro.originPathname?.startsWith("/en/") ? "en" : "zh");
+const publicPathname = Astro.locals.publicPathname || Astro.originPathname || Astro.url.pathname;
+const basePathname = stripLanguagePrefix(publicPathname);
+const chineseUrl = new URL(localizedPath(basePathname, "zh"), siteUrl).toString();
+const englishUrl = new URL(localizedPath(basePathname, "en"), siteUrl).toString();
+const pageUrl = language === "en" ? englishUrl : chineseUrl;
 const imageUrl = image ? new URL(image, siteUrl).toString() : undefined;
-const pageTitle = text(title);
-const pageDescription = text(description);
-const pageSchema = Array.isArray(schema) ? schema : [schema];
-const structuredData = [
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    name: "VINNER Health",
-    alternateName: ["VINNER", "维尼健康"],
-    url: siteUrl,
-    logo: new URL(settings.brand.logo, siteUrl).toString(),
-    sameAs: settings.footer.socials.map((item) => item.href).filter(Boolean),
-    contactPoint: [
-      {
-        "@type": "ContactPoint",
-        contactType: "sales",
-        email: "hongzihao@vinnercare.cn",
-        telephone: "+86 15013995875",
-        areaServed: "Worldwide",
-        availableLanguage: ["zh-CN", "en"]
-      }
-    ]
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    name: "VINNER",
-    url: siteUrl,
-    inLanguage: ["zh-CN", "en"],
-    publisher: {
-      "@type": "Organization",
-      name: "VINNER Health"
-    }
-  },
-  ...pageSchema.filter(Boolean)
-];
+const pageTitle = text(title, language);
+const pageDescription = text(description, language);
+const ids = schemaIds(siteUrl);
+const breadcrumbNode = buildBreadcrumbNode(breadcrumbs, siteUrl, language, pageUrl);
+const additionalSchema = (Array.isArray(schema) ? schema : [schema])
+  .filter(Boolean)
+  .map(stripSchemaContext);
+const primaryImageId = imageUrl ? `${pageUrl}#primaryimage` : undefined;
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    ...buildOrganizationNodes(siteUrl, language),
+    {
+      "@type": "WebSite",
+      "@id": ids.website,
+      name: "Vinner",
+      alternateName: "VINNER",
+      url: ids.root,
+      inLanguage: ["zh-CN", "en"],
+      publisher: { "@id": ids.organization }
+    },
+    ...(imageUrl ? [{
+      "@type": "ImageObject",
+      "@id": primaryImageId,
+      url: imageUrl,
+      contentUrl: imageUrl,
+      representativeOfPage: true
+    }] : []),
+    {
+      "@type": pageType,
+      "@id": `${pageUrl}#webpage`,
+      name: pageTitle,
+      description: pageDescription,
+      url: pageUrl,
+      inLanguage: language === "en" ? "en" : "zh-CN",
+      isPartOf: { "@id": ids.website },
+      publisher: { "@id": ids.organization },
+      ...(primaryImageId ? { primaryImageOfPage: { "@id": primaryImageId } } : {}),
+      ...(breadcrumbNode ? { breadcrumb: { "@id": `${pageUrl}#breadcrumb` } } : {}),
+      ...(mainEntityId ? { mainEntity: { "@id": mainEntityId } } : {}),
+      ...pageProperties
+    },
+    ...(breadcrumbNode ? [breadcrumbNode] : []),
+    ...additionalSchema
+  ]
+};
+const robotsDirective = Astro.locals.indexable ? "index, follow, max-image-preview:large" : "noindex, nofollow";
 ---
 
 <!doctype html>
-<html lang="zh-CN">
+<html lang={language === "en" ? "en" : "zh-CN"}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={pageDescription} {...attrs(description)} />
+    <meta name="robots" content={robotsDirective} />
     <meta name="theme-color" content="#ffffff" />
     <link rel="canonical" href={pageUrl} />
+    <link rel="alternate" hreflang="zh-CN" href={chineseUrl} />
+    <link rel="alternate" hreflang="en" href={englishUrl} />
+    <link rel="alternate" hreflang="x-default" href={chineseUrl} />
     <meta property="og:site_name" content="VINNER" />
     <meta property="og:type" content={ogType} />
+    {articleMeta?.author && <meta name="author" content={articleMeta.author} />}
+    {articleMeta?.publishedAt && <meta property="article:published_time" content={articleMeta.publishedAt} />}
+    {articleMeta?.modifiedAt && <meta property="article:modified_time" content={articleMeta.modifiedAt} />}
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={pageDescription} />
     <meta property="og:url" content={pageUrl} />
-    <meta property="og:locale" content="zh_CN" />
-    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:locale" content={language === "en" ? "en_US" : "zh_CN"} />
+    <meta property="og:locale:alternate" content={language === "en" ? "zh_CN" : "en_US"} />
     {imageUrl && <meta property="og:image" content={imageUrl} />}
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={pageTitle} />
@@ -77,12 +112,13 @@ const structuredData = [
     <link rel="icon" href="/favicon.ico?v=vinner" sizes="any" />
     <link rel="icon" type="image/png" href="/favicon.png?v=vinner" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=vinner" />
-    <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+    <script type="application/ld+json" set:html={JSON.stringify(structuredData).replace(/</g, "\\u003c")} />
     <title {...attrs(title)}>{pageTitle}</title>
   </head>
   <body>
     <a class="skip-link" href="#main-content" data-zh="跳到主要内容" data-en="Skip to main content">跳到主要内容</a>
     <Header />
+    <SectionIndicator />
     <main id="main-content">
       <slot />
     </main>

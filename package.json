@@ -4,14 +4,25 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "test:contact": "node --test scripts/contact.test.mjs",
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "check": "astro check"
+    "check": "astro check",
+    "check:glossary-links": "node scripts/check-glossary-links.mjs",
+    "audit:seo": "node scripts/audit-seo.mjs",
+    "audit:crawl": "node scripts/audit-crawl.mjs",
+    "audit:release": "node scripts/audit-release.mjs",
+    "audit:backlinks": "node scripts/audit-glossary-backlinks.mjs",
+    "test:backlinks": "node --test scripts/glossary-backlinks.test.mjs",
+    "audit:glossary-links": "node scripts/audit-glossary-links.mjs",
+    "test:search": "node --test scripts/search.test.mjs",
+    "indexnow": "node scripts/indexnow.mjs"
   },
   "dependencies": {
     "@astrojs/vercel": "^10.0.6",
     "astro": "^6.2.2",
-    "astro-decap-cms-oauth": "^0.5.2"
+    "astro-decap-cms-oauth": "^0.5.2",
+    "parse5": "^7.3.0"
   }
 }
