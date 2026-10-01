@@ -1,11 +1,11 @@
 import { defineConfig } from "astro/config";
-import vercel from "@astrojs/vercel";
+import edgeone from "@edgeone/astro";
 import decapCmsOauth from "astro-decap-cms-oauth";
 import glossaryBacklinks from "./src/integrations/glossary-backlinks.mjs";
 
 export default defineConfig({
   output: "server",
-  adapter: vercel(),
+  adapter: edgeone(),
   integrations: [
     glossaryBacklinks(),
     decapCmsOauth({
