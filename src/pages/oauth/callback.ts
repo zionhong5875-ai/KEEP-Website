@@ -2,7 +2,7 @@ import type { APIRoute } from "astro";
 
 export const prerender = false;
 
-const siteUrl = () => import.meta.env.PUBLIC_SITE_URL || "https://keep-website-ochre.vercel.app";
+const siteUrl = () => import.meta.env.PUBLIC_SITE_URL || "https://vinnercare.com";
 
 export const GET: APIRoute = async ({ url, redirect }) => {
   const code = url.searchParams.get("code");

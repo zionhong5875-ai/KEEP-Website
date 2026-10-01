@@ -2,8 +2,8 @@ backend:
   name: github
   repo: zionhong5875-ai/KEEP-Website
   branch: main
-  site_domain: vinner-steel.vercel.app
-  base_url: https://vinner-steel.vercel.app
+  site_domain: vinnercare.com
+  base_url: https://vinnercare.com
   auth_endpoint: oauth
   commit_messages:
     create: "CMS: create {{collection}} {{slug}}"

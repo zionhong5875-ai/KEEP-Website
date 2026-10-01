@@ -1,4 +1,4 @@
-export const DEFAULT_SITE_URL = "https://keep-website-ochre.vercel.app";
+export const DEFAULT_SITE_URL = "https://vinnercare.com";
 export const INDEXNOW_KEY = "b9001a0e275974da9479bb3283076c6b";
 
 export function getSearchConfig(env = {}) {
